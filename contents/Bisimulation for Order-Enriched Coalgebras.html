@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>FML: Bisimulation for Order-Enriched Coalgebras &#8212; Coalgebraic Logic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Bisimulation for Order-Enriched Coalgebras';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Coalgebraic Logic</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
+                        Introduction to Modal Logic
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
+                        Introduction to Modal Logic
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Coalgebraic Logic</p>
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Bisimulation for Order-Enriched Coalgebras.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/contents/Bisimulation for Order-Enriched Coalgebras.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>FML: Bisimulation for Order-Enriched Coalgebras</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordered-neighbourhood-models">
+   Ordered neighbourhood models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-neighbourhood-models">
+   Discrete neighbourhood models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section class="tex2jax_ignore mathjax_ignore" id="fml-bisimulation-for-order-enriched-coalgebras">
+<h1>FML: Bisimulation for Order-Enriched Coalgebras<a class="headerlink" href="#fml-bisimulation-for-order-enriched-coalgebras" title="Permalink to this headline">#</a></h1>
+<p>(under construction)</p>
+<p><a class="reference external" href="https://hackmd.io/uvH1hEqBTE6uJKlI0qSRAA">Modal Logic on Posets</a>
+<a class="reference external" href="https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w">Neighbourhood Frames over Posets</a>
+<a class="reference external" href="https://hackmd.io/dhUAXEIIQCGiBpTNkU1RiQ">Bisimulation for Metric-Enriched Coalgebra</a>
+…</p>
+<hr class="docutils" />
+<p>The basic observation about ordinary, set-based coalgebras, due to Aczel’s monograph “Non-Well Founded Sets”, is the following:</p>
+<p>Given a coalgebra <span class="math notranslate nohighlight">\(X\)</span>, the largest bisimulation on <span class="math notranslate nohighlight">\(X\)</span> is the kernel of the unique morphism <span class="math notranslate nohighlight">\(X\to Z\)</span> into the final coalgebra <span class="math notranslate nohighlight">\(Z\)</span>.</p>
+<p>Aczel observed this as a fact for special coalgebras such as Kripke models and then took it as a starting point for a general definition, known today as Aczel-Mendler bisimulation.</p>
+<p>Moving to the ordered setting, that is, enriching over preorders or posets, one can generalise by either formalising kernels as pullbacks (as before) or as order-pullbacks, which we call comma objects or comma squares or just commas, following terminology introduced by Lawvere in the category-enriched situation.</p>
+<p>Choosing pullbacks, one only recovers the equality on the final coalgebra. On the other hand, choosing comma squares leads to a richer theory of bisimulations that includes simulations as special cases of bisimulations.</p>
+<p>In fact, in preorders and posets, comma and cocomma squares are exact, that is, weakening relations can be both tabulated and cotabulated. This leads us to Definition 5.2 of (Worrell 2000), which, btw, does work for more general enrichments. Also note that because of the use of co-spans there is no need to restrict to weak-pullback preserving functors.</p>
+<p>We first need to recall that every weakening relation <span class="math notranslate nohighlight">\(R:X\looparrowright Y\)</span> can be represented as a preorder/poset <span class="math notranslate nohighlight">\(\overline R\)</span> such that</p>
+<ul class="simple">
+<li><p>the underling set of <span class="math notranslate nohighlight">\(\overline R\)</span> is the disjoint union of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> and</p></li>
+<li><p>the order on <span class="math notranslate nohighlight">\(\overline R\)</span> is the one inherited from <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> plus <span class="math notranslate nohighlight">\(x\overline Ry  \ \Leftrightarrow \  xRy\)</span>.</p></li>
+</ul>
+<p>In other words, we encode the relation <span class="math notranslate nohighlight">\(R\)</span> via the order of the preorder/poset <span class="math notranslate nohighlight">\(\overline R\)</span>, also known as the <em>collage</em> of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+<p><strong>Definition:</strong> Let <span class="math notranslate nohighlight">\(T\)</span> be a (locally monotone) functor on preorders or posets. The weakening relation <span class="math notranslate nohighlight">\(R:X\looparrowright Y\)</span> is an <em><strong>order-bisimulation</strong></em> between coalgebras <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> if the unique function <span class="math notranslate nohighlight">\(\overline R\to T\overline R\)</span> making the diagram
+$<span class="math notranslate nohighlight">\(
+\begin{array}{}
+X  &amp; \rightarrow &amp; \overline R &amp; \leftarrow &amp; Y\\
+\downarrow &amp;&amp;\downarrow &amp;&amp; \downarrow \\
+TX  &amp; \rightarrow &amp; T\overline R &amp; \leftarrow &amp; TY
+\end{array}
+\)</span>$</p>
+<p>commute (in <span class="math notranslate nohighlight">\(Set\)</span>) is order-preserving.</p>
+<p><strong>Remark:</strong> It follows from the definition that <span class="math notranslate nohighlight">\(R\)</span> is a weakening relation. In other words, the pullback and the comma of the cospan <span class="math notranslate nohighlight">\(X \rightarrow \overline R \leftarrow Y\)</span> coincide. (<strong>Notation:</strong> I am tempted to drop the overline over the <span class="math notranslate nohighlight">\(R\)</span> in the following, because of the ugly extra space it introduces between lines.)</p>
+<p><strong>Example:</strong> The identity cospan <span class="math notranslate nohighlight">\(X \rightarrow X \leftarrow X\)</span> is not isomorphic to the collage of a relation unless <span class="math notranslate nohighlight">\(X\)</span> is discrete. The collage of the order on <span class="math notranslate nohighlight">\(X\)</span> can be obtained as the cocomma of the comma of the identity cospan. <a class="footnote-reference brackets" href="#comma" id="id1">1</a> In fact, in posets, every collage is the cocomma of its comma.</p>
+<p><strong>Example:</strong> If we instantiate the definition above with the downset functor and the upset functor, we obtain that <span class="math notranslate nohighlight">\(T\)</span>-bisimulation is simulation.</p>
+<ul>
+<li><p>Let <span class="math notranslate nohighlight">\(D\)</span> be the downset functor. A bisimulation between <span class="math notranslate nohighlight">\(D\)</span>-coalgebras <span class="math notranslate nohighlight">\((X,\xi)\)</span> and <span class="math notranslate nohighlight">\((Y,\nu)\)</span> is a relation <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span> such that $<span class="math notranslate nohighlight">\(xRy\ \Rightarrow \ \xi x \subseteq \nu y,\)</span>$</p>
+<p>or, more explicitely, <a class="footnote-reference brackets" href="#xtox" id="id2">2</a></p>
+</li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-5401a958-b17b-454b-ae0a-3fa80d6ec27e">
+<span class="eqno">()<a class="headerlink" href="#equation-5401a958-b17b-454b-ae0a-3fa80d6ec27e" title="Permalink to this equation">#</a></span>\[\begin{align}
+xRy \ \Rightarrow \ &amp; \forall x\to x'.\exists y\to y'. x' R\, y' 
+\end{align}\]</div>
+<ul>
+<li><p>Let <span class="math notranslate nohighlight">\(U\)</span> be the downset functor. Recall that <span class="math notranslate nohighlight">\(UX=[X,2]^o\)</span> is ordered by reverse inclusion. A bisimulation between <span class="math notranslate nohighlight">\(U\)</span>-coalgebras <span class="math notranslate nohighlight">\((X,\xi)\)</span> and <span class="math notranslate nohighlight">\((Y,\nu)\)</span> is a relation <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span> such that $<span class="math notranslate nohighlight">\(xRy\ \Rightarrow \ \xi x \supseteq \nu y,\)</span>$</p>
+<p>or, more explicitely,</p>
+</li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-60d64011-5f4b-4a56-a58c-7978937e6bae">
+<span class="eqno">()<a class="headerlink" href="#equation-60d64011-5f4b-4a56-a58c-7978937e6bae" title="Permalink to this equation">#</a></span>\[\begin{align}
+xRy \ \Rightarrow \ &amp; \forall y\to y'.\exists x\to x'. x' \le y' 
+\end{align}\]</div>
+<p>Intuitively, a <span class="math notranslate nohighlight">\(D\)</span>-bisimulation is forward simulation: Every move in the domain can be simulated by a “larger” move in the codomain. Conversely, <span class="math notranslate nohighlight">\(U\)</span>-bisimulation is backward simulation: Every move in the codomain can be simulated by “smaller” move in the domain. (The words “smaller” and “larger” are intended to remind us of the fact that <span class="math notranslate nohighlight">\(R\)</span> is a weakening relation closed under the order in <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>.)</p>
+<p><strong>Remark:</strong> Notice that even if <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are discrete, we do not obtain ordinary bisimulation, but rather ordinary forward and backward simulation. On the other hand, if we take <span class="math notranslate nohighlight">\(T\)</span> to be the convex powerset functor, then <span class="math notranslate nohighlight">\(T\)</span>-bisimulation is ordinary bisimulation.</p>
+<p><strong>Remark:</strong> The framework of functorial modal logic guarantees that for every functor <span class="math notranslate nohighlight">\(T\)</span> there is a sound, complete and bisimilarity preserving logic. In this case, these are the familiar <span class="math notranslate nohighlight">\((\Diamond,\bot,\vee)\)</span>-logic for the downset functor and the <span class="math notranslate nohighlight">\((\Box,\top,\wedge)\)</span>-logic for the upset functor. In case of the convex powerset functor we obtain Dunn’s positive modal logic.</p>
+<section id="ordered-neighbourhood-models">
+<h2>Ordered neighbourhood models<a class="headerlink" href="#ordered-neighbourhood-models" title="Permalink to this headline">#</a></h2>
+<p>Ordered neighbourhood frames are <span class="math notranslate nohighlight">\(UD\)</span>-coalgebras. If <span class="math notranslate nohighlight">\(X\)</span> is discrete then a coalgebra <span class="math notranslate nohighlight">\(X\to UDX\)</span> is known as a monotone neighbourhood frame, see eg (Hansen-Kupke-Pacuit 2009).</p>
+<p>An ordered bisimulation <span class="math notranslate nohighlight">\(R:(X,\xi)\looparrowright (Y,\nu)\)</span> between ordered neighbourhood frames satisfies (see the case of <span class="math notranslate nohighlight">\(U\)</span>-bisimulations above)
+$<span class="math notranslate nohighlight">\( xRy \ \Rightarrow \ \xi x \supseteq \nu y,\)</span>$</p>
+<p>or, more explicitely, <a class="footnote-reference brackets" href="#xtoa" id="id3">3</a></p>
+<div class="amsmath math notranslate nohighlight" id="equation-2e345e2f-079a-4cf1-bd92-0404dadd3110">
+<span class="eqno">()<a class="headerlink" href="#equation-2e345e2f-079a-4cf1-bd92-0404dadd3110" title="Permalink to this equation">#</a></span>\[\begin{align}
+xRy \ \ \Rightarrow \ \ &amp; \forall y\to b.\exists x\to a. \forall y'\in b.\exists x'\in a. x'Ry' 
+\end{align}\]</div>
+<p>Can this be simplified using the ordered version of <span class="math notranslate nohighlight">\(R\)</span>-coherent pairs?</p>
+<p>Remember that <span class="math notranslate nohighlight">\((a,b)\in R^\partial\)</span> is defined as <span class="math notranslate nohighlight">\(R[a]\subseteq b\)</span>, that is, <span class="math notranslate nohighlight">\(\forall x\in a. \exists y\in b.xRy\)</span>. Similarly,<a class="footnote-reference brackets" href="#ro" id="id4">4</a> <span class="math notranslate nohighlight">\((b,a)\in {R^o}^\partial\)</span> iff <span class="math notranslate nohighlight">\(R^o[b]\subseteq a\)</span>, that is, <span class="math notranslate nohighlight">\(\forall y\in b. \exists x\in a.xRy\)</span>.</p>
+<p>So we can summarise as follows.</p>
+<p><strong>Proposition:</strong> The weakening relation <span class="math notranslate nohighlight">\(R:(X,\xi)\looparrowright (Y,\nu)\)</span>  is a <span class="math notranslate nohighlight">\(UD\)</span>-bisimulation iff
+$<span class="math notranslate nohighlight">\(xRy \ \ \Rightarrow \ \ 
+\forall y\to b.\exists x\to a. 
+(b,a)\in {R^{o}}^\partial\)</span>$</p>
+<p>and <span class="math notranslate nohighlight">\(R\)</span> is a <span class="math notranslate nohighlight">\(DU\)</span>-bisimulation iff
+$<span class="math notranslate nohighlight">\(xRy \ \ \Rightarrow \ \ 
+\forall x\to a.\exists y\to b. 
+(a,b)\in R^\partial\)</span>$</p>
+</section>
+<section id="discrete-neighbourhood-models">
+<h2>Discrete neighbourhood models<a class="headerlink" href="#discrete-neighbourhood-models" title="Permalink to this headline">#</a></h2>
+<p>We noted before that the definition of ordered bisimulations does not depend on the functor preserving weak pullbacks. So what do we obtain if we apply the definition to neighbourhood frames?</p>
+<p>For this we need the posetification of <span class="math notranslate nohighlight">\(TX=2^{2^X}\)</span> and of <span class="math notranslate nohighlight">\(TX = U\mathcal PX\)</span> where <span class="math notranslate nohighlight">\(\mathcal P\)</span> is powerset.</p>
+<p>Have I done this before? Maybe in one of the papers with Adriana, Jirka, or Fredrik?</p>
+<p>… tbc …</p>
+<p><strong>Example:</strong> For a starter we can illustrate what happens in the case of Kripke frames, that is, coalgebras <span class="math notranslate nohighlight">\(X\to\mathcal PX\)</span>. The posetification of <span class="math notranslate nohighlight">\(\mathcal P\)</span> is the convex powerset functor <span class="math notranslate nohighlight">\(\mathcal{\overline P}\)</span>. <span class="math notranslate nohighlight">\(R\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{\overline P}\)</span>-bisimulation iff
+$<span class="math notranslate nohighlight">\(xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,\)</span>$</p>
+<p>which, by definition<a class="footnote-reference brackets" href="#eglimilner" id="id5">5</a> of the order on <span class="math notranslate nohighlight">\(\mathcal{\overline P}R\)</span>, unfolds to</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bb833790-e6c0-431e-963d-3299366352c7">
+<span class="eqno">()<a class="headerlink" href="#equation-bb833790-e6c0-431e-963d-3299366352c7" title="Permalink to this equation">#</a></span>\[\begin{align}
+xRy \ \ \Rightarrow \ \ &amp; \forall x\to x'.\exists y\to y'.  x'Ry' \ \ \textrm { and }\\  
+&amp; \forall y\to y'.\exists x\to x'.  x'Ry' \\  
+\end{align}\]</div>
+</section>
+<section id="id6">
+<h2>…<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p>Hansen, Kupke and Pacuit: <span class="xref myst">Neighbourhood Structures: Bisimilarity and Basic Model Theory</span>, 2009</p>
+<p>Worrell: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1571066105803561">Coinduction for recursive data types: partial orders, metric spaces and omega-categories</a>, CMCS 2000.</p>
+</section>
+<section id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h2>
+<p>Aczel:</p>
+<p>Aczel, Mendler:</p>
+<p>Lawvere:</p>
+<p>Rutten:</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="comma"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This observation is useful for working with abstract order-enriched categories. If they admit commas of identity cospans, then for each object there is a span representing the order on that object.</p>
+</dd>
+<dt class="label" id="xtox"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>We write <span class="math notranslate nohighlight">\(x\to x'\)</span> for <span class="math notranslate nohighlight">\(x'\in\xi x\)</span> and similarly for <span class="math notranslate nohighlight">\(y\to y'\)</span> etc.</p>
+</dd>
+<dt class="label" id="xtoa"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>We write <span class="math notranslate nohighlight">\(x\to a\)</span> for <span class="math notranslate nohighlight">\(a\in\xi x\)</span>, and similarly for <span class="math notranslate nohighlight">\(y\to b\)</span>, etc.</p>
+</dd>
+<dt class="label" id="ro"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>If <span class="math notranslate nohighlight">\(R:X\looparrowright Y\)</span> is a weakening relation then <span class="math notranslate nohighlight">\(R:Y^o\looparrowright X^o\)</span> is the opposite relation. In the discrete case it coincides with <span class="math notranslate nohighlight">\(R^{-1}\)</span>.</p>
+</dd>
+<dt class="label" id="eglimilner"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Given a preorder/poset <span class="math notranslate nohighlight">\(X\)</span>, the order on the convex powerset of <span class="math notranslate nohighlight">\(X\)</span> is defined by <span class="math notranslate nohighlight">\((a,b)\in \mathcal{\overline P}X\)</span> if <span class="math notranslate nohighlight">\(\forall x\in a.\exists y\in b. x\le y\)</span> and <span class="math notranslate nohighlight">\(\forall y\in b.\exists x\in a. x\le y\)</span>.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordered-neighbourhood-models">
+   Ordered neighbourhood models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discrete-neighbourhood-models">
+   Discrete neighbourhood models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Kurz
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>

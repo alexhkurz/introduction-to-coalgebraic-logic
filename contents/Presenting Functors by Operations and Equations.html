@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Presenting Functors by Operations and Equations &#8212; Coalgebraic Logic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Presenting Functors by Operations and Equations';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Coalgebraic Logic</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
+                        Introduction to Modal Logic
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
+                        Introduction to Modal Logic
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Coalgebraic Logic</p>
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Presenting Functors by Operations and Equations.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/contents/Presenting Functors by Operations and Equations.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Presenting Functors by Operations and Equations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sifted-colimits">
+   Sifted Colimits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presenting-functors-on-varieties">
+   Presenting Functors on Varieties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminaries">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1">
+     Step 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2">
+     Step 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-presentation">
+     The Presentation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section class="tex2jax_ignore mathjax_ignore" id="presenting-functors-by-operations-and-equations">
+<h1>Presenting Functors by Operations and Equations<a class="headerlink" href="#presenting-functors-by-operations-and-equations" title="Permalink to this headline">#</a></h1>
+<p>(draft)</p>
+<p>The main theorem is that a functor on a variety (in the sense of universal algebra) has a presentation by operations and equations if and only if the functor preserves sifted colimits.</p>
+<p>The theory of sifted colimits is well explained in Adamek-Rosicky-Vitale. We only cover some highlights.</p>
+<p>In all of the following <span class="math notranslate nohighlight">\(\mathcal A\)</span> is a variety in the sense of univeral algebra, that is, a category of algebras specified (finitary) operations equations. (We will assume all operations to be finitary in the following, even if we drop the qualifier.)</p>
+<section id="sifted-colimits">
+<h2>Sifted Colimits<a class="headerlink" href="#sifted-colimits" title="Permalink to this headline">#</a></h2>
+<p><strong>Filtered categories</strong> are precisely categories <span class="math notranslate nohighlight">\(\mathcal D\)</span> such that colimits over <span class="math notranslate nohighlight">\(\mathcal D\)</span> commute with finite limits in Set. There is also a characterization of filtered categories independent of sets – a category <span class="math notranslate nohighlight">\(\mathcal D\)</span> is filtered if and only if the diagonal functor <span class="math notranslate nohighlight">\(\mathcal D \to \mathcal D^\mathcal I\)</span> is final for each finite category <span class="math notranslate nohighlight">\(\mathcal I\)</span>.</p>
+<p><strong>Sifted categories</strong> are the categories <span class="math notranslate nohighlight">\(\mathcal D\)</span> such that colimits over <span class="math notranslate nohighlight">\(\mathcal D\)</span> commute with finite products. These categories are characterized by the property that the diagonal functor <span class="math notranslate nohighlight">\(\mathcal D \to \mathcal D \times \mathcal D\)</span> is final.</p>
+<p><strong>Facts:</strong></p>
+<ul class="simple">
+<li><p>Every filtered colimit is sifted.</p></li>
+<li><p>Reflexive coequalisers are sifted but not filtered.</p></li>
+<li><p>Sifted colimit preserving functors preserve filtered colimits.</p></li>
+</ul>
+<p>An object <span class="math notranslate nohighlight">\(A\)</span> of a category <span class="math notranslate nohighlight">\(\mathcal C\)</span> is <strong>finitely presentable</strong> if its hom-functor <span class="math notranslate nohighlight">\(hom(A, −) : \mathcal C → Set\)</span> preserves filtered colimits. A category <span class="math notranslate nohighlight">\(\mathcal C\)</span> is locally finitely presentable <strong>(lfp)</strong> if it is cocomplete and has a set <span class="math notranslate nohighlight">\(\mathcal X\)</span> of finitely presentable objects such that each object of <span class="math notranslate nohighlight">\(\mathcal C\)</span> is a filtered colimit of objects from <span class="math notranslate nohighlight">\(\mathcal X\)</span>.</p>
+<p>An object <span class="math notranslate nohighlight">\(A\)</span> is <strong>strongly finitely presentable</strong> if its hom-functor <span class="math notranslate nohighlight">\(hom(A,−) : \mathcal C → Set\)</span> preserves sifted colimits. A category <span class="math notranslate nohighlight">\(\mathcal C\)</span> is strongly locally finitely presentable <strong>(slfp)</strong> if it is cocomplete and has a set <span class="math notranslate nohighlight">\(\mathcal X\)</span> of strongly finitely presentable objects such that each object of <span class="math notranslate nohighlight">\(\mathcal C\)</span> is a sifted colimit of objects from <span class="math notranslate nohighlight">\(\mathcal X\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal A\)</span> be a variety in the sense of universal algebra.</p>
+<p><strong>Facts:</strong></p>
+<ul class="simple">
+<li><p>Finitely presentable objects in <span class="math notranslate nohighlight">\(\mathcal A\)</span> are algebras finitely presentable in a usual sense.</p></li>
+<li><p>Strongly finitely presentable algebra = retract of finitely generated free algebra.</p></li>
+<li><p>Finitely presentable algebra = reflexive coequalizer of strongly finitely presentable ones.</p></li>
+<li><p>Sifted colimit preserving functors on <span class="math notranslate nohighlight">\(\mathcal A\)</span> are determined by their action on finitely generated free algebras.</p></li>
+</ul>
+<p>Let <span class="math notranslate nohighlight">\(Alg(L)\)</span> be the categories of algebras for the functor <span class="math notranslate nohighlight">\(L:\mathcal A\to\mathcal A\)</span>.</p>
+<p><strong>Theorem:</strong> If <span class="math notranslate nohighlight">\(\mathcal A\)</span> is a variety and <span class="math notranslate nohighlight">\(L:\mathcal A\to \mathcal A\)</span> preserves sifted colimits then <span class="math notranslate nohighlight">\(Alg(L)\)</span> is a variety.</p>
+<p><strong>Proposition:</strong></p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(\mathcal A\)</span> be a variety such that every finitely presentable algebra is projective. Then any functor <span class="math notranslate nohighlight">\(L : \mathcal A \to  \mathcal A\)</span> preserving filtered colimits preserves sifted colimits.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> preserves filtered colimits then <span class="math notranslate nohighlight">\(T\)</span> preserves sifted colimits.</p></li>
+<li><p>For any filtered colimit preserving functor <span class="math notranslate nohighlight">\(L : BA → BA\)</span> there is a sifted colimit preserving functor <span class="math notranslate nohighlight">\(L′ : BA → BA\)</span> such that <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(L′\)</span> are isomorphic when restricted to the full subcategory of BA without <span class="math notranslate nohighlight">\(1\)</span>. Moreover, <span class="math notranslate nohighlight">\(Alg(L) = Alg(L′)\)</span>.</p></li>
+</ul>
+</section>
+<section id="presenting-functors-on-varieties">
+<h2>Presenting Functors on Varieties<a class="headerlink" href="#presenting-functors-on-varieties" title="Permalink to this headline">#</a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
+<p>Given an adjunction <span class="math notranslate nohighlight">\(L\dashv R:\mathcal C\to \mathcal X\)</span> such that the right-adjoint <span class="math notranslate nohighlight">\(R\)</span> is monadic (or of descent type) all objects <span class="math notranslate nohighlight">\(A\in\mathcal C\)</span> have a presentation “by generators and relations”
+$<span class="math notranslate nohighlight">\(LRLRA\rightrightarrows LRA \to A.\)</span>$</p>
+<p>In words, <span class="math notranslate nohighlight">\(A\)</span> is the quotient of the free algebra <span class="math notranslate nohighlight">\(LRA\)</span> over generators <span class="math notranslate nohighlight">\(RA\)</span> by equations in <span class="math notranslate nohighlight">\(LRLRA\)</span>.</p>
+<p>We apply this “monadic presentation” now to the situation where <span class="math notranslate nohighlight">\(A\)</span> is an endofunctor. In fact, we apply it twice and combine two representations:</p>
+<p><em>Step 1:</em> We represent a sifted colimit preserving endofunctor on a variety <span class="math notranslate nohighlight">\(\mathcal A\)</span> such that the “generators” and “relations” are given by sifted colimit preserving endofunctors on Set.</p>
+<p><em>Step 2:</em> We represent a sifted colimit on Set as the quotient of polynomial functor.</p>
+</section>
+<section id="preliminaries">
+<h3>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(S(\mathcal C)\)</span> be the category of sifted colimit preserving functors <span class="math notranslate nohighlight">\(\mathcal C\to\mathcal C\)</span>.</p>
+<p><strong>Fact:</strong> The category <span class="math notranslate nohighlight">\(S(\mathcal C)\)</span> is slfp if <span class="math notranslate nohighlight">\(\mathcal C\)</span> is.</p>
+<p>A functor <span class="math notranslate nohighlight">\(H : \mathcal A \to \mathcal B\)</span> between slfp categories is called <strong>algebraically exact</strong> provided that it preserves limits and sifted colimits.</p>
+<p><strong>Fact:</strong> If <span class="math notranslate nohighlight">\(H\)</span> is algebraically exact it has a left adjoint.</p>
+</section>
+<section id="step-1">
+<h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(U:\mathcal A\to Set\)</span> be a variety and <span class="math notranslate nohighlight">\(F\dashv U\)</span>. Define
+$<span class="math notranslate nohighlight">\(\Psi:S(\mathcal A)\to S(Set)\)</span>$</p>
+<p>via <span class="math notranslate nohighlight">\(\Psi L = ULF\)</span> and
+$<span class="math notranslate nohighlight">\(\Phi: S(Set) \to S(\mathcal A)\)</span>$</p>
+<p>via <span class="math notranslate nohighlight">\(\Phi T = FTU\)</span>.</p>
+<p><strong>Fact:</strong> <span class="math notranslate nohighlight">\(\Psi\)</span> is algebraically exact and <span class="math notranslate nohighlight">\(\Phi\dashv\Psi\)</span>.</p>
+<p>After the first step, we obtain a quotient <span class="math notranslate nohighlight">\(FULFU\to L\)</span>. Here, <span class="math notranslate nohighlight">\(FULFU\)</span> results from applying the free construction <span class="math notranslate nohighlight">\(\Phi=F-U\)</span> to the Set-functor <span class="math notranslate nohighlight">\(ULF\)</span>. What we need next is a presentation by operations and equations of <span class="math notranslate nohighlight">\(ULF\)</span>.</p>
+</section>
+<section id="step-2">
+<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">#</a></h3>
+<p>Every sifted colimit preserving on <span class="math notranslate nohighlight">\(Set\)</span> (=filtered colimit preserving functor=finitary functor) can be presented as the quotient of a polynomial functor.</p>
+<p>Indeed, if <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> is finitary then we have a natural transformation</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f414880d-3257-4d14-af04-31ca267217a8">
+<span class="eqno">()<a class="headerlink" href="#equation-f414880d-3257-4d14-af04-31ca267217a8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\coprod_{n\in\mathbb N} Tn\times X^n &amp; 
+\stackrel {q_X} \longrightarrow TX \\
+(\sigma,v) &amp; \ \mapsto \ T(v)(\sigma)
+\end{align}\]</div>
+<p>with each <span class="math notranslate nohighlight">\(q_X\)</span> being surjective (even for infinite sets <span class="math notranslate nohighlight">\(X\)</span>).</p>
+<p>Note that <span class="math notranslate nohighlight">\(v\)</span> can be seen both as a tuple <span class="math notranslate nohighlight">\((x_1,\ldots x_n)\)</span> and as a function <span class="math notranslate nohighlight">\(n\to X\)</span>. Hence we can evaluate the term <span class="math notranslate nohighlight">\(\sigma(x_1,\ldots x_n)\)</span> by applying <span class="math notranslate nohighlight">\(Tv:Tn\to TX\)</span> to <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+<p>This gives us a representation of <span class="math notranslate nohighlight">\(T\)</span> as a functor by operations and equations where the set of <span class="math notranslate nohighlight">\(n\)</span>-ary operations is <span class="math notranslate nohighlight">\(Tn\)</span> and the set of equations in <span class="math notranslate nohighlight">\(n\)</span> variables is the kernel of <span class="math notranslate nohighlight">\(q_n\)</span>.</p>
+</section>
+<section id="the-presentation">
+<h3>The Presentation<a class="headerlink" href="#the-presentation" title="Permalink to this headline">#</a></h3>
+<p><strong>Theorem:</strong> A functor on a variety has a presentation by operations and equations iff the functor preserves sifted colimits.</p>
+<p>To prove “if”, one shows that every sifted colimit preserving functor <span class="math notranslate nohighlight">\(L\)</span> on a variety is a quotient
+$<span class="math notranslate nohighlight">\(FGUA\stackrel {q_A} \longrightarrow LA\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(GX=\coprod_{n\in\mathbb N}ULFn\times X^n\)</span>.</p>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\(n\)</span>-ary modal operators <span class="math notranslate nohighlight">\(\sigma\)</span> are the elements of <span class="math notranslate nohighlight">\(ULFn\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(q_A\)</span> maps <span class="math notranslate nohighlight">\((\sigma,v:n\to UA)\)</span> to <span class="math notranslate nohighlight">\(L(v^\dagger)(\sigma)\)</span> where <span class="math notranslate nohighlight">\(v^\dagger:Fn\to A\)</span> is the adjoint transpose of <span class="math notranslate nohighlight">\(v\)</span>.<a class="footnote-reference brackets" href="#sigma" id="id1">1</a></p></li>
+<li><p>The equations in <span class="math notranslate nohighlight">\(n\)</span> variables are the kernel of <span class="math notranslate nohighlight">\(q_{Fn}\)</span>.</p></li>
+</ul>
+<p>In particular the <span class="math notranslate nohighlight">\((\sigma,v:n\to UA)\)</span> are modal formulas $<span class="math notranslate nohighlight">\(\Delta(a_1,\ldots a_n)\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(\Delta=\sigma\)</span> and <span class="math notranslate nohighlight">\(a_i=v(i)\)</span>.</p>
+<p>The set <span class="math notranslate nohighlight">\(\Sigma\)</span> of operations and the set <span class="math notranslate nohighlight">\(E\)</span> of equations constitute the presentation <span class="math notranslate nohighlight">\(\langle\Sigma_L,E_L\rangle\)</span> of <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<p><strong>Theorem:</strong> Let <span class="math notranslate nohighlight">\(\mathcal A \cong Alg(Σ_\mathcal A, E_\mathcal A)\)</span> be a variety and <span class="math notranslate nohighlight">\(\langle \Sigma_L, E_L\rangle\)</span> a presentation of <span class="math notranslate nohighlight">\(L : \mathcal A \to \mathcal A\)</span>. Then <span class="math notranslate nohighlight">\(Alg(Σ_\mathcal A + \Sigma_L, E_\mathcal A+E_L)\)</span> is isomorphic to Alg(L), where equations in <span class="math notranslate nohighlight">\(E_\mathcal A\)</span> and <span class="math notranslate nohighlight">\(E_L\)</span> are understood as equations over <span class="math notranslate nohighlight">\(\Sigma_\mathcal A + \Sigma_L\)</span>.</p>
+<p><strong>Example:</strong> The variety of modal algebras is presented by the operations and equations of Boolean algebra plus a unary operation <span class="math notranslate nohighlight">\(\Box\)</span> and two equations specifying that <span class="math notranslate nohighlight">\(\Box\)</span> preserves finite meets.</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p>Kurz-Rosicky: <a class="reference external" href="https://arxiv.org/pdf/1207.2732.pdf">Strongly Complete Logics for Coalgebras</a>, 2012.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="sigma"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Note that <span class="math notranslate nohighlight">\((\sigma,v:n\to UA)\)</span> is a modal formula <span class="math notranslate nohighlight">\(\Delta(a_1,\ldots a_n)\)</span> where <span class="math notranslate nohighlight">\(\Delta=\sigma\)</span> and <span class="math notranslate nohighlight">\(a_i=v(i)\)</span>.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sifted-colimits">
+   Sifted Colimits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presenting-functors-on-varieties">
+   Presenting Functors on Varieties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminaries">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1">
+     Step 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2">
+     Step 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-presentation">
+     The Presentation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Kurz
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
