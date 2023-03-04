@@ -1,8 +1,10 @@
 # coalgebraic-logic-jupyter
 
+(under construction)
+
 ## coalgebraic logic
 
-This is the repo in which I keep my notes on coalgebraic logic.
+This is the repo in which I keep [my notes on coalgebraic logic](https://alexhkurz.github.io/coalgebraic-logic-jupyter).
 
 I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had various problems, in particular when it came to latex. 
 
@@ -10,7 +12,7 @@ So far, jupyter-book seems to work well and the next section contains a summary 
 
 ## how to create a jupyter book
 
-Starting from [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book.html)
+Starting from [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book.html) the following steps were taken.
 
 ### basics
 
@@ -52,11 +54,16 @@ curl https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.giti
 
 ### publishing
 
-Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html)
+Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html) install `ghp-import`
 
 ```
 pip install ghp-import
+```
+
+and then publish the book by running
+
+```
 ghp-import -n -p -f _build/html
 ```
 
-which makes the [publish book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter).
+This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter).
