@@ -68,7 +68,7 @@ and then publish the book by running
 ghp-import -n -p -f _build/html
 ```
 
-This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter).
+This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch.
 
 ### important commands
 
