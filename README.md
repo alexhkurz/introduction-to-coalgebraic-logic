@@ -8,7 +8,9 @@ This is the repo in which I keep [my notes on coalgebraic logic](https://alexhku
 
 I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had various problems, in particular when it came to latex. 
 
-So far, jupyter-book seems to work well and the next section contains a summary of how I set it up (but the available documentation works almost out of the box anyway).
+So far, jupyter-book seems to work well [^slow] and the next section contains a summary of how I set it up (but the available documentation works almost out of the box anyway).
+
+[^slow]: Maybe building is a bit slow. On the other hand, once the files are cached, compiling the book in the terminal with `jb build . ; open _build/html/index.html` does not take longer than doing it directly in TeX.
 
 ## how to create a jupyter book
 
@@ -67,3 +69,11 @@ ghp-import -n -p -f _build/html
 ```
 
 This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter).
+
+### important commands
+
+If, for example, the table of contents in the left-ahnd pane behaves in a strange way, clean out `_build`:
+
+```
+jupyter-book clean .
+```

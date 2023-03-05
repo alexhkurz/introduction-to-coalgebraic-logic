@@ -2,11 +2,11 @@
 tags: coalgebraic logic, coalgebraic modal logic, maths, functorial modal logic
 ---
 
-# Presenting Functors by Operations and Equations
+# Presenting Functors
 
 (draft)
 
-The main theorem is that a functor on a variety (in the sense of universal algebra) has a presentation by operations and equations if and only if the functor preserves sifted colimits.
+The main theorem is that a functor on a variety (in the sense of universal algebra) has a **presentation by operations and equations** if and only if the functor preserves sifted colimits.
 
 The theory of sifted colimits is well explained in Adamek-Rosicky-Vitale. We only cover some highlights.
 
@@ -50,6 +50,7 @@ Let $Alg(L)$ be the categories of algebras for the functor $L:\mathcal A\to\math
 ### Introduction
 
 Given an adjunction $L\dashv R:\mathcal C\to \mathcal X$ such that the right-adjoint $R$ is monadic (or of descent type) all objects $A\in\mathcal C$ have a presentation "by generators and relations"
+
 $$LRLRA\rightrightarrows LRA \to A.$$
 
 In words, $A$ is the quotient of the free algebra $LRA$ over generators $RA$ by equations in $LRLRA$.
@@ -73,9 +74,11 @@ A functor $H : \mathcal A \to \mathcal B$ between slfp categories is called **al
 ### Step 1
 
 Let $U:\mathcal A\to Set$ be a variety and $F\dashv U$. Define
+
 $$\Psi:S(\mathcal A)\to S(Set)$$
 
 via $\Psi L = ULF$ and 
+
 $$\Phi: S(Set) \to S(\mathcal A)$$
 
 via $\Phi T = FTU$. 
@@ -106,6 +109,7 @@ This gives us a representation of $T$ as a functor by operations and equations w
 **Theorem:** A functor on a variety has a presentation by operations and equations iff the functor preserves sifted colimits.
 
 To prove "if", one shows that every sifted colimit preserving functor $L$ on a variety is a quotient
+
 $$FGUA\stackrel {q_A} \longrightarrow LA$$
 
 where $GX=\coprod_{n\in\mathbb N}ULFn\times X^n$. 
@@ -115,7 +119,9 @@ where $GX=\coprod_{n\in\mathbb N}ULFn\times X^n$.
 
 [^sigma]: Note that $(\sigma,v:n\to UA)$ is a modal formula $\Delta(a_1,\ldots a_n)$ where $\Delta=\sigma$ and $a_i=v(i)$.
 
-In particular the $(\sigma,v:n\to UA)$ are modal formulas $$\Delta(a_1,\ldots a_n)$$ 
+In particular the $(\sigma,v:n\to UA)$ are modal formulas 
+
+$$\Delta(a_1,\ldots a_n)$$ 
 
 where $\Delta=\sigma$ and $a_i=v(i)$.
 

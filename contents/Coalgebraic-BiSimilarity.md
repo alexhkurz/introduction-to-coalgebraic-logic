@@ -1,6 +1,6 @@
 # Coalgebraic (Bi)Similarity
 
-([previous](https://hackmd.io/@alexhkurz/r1SJ8lizO))
+(draft ... references to be added)
 
 One of the main contributions of coalgebra to computer science is to provide the minimal abstract setting allowing us to account for various different notions of simulation and bisimulation in a uniform way with the help of a single simple parameter, that of a functor $T$ on a category $\mathcal C$. 
 
@@ -15,6 +15,7 @@ In the following we will define bisimilarity for set-coalgebras and then look at
 Every functor $T:\sf Set\to Set$ induces a notion of $T$-bisimilarity on elements of $T$-coalgebras $X\to TX$.
 
 **Definition:** Bisimilarity (behavioural equivalence) $\simeq$ is the smallest equivalence relation between elements $(x,X\to TX)$ of coalgebras induced by pairs 
+
 $$(x,X\to TX)\  \simeq\  (f(x),Y\to TY)$$
 
 where $f:X\to TX$ is a coalgebra morphism.
@@ -23,6 +24,7 @@ Intuitively, bisimilarity captures that what is preserved by homomorphisms. [^fh
 
 
 **Remark (2nd Definition):** Equivalently, this definition can be formulated using cospans. Two elements of two coalgebras are bisimilar (behaviourally equivalent) 
+
 $$(x,X\to TX)\  \simeq\  (y,Y\to TY)$$
 
 if there are coalgebra morphism $f,g$ with $f(x)=g(y)$. 
@@ -49,6 +51,7 @@ We briefly indicate that essentially the same approach to bisimilarity works for
 Let $T:\sf Ord\to Ord$ be a functor. 
 
 **Definition:** Two elements of two coalgebras are (bi)similar 
+
 $$(x,X\to TX)\  \lesssim\  (y,Y\to TY)$$
 
 if there are coalgebra morphism $f,g$ such that $f(x)\le g(y)$.
@@ -63,9 +66,9 @@ As before we obtain
 
 ## Other Base Categories
 
-One could continue here now with looking at other base categories such as metric spaces, topological spaces, nominal sets, various categories of algebras, ...
+One could continue here with looking at other base categories such as metric spaces, topological spaces, nominal sets, various categories of algebras, ...
 
-I don't do this (for now) because the literature is already big and growing and the new interesting phenomena that arise are particular to the base category one chooses. 
+I don't do this (for now) because the literature is big and growing and the new interesting phenomena that arise are particular to the base category one chooses. 
 
 ## References
 
@@ -77,7 +80,7 @@ Coalgebra: Aczel, Aczel-Mendler, Barr, Rutten, Worrell, Kurz, Staton, Hughes-Jac
 
 Mac Lane: Categories for the Working Mathematician. 1971.
 
-[^duality]: This can be seen from the fact that the theory of coalgebras over $\mathcal C$ is  the theory of algebras over $\mathcal C^{\rm op}$. But the theory that can be developed simultaneously for algebra and coalgebra is quite small. Intuitively, it only consists of those "systems" that can be defined by *unary* operations such as deterministic automata.
+[^duality]: This can be seen from the fact that the theory of coalgebras over $\mathcal C$ is  the theory of algebras over $\mathcal C^{\rm op}$. But the theory that can be developed simultaneously for algebra and coalgebra is quite small in the sense that it excludes most features that are of particular interest to the algebraist or the coalgebraist. Intuitively, the intersection of algebra and coalgebra only consists of those "systems" that can be defined by *unary* operations such as deterministic automata or, more generally, presheaves.
 
 [^fhom]: This notion makes sense in any category which has a forgetful functor to $\sf Set$. Why is it trivial for categories of algebras?
 

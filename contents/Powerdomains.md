@@ -1,10 +1,19 @@
-# A Short Review of Powerdomains
+---
+tags: coalgebraic logic, coalgebraic modal logic, maths, functorial modal logic
+---
+
+# Powerdomains
 
 Powerdomains can be seen as modelling non-determinstic choice. They appear in various areas of mathematics and computer science. 
+
+We review the basic relationships between lower/upper powerdomains, forward and backward simulation, and $\Diamond$ and $\Box$ modalities.
+
+It may be worth to read the [Summary](https://hackmd.io/@alexhkurz/r1SJ8lizO#Summary) first.
 
 ## An Axiomatic Account of Choice
 
 A somewhat minimal axiomatisation of a choice operator $\odot$ is
+
 \begin{gather}
 (x\odot y)\odot z= x\odot (y\odot z)\\
 x\odot y = y\odot x\\
@@ -29,20 +38,26 @@ What is axiomatised here is choice as a set of alternatives. Given a set $X$, we
 
 More often than not, the reason to investigate choice is to model dynamic scenarios where agents change state by making choices. Such dynamical systems are known as *coalgebras* for the powerset functor and also as  *transition systems* in process algebra and as *non-determinstic automata* in the theory of automata and formal languages and as **Kripke frames** in the theory of modal logic.
 
-Mathematically, a coalgebra is a function $X\to\mathcal PX$. A coalgebra morphism $$(X\stackrel \xi \to \mathcal PX)
-\stackrel f\longrightarrow (X'\stackrel {\xi'} \to \mathcal PX')$$
+Mathematically, a coalgebra is a function $X\to\mathcal PX$. A coalgebra morphism 
+
+$$
+(X\stackrel \xi \to \mathcal PX)
+\stackrel f\longrightarrow (X'\stackrel {\xi'} \to \mathcal PX')
+$$
 
 is a function $f:X\to X'$ satisfying 
+
 $$\mathcal Pf\circ \xi = \xi\circ f.$$ 
 
 In other words, $f$ makes the following square commute.
 
-![](https://i.imgur.com/wpaU0or.png =300x)
+![](https://i.imgur.com/wpaU0or.png)
 
 
 Of course, a coalgebra on $X$ is nothing but a set with a relation $R\subseteq X\times X$. But coalgebra morphisms do not only preserve the relation but also reflect it in a particular way. Key to this is the following.
 
 **Exercise on (bi)simulation:** We write $xRy$ for $y\in\xi(x)$. The following are equivalent conditions for $f$ being a **forward simulation**.
+
 \begin{gather}
 \mathcal Pf\circ \xi \ \subseteq \ \xi'\circ f\\
 xRy \ \Rightarrow \ f(x) R' f(y)\\
@@ -50,6 +65,7 @@ x'=f(x) \ \Rightarrow \ \forall y\in\xi(x)\,.\,\exists y'\in\xi'(x')\,.\,y'=f(x'
 \end{gather}
 
 The following are equivalent conditions for $f$ being a **backward simulation**.
+
 \begin{gather}
 \mathcal Pf\circ \xi \ \supseteq \ \xi'\circ f\\
 f(x)R'y' \ \Rightarrow \ \exists y\,.\, xRy \ \& \  y'=f(y)\\
@@ -64,61 +80,91 @@ The advantage of the first conditions is that they are parametric in the functor
 
 ## Powerdomains on Posets
 
-The "domain" in powerdomain comes from domain theory and the theory of programming languages. It is well-known that in order to model recursively defined programs and types one needs to extend the types-as-sets paradigm to types-as-domains. There are different ways to define domains. Typically, they  involve some kind of complete order or complete metric structure that supports the taking of certain limits to interpret recursively defined functions. In this section, I simplify by ignoring completeness and only look at domains as ordered sets. 
+The "domain" in powerdomain comes from domain theory and the theory of programming languages. It is well-known that in order to model recursively defined programs and datatypes in general one needs to extend the types-as-sets paradigm to types-as-domains. There are different ways to define domains. Typically, they  involve some kind of complete order or complete metric that supports the taking of certain limits to interpret recursively defined functions. In this section, I simplify by ignoring completeness and only look at domains as ordered sets. 
 
 ### Functors
 
 The powerset functor gives rise to three different powerdomains on the category of partial orders according to whether we enforce one of one of the following two alternatives.
+
 \begin{gather}
 x\le x\odot y\\
 x\ge x\odot y
 \end{gather}
 
-- The functor $$\mathcal P^\rm c:\sf Pos \to Pos$$ maps a poset $(X,\le)$ to the set of convex subsets $\mathcal PX$. The order on convex subsets is defined as follows. [^back-forth] [^Pjust]
+#### Convex Powerdomain
+
+The functor 
+
+$$\mathcal P^\rm c:\sf Pos \to Pos$$ 
+
+maps a poset $(X,\le)$ to the set of convex subsets $\mathcal PX$. The order on convex subsets is defined as follows. [^back-forth] [^Pjust]
+
 \begin{align}
 a\le b\  \quad \textrm{ if } \quad & \forall x\in a\,.\,\exists y\in b. x\le y \quad \textrm{ and }\\
 &\forall y\in b\,.\,\exists x\in a. x\le y\\
 \end{align}
 
-	If $X$ is discrete then $\mathcal P^\rm c X$ is just  $\mathcal PX$.
+If $X$ is discrete then $\mathcal P^\rm c X$ is just  $\mathcal PX$ and $\le$ is equality.
 
-- The functor $$\mathcal D:\sf Pos \to Pos$$ maps a poset $(X,\le)$ to the set of downward closed subsets (downsets) $\mathcal DX$. The order on subsets $a,b\subseteq X$ is defined as [^Dpre] [^Djust]
+#### Lower Powerdomain 
+
+The functor 
+
+$$\mathcal D:\sf Pos \to Pos$$ 
+
+maps a poset $(X,\le)$ to the set of downward closed subsets (downsets) $\mathcal DX$. The order on subsets $a,b\subseteq X$ is defined as [^Dpre] [^Djust]
+
 \begin{align}
 a\le b\  \quad \textrm{ if } \quad & \forall x\in a\,.\,\exists y\in b. x\le y
 \end{align}
 
-	which amounts to inclusion of downsets. If $X$ is discrete then $\mathcal DX$ is $\mathcal PX$ ordered by $\subseteq$.
+which amounts to inclusion of downsets. If $X$ is discrete then $\mathcal DX$ is $\mathcal PX$ ordered by $\subseteq$.
 
-- The functor $\mathcal U:\sf Pos \to Pos$ maps a poset $(X,\le)$ to the set of upward closed subsets (upsets) $\mathcal UX$. The order on upsets is defined as [^Ujust]
+#### Upper Powerdomain
+
+The functor $\mathcal U:\sf Pos \to Pos$ maps a poset $(X,\le)$ to the set of upward closed subsets (upsets) $\mathcal UX$. The order on upsets is defined as [^Ujust]
+
 \begin{align}
 a\le b\  \quad \textrm{ if } \quad & \forall y\in b\,.\,\exists x\in a. x\le y
 \end{align}
 
-	which amounts to reverse inclusion of upsets. If $X$ is discrete then $\mathcal UX$ is $\mathcal PX$ ordered by $\supseteq$.
+which amounts to reverse inclusion of upsets. If $X$ is discrete then $\mathcal UX$ is $\mathcal PX$ ordered by $\supseteq$.
 	
 ### Coalgebras
 
 As noted above, coalgebras $X\to\mathcal PX$ are in bijective correspondence with Kripke frames $(X,R)$. This continues to hold in the ordered setting under appropriate conditions on the relation $R$.
 
 $(X,R)$ is an $\mathcal U$-coalgebra iff $R$ is a weakening relation, that is, iff 
+
 $$\frac{x'\le x R y \le y'}{x'R y'}$$
 
 $(X,R)$ is an $\mathcal D$-coalgebra iff
+
 $$\frac{x'\ge x R y \ge y'}{x'R y'}$$
 
 **Example:** Let $X=\{x,y\}$ be a Kripke frame where $x$ has no successor and $y$ is reflexive. We can turn $X$ into a $\mathcal U$-coalgebra by setting $x\le y$ and into a $\mathcal D$-coalgebra by setting $x\ge y$.
 
 
-
 ### (Bi)simulations
 
-As for set-functors, any functor on ordered sets gives rise to a canonical notion of **(bi)simulation**,  [cospan bisimulation](https://hackmd.io/@alexhkurz/HyQxhrh_v). In case of $\mathcal P^\rm c$-coalgebras (bi)simulation is bisimulation, in case of $\mathcal U$-coalgebras (bi)simulation is forward simulation and in case of  $\mathcal D$-coalgebras (bi)simulation is backward simulation.
+As for set-functors, any functor on ordered sets gives rise to a canonical notion of **(bi)simulation**,  [cospan bisimulation](https://hackmd.io/@alexhkurz/HyQxhrh_v). In case of $\mathcal P^\rm c$-coalgebras (bi)simulation is bisimulation, in case of $\mathcal U$-coalgebras (bi)simulation is backward simulation and in case of  $\mathcal D$-coalgebras (bi)simulation is forward simulation.
 
-**Fact:** The largest preorder on a $\mathcal U$-coalgebra ($\mathcal D$-coalgebra) compatible with the coalgebra structure is the largest forward-simulation (backward simulation) on that coalgebra. [^compatible]
+**Fact:** The largest preorder on a $\mathcal U$-coalgebra ($\mathcal D$-coalgebra) compatible with the coalgebra structure is the largest backward-simulation (forward simulation) on that coalgebra. [^compatible]
 
 [^compatible]: Compatible means that the quotient by the preorder is again a coalgebra.
 
-To understand this better we need to know more about [coalgebraic (bi)similarity](https://hackmd.io/@alexhkurz/SJs53demu).
+To understand this better it helps to know more about [coalgebraic (bi)similarity](https://hackmd.io/@alexhkurz/SJs53demu). But I will try to shortcut this here, with more details available at [cospan (bi)simulation](https://hackmd.io/@alexhkurz/HyQxhrh_v).
+
+In order to define the notion of (bi)simulation induced by $\mathcal U$ or $\mathcal D$ we proceed as follows.
+- A relation $R$ from $X$ to $Y$ will be represented as an order $\bf R$ on the disjoint union $X+Y$. 
+- Because of the universal property of the coproduct, there always will be a coalgebra ${\bf R}\to T{\bf R}$ where $T$ is either $\mathcal U$ or $\mathcal D$.
+- $R$ is a (bi)simulation iff ${\bf R}\to T{\bf R}$ is monotone.
+
+Recall from the definition of  $\mathcal D$ and $\mathcal U$ how these functors act on ordered sets.[^DU] Instantiating this procedure it is not difficult to see the following.
+
+**Proposition on $\mathcal D$- and $\mathcal U$-(bi)simulation:** $\mathcal D$-(bi)simulation is forward-simulation and $\mathcal U$-(bi)simulation is backward-simulation.
+
+
 
 ### Simulations for Set-Coalgebras
 
@@ -126,7 +172,7 @@ Each functor $T:\sf Set\to Set$ induces a notion of $T$-bisimulation.
 
 What about simulations?
 
-We first note that each functor $T:\sf Ord\to Ord$ induces a notion of $T$-(bi)simulation.[^Ord] I write (bi)simulation here because technically this notion works much in the same way for $\sf Set$-functors and for $\sf Ord$-functors. But it encompasses both simulations and bisimulations, depending on the functor.
+We first note that each functor $T:\sf Ord\to Ord$ induces a notion of $T$-(bi)simulation.[^Ord] I write (bi)simulation here because technically this notion works much in the same way for $\sf Set$-functors and for $\sf Ord$-functors. But for $\sf Ord$-functors, it encompasses both simulations and bisimulations, depending on the functor.
 
 A general way to introduce notions of simulation for $\sf Set$ functors is as follows. Let $T:\sf Set\to Set$ be a functor. Extend $T$ to a functor $T':\sf Ord\to Ord$.[^extend] Then restrict $T'$-(bi)simulation to $T$-coalgebras.
 
@@ -157,13 +203,15 @@ To remember how taking upsets and downsets interacts with the order, it is helpf
 
 ## Modal Logic
 
-... (under construction ... enter at your own risk) ...
-
 We have seen that coalgebra morphisms express a particular back-and-forth condition. It is interesting to study its logical ramifications.
 
-The key is to ask: Which logic is invariant under coalgebra morphism? 
+The key questions are: Which logic is invariant under coalgebra morphisms (bisimulation)? Which logic is invariant under forward (or backward) simulation?
 
-The answer is given by the "bounded quantifiers" $\Box$ and $\Diamond$. Usually they are considered as syntactic operations on formulas. But I want to treat them here as operations on "semantic" propositions, that is, on subsets of $X$ where $\xi:X\to\mathcal PX$ is a coalgebra. We define
+### The Logic of Bisimulation
+
+The answer is given by the "bounded quantifiers" $\Box$ and $\Diamond$. Usually they are considered as syntactic operations on formulas. But I want to treat them here as operations on "semantic" propositions, that is, on subsets of $X$ where $$\xi:X\to\mathcal PX$$ 
+
+is a coalgebra. We rewrite the usual definition of the semantics of $\Box$ and $\Diamond$ in terms of the coalgebra structure $\xi$ as follows.
 
 \begin{gather}
 \Box a = \xi^{-1}(\{b\subseteq X \mid b\subseteq a\})\\
@@ -171,6 +219,7 @@ The answer is given by the "bounded quantifiers" $\Box$ and $\Diamond$. Usually 
 \end{gather}
 
 **Exercise:** The following are a direct consequence of the definition above.
+
 \begin{gather}
 x\in \Box a \quad \Longleftrightarrow \quad \forall y\in\xi(x)\,.\, y\in a\\
 x\in \Diamond a \quad \Longleftrightarrow \quad \exists y\in\xi(x)\,.\, y\in a
@@ -197,7 +246,9 @@ x Rx' \ \ \textrm{ only if } \quad
 
 **Facts:** Two elements of two coalgebras are bisimilar iff there is a bisimulation relating them. If two elements of two coalgebras are bisimular then they satisfy the same modal formulas. The converse is true on finite coalgebras (or if we extend modal logic by infinitary conjunctions). 
 
-A finer analysis is possible and it sheds light on the ordered generalisations of the powerset functor. 
+### Logics of Simulation
+
+A finer analysis, separating forward and backward simulation, is possible. It also sheds light on the ordered generalisations of the powerset functor. 
 
 Let me write ${\bf K}^\Box$ and ${\bf K}^\Diamond$ (this is not standard notation) for the negation-free fragment of $\bf K$ that only contains $\Box$ (respectively $\Diamond$) formulas. It now turns out that preservation of ${\bf K}^\Box$-formulas and preservation of ${\bf K}^\Diamond$-formulas each corresponds to one direction of the definition of bisimulation.
 
@@ -206,7 +257,32 @@ Let $f$ be a coalgebra morphism and $\phi\in\bf K^\Box$. Then
 $$x\in\phi \quad \Longleftrightarrow \quad $$
 -->
 
-...
+As the *Exercise on (bi)simulation* above shows, ${\bf K}^\Diamond$-formulas are invariant under forward-simulation and ${\bf K}^\Box$-formulas are invariant under backward-simulation.
+
+On the other hand, we know from the *Proposition on $\mathcal D$- and $\mathcal U$-(bi)simulation* that $\mathcal D$-(bi)simulation is forward-simulation and $\mathcal U$-(bi)simulation is backward simulation.
+
+We now assembled all the pieces needed for the table below.
+
+## Summary
+
+To read the table recall that, for a poset $X$,  the elements of $\mathcal DX$ are downsets ordered according to $\ a\le b \ \Leftrightarrow\  a\subseteq b$ and the elements of $\mathcal UX$ are upsets ordered as  $\ a\le b \ \Leftrightarrow\  a\supseteq b$ .
+
+|$T$|$\mathcal D$|$\mathcal U$|
+|:---:|:---:|:---:|
+|also known as|Hoare powerdomain|Smyth powerdomain|
+|$\odot$ | $\cup$ | $\cup$ | 
+|$a\le b\in TX$|$\forall x\in a\,.\,\exists y\in b\,.\, x\le y$|$\forall y\in b\,.\,\exists x\in a\,.\, x\le y$|
+|semilattice + ...| $a\le a\odot b$ | $a \odot b \le a$
+(bi)simulation | forward | backward
+logic | $\Diamond$ | $\Box$ |
+$X\stackrel R \longrightarrow TX$ | $\frac{x'\ge x\,R\,y'\ge y}{x'\,R\,y'}$ | $\frac{x'\le x\,R\,y'\le y}{x'\,R\,y'}$
+||angelic | demonic 
+
+Maybe the most principled way to remember that $\mathcal U$ gives $\Box$ and $\mathcal D$ gives $\Diamond$ is via a direct analysis of the predicate liftings of these functors, see my note on [monotone predicate liftings](https://hackmd.io/@alexhkurz/Sk4WH_fNd).
+
+A choice satisfying $a\le a\odot b$ is sometimes called angelic because, whatever $a\odot b$ is, it is better than what I have, $a$. Dually, a demon would make sure that $a\odot b$ is not better than $a$ and not better than $b$.
+
+
 
 ## Generalisations
 
@@ -220,7 +296,7 @@ Vietoris defined a powerdomain on certain topological spaces. A good introductio
 
 The theory can also be developed internally in a topos.
 
-Many results on powerdomains generalise to quantale enriched categories. And some even survives the move to categories or higher categories.
+Many results on powerdomains generalise to quantale enriched categories. And some even survive the move to categories or higher categories. The analogy here is that the powerset functor, or rather $\mathcal U$ and $\mathcal D$, generalise to taking presheaves.
 
 ... 
 
@@ -228,13 +304,30 @@ Many results on powerdomains generalise to quantale enriched categories. And som
 
 (very incomplete)
 
+### Topology
+
 Vietoris
 
 Johnstone: Stone Spaces. 1982. See in particular Chapter III.4. On page 112 one finds the definitions of $\Box$ (called $t$) and $\Diamond$ (called $m$). This also works for ordered compact Hausdorff spaces and many other settings, see Guram Bezhanishvili's talk.
 
-van Benthem
+G. Bezhanishvili: Talk on [The hit-or-miss toplogy](https://udenver.zoom.us/rec/play/7RjX2tLeKT1k77hAYU5ESknnw_mF81T3pQyOb9GwVCrfmJTcUVZ1UCB5J4bZ6arcFfDV7e2x-AXpZ9UM.S7zfu-HmUau4bDIJ?continueMode=true&_x_zm_rtaid=z4OFcm27QFSp69I_BMOUkQ.1614750538907.e7098d2d8761d7702e11f6228f8a9179&_x_zm_rhtaid=606). (Passcode: ?D3q#^mw).
 
-Plotkin, Winskel, Abramsky, ...
+### Modal Logic
+
+van Benthem, Segerberg, Goldblatt, ...
+
+### Domain Theory
+
+[Plotkin 1976](https://homepages.inf.ed.ac.uk/gdp/publications/Powerdomain_Construction.pdf), [Smyth 1978](https://homepages.inf.ed.ac.uk/gdp/publications/Dijkstras_Predicate_Transformers.pdf)  [^smyth], [Plotkin 1980](https://homepages.inf.ed.ac.uk/gdp/publications/Dijkstras_Predicate_Transformers.pdf), [Apt-Plotkin 1981](https://ir.cwi.nl/pub/10433), [Winskel 1985](https://core.ac.uk/display/82360862) [^winskel], Section 6.2 of [Abramsky-Jung 1994](https://www.cs.bham.ac.uk/~axj/pub/papers/handy1.pdf), [Martin-Curtis-Rewitzky 2007](https://www.sciencedirect.com/science/article/pii/S0167642306002115), Section 3 of [Goubault-Larreque 2010](https://www.informatics.sussex.ac.uk/events/domains9/MSCS/Goubault.pdf), ...
+
+[^smyth]: On page 26 we find 
+    ![](https://hackmd.io/_uploads/ryJYrcOCt.png)
+
+[^winskel]: On page 128 we find
+    ![](https://hackmd.io/_uploads/r17WO9_0K.png)
+
+
+### Coalgebra
 
 Aczel: Non-well founded set theory. Aczel-Mendler, ...
 
@@ -252,20 +345,31 @@ Litak etal
 
 ...
 
+More references can also be found in the following papers. Kurz-Palmigiano [Coalgebras and Modal Expansions of Logics](https://alexhkurz.github.io/papers/KP-cmcs04/cmcs04.pdf), Kapulkin-Kurz-Velebil [Expressiveness of Positive Coalgebraic Logic](http://www.aiml.net/volumes/volume9/Kapulkin-Kurz-Velebil.pdf), Bilkova-Kurz-Petrisan-Velebil [Relation lifting, with an application to the many-valued cover modality](https://arxiv.org/pdf/1307.4682v3.pdf), Balan-Kurz-Velebil [Positive Fragments of Coalgebraic Logics](https://arxiv.org/pdf/1402.5922.pdf).
+
 [^back-forth]: Note how the back-and-forth pattern of bisimulations appears again. 
 
 [^Pjust]: We could have defined this powerdomain as the set of all subsets instead of restricting to convex subsets. Then $\mathcal PX$ is a preorder but may not be a partial order. This gives the right definition of the "convex" powerdomain on preorders. In fact, for a preorder $(X,\le)$ and $a,b\subseteq X$ we have $a\le b$ iff they have the same posetal quotients of their convex closures.
 
 [^Dpre]: Note that the definition of the order $\le$ makes sense for aribtray subsets of $X$ (but may only be a preorder then). 
 
-[^Djust]: The justification for choosing this half of the convex powerdomain is the following. Two subsets $a,b\subseteq X$ are in the relation $a\le b$ iff the downset closure of $a$ is a subset of the downset closure of $b$. 
+[^Djust]: The justification for choosing this half of the convex powerdomain is the following. Two subsets $a,b\subseteq X$ are in the relation $a\le b$ iff the downset closure of $a$ is a subset of the downset closure of $b$. It follows that if $X$ is a poset then the order $\le$ is also a poset when restricted to downsets.
 
-[^Ujust]: As before, the definition of the order makes sense for aribtrary subsets $a,b\subseteq X$ and we can use this observation to extend the powerset functor to preorders. One reason one may want to restrict to upsets and to partial orders is that $a\le b$ iff the upset of $b$ is a subset of the upset of $a$.
+[^Ujust]: As before, the definition of the order makes sense for aribtrary subsets $a,b\subseteq X$ (and we can use this observation to extend the powerset functor to preorders). Note that $a\le b$ iff the upset of $b$ is a subset of the upset of $a$. It follows that if $X$ is a poset then the order $\le$ is also a poset when restricted to upsets.
+
+[^DU]: The order on $\mathcal DX$ is given by \begin{align}
+a\le b\  \quad \textrm{ if } \quad & \forall x\in a\,.\,\exists y\in b. x\le y
+\end{align}
+
+	and the order on $\mathcal UX$ by
+	\begin{align}
+a\le b\  \quad \textrm{ if } \quad & \forall y\in b\,.\,\exists x\in a. x\le y
+\end{align}
 
 [^Ord]: I like to write $\sf Ord$ if I do not want to commit to using preorders or posets. If you want to be specific let $\sf Ord$ be the category of preorders.
 
 [^extend]: Let $D:\sf Set\to Ord$ be the "discrete" embedding. $T'$ is an *extension* of $T$ if there is a natural transformation $DT\to T'D$. For example, if $T=\mathcal P$ and $T'=\mathcal U$, then we have the bijection $(\mathcal PX,=)\to(\mathcal U,\subseteq)$.
 
-[^bisimilar]: Precisely: Two elements are bisimilar if they are in the same connected component of the category of elements of the forgetful functor $\sf Coalg(\mathcal P)\to Set$
+[^bisimilar]: See the note on [Coalgebraic (Bi)Similarity](https://hackmd.io/@alexhkurz/SJs53demu) for more.
 
 

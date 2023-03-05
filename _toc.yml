@@ -2,6 +2,37 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: contents/Introduction-to-Modal-Logic.md
+root: intro.md
+
+parts:
+  - caption: Modal Logic
+    chapters:
+    - file: contents/Introduction-to-Modal-Logic.md
+  - caption: Overview or Coalgebraic Logic
+    chapters:
+    - file: contents/Introduction-to-Coalgebraic-Logic.md
+    - file: contents/The-Origins-of-Coalgebra-in-Domain-Theory.md
+    - file: contents/The-Landscape-of-Coalgebraic-Logic.md
+  - caption: Paradigmatic Examples
+    chapters:
+    - file: contents/Powerdomains.md
+    - file: contents/Neighbourhood-Frames.md
+  - caption: Introduction to Coalgebraic Logic
+    chapters:
+    - file: contents/Coalgebraic-BiSimilarity.md
+    - file: contents/Basic-Coalgebraic-Logic.md
+    - file: contents/Predicate-Liftings.md
+    - file: contents/Monotone-Predicate-Liftings.md
+    - file: contents/Expressive-Predicate-Liftings.md
+    - file: contents/Relation-Lifting.md
+    - file: contents/Moss-Coalgebraic-Logic.md
+  - caption: Functorial Modal Logic
+    chapters: 
+    - file: contents/Introduction-to-Functorial-Modal-Logic.md
+    - file: contents/Presenting-Functors-by-Operations-and-Equations.md
+    - file: contents/Boolean-Logic-for-Set-Coalgebras.md
+    - file: contents/Semantics.md
+    - file: contents/Completeness.md
+    - file: contents/Expressivity.md
+    - file: contents/Translations.md
+

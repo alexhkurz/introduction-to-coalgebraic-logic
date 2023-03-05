@@ -1,16 +1,8 @@
 $\newcommand{\sem}[1]{\mathopen{[\![} #1 \mathclose{]\!]}}$
 
-# FML -  Basic Modal Logic
+# Basic Coalgebraic Logic
 
-(under construction)
-
-Previous:
- - [Introduction](https://hackmd.io/@alexhkurz/r1t-Y6f8L)
-
-Next:
- - [Example: Modal Logic on Posets](https://hackmd.io/uvH1hEqBTE6uJKlI0qSRAA)
-
----
+(draft ... references to be added)
 
 ## Idea
 

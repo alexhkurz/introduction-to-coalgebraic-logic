@@ -1,6 +1,6 @@
 # Relation Lifting
 
-(draft ... [up](https://hackmd.io/@alexhkurz/ryrkkYZZc))
+(draft)
 
 Extending a functor from functions to relations is important to coalgebra for at least two reasons. Relation lifting can be used to define bisimulations and also to define Moss's coalgebraic logic. In the latter case, the idea is to apply the lifted functor to the satisfiability relation.
 
@@ -12,9 +12,12 @@ In the following let $\sf Rel$ be the category which has sets as objects and rel
 
 The idea of the span-based relation lifting of a functor $T$ is to "tabulate" a relation $R$ by a span $X\stackrel p \leftarrow R\stackrel q\rightarrow Y$ and then to apply the functor $T$ to the projections, obtaining $TX\stackrel {Tp} \longleftarrow TR\stackrel {Tq}\longrightarrow TY$.
 
-**Definition:** Let $T:\sf Set\to Set$ and $X\stackrel p \leftarrow R\stackrel q\rightarrow Y$ be a relation. Then $$\overline T:\sf Rel\to Rel$$ 
+**Definition:** Let $T:\sf Set\to Set$ and $X\stackrel p \leftarrow R\stackrel q\rightarrow Y$ be a relation. Then 
+
+$$\overline T:\sf Rel\to Rel$$ 
 
 is the relation given by 
+
 $$\overline TR = \{(a,b) \in TX\times TY \mid \exists w\in TR\,.\, Tp(w)=a \ \& \ Tq(w)=b\}$$
 
 **Remark:** This formulation is specific to set-functors, but can be generalised to other base categories.
@@ -38,9 +41,11 @@ Thus, in order to apply a set-functor $T$ to $j$ and $k$, we need extend $T$ fro
 **Definition:** Let $(X,\le)$ be a pre-order. Write $X\stackrel p \leftarrow {\le}\stackrel q\rightarrow X$ for the two projections. Then $\widetilde T (X,\le)$ has carrier $TX$ and the order on $\widetilde T(X,\le)$
 
 is the smallest order containing 
+
 $$\{(a,b) \in TX\times TX \mid \exists w\in T(\le)\,.\, Tp(w)=a \ \& \ Tq(w)=b\}.$$
 
 This defines a functor 
+
 $$\widetilde T:\sf Ord\to Ord$$
 
 where $\sf Ord$ can be preorders or posets.
@@ -62,9 +67,11 @@ In domain theory, this is also known as the Egli-Milner order. When restricted t
 ## Cospan-Based Relation Lifting
 
 To cotabulate a relation $R\subseteq X\times Y$ by a cospan
+
 $$X\stackrel j \rightarrow \mathbf R\stackrel k\leftarrow Y$$
 
 we need to recall the **collage** $\bf R$ of a relation $R$. This notion can also be defined in case $X$ and $Y$ are ordered sets and $R$ is **weakening-closed**, that is,
+
 $$\frac{x'\le x\,R\, y\le y'}{x'\,R\,y'}.$$
 
 We give the more general definition, because it shows that the cospan-based relation lifting cannot only be used to extend set-functors but also ordered functors.
@@ -74,6 +81,7 @@ If $R\subseteq X\times Y$ is a weakening relation, then the **collage** $\bf R$ 
 Given a functor $T:\sf Set\to Set$, [^Ord] we can use the collage to give a cospan-based definition of relation lifting.  
 
 **Definition:** Let $R\subseteq X\times Y$. Then
+
 $$\widehat T: \sf Rel\to Rel$$ 
 
 is defined$(a,b)\in \widehat TR$ if $a\le b$ in $\widetilde T\bf R$.

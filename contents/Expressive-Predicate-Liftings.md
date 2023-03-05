@@ -1,11 +1,13 @@
 # Expressive Predicate Liftings
 
-(draft ... [predicate liftings](https://hackmd.io/@alexhkurz/SJcARPMVO) ... [monotone predicate liftings](https://hackmd.io/@alexhkurz/Sk4WH_fNd))
+(draft ... references to be added)
 
 For every functor $T:\sf Set\to Set$ there is a natural transformation ($n$ runs over all positive integers and the product is taken over all finitary predicate liftings)
+
 $$ TX\to \prod 2^{({2^n}^X)}$$
 
 which, for a choice of predicate lifting $\triangle: T(2^n)\to 2$ and predicate $\phi:X\to 2^n$, applies
+
 $$TX\stackrel {T\phi} \longrightarrow T(2^n)\stackrel\triangle\longrightarrow 2$$
 
 to elements of  $TX$.

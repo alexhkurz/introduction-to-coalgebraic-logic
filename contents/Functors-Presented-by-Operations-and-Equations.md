@@ -1,6 +1,6 @@
 # Functors presented by operations and equations
 
-(under construction ... [index](https://hackmd.io/@alexhkurz/Hy1oUrS4u) )
+(under construction ... [up](https://hackmd.io/@alexhkurz/ryrkkYZZc) )
 
 ## Example: Functors on Distributive Lattics
 
@@ -11,6 +11,7 @@
    - presentations of functors L on a variety correspond, via Stone duality, to logics for coalgebras [(Diagram (4), Theorem 27)](https://alexhkurz.github.io/papers/Fossacs06/fossacs06.pdf).
 
 3. Varieties are, in particular, locally finitely presentable (lfp). (The finitely presentable objects are exactly the finite $DL$s.) That $DL$ is lfp means that every $DL$ is a filtered colimit of finite $DL$s. This result can also be phrased by saying that the inclusion of finitely presentable $DL$s
+
 $$DL_{fp}\to DL$$
 
    is dense and that filtered colimits are a density presentation of this inclusion.
@@ -21,6 +22,7 @@ $$DL_{fp}\to DL$$
     - The solution, then, is to work with a density presentation of the free functor  $Set_{fin}\to DL$, or, equivalently, with a density presentation of the functor $DL_{fgf}\to DL$, where $DL_{fgf}$ is the category of finitely generated free algebras.
   
 4. Let $DL_{fgf}$ be the category of **finitely generated free** $DL$s. Then the (ordinary) inclusion
+
 $$DL_{fgf}\to DL$$
 
    is dense and filtered colimits and reflexive coequalisers are a density presentations.
@@ -38,6 +40,7 @@ $$DL_{fgf}\to DL$$
    What modifications to the setting of [(Velebil and Kurz, 2011)](https://alexhkurz.github.io/papers/velebil-kurz-mscs2011.pdf) are needed to get an account of functors that have presentations by finitary monotone operations in discrete arities?
   
 6. [(Kurz and Velebil, 2017)](https://alexhkurz.github.io/papers/Ordered-algebras.pdf) combines the approaches of 4. and 5. above by considering the inclusion
+
 $$DL_{fgf}\to DL$$
 
    as a Poset-enriched functor. This corresponds to restricting to *discrete* arities (as in 4.) and to *monotone* operations (as in 5.). 
