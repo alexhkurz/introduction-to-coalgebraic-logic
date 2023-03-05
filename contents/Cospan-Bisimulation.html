@@ -59,9 +59,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Cospan Bisimulation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Cospan-Bisimulation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Neighbourhood Coalgebras" href="Neighbourhood-Coalgebras.html" />
+    <link rel="prev" title="Cospan Bisimulation: Overview" href="Cospan-Bisimulation-Introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -275,6 +277,34 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="Translations.html">
                         Translations of Logics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
                       </a>
                     </li>
                 
@@ -495,6 +525,34 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -600,6 +658,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Expressivity.html">Expressivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cospan Bisimulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
+</ul>
 
     </div>
 </nav>
@@ -674,7 +739,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Cospan Bisimulation.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Cospan-Bisimulation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -699,7 +764,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/contents/Cospan Bisimulation.md" target="_blank"
+      <li><a href="../_sources/contents/Cospan-Bisimulation.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -768,6 +833,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#probabilistic-bisimulation">
+   Probabilistic bisimulation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-examples">
    More Examples?
   </a>
@@ -798,29 +868,14 @@ title="Print to PDF"
               
   <section class="tex2jax_ignore mathjax_ignore" id="cospan-bisimulation">
 <h1>Cospan Bisimulation<a class="headerlink" href="#cospan-bisimulation" title="Permalink to this headline">#</a></h1>
-<p>(draft) … (<a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Hy1oUrS4u">index</a>)</p>
-<p>Previous:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://hackmd.io/uvH1hEqBTE6uJKlI0qSRAA">Modal Logic on Posets</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w">Neighbourhood Frames over Posets</a></p></li>
-</ul>
-<p>Next:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://hackmd.io/jxfudz7SQpmj5BzZkyWZIA">Cospan Bisimulation 2</a></p></li>
-</ul>
-<p>Others;</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJZPcfMdv">Bisimulation for Order-Enriched Coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Syilr93_w">Extending Functors from Orders to Relations</a></p></li>
-</ul>
-<hr class="docutils" />
+<p>(draft)</p>
 <p>One of the starting points of coalgebra was Aczel’s discovery, see also (Rutten, 2000), that span-bisimulation, also known as Aczel-Mendler bisimulation, can capture category theoretically the combinatorial notion of bisimulation.</p>
 <p>From an axiomatic point of view, one drawback of span-bisimulations is that, in order to for span-bisimulations to capture the coalgebraic notion of equivalence (aka behavioural equivalence), the coalgebra-functor needs to weakly preserve pullbacks (=preserve weak pullbacks).</p>
 <p>In their proof of the final coalgebra, in order to not depend on this assumption, Aczel and Mendler work with quotients and cospans instead of spans. What they call precongruences can be considered as a precursor to the notion of cospan-bisimulation, defined below.</p>
 <p>One disadvantage of cospans in Set is that they do not allow us to capture general relations. This can be circumvented by working poset enriched.</p>
 <p><a class="reference external" href="https://hackmd.io/V6m2cAy_TdagteE4RG_sbw">Recall</a> that</p>
 <ul class="simple">
-<li><p>for every relation <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span> the collage <span class="math notranslate nohighlight">\(\mathbf R\)</span> is the poset on the disjoint union <span class="math notranslate nohighlight">\(X+Y\)</span> encoding <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+<li><p>for every relation <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span> the collage <span class="math notranslate nohighlight">\(\mathbf R\)</span> is the poset on the disjoint union <span class="math notranslate nohighlight">\(X+Y\)</span> encoding <span class="math notranslate nohighlight">\(R\)</span> (with <span class="math notranslate nohighlight">\(x\le_{\bf R} y \ \Leftrightarrow \  xRy\)</span>),</p></li>
 <li><p>for every functor <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> there is a preordification <span class="math notranslate nohighlight">\(\overline T:Pre\to Pre\)</span>. <a class="footnote-reference brackets" href="#preordification" id="id1">1</a></p></li>
 </ul>
 <p><strong>Definition (cospan-bisimulation):</strong> Let <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> be a functor. A relation <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span> is a <em>cospan bisimulation</em> between coalgebras <span class="math notranslate nohighlight">\(X\stackrel\xi\longrightarrow TX\)</span> and  <span class="math notranslate nohighlight">\(Y\stackrel\nu\longrightarrow TY\)</span> if the unique arrow <span class="math notranslate nohighlight">\(\mathbf R\to\overline T \mathbf R\)</span> that makes the diagram</p>
@@ -837,12 +892,13 @@ TX  &amp; \rightarrow &amp; \overline T\mathbf R &amp; \leftarrow &amp; TY
 <h2>Kripke models<a class="headerlink" href="#kripke-models" title="Permalink to this headline">#</a></h2>
 <p>For a starter we can illustrate what happens in the case of Kripke frames, that is, <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> is the powerset functor.</p>
 <p><strong>Proposition</strong> (Balan et al, 2015): The posetification of <span class="math notranslate nohighlight">\(\mathcal P\)</span> is the convex powerset functor <span class="math notranslate nohighlight">\(\mathcal{\overline P}\)</span>.</p>
-<p>By definition, then, <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation iff
-$<span class="math notranslate nohighlight">\(xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,\)</span>$</p>
+<p>By definition, then, <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation iff</p>
+<div class="math notranslate nohighlight">
+\[xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,\]</div>
 <p>which, by definition<a class="footnote-reference brackets" href="#eglimilner" id="id2">2</a> of the order on <span class="math notranslate nohighlight">\(\mathcal{\overline P}\mathbf R\)</span>, gives us the usual definition of a bisimulation on Kripke frames (to emphasise the coalgebraic nature of Kripke frames we write <span class="math notranslate nohighlight">\(x'\in\xi(x)\)</span> instead of <span class="math notranslate nohighlight">\(x\to x'\)</span> and <span class="math notranslate nohighlight">\(y'\in\nu(y)\)</span> instead of <span class="math notranslate nohighlight">\(y\to y'\)</span>).</p>
 <p><strong>Corollary:</strong> <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation between Kripke frames <span class="math notranslate nohighlight">\(\xi:X\to TX\)</span> and <span class="math notranslate nohighlight">\(\nu:Y\to TY\)</span> iff <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6ed312d6-d9f6-4cf9-9696-dfd74d0061c4">
-<span class="eqno">()<a class="headerlink" href="#equation-6ed312d6-d9f6-4cf9-9696-dfd74d0061c4" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-5b608509-b330-4ffe-84b9-6bc1e2b64624">
+<span class="eqno">(27)<a class="headerlink" href="#equation-5b608509-b330-4ffe-84b9-6bc1e2b64624" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x'\in\xi(x).\exists y'\in\nu(y).  x'Ry' \\[1ex]
 \textrm { and }\\[1ex]
 \forall y'\in\nu(y).\exists x'\in\xi(x).  x'Ry' \\  
@@ -851,8 +907,9 @@ $<span class="math notranslate nohighlight">\(xRy \ \ \Rightarrow \ \ \xi x \le_
 <section id="monotone-neighbourhood-coalgebras">
 <h2>Monotone Neighbourhood Coalgebras<a class="headerlink" href="#monotone-neighbourhood-coalgebras" title="Permalink to this headline">#</a></h2>
 <p>In this subsection we look at coalgebras for the functor <span class="math notranslate nohighlight">\(Up\mathcal P:Set\to Set\)</span> and the associated notion of cospan-bisimulation induced by its posetification <span class="math notranslate nohighlight">\(\overline{Up\mathcal P}\)</span>. For cospan-(bi)simulations for related functors <span class="math notranslate nohighlight">\(Pos\to Pos\)</span> see the section on <a class="reference external" href="https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w">Montone Neighbourhood Coalgebras</a>.</p>
-<p><strong>Proposition</strong> (Corollary 5 in Dahlqvist and Kurz, 2017): The preordification of the monotone neighbourhood functor <span class="math notranslate nohighlight">\(T=Up\mathcal P\)</span> is <span class="math notranslate nohighlight">\(\mathcal D \mathcal U\)</span> ordered by
-$<span class="math notranslate nohighlight">\(A\le B \quad\stackrel{def}\Longleftrightarrow\quad \forall a\in A.\exists b\in B. {\uparrow}b \subseteq {\uparrow} a \ \ \ \textrm{and} \ \ \  \forall b\in B.\exists a\in A. {\downarrow} a \subseteq {\downarrow} b\)</span>$</p>
+<p><strong>Proposition</strong> (Corollary 5 in Dahlqvist and Kurz, 2017): The preordification of the monotone neighbourhood functor <span class="math notranslate nohighlight">\(T=Up\mathcal P\)</span> is <span class="math notranslate nohighlight">\(\mathcal D \mathcal U\)</span> ordered by</p>
+<div class="math notranslate nohighlight">
+\[A\le B \quad\stackrel{def}\Longleftrightarrow\quad \forall a\in A.\exists b\in B. {\uparrow}b \subseteq {\uparrow} a \ \ \ \textrm{and} \ \ \  \forall b\in B.\exists a\in A. {\downarrow} a \subseteq {\downarrow} b\]</div>
 <p>for all <span class="math notranslate nohighlight">\(A,B\in \mathcal D\mathcal UX\)</span>.</p>
 <p>The proof relies on the following lemma, see also Proposition 8.25 in (Hansen, 2003).</p>
 <p><strong>Lemma:</strong>  Let <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span> with projections <span class="math notranslate nohighlight">\(\pi_1:R\to X\)</span>, <span class="math notranslate nohighlight">\(\pi_2:R\to Y\)</span> onto. There is a <span class="math notranslate nohighlight">\(C\in TR\)</span> s.t.</p>
@@ -888,9 +945,10 @@ $<span class="math notranslate nohighlight">\(A\le B \quad\stackrel{def}\Longlef
 \[(a,b)\in \overline{\mathcal P}R \quad \Longleftrightarrow \
 (\forall x\in a.\exists y\in b. xRy) \ \&amp; \  
 (\forall y\in b.\exists x\in a. xRy)\]</div>
-<p><strong>Corollary:</strong> <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation between neighbourhood frames <span class="math notranslate nohighlight">\(\xi:X\to TX\)</span> and <span class="math notranslate nohighlight">\(\nu:Y\to TY\)</span> iff <span class="math notranslate nohighlight">\(xRy\)</span> implies
-$<span class="math notranslate nohighlight">\(\forall a\in\xi(x).\exists b \in \nu(y). (a,b)\in\overline{\mathcal P}R \quad \textrm{and}\quad
-\forall b\in\nu(y).\exists a \in \xi(x). (a,b)\in\overline{\mathcal P}R\)</span>$</p>
+<p><strong>Corollary:</strong> <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation between neighbourhood frames <span class="math notranslate nohighlight">\(\xi:X\to TX\)</span> and <span class="math notranslate nohighlight">\(\nu:Y\to TY\)</span> iff <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
+<div class="math notranslate nohighlight">
+\[\forall a\in\xi(x).\exists b \in \nu(y). (a,b)\in\overline{\mathcal P}R \quad \textrm{and}\quad
+\forall b\in\nu(y).\exists a \in \xi(x). (a,b)\in\overline{\mathcal P}R\]</div>
 <p><em>Proof:</em> Let <span class="math notranslate nohighlight">\(D:Set\to Pos\)</span> be the discrete functor (apologies for using the same letter for the downset-functor). <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation if the middle arrow in the diagram below is order-preserving.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -900,10 +958,11 @@ D\xi\Bigg\downarrow \quad &amp;&amp;\Bigg\downarrow &amp;&amp; \quad\Bigg\downar
 DTX\cong\overline TDX  &amp; \stackrel{\overline Ti}\longrightarrow &amp; \overline T\mathbf R &amp; \stackrel{\overline Tj}\longleftarrow &amp; \overline TDY\cong DTY
 \end{array}
 \end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(\mathbf R\to \overline T\mathbf R\)</span> is order-preserving iff <span class="math notranslate nohighlight">\(xRy\)</span> implies that <span class="math notranslate nohighlight">\(\overline Ti (D\xi(x))=\overline Tj(D\nu(y))\)</span>, that is,
-$<span class="math notranslate nohighlight">\(\{c\subseteq C\mathbf R \mid \exists a\in\xi(x). i^{-1}(c)=a\} 
+<p><span class="math notranslate nohighlight">\(\mathbf R\to \overline T\mathbf R\)</span> is order-preserving iff <span class="math notranslate nohighlight">\(xRy\)</span> implies that <span class="math notranslate nohighlight">\(\overline Ti (D\xi(x))=\overline Tj(D\nu(y))\)</span>, that is,</p>
+<div class="math notranslate nohighlight">
+\[\{c\subseteq C\mathbf R \mid \exists a\in\xi(x). i^{-1}(c)=a\} 
 \quad =\quad 
-\{c\subseteq C\mathbf R \mid \exists b\in\nu(y). j^{-1}(c)=a\}\)</span>$</p>
+\{c\subseteq C\mathbf R \mid \exists b\in\nu(y). j^{-1}(c)=a\}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> takes connected components. “<span class="math notranslate nohighlight">\(\subseteq\)</span>” can be written as</p>
 <div class="math notranslate nohighlight">
 \[\forall a\in\xi(x). \exists b\in\nu(y).i^{-1}(a) = j^{-1}(b)\]</div>
@@ -914,9 +973,12 @@ $<span class="math notranslate nohighlight">\(\{c\subseteq C\mathbf R \mid \exis
 (\forall y\in b.\exists x\in a. xRy) \]</div>
 <p>and similarly for “<span class="math notranslate nohighlight">\(\supseteq\)</span>”.</p>
 </section>
+<section id="probabilistic-bisimulation">
+<h2>Probabilistic bisimulation<a class="headerlink" href="#probabilistic-bisimulation" title="Permalink to this headline">#</a></h2>
+<p>Probabilistic bisimulation also provides an example of cospan bisimulations. If <span class="math notranslate nohighlight">\(\mathcal D\)</span> is the functor of  finitely supported probability distributions, then the posetification <span class="math notranslate nohighlight">\(\overline{\mathcal D}\)</span> is given as follows. Let <span class="math notranslate nohighlight">\(p,q\)</span> be two probability distributions in <span class="math notranslate nohighlight">\(\mathcal DX\)</span>. Then define <span class="math notranslate nohighlight">\(p\sqsubseteq q\)</span> if <span class="math notranslate nohighlight">\(p[U]\le q[U]\)</span> for all upsets <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</section>
 <section id="more-examples">
 <h2>More Examples?<a class="headerlink" href="#more-examples" title="Permalink to this headline">#</a></h2>
-<p>probabilistic bisimulation would be worth a look</p>
 <p>… other, less well-known, examples?</p>
 </section>
 <section id="results">
@@ -926,7 +988,7 @@ $<span class="math notranslate nohighlight">\(\{c\subseteq C\mathbf R \mid \exis
 <li><p>agrees with span bisimulation if <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks</p></li>
 <li><p>captures behavioural equivalence without assumptions on <span class="math notranslate nohighlight">\(T\)</span></p></li>
 <li><p>coalgebraic logic is invariant under cospan-bisimulations</p></li>
-<li><p>… ?</p></li>
+<li><p>…</p></li>
 </ul>
 <p>Could there be theorems linking cospan-bisimulations to cospan-simulations?</p>
 <ul class="simple">
@@ -941,6 +1003,7 @@ $<span class="math notranslate nohighlight">\(\{c\subseteq C\mathbf R \mid \exis
 <p>Hansen: <a class="reference external" href="https://eprints.illc.uva.nl/id/document/264">Monotonic modal logics</a>. 2003. (Def 4.10, Def 8.20, Prop 8.25)</p>
 <p>Hansen, Kupke and Pacuit: <a class="reference external" href="https://arxiv.org/pdf/0901.4430">Neighbourhood Structures: Bisimilarity and Basic Model Theory</a>. LMCS 2009. (Def 3.5, Thm 3.12)</p>
 <p>Pauly: <a class="reference external" href="https://hdl.handle.net/11245/1.194561">Logic for Social Software</a>. 2001. (Thm 6.5)</p>
+<p>Rutten, Turi: <a class="reference external" href="https://homepages.cwi.nl/~janr/papers/files-of-papers/1993-LNCS.pdf"></a>, 1993. In particular, Def 5.4 of an <em>ordered F-bisimulation</em>.</p>
 <p>Worrell: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1571066105803561">Coinduction for recursive data types: partial orders, metric spaces and <span class="math notranslate nohighlight">\(\Omega\)</span>-categories</a>, CMCS 2000. (Def 5.2)</p>
 </section>
 <section id="further-reading">
@@ -993,6 +1056,20 @@ $<span class="math notranslate nohighlight">\(\{c\subseteq C\mathbf R \mid \exis
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="Cospan-Bisimulation-Introduction.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Cospan Bisimulation: Overview</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="Neighbourhood-Coalgebras.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Neighbourhood Coalgebras</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
             
@@ -1022,6 +1099,11 @@ $<span class="math notranslate nohighlight">\(\{c\subseteq C\mathbf R \mid \exis
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#neighbourhood-coalgebras">
    Neighbourhood Coalgebras
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#probabilistic-bisimulation">
+   Probabilistic bisimulation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">

@@ -280,6 +280,34 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -497,6 +525,34 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -601,6 +657,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Completeness.html">Completeness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Expressivity.html">Expressivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 </ul>
 
     </div>
@@ -806,8 +869,8 @@ title="Print to PDF"
 <p><strong>Remark:</strong> This formulation is specific to set-functors, but can be generalised to other base categories.</p>
 <p><strong>Fact:</strong> <span class="math notranslate nohighlight">\(\overline T\)</span> preserves composition (and therefore is a functor on <span class="math notranslate nohighlight">\(\sf Rel\)</span>) if <span class="math notranslate nohighlight">\(T\)</span> preserves weak-pullbacks.</p>
 <p><strong>Example/Exercise:</strong> Let <span class="math notranslate nohighlight">\(\mathcal P\)</span> be the powerset functor. It is an interesting exercise to check that <span class="math notranslate nohighlight">\((a,b)\in \overline{\mathcal P}X\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cfb52221-4113-4ce3-abb5-7249e87e7df0">
-<span class="eqno">(18)<a class="headerlink" href="#equation-cfb52221-4113-4ce3-abb5-7249e87e7df0" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-7a56f7c0-5cba-4cef-be5c-a6406b696abc">
+<span class="eqno">(18)<a class="headerlink" href="#equation-7a56f7c0-5cba-4cef-be5c-a6406b696abc" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,xRy \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,xRy \\
 \end{gather}\]</div>
@@ -829,8 +892,8 @@ title="Print to PDF"
 <p>The following fact allows us to use known results about the span-based relation lifting to compute the order-extension of a set-functor in many examples.</p>
 <p><strong>Fact:</strong> If <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks, then applying <span class="math notranslate nohighlight">\(\widetilde T\)</span> to a preorder <span class="math notranslate nohighlight">\((X,\le)\)</span> agrees with applying the relation lifting <span class="math notranslate nohighlight">\(\overline T\)</span> to <span class="math notranslate nohighlight">\(\le\)</span>.</p>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\((X,\le)\)</span> be a preorder. For subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> we have <span class="math notranslate nohighlight">\(a\le b\in \widetilde{\mathcal P}(X,\le)\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-385b26c2-1968-4e01-a207-daebfb647643">
-<span class="eqno">(19)<a class="headerlink" href="#equation-385b26c2-1968-4e01-a207-daebfb647643" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-d113d100-25d4-43e7-9f75-22595dcaa901">
+<span class="eqno">(19)<a class="headerlink" href="#equation-d113d100-25d4-43e7-9f75-22595dcaa901" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,x\le y \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,x\le y \\
 \end{gather}\]</div>

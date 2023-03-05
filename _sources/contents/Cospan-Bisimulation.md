@@ -4,20 +4,7 @@ tags: coalgebraic logic, coalgebraic modal logic, maths, functorial modal logic
 
 #  Cospan Bisimulation 
 
-(draft) ... ([index](https://hackmd.io/@alexhkurz/Hy1oUrS4u))
-
-Previous:
-- [Modal Logic on Posets](https://hackmd.io/uvH1hEqBTE6uJKlI0qSRAA)
-- [Neighbourhood Frames over Posets](https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w)
-
-Next:
-- [Cospan Bisimulation 2](https://hackmd.io/jxfudz7SQpmj5BzZkyWZIA)
-
-Others;
-- [Bisimulation for Order-Enriched Coalgebras](https://hackmd.io/@alexhkurz/SJZPcfMdv)
-- [Extending Functors from Orders to Relations](https://hackmd.io/@alexhkurz/Syilr93_w)
-
----
+(draft) 
 
 One of the starting points of coalgebra was Aczel's discovery, see also (Rutten, 2000), that span-bisimulation, also known as Aczel-Mendler bisimulation, can capture category theoretically the combinatorial notion of bisimulation. 
 
@@ -28,7 +15,7 @@ In their proof of the final coalgebra, in order to not depend on this assumption
 One disadvantage of cospans in Set is that they do not allow us to capture general relations. This can be circumvented by working poset enriched. 
 
 [Recall](https://hackmd.io/V6m2cAy_TdagteE4RG_sbw) that
-- for every relation $R\subseteq X\times Y$ the collage $\mathbf R$ is the poset on the disjoint union $X+Y$ encoding $R$.
+- for every relation $R\subseteq X\times Y$ the collage $\mathbf R$ is the poset on the disjoint union $X+Y$ encoding $R$ (with $x\le_{\bf R} y \ \Leftrightarrow \  xRy$),
 - for every functor $T:Set\to Set$ there is a preordification $\overline T:Pre\to Pre$. [^preordification]
 
 
@@ -52,6 +39,7 @@ For a starter we can illustrate what happens in the case of Kripke frames, that 
 **Proposition** (Balan et al, 2015): The posetification of $\mathcal P$ is the convex powerset functor $\mathcal{\overline P}$. 
 
 By definition, then, $R$ is a cospan-bisimulation iff
+
 $$xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,$$
 
 which, by definition[^eglimilner] of the order on $\mathcal{\overline P}\mathbf R$, gives us the usual definition of a bisimulation on Kripke frames (to emphasise the coalgebraic nature of Kripke frames we write $x'\in\xi(x)$ instead of $x\to x'$ and $y'\in\nu(y)$ instead of $y\to y'$). 
@@ -72,6 +60,7 @@ In this subsection we look at coalgebras for the functor $Up\mathcal P:Set\to Se
 
 
 **Proposition** (Corollary 5 in Dahlqvist and Kurz, 2017): The preordification of the monotone neighbourhood functor $T=Up\mathcal P$ is $\mathcal D \mathcal U$ ordered by
+
 $$A\le B \quad\stackrel{def}\Longleftrightarrow\quad \forall a\in A.\exists b\in B. {\uparrow}b \subseteq {\uparrow} a \ \ \ \textrm{and} \ \ \  \forall b\in B.\exists a\in A. {\downarrow} a \subseteq {\downarrow} b$$ 
 
 for all $A,B\in \mathcal D\mathcal UX$.
@@ -119,6 +108,7 @@ $$(a,b)\in \overline{\mathcal P}R \quad \Longleftrightarrow \
 (\forall y\in b.\exists x\in a. xRy)$$ 
 
 **Corollary:** $R$ is a cospan-bisimulation between neighbourhood frames $\xi:X\to TX$ and $\nu:Y\to TY$ iff $xRy$ implies
+
 $$\forall a\in\xi(x).\exists b \in \nu(y). (a,b)\in\overline{\mathcal P}R \quad \textrm{and}\quad
 \forall b\in\nu(y).\exists a \in \xi(x). (a,b)\in\overline{\mathcal P}R$$
 
@@ -133,6 +123,7 @@ DTX\cong\overline TDX  & \stackrel{\overline Ti}\longrightarrow & \overline T\ma
 $$
 
 $\mathbf R\to \overline T\mathbf R$ is order-preserving iff $xRy$ implies that $\overline Ti (D\xi(x))=\overline Tj(D\nu(y))$, that is, 
+
 $$\{c\subseteq C\mathbf R \mid \exists a\in\xi(x). i^{-1}(c)=a\} 
 \quad =\quad 
 \{c\subseteq C\mathbf R \mid \exists b\in\nu(y). j^{-1}(c)=a\}$$
@@ -149,9 +140,11 @@ $$\forall a\in\xi(x).\exists b\in\nu(y).
 
 and similarly for "$\supseteq$".
 
-## More Examples?
+## Probabilistic bisimulation 
 
-probabilistic bisimulation would be worth a look
+Probabilistic bisimulation also provides an example of cospan bisimulations. If $\mathcal D$ is the functor of  finitely supported probability distributions, then the posetification $\overline{\mathcal D}$ is given as follows. Let $p,q$ be two probability distributions in $\mathcal DX$. Then define $p\sqsubseteq q$ if $p[U]\le q[U]$ for all upsets $U$ of $X$.
+
+## More Examples?
 
 ... other, less well-known, examples?
 
@@ -160,17 +153,12 @@ probabilistic bisimulation would be worth a look
 We will get the expected results. For $T:Set\to Set$, cospan bisimulation
 
 - agrees with span bisimulation if $T$ preserves weak pullbacks
-
 - captures behavioural equivalence without assumptions on $T$
-
 - coalgebraic logic is invariant under cospan-bisimulations
-
-- ... ? 
+- ...
 
 Could there be theorems linking cospan-bisimulations to cospan-simulations? 
-
 - What are conditions on $T:Set\to Set$ so that there is a forward version $T^\rightarrow:Pos\to Pos$ and a backward version $T^\leftarrow:Pos\to Pos$? Can we say sth general here or must this be done on an adhoc basis for particlar $T$?
-
 - ...
 
 
@@ -186,6 +174,8 @@ Hansen: [Monotonic modal logics](https://eprints.illc.uva.nl/id/document/264). 2
 Hansen, Kupke and Pacuit: [Neighbourhood Structures: Bisimilarity and Basic Model Theory](https://arxiv.org/pdf/0901.4430). LMCS 2009. (Def 3.5, Thm 3.12)
 
 Pauly: [Logic for Social Software](https://hdl.handle.net/11245/1.194561). 2001. (Thm 6.5)
+
+Rutten, Turi: [](https://homepages.cwi.nl/~janr/papers/files-of-papers/1993-LNCS.pdf), 1993. In particular, Def 5.4 of an *ordered F-bisimulation*.
 
 Worrell: [Coinduction for recursive data types: partial orders, metric spaces and $\Omega$-categories](https://www.sciencedirect.com/science/article/pii/S1571066105803561), CMCS 2000. (Def 5.2)
 

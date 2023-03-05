@@ -59,9 +59,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Neighbourhood Coalgebras';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Neighbourhood-Coalgebras';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bisimulation for Ordered Coalgebras" href="Bisimulation-for-Order-Enriched-Coalgebras.html" />
+    <link rel="prev" title="Cospan Bisimulation" href="Cospan-Bisimulation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -275,6 +277,34 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="Translations.html">
                         Translations of Logics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
                       </a>
                     </li>
                 
@@ -495,6 +525,34 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -600,6 +658,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Expressivity.html">Expressivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Neighbourhood Coalgebras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
+</ul>
 
     </div>
 </nav>
@@ -674,7 +739,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Neighbourhood Coalgebras.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Neighbourhood-Coalgebras.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -699,7 +764,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/contents/Neighbourhood Coalgebras.md" target="_blank"
+      <li><a href="../_sources/contents/Neighbourhood-Coalgebras.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -768,22 +833,21 @@ title="Print to PDF"
               
   <section class="tex2jax_ignore mathjax_ignore" id="neighbourhood-coalgebras">
 <h1>Neighbourhood Coalgebras<a class="headerlink" href="#neighbourhood-coalgebras" title="Permalink to this headline">#</a></h1>
-<p>(draft) … (<a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ryrkkYZZc">up</a>)</p>
-<!--![](https://i.imgur.com/1FLZ0fs.png =80x80)-->
+<p>(draft)</p>
 <p>The idea of the following is to run through (Hansen, Kupke, Pacuit, 2009) and analyse it from the point of view of cospan bisimulation.</p>
 <p><strong>Def:</strong> Let <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span>. The dual relation <span class="math notranslate nohighlight">\(R^\partial:2^X\looparrowright 2^Y\)</span> is defined by <span class="math notranslate nohighlight">\(R[a]\subseteq b\)</span>.</p>
 <p><strong>Remark:</strong> <span class="math notranslate nohighlight">\((a,b)\)</span> are called <span class="math notranslate nohighlight">\(R\)</span>-coherent in Def 2.1 of Hansen-Kupke-Pacuit if <span class="math notranslate nohighlight">\((a,b)\in R^\partial\)</span> and <span class="math notranslate nohighlight">\((b,a)\in (R^{-1})^\partial\)</span>.</p>
 <p>Recall that the connected component functor <span class="math notranslate nohighlight">\(C:Ord\to Set\)</span> is left-adjoint to the discrete functor <span class="math notranslate nohighlight">\(D:Set\to Ord\)</span>. Also recall that the ordification of the neighbourhood functor is $D2^{2^{C-}}, see Theorem 8 in [DK17] and the section on <a class="reference external" href="https://hackmd.io/6Ehr9bIQQgSZKeeasdSKoQ#Neighbourhood-Coalgebras">Cospan Bisimulation</a>.</p>
 <p><strong>Definition:</strong> A neighbourhood frame is a set <span class="math notranslate nohighlight">\(X\)</span> with a function <span class="math notranslate nohighlight">\(X\to 2^{2^X}\)</span>. An ordered neighbourhood frame is an ordered set <span class="math notranslate nohighlight">\(X\)</span> with an order-preserving function <span class="math notranslate nohighlight">\(X\to D2^{2^{CX}}\)</span>.</p>
 <p><strong>Remark:</strong> The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Set\)</span> <a class="footnote-reference brackets" href="#ordmorph" id="id1">1</a> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to 2^{2^X}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to 2^{2^Y}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-354cd0c9-48ee-493b-8929-47e30f4072c1">
-<span class="eqno">()<a class="headerlink" href="#equation-354cd0c9-48ee-493b-8929-47e30f4072c1" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-7323d019-9f6a-4239-9317-cf01defe2c5f">
+<span class="eqno">(28)<a class="headerlink" href="#equation-7323d019-9f6a-4239-9317-cf01defe2c5f" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)
 \end{gather}\]</div>
 <p><strong>Remark:</strong> Similarly, <span class="math notranslate nohighlight">\(R\)</span> is a bisimulation if <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf2afcda-d826-40ad-bb88-f06882a99c58">
-<span class="eqno">()<a class="headerlink" href="#equation-bf2afcda-d826-40ad-bb88-f06882a99c58" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-30495854-f3ab-4a90-8dc7-df6f23a99901">
+<span class="eqno">(29)<a class="headerlink" href="#equation-30495854-f3ab-4a90-8dc7-df6f23a99901" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)
 \end{gather}\]</div>
@@ -795,8 +859,8 @@ title="Print to PDF"
 <dl class="footnote brackets">
 <dt class="label" id="ordmorph"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Ord\)</span> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to D2^{2^{CX}}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to D2^{2^{CY}}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2218f39-a687-4e3c-9a2c-45c721d0a42c">
-<span class="eqno">()<a class="headerlink" href="#equation-b2218f39-a687-4e3c-9a2c-45c721d0a42c" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-c0fc640e-f960-4ade-a262-6670362ef2fd">
+<span class="eqno">(30)<a class="headerlink" href="#equation-c0fc640e-f960-4ade-a262-6670362ef2fd" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)
 \end{gather}\]</div>
@@ -834,6 +898,20 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="Cospan-Bisimulation.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Cospan Bisimulation</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="Bisimulation-for-Order-Enriched-Coalgebras.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Bisimulation for Ordered Coalgebras</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
             

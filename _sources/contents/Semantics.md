@@ -5,7 +5,7 @@ $\newcommand{\sem}[1]{[\![#1]\!]}$
 
 # Semantics of Coalgebraic Logic
 
-(draft)
+(draft) 
 
 We first review the definitions and results that make sense for the general setting of coalgebraic logic.
 

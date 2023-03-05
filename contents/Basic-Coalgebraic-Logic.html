@@ -280,6 +280,34 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -497,6 +525,34 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
+                        Cospan Bisimulation: Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
+                        Cospan Bisimulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
+                        Neighbourhood Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
+                        Bisimulation for Ordered Coalgebras
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -601,6 +657,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Completeness.html">Completeness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Expressivity.html">Expressivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 </ul>
 
     </div>
@@ -821,8 +884,8 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>LA is the free Boolean algebra over <span class="math notranslate nohighlight">\(\Box a\)</span>, <span class="math notranslate nohighlight">\(a\in A\)</span> module the equations</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-ce247250-f6b3-4150-9528-4861401ff83f">
-<span class="eqno">(13)<a class="headerlink" href="#equation-ce247250-f6b3-4150-9528-4861401ff83f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-338701f1-d642-43c2-ade6-1115c27bf712">
+<span class="eqno">(13)<a class="headerlink" href="#equation-338701f1-d642-43c2-ade6-1115c27bf712" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Box\top &amp;= \top \\
 \Box(a\wedge b) &amp; = \Box a\wedge \Box b
 \end{align}\]</div>
@@ -873,15 +936,15 @@ $<span class="math notranslate nohighlight">\(PT\to L'P\to LP\)</span>$</p>
 <h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Permalink to this headline">#</a></h3>
 <p>For now we side-step the question of how to find the language. We start from the language we know and love, namely the one given by one modal operation <span class="math notranslate nohighlight">\(\Box\)</span>. We also know the standard Kripke semantics of the <span class="math notranslate nohighlight">\(\Box\)</span> via sets of successors. The aim is to show a methodology of how to find the axioms.</p>
 <p>The functor <span class="math notranslate nohighlight">\(L'\)</span> is represented by the language without the axioms. It is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cc47160b-972c-420d-bf3b-94974a46862a">
-<span class="eqno">(14)<a class="headerlink" href="#equation-cc47160b-972c-420d-bf3b-94974a46862a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a4912ccb-babc-4076-bc52-95c181e69f6d">
+<span class="eqno">(14)<a class="headerlink" href="#equation-a4912ccb-babc-4076-bc52-95c181e69f6d" title="Permalink to this equation">#</a></span>\[\begin{align}
 L':BA&amp; \to BA\\
  A &amp; \mapsto F\{\Box a \mid a\in A\}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(FX\)</span> denotes the free Boolean algebra over <span class="math notranslate nohighlight">\(X\)</span>. Categorically <span class="math notranslate nohighlight">\(F\)</span> is the left adjoint of the forgetful functor <span class="math notranslate nohighlight">\(U:BA\to Set\)</span>.</p>
 <p>The semantics of the language is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a6251bfb-45f4-43ca-94b8-ee5bf3eeef5c">
-<span class="eqno">(15)<a class="headerlink" href="#equation-a6251bfb-45f4-43ca-94b8-ee5bf3eeef5c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ba3d2d6-02fc-4508-9402-bb15e1fb0f66">
+<span class="eqno">(15)<a class="headerlink" href="#equation-4ba3d2d6-02fc-4508-9402-bb15e1fb0f66" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta'_X:L'PX &amp; \to PTX\\
            \Box a &amp; \mapsto \{S\in PTX \mid S\subseteq a\}
 \end{align}\]</div>
@@ -896,8 +959,8 @@ $<span class="math notranslate nohighlight">\(\sem{-}:\Phi\to PX\)</span>$</p>
 </li>
 </ul>
 <p>Spelling this out in detail, gives us back the usual definition of the semantics of modal logic:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9fb3d1f3-a769-4995-85bf-5a635929eb22">
-<span class="eqno">(16)<a class="headerlink" href="#equation-9fb3d1f3-a769-4995-85bf-5a635929eb22" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-51d3e829-ee5c-44dc-afa7-39e95acfeb02">
+<span class="eqno">(16)<a class="headerlink" href="#equation-51d3e829-ee5c-44dc-afa7-39e95acfeb02" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sem{\top} &amp; = X\\
 \sem{\phi\wedge \psi} &amp; = \sem{\phi}\wedge\sem{\psi}\\
 \sem{\neg\phi} &amp; = X\setminus \sem{\phi}\\

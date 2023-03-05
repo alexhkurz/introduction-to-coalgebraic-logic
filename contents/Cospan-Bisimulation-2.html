@@ -59,9 +59,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Cospan Bisimulation 2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Cospan-Bisimulation-2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Bisimulation for Ordered Coalgebras" href="Bisimulation-for-Order-Enriched-Coalgebras.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -303,6 +304,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
                         Bisimulation for Ordered Coalgebras
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Cospan Bisimulation 2
                       </a>
                     </li>
                 
@@ -551,6 +559,13 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Cospan Bisimulation 2
+                      </a>
+                    </li>
+                
                 </div>
             </div>
             
@@ -657,11 +672,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cospan Bisimulation 2</a></li>
 </ul>
 
     </div>
@@ -737,7 +753,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Cospan Bisimulation 2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Cospan-Bisimulation-2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -762,7 +778,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/contents/Cospan Bisimulation 2.md" target="_blank"
+      <li><a href="../_sources/contents/Cospan-Bisimulation-2.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -883,7 +899,7 @@ title="Print to PDF"
               
   <section class="tex2jax_ignore mathjax_ignore" id="cospan-bisimulation-2">
 <h1>Cospan Bisimulation 2<a class="headerlink" href="#cospan-bisimulation-2" title="Permalink to this headline">#</a></h1>
-<p>(draft … references to be added) … (<a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ryrkkYZZc">up</a>)</p>
+<p>(draft … references to be added)</p>
 <hr class="docutils" />
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
@@ -917,8 +933,9 @@ $<span class="math notranslate nohighlight">\(C\dashv D\dashv V\)</span>$ for th
 <section id="order-extensions">
 <h2>Order-Extensions<a class="headerlink" href="#order-extensions" title="Permalink to this headline">#</a></h2>
 <p>Following on from <a class="reference external" href="https://hackmd.io/6Ehr9bIQQgSZKeeasdSKoQ">part one</a>, we are interested in preordification <span class="math notranslate nohighlight">\(T'\)</span> of <span class="math notranslate nohighlight">\(T\)</span>. Preordifictions are universal solutions to the problem of finding a <span class="math notranslate nohighlight">\(T'\)</span> together with a transformation <span class="math notranslate nohighlight">\(DT\to T'D\)</span>. In fact, the preordification <span class="math notranslate nohighlight">\(T'\)</span> of <span class="math notranslate nohighlight">\(T\)</span> can be defined as the <span class="math notranslate nohighlight">\(Ord\)</span>-enriched left Kan extension of <span class="math notranslate nohighlight">\(DT\)</span> along <span class="math notranslate nohighlight">\(D\)</span>. But some results hold more generally for any ordered extension <span class="math notranslate nohighlight">\(DT\to T'D\)</span>.</p>
-<p><strong>Definition:</strong> We call <span class="math notranslate nohighlight">\(T':Ord\to Ord\)</span> an <strong>order-extension</strong> of <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> if there is a natural transformation
-$<span class="math notranslate nohighlight">\(DT\to T'D.\)</span>$</p>
+<p><strong>Definition:</strong> We call <span class="math notranslate nohighlight">\(T':Ord\to Ord\)</span> an <strong>order-extension</strong> of <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> if there is a natural transformation</p>
+<div class="math notranslate nohighlight">
+\[DT\to T'D.\]</div>
 <p><strong>Remark:</strong> Equivalently, <span class="math notranslate nohighlight">\(T'\)</span> is an order-extension of <span class="math notranslate nohighlight">\(T\)</span> if there is a natural tranformation <span class="math notranslate nohighlight">\(T\to DT'V\)</span>. This also captures the intuition that <span class="math notranslate nohighlight">\(T'\)</span> adds ordering to <span class="math notranslate nohighlight">\(T\)</span>. If one insists on <span class="math notranslate nohighlight">\(T\to DT'V\)</span> being an iso, this notion is equivalent to the one of Jacobs and Jacobs-Hughes (ADD REFERENCES).</p>
 <p><strong>Question:</strong> <span class="math notranslate nohighlight">\(T\to DT'V\)</span> iso is equivalent to <span class="math notranslate nohighlight">\(DT\to T'D\)</span> being bijective. Is there an interesting example of an order-extension for which <span class="math notranslate nohighlight">\(DT\to T'D\)</span> is not bijective?</p>
 <p><strong>Remark:</strong> The mate of <span class="math notranslate nohighlight">\(DT\to T'D\)</span> is <span class="math notranslate nohighlight">\(TV\to VT'\)</span>. If <span class="math notranslate nohighlight">\(T'\)</span> is the preordification then <span class="math notranslate nohighlight">\(TV\to VT'\)</span> is an iso, but for posetifications this does not need to be the case as the example of convex powerset (=the posetification of  powerset) shows. We summarise some of the relationships between properties of these natural transformations in the table below.</p>
@@ -964,8 +981,9 @@ $<span class="math notranslate nohighlight">\(DT\to T'D.\)</span>$</p>
 <h2>Span and cospan bisimulations<a class="headerlink" href="#span-and-cospan-bisimulations" title="Permalink to this headline">#</a></h2>
 <p>The following result makes precise that every span bisimulation is a cospan (bi)simulation.</p>
 <p><strong>Proposition:</strong> Let <span class="math notranslate nohighlight">\(T'\)</span> be an order-extension of <span class="math notranslate nohighlight">\(T\)</span>. If two states in two <span class="math notranslate nohighlight">\(T\)</span>-coalgebras are <span class="math notranslate nohighlight">\(T\)</span>-span-bisimilar then they are <span class="math notranslate nohighlight">\(T'\)</span>-cospan-(bi)similar.</p>
-<p><em>Proof:</em> Let <span class="math notranslate nohighlight">\(X\to TX\)</span> and <span class="math notranslate nohighlight">\(Y\to TY\)</span> be two <span class="math notranslate nohighlight">\(T\)</span>-caolgebras. Let <span class="math notranslate nohighlight">\(X\leftarrow R \rightarrow Y\)</span> be a <span class="math notranslate nohighlight">\(T\)</span>-span bisimulation. Let <span class="math notranslate nohighlight">\(R'\)</span> be the cocomma of <span class="math notranslate nohighlight">\(X\leftarrow R \rightarrow Y\)</span>. Applying <span class="math notranslate nohighlight">\(T'\)</span> to the square
-$<span class="math notranslate nohighlight">\(
+<p><em>Proof:</em> Let <span class="math notranslate nohighlight">\(X\to TX\)</span> and <span class="math notranslate nohighlight">\(Y\to TY\)</span> be two <span class="math notranslate nohighlight">\(T\)</span>-caolgebras. Let <span class="math notranslate nohighlight">\(X\leftarrow R \rightarrow Y\)</span> be a <span class="math notranslate nohighlight">\(T\)</span>-span bisimulation. Let <span class="math notranslate nohighlight">\(R'\)</span> be the cocomma of <span class="math notranslate nohighlight">\(X\leftarrow R \rightarrow Y\)</span>. Applying <span class="math notranslate nohighlight">\(T'\)</span> to the square</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{}
 &amp;&amp;DR&amp;&amp;\\
 &amp;\swarrow&amp;&amp;\searrow&amp;\\
@@ -973,7 +991,7 @@ DX&amp;&amp;&amp;&amp;DY\\
 &amp;\searrow&amp;&amp;\swarrow&amp;\\
 &amp;&amp;R'&amp;&amp;
 \end{array}
-\)</span>$</p>
+\end{split}\]</div>
 <p>and using the arrow <span class="math notranslate nohighlight">\(R\to TR\)</span> from the span-bisimulation the universal property of the cocomma <span class="math notranslate nohighlight">\(R'\)</span> gives the required arroe <span class="math notranslate nohighlight">\(R'\to T'R'\)</span>. QED</p>
 <p><strong>Examples:</strong> A number of familiar examples arise as instances of this proposition.</p>
 <ul class="simple">
@@ -995,14 +1013,14 @@ $<span class="math notranslate nohighlight">\( (x,y)\in f_\diamond \ \Leftrighta
 <p><strong>Proposition:</strong> Let <span class="math notranslate nohighlight">\(T:Ord\to Ord\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is a <span class="math notranslate nohighlight">\(T\)</span>-coalgebra morphism, then <span class="math notranslate nohighlight">\(f_\diamond\)</span> and <span class="math notranslate nohighlight">\(f^\diamond\)</span> are cospan-(bi)simulations.</p>
 <p><em>Proof:</em> <span class="math notranslate nohighlight">\(f_\diamond\)</span> and <span class="math notranslate nohighlight">\(f^\diamond\)</span> are the weakening closures of the spans <span class="math notranslate nohighlight">\((id,f)\)</span> and <span class="math notranslate nohighlight">\((f,id)\)</span>, respectively. Recall the definition of cospan-(bi)simulation and the fact that the collage of the weakening closure of a relation represented by a span <span class="math notranslate nohighlight">\((p,q)\)</span> is the cocomma of <span class="math notranslate nohighlight">\((p,q)\)</span>. Now the proposition follows from the universal property of cocommas. QED</p>
 <p><strong>Example:</strong> <a class="reference external" href="https://hackmd.io/V6m2cAy_TdagteE4RG_sbw#mathcal-Dmathcal-U-coalgebras">Recall</a> that <span class="math notranslate nohighlight">\(R\)</span> is a <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-cospan-(bi)simulation iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87f73656-8180-419c-a727-881fadf4a377">
-<span class="eqno">()<a class="headerlink" href="#equation-87f73656-8180-419c-a727-881fadf4a377" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1ba70631-9c6f-4144-bf7f-4b350f9810ae">
+<span class="eqno">(37)<a class="headerlink" href="#equation-1ba70631-9c6f-4144-bf7f-4b350f9810ae" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \ \Rightarrow \ \ &amp; 
 \forall a\in\xi x.\exists b\in\nu y. \forall y'\in b.\exists x'\in a.\ x'Ry' 
 \end{align}\]</div>
 <p>We also <a class="reference external" href="https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w">know</a> that <span class="math notranslate nohighlight">\(f:X\to Y\)</span> is a morphism <span class="math notranslate nohighlight">\((X,\xi)\to(Y,\nu)\)</span> of <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-coalegbras iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dc4fcf57-c714-4691-b4ee-e723ffb19d56">
-<span class="eqno">()<a class="headerlink" href="#equation-dc4fcf57-c714-4691-b4ee-e723ffb19d56" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-a9d8f1d0-2b53-443e-ab8b-4f9a62237cc9">
+<span class="eqno">(38)<a class="headerlink" href="#equation-a9d8f1d0-2b53-443e-ab8b-4f9a62237cc9" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in \xi x.\exists b\in\nu(fx).\forall y\in b.\exists x\in a. fx \le y\\[1ex]
 \forall b\in \nu(fx).\exists a\in\xi(x).\forall x\in a.\exists y\in b. \ y\le fx
 \end{gather}\]</div>
@@ -1064,6 +1082,13 @@ xRy \ \ \Rightarrow \ \ &amp;
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="Bisimulation-for-Order-Enriched-Coalgebras.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Bisimulation for Ordered Coalgebras</p>
+      </div>
+  </a>
 </div>
             </footer>
             
