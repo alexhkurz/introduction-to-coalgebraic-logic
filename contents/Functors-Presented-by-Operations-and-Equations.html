@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Semantics of Coalgebraic Logic &#8212; Coalgebraic Logic</title>
+    <title>Functors presented by operations and equations &#8212; Coalgebraic Logic</title>
   
   
   
@@ -59,11 +59,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Semantics';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Functors-Presented-by-Operations-and-Equations';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Completeness" href="Completeness.html" />
-    <link rel="prev" title="Boolean Logic for Set-Coalgebras" href="Boolean-Logic-for-Set-Coalgebras.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -253,8 +251,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Semantics.html">
                         Semantics of Coalgebraic Logic
                       </a>
                     </li>
@@ -470,8 +468,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Semantics.html">
                         Semantics of Coalgebraic Logic
                       </a>
                     </li>
@@ -593,11 +591,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Moss%27s-Coalgebraic-Logic.html">Moss’s Coalgebraic Logic</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functorial Modal Logic</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Functorial-Modal-Logic.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presenting-Functors-by-Operations-and-Equations.html">Presenting Functors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Boolean-Logic-for-Set-Coalgebras.html">Boolean Logic for Set-Coalgebras</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Semantics of Coalgebraic Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Semantics.html">Semantics of Coalgebraic Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Completeness.html">Completeness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Expressivity.html">Expressivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
@@ -676,7 +674,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Semantics.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Functors-Presented-by-Operations-and-Equations.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -701,7 +699,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/contents/Semantics.md" target="_blank"
+      <li><a href="../_sources/contents/Functors-Presented-by-Operations-and-Equations.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -744,7 +742,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Semantics of Coalgebraic Logic</h1>
+    <h1>Functors presented by operations and equations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -755,13 +753,8 @@ title="Print to PDF"
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#syntax-and-semantics">
-   Syntax and Semantics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-logic-functor-induced-by-the-coalgebra-functor">
-   The Logic Functor Induced by the Coalgebra Functor
+  <a class="reference internal nav-link" href="#example-functors-on-distributive-lattics">
+   Example: Functors on Distributive Lattics
   </a>
  </li>
 </ul>
@@ -773,37 +766,67 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <p><span class="math notranslate nohighlight">\(\newcommand{\sem}[1]{[\![#1]\!]}\)</span></p>
-<section class="tex2jax_ignore mathjax_ignore" id="semantics-of-coalgebraic-logic">
-<h1>Semantics of Coalgebraic Logic<a class="headerlink" href="#semantics-of-coalgebraic-logic" title="Permalink to this headline">#</a></h1>
-<p>(draft)</p>
-<p>We first review the definitions and results that make sense for the general setting of coalgebraic logic.</p>
-<section id="syntax-and-semantics">
-<h2>Syntax and Semantics<a class="headerlink" href="#syntax-and-semantics" title="Permalink to this headline">#</a></h2>
-<p>one-step syntax</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="functors-presented-by-operations-and-equations">
+<h1>Functors presented by operations and equations<a class="headerlink" href="#functors-presented-by-operations-and-equations" title="Permalink to this headline">#</a></h1>
+<p>(under construction … <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ryrkkYZZc">up</a> )</p>
+<section id="example-functors-on-distributive-lattics">
+<h2>Example: Functors on Distributive Lattics<a class="headerlink" href="#example-functors-on-distributive-lattics" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(DL\)</span> is a variety and, as all varieties, has a presentation by operations and equations.</p></li>
+<li><p><strong>Presentations by operations and equations</strong> of functors <span class="math notranslate nohighlight">\(L\)</span> on a variety were introduced by <a class="reference external" href="https://alexhkurz.github.io/papers/Fossacs06/fossacs06.pdf">(Bonsangue and Kurz, 2006, Definition 6)</a>, generalising the notion of presentation for <span class="math notranslate nohighlight">\(Set\)</span>-functors as quotients of polynomial functors. The reason to introduce this notion was to show that</p>
+<ul class="simple">
+<li><p>the category of L-algebras has a presentation by operations and equations that is obtained in modular way from the presentation of the variety and of the functor <a class="reference external" href="https://alexhkurz.github.io/papers/Fossacs06/fossacs06.pdf">(Theorem 5)</a>;</p></li>
+<li><p>presentations of functors L on a variety correspond, via Stone duality, to logics for coalgebras <a class="reference external" href="https://alexhkurz.github.io/papers/Fossacs06/fossacs06.pdf">(Diagram (4), Theorem 27)</a>.</p></li>
+</ul>
+</li>
+<li><p>Varieties are, in particular, locally finitely presentable (lfp). (The finitely presentable objects are exactly the finite <span class="math notranslate nohighlight">\(DL\)</span>s.) That <span class="math notranslate nohighlight">\(DL\)</span> is lfp means that every <span class="math notranslate nohighlight">\(DL\)</span> is a filtered colimit of finite <span class="math notranslate nohighlight">\(DL\)</span>s. This result can also be phrased by saying that the inclusion of finitely presentable <span class="math notranslate nohighlight">\(DL\)</span>s</p></li>
+</ol>
 <div class="math notranslate nohighlight">
-\[\mathcal A\stackrel L \longrightarrow \mathcal A\]</div>
-<p>syntax is the initial algebra</p>
+\[DL_{fp}\to DL\]</div>
+<p>is dense and that filtered colimits are a density presentation of this inclusion.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- **Theorem** [(Kelly and Power, 1993)](https://www.sciencedirect.com/science/article/pii/0022404993900928): Filtered colimit preserving functors on $DL$ are precisely those that have a presentation as a coqualiser of polynomial functors.
+- The theorem is actually much more general as it applies not only to $DL$ but to all categories that are lfp, or even those that are lfp in the enriched sense.
+- While this theorem is beautiful and very general, it has, for our purposes, the disadvantage that the **category of arities**, that is, the category $DL_{fp}$, is too big: We are not interested in presenting functors $L$ by operations that have distributive lattices as arities. We are only interested in operations that have arities in the usual sense, that is, arities that are *finite sets*, or, briefly, **discrete arities**.
+- The solution, then, is to work with a density presentation of the free functor  $Set_{fin}\to DL$, or, equivalently, with a density presentation of the functor $DL_{fgf}\to DL$, where $DL_{fgf}$ is the category of finitely generated free algebras.
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Let <span class="math notranslate nohighlight">\(DL_{fgf}\)</span> be the category of <strong>finitely generated free</strong> <span class="math notranslate nohighlight">\(DL\)</span>s. Then the (ordinary) inclusion</p></li>
+</ol>
 <div class="math notranslate nohighlight">
-\[LI\longrightarrow I\]</div>
-<p>one-step semantics</p>
+\[DL_{fgf}\to DL\]</div>
+<p>is dense and filtered colimits and reflexive coequalisers are a density presentations.</p>
+<ul class="simple">
+<li><p><strong>Theorem</strong> <span class="xref myst">(Kurz and Rosicky, 2012, Theorem 4.7)</span>: The functors on <span class="math notranslate nohighlight">\(DL\)</span> that preserve filtered colimits and reflexive coequalisers are precisely those that have a presentation by finitary operations and equations.</p></li>
+<li><p>This theorem applies to all one-sorted varieties in the sense of universal algebra.</p>
+<ul>
+<li><p>A many-sorted generalisation was given in <a class="reference external" href="https://alexhkurz.github.io/papers/cmcs08-j.pdf">(Kurz and Petrisan, 2010, Theorem 3.5)</a>.</p></li>
+<li><p>A further generalisation to enriched categories is in <a class="reference external" href="https://alexhkurz.github.io/papers/velebil-kurz-mscs2011.pdf">(Velebil and Kurz, 2011, Theorem 3.18)</a>.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic" start="5">
+<li><p>The results in <a class="reference external" href="https://alexhkurz.github.io/papers/velebil-kurz-mscs2011.pdf">(Velebil and Kurz, 2011)</a> also apply when we consider <span class="math notranslate nohighlight">\(DL\)</span> as an <strong>ordered variety</strong>, that is, we turn our attention from the forgetful functor <span class="math notranslate nohighlight">\(DL\to Set\)</span> to the forgetful functor <span class="math notranslate nohighlight">\(DL\to Pos\)</span>. This has the following consequences.</p>
+<ul class="simple">
+<li><p>Representing a functor <span class="math notranslate nohighlight">\(L:DL\to DL\)</span> now means to represent it by <em>monotone operations</em> (because we work order enriched).</p></li>
+<li><p><span class="math notranslate nohighlight">\(DL_{fgf}\)</span> refers to the category of distributive lattices that are free over <em>finite posets</em> (because we consider <span class="math notranslate nohighlight">\(DL\to Pos\)</span>).</p></li>
+<li><p>In other words, being finite posets, arities are not necessarily discrete anymore. This would mean going beyond operations and equations in the sense of universal algebra, which we want to avoid here.</p></li>
+</ul>
+<p>What modifications to the setting of <a class="reference external" href="https://alexhkurz.github.io/papers/velebil-kurz-mscs2011.pdf">(Velebil and Kurz, 2011)</a> are needed to get an account of functors that have presentations by finitary monotone operations in discrete arities?</p>
+</li>
+<li><p><a class="reference external" href="https://alexhkurz.github.io/papers/Ordered-algebras.pdf">(Kurz and Velebil, 2017)</a> combines the approaches of 4. and 5. above by considering the inclusion</p></li>
+</ol>
 <div class="math notranslate nohighlight">
-\[LP\stackrel \delta \longrightarrow PT\]</div>
-<p>semantics wrt <span class="math notranslate nohighlight">\(X\to TX\)</span></p>
-<p><img alt="" src="https://i.imgur.com/AGBiZjm.png" /></p>
-<p>For the next result we assume that <span class="math notranslate nohighlight">\(\mathcal X\)</span> is a concrete category. Various generalisations to abstract categories are also possible.</p>
-<p><strong>Proposition:</strong> Formulas are invariant under bisimilarity.</p>
-<p><em>Proof:</em> Follows from the naturality of <span class="math notranslate nohighlight">\(LP \to PT\)</span>.</p>
-</section>
-<section id="the-logic-functor-induced-by-the-coalgebra-functor">
-<h2>The Logic Functor Induced by the Coalgebra Functor<a class="headerlink" href="#the-logic-functor-induced-by-the-coalgebra-functor" title="Permalink to this headline">#</a></h2>
-<p>The definitions above are parametric in <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(LP\to PT\)</span>.</p>
-<p>On the other hand, from a coalgebraic point of view, <span class="math notranslate nohighlight">\(T\)</span> is given and we should ask how to derive <span class="math notranslate nohighlight">\(L\)</span> from <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<p>If <span class="math notranslate nohighlight">\(\mathcal A\)</span> is a variety in the sense of universal algebra, then we can define a functor by its action on the free algebras. Moreover, if the variety has a presentation by operations of finite arity, then we can restrict attention to finitely generated free algebras and define <span class="math notranslate nohighlight">\(L\)</span> as</p>
-<div class="math notranslate nohighlight">
-\[LFn=PTSFn,\]</div>
-<p>where <span class="math notranslate nohighlight">\(n\)</span> ranges over finite sets.</p>
-<p>(to be continued)</p>
+\[DL_{fgf}\to DL\]</div>
+<p>as a Poset-enriched functor. This corresponds to restricting to <em>discrete</em> arities (as in 4.) and to <em>monotone</em> operations (as in 5.).</p>
+<ul class="simple">
+<li><p><strong>Theorem:</strong>  <a class="reference external" href="https://alexhkurz.github.io/papers/Ordered-algebras.pdf">(Kurz and Velebil, 2017, Proposition 6.8)</a> A functor between ordered varieties has a presentation by monotone operations (in discrete arities) and equations iff it is finitary and preserves surjections.</p></li>
+</ul>
+<p><strong>Question:</strong> The two theorems now look the same on ordered varieties where the order is equationally definable: Preservation of filtered colimits and surjections … but one should give all presentations and the other only the monotone ones.</p>
+<ol class="arabic simple" start="7">
+<li><p><span class="xref myst">(Balan etal)</span> …</p></li>
+<li><p><span class="xref myst">(Dahlqvist and Kurz)</span> …</p></li>
+</ol>
 </section>
 </section>
 
@@ -835,20 +858,6 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="Boolean-Logic-for-Set-Coalgebras.html" title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Boolean Logic for Set-Coalgebras</p>
-      </div>
-  </a>
-  <a class='right-next' id="next-link" href="Completeness.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Completeness</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
 </div>
             </footer>
             
@@ -866,13 +875,8 @@ title="Print to PDF"
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#syntax-and-semantics">
-   Syntax and Semantics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-logic-functor-induced-by-the-coalgebra-functor">
-   The Logic Functor Induced by the Coalgebra Functor
+  <a class="reference internal nav-link" href="#example-functors-on-distributive-lattics">
+   Example: Functors on Distributive Lattics
   </a>
  </li>
 </ul>

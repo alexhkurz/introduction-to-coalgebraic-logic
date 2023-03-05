@@ -138,6 +138,13 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contents/Introduction-to-Coalgebraic-Logic.html">
+                        Coalgebraic Logic: Introduction
+                      </a>
+                    </li>
+                
     </ul>
 </nav>
       </div>
@@ -214,6 +221,13 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contents/Introduction-to-Coalgebraic-Logic.html">
+                        Coalgebraic Logic: Introduction
+                      </a>
+                    </li>
+                
     </ul>
 </nav>
       </div>
@@ -281,8 +295,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modal Logic</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="contents/Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview and Background on Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="contents/Introduction-to-Coalgebraic-Logic.html">Coalgebraic Logic: Introduction</a></li>
 </ul>
 
     </div>
@@ -437,9 +456,26 @@ title="Print to PDF"
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coalgebraic-logic">
+   coalgebraic logic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-create-a-jupyter-book">
    how to create a jupyter book
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basics">
+     basics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#publishing">
+     publishing
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -452,9 +488,18 @@ title="Print to PDF"
               
   <section class="tex2jax_ignore mathjax_ignore" id="coalgebraic-logic-jupyter">
 <h1>coalgebraic-logic-jupyter<a class="headerlink" href="#coalgebraic-logic-jupyter" title="Permalink to this headline">#</a></h1>
+<p>(under construction)</p>
+<section id="coalgebraic-logic">
+<h2>coalgebraic logic<a class="headerlink" href="#coalgebraic-logic" title="Permalink to this headline">#</a></h2>
+<p>This is the repo in which I keep <a class="reference external" href="https://alexhkurz.github.io/coalgebraic-logic-jupyter">my notes on coalgebraic logic</a>.</p>
+<p>I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had various problems, in particular when it came to latex.</p>
+<p>So far, jupyter-book seems to work well <a class="footnote-reference brackets" href="#slow" id="id1">1</a> and the next section contains a summary of how I set it up (but the available documentation works almost out of the box anyway).</p>
+</section>
 <section id="how-to-create-a-jupyter-book">
 <h2>how to create a jupyter book<a class="headerlink" href="#how-to-create-a-jupyter-book" title="Permalink to this headline">#</a></h2>
-<p>Starting from <a class="reference external" href="https://jupyterbook.org/en/stable/start/your-first-book.html">Create your first book</a></p>
+<p>Starting from <a class="reference external" href="https://jupyterbook.org/en/stable/start/your-first-book.html">Create your first book</a> the following steps were taken.</p>
+<section id="basics">
+<h3>basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h3>
 <p>After creating this repo, cloning it (assuming it is called <code class="docutils literal notranslate"><span class="pre">root</span></code> locally), I run the following from the commandline in the folder containing <code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
 <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">book</span>
@@ -464,15 +509,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>The book can now be opened in a browser by opening the file <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code>. On a mac, simply run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">_build/html/index.html</span></code></p>
-<p>Adapt <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">executablebooks</span><span class="o">/</span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="o">/</span><span class="n">master</span><span class="o">/.</span><span class="n">gitignore</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
-</pre></div>
-</div>
-<p>Going up to root again, run</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">book</span>
-</pre></div>
-</div>
-<p>and open the book (I am on a mac) with <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">book/_build/html/index.html</span></code> in my default browser.</p>
 <p>Following <a class="reference external" href="https://jupyterbook.org/en/stable/content/math.html#math-and-equations">Math and equations</a> add to <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parse</span><span class="p">:</span>
   <span class="n">myst_enable_extensions</span><span class="p">:</span>
@@ -482,6 +518,34 @@ title="Print to PDF"
     <span class="o">-</span> <span class="n">dollarmath</span>
 </pre></div>
 </div>
+<p>Adapt <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>. Add your own files. Go through several iterations of</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
+<span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>Before committing and pushing to git, I downloaded a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">executablebooks</span><span class="o">/</span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="o">/</span><span class="n">master</span><span class="o">/.</span><span class="n">gitignore</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
+</pre></div>
+</div>
+</section>
+<section id="publishing">
+<h3>publishing<a class="headerlink" href="#publishing" title="Permalink to this headline">#</a></h3>
+<p>Following <a class="reference external" href="https://jupyterbook.org/en/stable/start/publish.html">Publish your book online</a> install <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+</pre></div>
+</div>
+<p>and then publish the book by running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>This makes the <a class="reference external" href="https://alexhkurz.github.io/coalgebraic-logic-jupyter">book available online</a>.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="slow"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Maybe building is a bit slow. On the other hand, once the files are cached, compiling the book in the terminal with <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span> <span class="pre">;</span> <span class="pre">open</span> <span class="pre">_build/html/index.html</span></code> does not take longer than doing it directly in TeX.</p>
+</dd>
+</dl>
+</section>
 </section>
 </section>
 
@@ -530,9 +594,26 @@ title="Print to PDF"
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coalgebraic-logic">
+   coalgebraic logic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-create-a-jupyter-book">
    how to create a jupyter book
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basics">
+     basics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#publishing">
+     publishing
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 

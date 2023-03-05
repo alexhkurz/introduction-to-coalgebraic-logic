@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Predicate Liftings &#8212; Coalgebraic Logic</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Predicate-Liftings';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Monotone Predicate Liftings" href="Monotone-Predicate-Liftings.html" />
+    <link rel="prev" title="Basic Coalgebraic Logic" href="Basic-Coalgebraic-Logic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Coalgebraic Logic</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
+                        Introduction to Modal Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Coalgebraic-Logic.html">
+                        Coalgebraic Logic: Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">
+                        The Origins of Coalgebra in Domain Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="The-Landscape-of-Coalgebraic-Logic.html">
+                        The Landscape of Coalgebraic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Powerdomains.html">
+                        A Short Review of Powerdomains
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Frames.html">
+                        Neighbourhood Frames
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Coalgebraic-BiSimilarity.html">
+                        Coalgebraic (Bi)Similarity
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Basic-Coalgebraic-Logic.html">
+                        Basic Coalgebraic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Predicate Liftings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Monotone-Predicate-Liftings.html">
+                        Monotone Predicate Liftings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Expressive-Predicate-Liftings.html">
+                        Expressive Predicate Liftings
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
+                        Introduction to Modal Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Introduction-to-Coalgebraic-Logic.html">
+                        Coalgebraic Logic: Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">
+                        The Origins of Coalgebra in Domain Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="The-Landscape-of-Coalgebraic-Logic.html">
+                        The Landscape of Coalgebraic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Powerdomains.html">
+                        A Short Review of Powerdomains
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Neighbourhood-Frames.html">
+                        Neighbourhood Frames
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Coalgebraic-BiSimilarity.html">
+                        Coalgebraic (Bi)Similarity
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Basic-Coalgebraic-Logic.html">
+                        Basic Coalgebraic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Predicate Liftings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Monotone-Predicate-Liftings.html">
+                        Monotone Predicate Liftings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Expressive-Predicate-Liftings.html">
+                        Expressive Predicate Liftings
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Coalgebraic Logic</p>
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modal Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview or Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Introduction-to-Coalgebraic-Logic.html">Coalgebraic Logic: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">The Origins of Coalgebra in Domain Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="The-Landscape-of-Coalgebraic-Logic.html">The Landscape of Coalgebraic Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Paradigmatic Examples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Powerdomains.html">A Short Review of Powerdomains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Frames.html">Neighbourhood Frames</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to Coalgebraic Logic</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coalgebraic-BiSimilarity.html">Coalgebraic (Bi)Similarity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Basic-Coalgebraic-Logic.html">Basic Coalgebraic Logic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Predicate Liftings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Monotone-Predicate-Liftings.html">Monotone Predicate Liftings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Expressive-Predicate-Liftings.html">Expressive Predicate Liftings</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Predicate-Liftings.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/contents/Predicate-Liftings.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Predicate Liftings</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Definition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-powerset">
+   Example: Powerset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-probability-distributions">
+   Example: Probability Distributions
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <p><span class="math notranslate nohighlight">\(\newcommand{\sem}[1]{\mathopen{[\![}#1\mathclose{]\!]}}\)</span></p>
+<section class="tex2jax_ignore mathjax_ignore" id="predicate-liftings">
+<h1>Predicate Liftings<a class="headerlink" href="#predicate-liftings" title="Permalink to this headline">#</a></h1>
+<p>(draft)</p>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
+<p>A <span class="math notranslate nohighlight">\(n\)</span>-ary predicate lifting for a functor <span class="math notranslate nohighlight">\(T:\sf Set\to Set\)</span> is a natural transformation</p>
+<div class="math notranslate nohighlight">
+\[{2^n}^X\to 2^{TX}\]</div>
+<p>It follows from the Yoneda lemma that such natural transformations are in bijection with functions</p>
+<div class="math notranslate nohighlight">
+\[T(2^n)\to 2.\]</div>
+<p>In one direction, we apply <span class="math notranslate nohighlight">\({2^n}^X\to 2^{TX}\)</span> to the idenity on <span class="math notranslate nohighlight">\(X=2^n\)</span> to obtain <span class="math notranslate nohighlight">\(T(2^n)\to 2\)</span>.</p>
+<p>In the other direction, each <span class="math notranslate nohighlight">\(T(2^n)\to 2\)</span> induces a modal operator as follows.</p>
+<p>Given a predicate lifting <span class="math notranslate nohighlight">\(\triangle: T(2^n)\to 2\)</span> and a collection <span class="math notranslate nohighlight">\(\phi:X\to 2^n\)</span> of <span class="math notranslate nohighlight">\(n\)</span> predicates <span class="math notranslate nohighlight">\(\phi_i:X\to 2\)</span>, we obtain <span class="math notranslate nohighlight">\(TX\to 2\)</span> defined as</p>
+<div class="math notranslate nohighlight">
+\[TX\stackrel {T\phi}\longrightarrow T(2^n)\stackrel\triangle\longrightarrow 2\]</div>
+<p>Precomposing with a coalgebra <span class="math notranslate nohighlight">\(X\to TX\)</span> the semantics of a modal formula $<span class="math notranslate nohighlight">\(\triangle \phi\)</span>$</p>
+<p>is then given by</p>
+<div class="math notranslate nohighlight">
+\[X\longrightarrow TX\stackrel {T\phi}\longrightarrow T(2^n)\stackrel\triangle\longrightarrow 2.\]</div>
+<p>A good way to understand what is going on here is to explicitely calculate all unary predicate liftings of the powerset functor.</p>
+<p>But before doing this let us clarify terminology.</p>
+<p>First, to simplify notation, we will only consider unary predicate liftings in the following.</p>
+<p><strong>Terminology:</strong> We tend to say <strong>predicate lifting</strong> for the function</p>
+<div class="math notranslate nohighlight">
+\[\triangle: T2\to 2\]</div>
+<p>and <strong>modal operator</strong> (or sometimes <strong>predicate transformer</strong>) for the function that maps a predicate <span class="math notranslate nohighlight">\(\phi\)</span> to the predicate</p>
+<div class="math notranslate nohighlight">
+\[\triangle\phi: X\to TX \stackrel {T\phi}\longrightarrow T2\stackrel\triangle\longrightarrow 2.\]</div>
+<p><strong>Question:</strong> Would it be better to reverse the terminology? Or perhaps as follows:</p>
+<ul class="simple">
+<li><p>predicate lifting <span class="math notranslate nohighlight">\(2^X\to 2^{TX}\)</span></p></li>
+<li><p>predicate transformer <span class="math notranslate nohighlight">\(2^X\to 2^{TX}\to 2^X\)</span></p></li>
+<li><p>modal operator: <span class="math notranslate nohighlight">\(T2\to 2\)</span></p></li>
+</ul>
+<p><strong>Anyway:</strong> Since there is a bijection between predicate liftings and modal operators, we may blur the distinction on occasion.</p>
+</section>
+<section id="example-powerset">
+<h2>Example: Powerset<a class="headerlink" href="#example-powerset" title="Permalink to this headline">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> be the powerset functor.</p>
+<p>We see right away that there are 16 modal operators</p>
+<div class="math notranslate nohighlight">
+\[\mathcal P2\to 2\]</div>
+<p>because that is the cardinality of the set of functions of type <span class="math notranslate nohighlight">\(\mathcal P2\to 2\)</span>.</p>
+<p>We are interested in explicitely describing all modal operators <span class="math notranslate nohighlight">\(\triangle:\mathcal P2\to 2\)</span> taking predicates <span class="math notranslate nohighlight">\(\phi:X\to 2\)</span> to $<span class="math notranslate nohighlight">\(\mathcal PX\stackrel {\mathcal P\phi}\longrightarrow \mathcal P2\stackrel\triangle\longrightarrow 2\)</span>$</p>
+<p>We need to know that <span class="math notranslate nohighlight">\(\mathcal P\phi\)</span> takes direct image. This tells us how to interpret the 4 possible results of applying <span class="math notranslate nohighlight">\(\mathcal P \phi\)</span> to a set <span class="math notranslate nohighlight">\(S\)</span> of successors. Writing <span class="math notranslate nohighlight">\(2=\{0,1\}\)</span>, if <span class="math notranslate nohighlight">\((\mathcal P\phi)S\)</span> is <a class="footnote-reference brackets" href="#aristotle" id="id1">1</a></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\{0,1\}\)</span> then some successors are outside of <span class="math notranslate nohighlight">\(\phi\)</span> and some are inside of <span class="math notranslate nohighlight">\(\phi\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{0\}\)</span> then all and some successors are out.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{1\}\)</span> then all and some successors are in.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\{\}\)</span> then there are no successors.</p></li>
+</ul>
+<p>For the purpose of further calculations I propose the following abbreviations:</p>
+<div class="math notranslate nohighlight">
+\[\varnothing=\{\}
+\quad\quad
+\overline 0=\{0\}
+\quad\quad
+\overline{01}=\{0,1\}
+\quad\quad
+\overline 1=\{1\}
+\]</div>
+<p>for the elements of <span class="math notranslate nohighlight">\(\mathcal P2\)</span>.</p>
+<p><img alt="" src="https://i.imgur.com/QXnFCEZ.png" /></p>
+<p><strong>Exercise:</strong> (Assumes familiarity with the classical definition of the modal operators <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>). Show that <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> defines <span class="math notranslate nohighlight">\(\Box\)</span> and that <span class="math notranslate nohighlight">\(\overline 1,\overline{01}\mapsto 1\)</span> defines <span class="math notranslate nohighlight">\(\Diamond\)</span>. <a class="footnote-reference brackets" href="#zero" id="id2">2</a></p>
+<p><strong>Answer.</strong> <a class="footnote-reference brackets" href="#boxdiamond" id="id3">3</a></p>
+<p><strong>Observation:</strong> The modal operator <span class="math notranslate nohighlight">\(\Box:\mathcal P2\to 2\)</span> coincides with <span class="math notranslate nohighlight">\(\bigwedge: \mathcal P2\to 2\)</span> and the modal operator <span class="math notranslate nohighlight">\(\Diamond:\mathcal P2\to 2\)</span> coincides with <span class="math notranslate nohighlight">\(\bigvee: \mathcal P2\to 2\)</span>.</p>
+<p>Modal logic is expressive up to bisimilarity and this means here that all predicate liftings <span class="math notranslate nohighlight">\(\mathcal P2\to 2\)</span> (and also all <span class="math notranslate nohighlight">\(\mathcal P2^n\to 2\)</span>) are generated by those for <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>. Let us try to support this with some examples:</p>
+<p><strong>Exercise:</strong> Using <span class="math notranslate nohighlight">\(\Box,\Diamond\)</span> as well as propositional connectives, express the predicate liftings <span class="math notranslate nohighlight">\(\triangle_\sigma\)</span> defined by <span class="math notranslate nohighlight">\(\sigma\mapsto 1\)</span> where <span class="math notranslate nohighlight">\(\sigma\)</span> ranges over <span class="math notranslate nohighlight">\(\{\varnothing,\overline 0,  \overline{01},\overline 1\}\)</span>. Also verify that <span class="math notranslate nohighlight">\(\Diamond=\neg\Box\neg\)</span> holds for the corresponding predicate liftings.</p>
+<p>Our next concern is to better understand the lattice (Boolean algebra) of all unary modal operators of the powerset functor <span class="math notranslate nohighlight">\(\mathcal P\)</span>.</p>
+<p>We already noted that there are 16 unary modal operators <span class="math notranslate nohighlight">\(P2\to 2\)</span> and we exhibited some salient examples.</p>
+<p>From general facts about Boolean algebras we can deduce the following. The Boolean algebra of modal operators <span class="math notranslate nohighlight">\(P2\to 2\)</span> is isomorphic to the free Boolean algebra on two generators, which I call <span class="math notranslate nohighlight">\(\sf o\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span>. <a class="footnote-reference brackets" href="#generators" id="id4">4</a> These generators combine to the atoms of the Boolean algebra as</p>
+<div class="math notranslate nohighlight">
+\[\sf o\wedge i, o\wedge\neg i, \neg o\wedge i, \neg o\wedge\neg i.\]</div>
+<p>Every element of the Boolean algebra of modal operators is a join of these atoms.</p>
+<p><strong>Exercise:</strong> Define an isomorphism between predicate liftings <span class="math notranslate nohighlight">\(\mathcal P2\to 2\)</span> and the free Boolean algebra generated by <span class="math notranslate nohighlight">\(\{\sf o,i\}\)</span> which maps <span class="math notranslate nohighlight">\(\Box\)</span> to <span class="math notranslate nohighlight">\(\neg\sf o\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> to <span class="math notranslate nohighlight">\(\sf i\)</span>.</p>
+<p><strong>Answer.</strong> <a class="footnote-reference brackets" href="#atoms" id="id5">5</a></p>
+<p><strong>Remark:</strong> The isomorphism in the previous exercise has been chosen in such a way that the generator <span class="math notranslate nohighlight">\(\sf o\)</span> is interpreted as “some  successors are <strong>o</strong>utside of <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\sf i\)</span> as “some successors are <strong>i</strong>nside”.</p>
+<ol class="arabic simple">
+<li><p>This choice of interpretation is suggested by how the functor <span class="math notranslate nohighlight">\(\mathcal P\)</span> acts on <span class="math notranslate nohighlight">\(\phi\)</span> (as direct image). In particular, <span class="math notranslate nohighlight">\(\sf o\)</span> symbolizes the observation that the direct image under <span class="math notranslate nohighlight">\(\phi\)</span> of the set of successors  contains <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span> that the direct image contains <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>From the point of view of Boolean generators there is no reason to prefer <span class="math notranslate nohighlight">\(\sf \neg o\)</span> over <span class="math notranslate nohighlight">\(\sf o\)</span>. But from a logician’s point of view <span class="math notranslate nohighlight">\(\sf \neg o\)</span>, which is <span class="math notranslate nohighlight">\(\Box\)</span>, has the advantage of being a monotone operator. We will study this in more detail in the follow-up note on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Sk4WH_fNd">monotone predicate liftings</a>.</p></li>
+</ol>
+<p><strong>Remark:</strong> Items 1. and 2. could be the starting point for a rational reconstruction of why classical modal logic is usually presented in terms of <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>. One would begin with the question of a logic that is invariant under bisimilarity, answer that such a logic is given by the logic of all predicate liftings and then proceed to the insight that <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> generate all predicate liftings in a canonical way.</p>
+<p><strong>Summary:</strong> We introduced some notation for the set <span class="math notranslate nohighlight">\(\mathcal P2\)</span></p>
+<p><img alt="" src="https://i.imgur.com/VKicAZA.png" /></p>
+<p>and then represented the unary modal operators as subsets of <span class="math notranslate nohighlight">\(\mathcal P2\)</span>. For example,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Box=\{\varnothing,\overline 1\} = \neg \sf o\)</span> (“nothing out”)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Diamond = \{\overline 1,\overline{01}\} = \sf i\)</span> (“at least one in”)</p></li>
+</ul>
+<p>As a corollary we identified <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> as the generators of the free Boolean algebra of all unary predicate liftings.</p>
+<p><strong>Puzzle:</strong> If we equip <span class="math notranslate nohighlight">\(\mathcal P2\)</span> with the inclusion order, then <span class="math notranslate nohighlight">\(\Box\)</span> is not a monotone function <span class="math notranslate nohighlight">\(\mathcal P2 \to 2\)</span> (when <span class="math notranslate nohighlight">\(2\)</span> is ordered as <span class="math notranslate nohighlight">\(0&lt;1\)</span>). On the other hand, we do know that <span class="math notranslate nohighlight">\(\Box\)</span> is a monotone modal operator in the sense that <a class="footnote-reference brackets" href="#monotonebox" id="id6">6</a></p>
+<div class="math notranslate nohighlight">
+\[\frac{\phi\to\psi}{\Box\phi\to\Box\psi}\]</div>
+<p>This puzzle will be resolved in a follow-up note on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Sk4WH_fNd">monotone predicate liftings</a>.</p>
+</section>
+<section id="example-probability-distributions">
+<h2>Example: Probability Distributions<a class="headerlink" href="#example-probability-distributions" title="Permalink to this headline">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal D\)</span> be the functor that maps a set <span class="math notranslate nohighlight">\(X\)</span> to the set <span class="math notranslate nohighlight">\(\mathcal DX\)</span> of finitely supported probability distributions.</p>
+<p>The unary modalities are given by sets of distributions on 2
+$<span class="math notranslate nohighlight">\(\mathcal D2\to 2.\)</span>$</p>
+<p>A modal operators <span class="math notranslate nohighlight">\(\triangle:\mathcal D2\to 2\)</span> takes a predicate <span class="math notranslate nohighlight">\(\phi:X\to 2\)</span> to</p>
+<div class="math notranslate nohighlight">
+\[\mathcal DX\stackrel {\mathcal 
+D\phi}\longrightarrow \mathcal D2\stackrel\triangle\longrightarrow 2\]</div>
+<p>The atoms of the Boolean algebra are the sets <span class="math notranslate nohighlight">\(\{b_r\}\)</span> where <span class="math notranslate nohighlight">\(b_r(1)=r\)</span>. If <span class="math notranslate nohighlight">\(\triangle\)</span> is <span class="math notranslate nohighlight">\(\{b_r\}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[p\in \sem{\triangle\phi}\ \Leftrightarrow \ Pr(x\in\phi)
+=r\]</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="aristotle"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This reminds me of the <a class="reference external" href="https://plato.stanford.edu/entries/square/">square of opposition</a> in Aristotelian logic. <span class="math notranslate nohighlight">\(\{1\}\)</span> corresponds to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to all successors”, <span class="math notranslate nohighlight">\(\{0\}\)</span> to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to no successors”, <span class="math notranslate nohighlight">\(\top\)</span> to “belongs to some but not all”. As far as I understand (not my area of expertise) Aristotle’s logic does not admit <span class="math notranslate nohighlight">\(\varnothing\)</span>.</p>
+</dd>
+<dt class="label" id="zero"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Here and in the following all elements not explicitly mentioned are sent to <span class="math notranslate nohighlight">\(0\)</span>. For example, writing <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> implies  <span class="math notranslate nohighlight">\(\overline 0,\overline{01}\mapsto 0\)</span>.</p>
+</dd>
+<dt class="label" id="boxdiamond"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>For example, in the case of <span class="math notranslate nohighlight">\(\Box\)</span>, one has to verify that with <span class="math notranslate nohighlight">\(\triangle\)</span> defined as <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> the function <span class="math notranslate nohighlight">\(\mathcal PX\stackrel {\mathcal P\phi}\longrightarrow \mathcal P2\stackrel\triangle\longrightarrow 2\)</span> maps <span class="math notranslate nohighlight">\(S\subseteq X\)</span> to <span class="math notranslate nohighlight">\(1\)</span> iff <span class="math notranslate nohighlight">\(S\subseteq\phi\)</span>.</p>
+</dd>
+<dt class="label" id="generators"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Intuitively, <span class="math notranslate nohighlight">\(\sf o\)</span> means “some successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\sf i\)</span> means “some successor inside <span class="math notranslate nohighlight">\(\phi\)</span>”. It is a lucky coincidence that the symbol <span class="math notranslate nohighlight">\(\sf o\)</span> reminds us of both <strong>o</strong>ut and <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span> of both <strong>i</strong>n and <span class="math notranslate nohighlight">\(1\)</span>.</p>
+</dd>
+<dt class="label" id="atoms"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Recall that <span class="math notranslate nohighlight">\(\varnothing\)</span> means “no successor”, <span class="math notranslate nohighlight">\(\overline 0\)</span> means “some and all successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>”, <span class="math notranslate nohighlight">\(\overline 1\)</span> means “some and all successors in <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\overline{01}\)</span> means “some out and some in”.
+Accordingly, we map the elements <span class="math notranslate nohighlight">\(\varnothing,\overline 0,\overline{01},\overline 1\in\mathcal P2\)</span> to conjunctions of generators as follows. <span class="math notranslate nohighlight">\(\varnothing \mapsto \sf \neg o\wedge\neg i\)</span>, <span class="math notranslate nohighlight">\(\overline 0\mapsto \sf o\wedge\neg i\)</span>, <span class="math notranslate nohighlight">\(\overline{01}\mapsto \sf o\wedge i\)</span>, <span class="math notranslate nohighlight">\(\overline 1\mapsto \sf\neg o\wedge i\)</span>.</p>
+</dd>
+<dt class="label" id="monotonebox"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>It also makes sense to replace <span class="math notranslate nohighlight">\(\to\)</span> by <span class="math notranslate nohighlight">\(\le\)</span> if we think of predicates as propositional functions to <span class="math notranslate nohighlight">\(2=\{0&lt;1\}\)</span>.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="Basic-Coalgebraic-Logic.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Basic Coalgebraic Logic</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="Monotone-Predicate-Liftings.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Monotone Predicate Liftings</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Definition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-powerset">
+   Example: Powerset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-probability-distributions">
+   Example: Probability Distributions
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Kurz
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
