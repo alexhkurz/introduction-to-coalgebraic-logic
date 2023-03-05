@@ -62,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Relation-Lifting';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction" href="Introduction-to-Functorial-Modal-Logic.html" />
+    <link rel="next" title="Moss’s Coalgebraic Logic" href="Moss-Coalgebraic-Logic.html" />
     <link rel="prev" title="Expressive Predicate Liftings" href="Expressive-Predicate-Liftings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
@@ -221,6 +221,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Relation Lifting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Moss-Coalgebraic-Logic.html">
+                        Moss’s Coalgebraic Logic
                       </a>
                     </li>
                 
@@ -436,6 +443,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Moss-Coalgebraic-Logic.html">
+                        Moss’s Coalgebraic Logic
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="Introduction-to-Functorial-Modal-Logic.html">
                         Introduction
                       </a>
@@ -576,6 +590,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Monotone-Predicate-Liftings.html">Monotone Predicate Liftings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Expressive-Predicate-Liftings.html">Expressive Predicate Liftings</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Relation Lifting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moss-Coalgebraic-Logic.html">Moss’s Coalgebraic Logic</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functorial Modal Logic</span></p>
 <ul class="nav bd-sidenav">
@@ -791,8 +806,8 @@ title="Print to PDF"
 <p><strong>Remark:</strong> This formulation is specific to set-functors, but can be generalised to other base categories.</p>
 <p><strong>Fact:</strong> <span class="math notranslate nohighlight">\(\overline T\)</span> preserves composition (and therefore is a functor on <span class="math notranslate nohighlight">\(\sf Rel\)</span>) if <span class="math notranslate nohighlight">\(T\)</span> preserves weak-pullbacks.</p>
 <p><strong>Example/Exercise:</strong> Let <span class="math notranslate nohighlight">\(\mathcal P\)</span> be the powerset functor. It is an interesting exercise to check that <span class="math notranslate nohighlight">\((a,b)\in \overline{\mathcal P}X\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-39df4486-b962-491e-9882-762a0f8dbbbe">
-<span class="eqno">(18)<a class="headerlink" href="#equation-39df4486-b962-491e-9882-762a0f8dbbbe" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-cfb52221-4113-4ce3-abb5-7249e87e7df0">
+<span class="eqno">(18)<a class="headerlink" href="#equation-cfb52221-4113-4ce3-abb5-7249e87e7df0" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,xRy \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,xRy \\
 \end{gather}\]</div>
@@ -814,8 +829,8 @@ title="Print to PDF"
 <p>The following fact allows us to use known results about the span-based relation lifting to compute the order-extension of a set-functor in many examples.</p>
 <p><strong>Fact:</strong> If <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks, then applying <span class="math notranslate nohighlight">\(\widetilde T\)</span> to a preorder <span class="math notranslate nohighlight">\((X,\le)\)</span> agrees with applying the relation lifting <span class="math notranslate nohighlight">\(\overline T\)</span> to <span class="math notranslate nohighlight">\(\le\)</span>.</p>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\((X,\le)\)</span> be a preorder. For subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> we have <span class="math notranslate nohighlight">\(a\le b\in \widetilde{\mathcal P}(X,\le)\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c78b522b-5b3b-4f8a-9e7d-129fd149cd04">
-<span class="eqno">(19)<a class="headerlink" href="#equation-c78b522b-5b3b-4f8a-9e7d-129fd149cd04" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-385b26c2-1968-4e01-a207-daebfb647643">
+<span class="eqno">(19)<a class="headerlink" href="#equation-385b26c2-1968-4e01-a207-daebfb647643" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,x\le y \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,x\le y \\
 \end{gather}\]</div>
@@ -895,10 +910,10 @@ title="Print to PDF"
           <p class="prev-next-title">Expressive Predicate Liftings</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="Introduction-to-Functorial-Modal-Logic.html" title="next page">
+  <a class='right-next' id="next-link" href="Moss-Coalgebraic-Logic.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Introduction</p>
+      <p class="prev-next-title">Moss’s Coalgebraic Logic</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
