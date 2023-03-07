@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Completeness &#8212; Coalgebraic Logic</title>
+    <title>Coalgebraic Logic: One-Step Properties &#8212; Coalgebraic Logic</title>
   
   
   
@@ -57,11 +57,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Completeness';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/One-Step-Properties';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Expressivity" href="Expressivity.html" />
-    <link rel="prev" title="Semantics of Coalgebraic Logic" href="Semantics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -258,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Completeness.html">
                         Completeness
                       </a>
                     </li>
@@ -393,6 +393,10 @@ const thebe_selector_output = ".output, .cell_output"
     </div>
   
 
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
   
 
 </div>
@@ -541,8 +545,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="Completeness.html">
                         Completeness
                       </a>
                     </li>
@@ -727,12 +731,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Moss-Coalgebraic-Logic.html">Moss’s Coalgebraic Logic</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functorial Modal Logic</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Functorial-Modal-Logic.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presenting-Functors-by-Operations-and-Equations.html">Presenting Functors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Boolean-Logic-for-Set-Coalgebras.html">Boolean Logic for Set-Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Semantics.html">Semantics of Coalgebraic Logic</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Completeness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Completeness.html">Completeness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Expressivity.html">Expressivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Many-Valued-Coalgebraic-Logic.html">Many-Valued Coalgebraic Logic</a></li>
@@ -826,7 +830,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Completeness.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/One-Step-Properties.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -851,7 +855,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/contents/Completeness.md" target="_blank"
+      <li><a href="../_sources/contents/One-Step-Properties.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -884,7 +888,9 @@ title="Print to PDF"
       
   </ul>
 </div>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
             </div>
@@ -892,19 +898,82 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Completeness</h1>
+    <h1>Coalgebraic Logic: One-Step Properties</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
 
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="completeness">
-<h1>Completeness<a class="headerlink" href="#completeness" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="coalgebraic-logic-one-step-properties">
+<h1>Coalgebraic Logic: One-Step Properties<a class="headerlink" href="#coalgebraic-logic-one-step-properties" title="Permalink to this headline">#</a></h1>
+<p>Given functors <span class="math notranslate nohighlight">\(T:\sf Set\to Set\)</span> and <span class="math notranslate nohighlight">\(L:\sf BA\to BA\)</span> and the contravariant adjunction “homming into <span class="math notranslate nohighlight">\(2\)</span>”</p>
+<div class="math notranslate nohighlight">
+\[ P:\sf Set \leftrightarrow BA : S\]</div>
+<p>the meaning of the logic <span class="math notranslate nohighlight">\(L\)</span> is determined by</p>
+<div class="math notranslate nohighlight">
+\[LP\to PT\]</div>
+<p>Moreover, <span class="math notranslate nohighlight">\(LP\to PT\)</span> determines, and is determined by, its so-called mate</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1bbaa10d-fa82-4d51-952e-2a30eb50b94e">
+<span class="eqno">()<a class="headerlink" href="#equation-1bbaa10d-fa82-4d51-952e-2a30eb50b94e" title="Permalink to this equation">#</a></span>\[\begin{gather}
+TS\to SL
+\end{gather}\]</div>
+<p>which maps a one-step behaviour to its theory.</p>
+<p>It is possible to express properties of the logic in terms of the properties of these natural transformations. Below</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n\)</span> is a finite set,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\twoheadrightarrow\)</span> is onto,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> is split epi (onto and has a half-inverse),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rightarrowtail\)</span> is injective,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hookrightarrow\)</span> is a section (injective and has a half-inverse).</p></li>
+</ul>
+<p>\begin{array}{|l|l|}
+\hline
+LP\stackrel{}{\rightarrowtail}PT  &amp; \textrm{one-step completeness}
+\ \hline
+LP\stackrel{}{\twoheadrightarrow}PT &amp; \textrm{all sets of one-step behaviours are definable}
+\ \hline
+LFn\twoheadrightarrow PTSFn &amp; \textrm{all finitary predicate liftings are definable}
+\ \hline
+TS\rightarrowtail SL &amp; \textrm{one-step expressiveness}\
+\hline
+TS\Rightarrow SL &amp; \textrm{canonical (strongly complete)}
+\ \hline
+T \rightarrowtail SLP &amp; \textrm{separating (non-bisimilar successors are distinguished by a formula)}
+\ \hline
+\end{array}</p>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p>The algebraic approach to coalgebraic logic was proposed in</p>
+<ul class="simple">
+<li><p>Kupke, Kurz, Pattinson: <a class="reference external" href="https://alexhkurz.github.io/papers/KKP-cmcs04/cmcs2004.entcs.pdf">Algebraic Semantics for Coalgebraic Logics</a>. 2004.</p></li>
+</ul>
+<p>This paper proves that one-step completeness implies completeness. That one-step expressiveness implies expressiveness is due to</p>
+<ul class="simple">
+<li><p>Klin: <span class="xref myst"></span> …</p></li>
+</ul>
+<p>…</p>
+<ul class="simple">
+<li><p>Kurz, Rosicky: <span class="xref myst"></span> …</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -935,26 +1004,33 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="Semantics.html" title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Semantics of Coalgebraic Logic</p>
-      </div>
-  </a>
-  <a class='right-next' id="next-link" href="Expressivity.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Expressivity</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
 </div>
             </footer>
             
           </div>
           
           
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
           
           
         </div>

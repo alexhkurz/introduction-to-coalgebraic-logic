@@ -1,8 +1,4 @@
-# Introduction
-
-(not even a draft)
-
-## Review
+# Coalgebraic Logic: One-Step Properties
 
 Given functors $T:\sf Set\to Set$ and $L:\sf BA\to BA$ and the contravariant adjunction "homming into $2$"
 
@@ -19,8 +15,6 @@ TS\to SL
 
 which maps a one-step behaviour to its theory.
 
-## One-Step Properties
-
 It is possible to express properties of the logic in terms of the properties of these natural transformations. Below 
 - $n$ is a finite set, 
 - $\twoheadrightarrow$ is onto, 
@@ -28,7 +22,7 @@ It is possible to express properties of the logic in terms of the properties of 
 - $\rightarrowtail$ is injective, 
 - $\hookrightarrow$ is a section (injective and has a half-inverse).
 
-$$
+
 \begin{array}{|l|l|}
   \hline
   LP\stackrel{}{\rightarrowtail}PT  & \textrm{one-step completeness}
@@ -44,7 +38,7 @@ $$
   T \rightarrowtail SLP & \textrm{separating (non-bisimilar successors are distinguished by a formula)}
   \\ \hline
 \end{array}
-$$
+
 
 ## References
 

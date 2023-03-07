@@ -18,7 +18,7 @@ Starting from [Create your first book](https://jupyterbook.org/en/stable/start/y
 
 ### basics
 
-After creating this repo, cloning it (assuming it is called `root` locally), I run the following from the commandline in the folder containing `root`.
+After creating this repo, cloning it (assume it is called `root` locally), I run the following from the commandline in the folder containing `root`.
 
 ```
 pip install -U jupyter-book
@@ -54,25 +54,28 @@ Before committing and pushing to git, I downloaded a `.gitignore`:
 curl https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.gitignore > .gitignore
 ```
 
-### publishing
+### publish on the web
 
-Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html) install `ghp-import`
-
-```
-pip install ghp-import
-```
-
-and then publish the book by running
+Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html) install `ghp-import` with
+`pip install ghp-import` and then publish the book by running
 
 ```
 ghp-import -n -p -f _build/html
 ```
 
-This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch.
+This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter). It also keeps the source files in the `main`-branch separate from the html-files in `_build` in the `gh-pages` branch.
+
+### create a pdf
+
+Following [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html), first run `pip install pyppeteer` once to install `pyppeteer`. Then build the pdf with
+
+```
+jb build . --builder pdfhtml
+```
 
 ### important commands
 
-If, for example, the table of contents in the left-ahnd pane behaves in a strange way, clean out `_build`:
+If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build`:
 
 ```
 jupyter-book clean .
