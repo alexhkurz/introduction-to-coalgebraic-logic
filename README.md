@@ -54,6 +54,8 @@ Before committing and pushing to git, I downloaded a `.gitignore`:
 curl https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.gitignore > .gitignore
 ```
 
+One question I have is how to adjust the size of screenshots and other images.
+
 ### publish on the web
 
 Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html) install `ghp-import` with
@@ -67,14 +69,13 @@ This makes the [book available online](https://alexhkurz.github.io/coalgebraic-l
 
 ### create a pdf
 
-Following [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html), first run `pip install pyppeteer` once to install `pyppeteer`. Then build the pdf with
+Following [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html), I first run `pip install pyppeteer` to use with  `jb build . --builder pdfhtml` but this produced the error `pyppeteer.errors.TimeoutError: Navigation Timeout Exceeded: 30000 ms exceeded.` The following did produce a pdf.
 
 ```
 jb build . --builder pdflatex
 ```
 
-This would need some work by hand to have a nice layout. Maybe worth the effort once a book reaches a state where a book can be considered more or less finished ... until then I think it is better to just produce html.
-
+This would need some work by hand to have a nice layout. Maybe worth the effort once a book reaches a state where a book can be considered more or less finished ... 
 ### important commands
 
 If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build`:
