@@ -35,4 +35,19 @@ parts:
     - file: contents/Completeness.md
     - file: contents/Expressivity.md
     - file: contents/Translations.md
+    - file: contents/Many-Valued-Coalgebraic-Logic.md
+  - caption: Cospan (Bi)Similarity.md
+    chapters:
+    - file: contents/Cospan-Bisimulation-Introduction.md
+    - file: contents/Cospan-Bisimulation.md
+    - file: contents/Neighbourhood-Coalgebras.md
+    - file: contents/Bisimulation-for-Order-Enriched-Coalgebras.md
+    - file: contents/Cospan-Bisimulation-2.md
+  - caption: Order-Enriched Coalgebra
+    chapters: 
+    - file: contents/Coalgebras-over-Preorders.md
+    - file: contents/Poset-Functors.md
+    - file: contents/Montone-Neighbourhood-Coalgebras.md
+    - file: contents/Logic-of-Ordered-Neighbourhood-Coalgebras.md
+
 

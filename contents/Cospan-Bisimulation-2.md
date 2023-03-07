@@ -3,7 +3,7 @@ tags: coalgebraic logic
 ---
 # Cospan Bisimulation 2
 
-(draft ... references to be added) ... ([up](https://hackmd.io/@alexhkurz/ryrkkYZZc))
+(draft ... references to be added) 
 
 ---
 
@@ -43,6 +43,7 @@ $$C\dashv D\dashv V$$ for the induced chain of adjoints.
 Following on from [part one](https://hackmd.io/6Ehr9bIQQgSZKeeasdSKoQ), we are interested in preordification $T'$ of $T$. Preordifictions are universal solutions to the problem of finding a $T'$ together with a transformation $DT\to T'D$. In fact, the preordification $T'$ of $T$ can be defined as the $Ord$-enriched left Kan extension of $DT$ along $D$. But some results hold more generally for any ordered extension $DT\to T'D$.
 
 **Definition:** We call $T':Ord\to Ord$ an **order-extension** of $T:Set\to Set$ if there is a natural transformation 
+
 $$DT\to T'D.$$
 
 **Remark:** Equivalently, $T'$ is an order-extension of $T$ if there is a natural tranformation $T\to DT'V$. This also captures the intuition that $T'$ adds ordering to $T$. If one insists on $T\to DT'V$ being an iso, this notion is equivalent to the one of Jacobs and Jacobs-Hughes (ADD REFERENCES). 
@@ -70,6 +71,7 @@ The following result makes precise that every span bisimulation is a cospan (bi)
 **Proposition:** Let $T'$ be an order-extension of $T$. If two states in two $T$-coalgebras are $T$-span-bisimilar then they are $T'$-cospan-(bi)similar.
 
 *Proof:* Let $X\to TX$ and $Y\to TY$ be two $T$-caolgebras. Let $X\leftarrow R \rightarrow Y$ be a $T$-span bisimulation. Let $R'$ be the cocomma of $X\leftarrow R \rightarrow Y$. Applying $T'$ to the square 
+
 $$
 \begin{array}{}
 &&DR&&\\

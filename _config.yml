@@ -17,7 +17,7 @@ latex:
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
-  - references.bib
+  - coalg.bib
 
 # Information about where the book exists on the web
 repository:
@@ -36,5 +36,10 @@ parse:
     # including those that are enabled by default!
     - amsmath
     - dollarmath
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+
 
 

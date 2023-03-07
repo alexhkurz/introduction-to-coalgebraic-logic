@@ -28,6 +28,7 @@ We first need to recall that every weakening relation $R:X\looparrowright Y$ can
 In other words, we encode the relation $R$ via the order of the preorder/poset $\overline R$, also known as the *collage* of $X$ and $Y$.
 
 **Definition:** Let $T$ be a (locally monotone) functor on preorders or posets. The weakening relation $R:X\looparrowright Y$ is an ***order-bisimulation*** between coalgebras $X$ and $Y$ if the unique function $\overline R\to T\overline R$ making the diagram 
+
 $$
 \begin{array}{}
 X  & \rightarrow & \overline R & \leftarrow & Y\\
