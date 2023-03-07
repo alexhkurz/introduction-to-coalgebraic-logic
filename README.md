@@ -6,7 +6,7 @@
 
 This is the repo in which I keep [my notes on coalgebraic logic](https://alexhkurz.github.io/coalgebraic-logic-jupyter).
 
-I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had various problems, in particular when it came to latex. 
+I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had problems, in particular when it came to combining markdown with latex. 
 
 So far, jupyter-book seems to work well [^slow] and the next section contains a summary of how I set it up (but the available documentation works almost out of the box anyway).
 
