@@ -1001,9 +1001,10 @@ title="Print to PDF"
 <section id="create-a-pdf">
 <h3>create a pdf<a class="headerlink" href="#create-a-pdf" title="Permalink to this headline">#</a></h3>
 <p>Following <a class="reference external" href="https://jupyterbook.org/en/stable/advanced/pdf.html">Build a PDF</a>, first run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pyppeteer</span></code> once to install <code class="docutils literal notranslate"><span class="pre">pyppeteer</span></code>. Then build the pdf with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">builder</span> <span class="n">pdfhtml</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">builder</span> <span class="n">pdflatex</span>
 </pre></div>
 </div>
+<p>This would need some work by hand to have a nice layout. Maybe worth the effort once a book reaches a state where a book can be considered more or less finished … until then I think it is better to just produce html.</p>
 </section>
 <section id="important-commands">
 <h3>important commands<a class="headerlink" href="#important-commands" title="Permalink to this headline">#</a></h3>

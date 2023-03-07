@@ -70,8 +70,10 @@ This makes the [book available online](https://alexhkurz.github.io/coalgebraic-l
 Following [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html), first run `pip install pyppeteer` once to install `pyppeteer`. Then build the pdf with
 
 ```
-jb build . --builder pdfhtml
+jb build . --builder pdflatex
 ```
+
+This would need some work by hand to have a nice layout. Maybe worth the effort once a book reaches a state where a book can be considered more or less finished ... until then I think it is better to just produce html.
 
 ### important commands
 
