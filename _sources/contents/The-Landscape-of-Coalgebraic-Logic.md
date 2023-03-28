@@ -9,7 +9,7 @@ These notes were prepared for the workshop [Exploring Baltag's Universe](https:/
 
 I met Alexandru first in 1997 in the pages of the book "Vicious Circles" by Barwise and Moss, from which I quote the introduction of the section that contains some of the earliest results in the area of coalgebra and modal logic:
 
-![](https://hackmd.io/_uploads/BJpkRix6F.png)
+![](https://hackmd.io/_uploads/BJpkRix6F.png =500x)
 
 For some time this Alexandru Baltag remained a mythical person.  There was no trace to find of him on the internet, which, even at that time, seemed curious given that he had important theorems to his name. Was he a practical joke of Barwise and Moss? But it wasn't long before Alexandru and I met at [AiML 1998](http://www.aiml.net/conferences/aiml-1998/) and we have been friends ever since. 
 

@@ -1,29 +1,26 @@
----
-tags: coalgebraic logic
----
-# Montone Neighbourhood Coalgebras
+# FML: Montone Neighbourhood Coalgebras
 
 (draft)
+
+Previous:
+- [Modal Logic on Posets](https://hackmd.io/uvH1hEqBTE6uJKlI0qSRAA),
+- [Bisimulation for Ordered Coalgebras](https://hackmd.io/V6m2cAy_TdagteE4RG_sbw)
+- [cospan (bi)simulation](https://hackmd.io/MMxanF1vQ1KgZ7BThVCoGw)
+---
 
 ## Introduction
 
 The idea of this section is to run through parts of [HK04] and adapt it to *ordered* neighbourhood frames. It could also be interesting to study *metric* neighbourhood frames.
 
-The neighbourhood frames of modal logic are coalgebras for the functor $Up\mathcal P$ [HK04,Lem.3.4]. Here, $Up\mathcal P X=\{A\subseteq \mathcal P(\mathcal PX) \mid a\in A, a\subseteq a' \Rightarrow a'\in A\}$. On functions, we have 
-
-$$Up\mathcal P\  f\ A = {\uparrow}\{f[a] \mid a\in A\}.$$
+The neighbourhood frames of modal logic are coalgebras for the functor $Up\mathcal P$ [HK04,Lem.3.4]. Here, $Up\mathcal P X=\{A\subseteq \mathcal P(\mathcal PX) \mid a\in A, a\subseteq a' \Rightarrow a'\in A\}$. On functions, we have $$Up\mathcal P\  f\ A = {\uparrow}\{f[a] \mid a\in A\}.$$
 
 There are three well-known ways of extending powerset to orders. In domain theory, they are known as the upper, lower and convex powerdomain, and also known under the names of Hoare, Smyth and Plotkin, respectively. They correspond to the downset functor $\mathcal D$, the upset functor $\mathcal U$ and the convex powerset functor $\overline{\mathcal P}$. The first two arise from ordering powerset by inclusion and reverse inclusion. The third arises as the posetification of the powerset.
 
 Similarly, there are three ways to extend the monotone neighbourhood functor $Up\mathcal P$ to posets.
 
-Recall that on objects $\mathcal UX=[X,2]^o$ and $\mathcal DX = [X^o,2]$. As a functor (and as a monad) 
+Recall that on objects $\mathcal UX=[X,2]^o$ and $\mathcal DX = [X^o,2]$. As a functor (and as a monad) $$\mathcal D\mathcal U X=[[X,2],2]$$ 
 
-$$\mathcal D\mathcal U X=[[X,2],2]$$ 
-
-and 
-
-$$\mathcal U\mathcal DX=[[X^o,2],2]^o.$$ 
+and $$\mathcal U\mathcal DX=[[X^o,2],2]^o.$$ 
 
 On discrete $X$, we have $\mathcal D\mathcal UX = (\mathcal U\mathcal DX)^o$, so both are legitimate order generalisations of the functor $Up\mathcal P$.
 
@@ -56,7 +53,6 @@ Morphisms of $\mathcal D\mathcal U$ and $\mathcal U\mathcal D$-coalgebras coinci
 ## Morphisms as Relations
 
 In sets every function is a relation and every coalgebra morphism a bisimulation. In ordered sets every function $f:X\to Y$ gives rise to two relation $f_\diamond:X\looparrowright Y$ and $f^\diamond: Y\looparrowright X$ with
-
 $$ (x,y)\in f_\diamond \ \Leftrightarrow \ fx\le y
 \quad\quad\quad\quad
 (y,x)\in f^\diamond \ \Leftrightarrow \ y\le fx$$

@@ -1,6 +1,6 @@
 # Coalgebras over Preorders 
 
-(draft ... reference to be added)
+(draft ... reference to be added) ... ([up](https://hackmd.io/@alexhkurz/ryrkkYZZc))
 
 The notion of "bisimulation" canonically associated to a functor $T:\sf Ord\to Ord$ on ordered sets is typically not a **bi**simulation but a (forward or backward) **simulation**. But, depending on the choice of $T$, it can include ordinary bisimulation as well. I therefore decided to call it (bi)simulation.
 
@@ -8,11 +8,10 @@ Simulations are one of the main reasons to be interested in coalgebras over orde
 
 For the remainder of this introduction, we review some of the material of the note on [powerdomains](https://hackmd.io/@alexhkurz/r1SJ8lizO) with the category of preorders instead of posets. We start again with
 
-![](https://i.imgur.com/wpaU0or.png)
+![](https://i.imgur.com/wpaU0or.png =300x)
 
 but we now allow $X,X'$ to be preorders (and require all maps to be order-preserving). We consider three versions of $\mathcal P$ according to whether $\mathcal PX$ is equipped with any of the following orders:
 
-$$
 \begin{array}{|c|c|c|l|}
 \hline
 \mathcal P & (\mathcal PX, \equiv) 
@@ -26,7 +25,6 @@ $$
 & \textrm{backward simulation} 
 & a \sqsupseteq b \ \Longleftrightarrow \ \forall y\in b\exists x\in a(x\le y) \\ \hline
 \end{array}
-$$
 
 Coalgebra homomorphisms are still (functional) bisimulations in all cases but (bi)simulations and the final coalgebra  can now have a richer structure. 
 

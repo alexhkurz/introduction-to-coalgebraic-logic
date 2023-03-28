@@ -8,7 +8,7 @@ Powerdomains can be seen as modelling non-determinstic choice. They appear in va
 
 We review the basic relationships between lower/upper powerdomains, forward and backward simulation, and $\Diamond$ and $\Box$ modalities.
 
-It may be worth to read the [Summary](#Summary) first.
+It may be worth to read the [Summary](https://hackmd.io/@alexhkurz/r1SJ8lizO#Summary) first.
 
 ## An Axiomatic Account of Choice
 
