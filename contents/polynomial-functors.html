@@ -394,7 +394,7 @@ document.write(`
 <div class="tex2jax_ignore mathjax_ignore section" id="polyonomial-functors">
 <h1>Polyonomial Functors<a class="headerlink" href="#polyonomial-functors" title="Permalink to this heading">#</a></h1>
 <p>(under construction)</p>
-<p>We use <span class="math notranslate nohighlight">\(\mathcal P\)</span> for the powerset functor and <span class="math notranslate nohighlight">\(\mathcal H X=2^{2^X}\)</span>. Below we indicate how to construct a modal logic for any functor <span class="math notranslate nohighlight">\(T\)</span> built according to the following context-free grammar.</p>
+<p>We use <span class="math notranslate nohighlight">\(\mathcal P\)</span> for the powerset functor and <span class="math notranslate nohighlight">\(\mathcal H X=2^{2^X}\)</span>. In this section we indicate how to construct a modal logic for any functor <span class="math notranslate nohighlight">\(T\)</span> built according to the following context-free grammar.</p>
 <div class="math notranslate nohighlight">
 \[T ::= Id \mid K_C \mid T \times T \mid T + T \mid \mathcal P T \mid \mathcal H T\]</div>
 <p>We describe functors <span class="math notranslate nohighlight">\(L:\BA\to\BA\)</span> or <span class="math notranslate nohighlight">\(L:\BA\times\BA\to\BA\)</span>
@@ -426,7 +426,7 @@ X\mid b\subseteq a\}\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(L_\mathcal H \Pi X\to \Pi\mathcal H X\)</span>  by  <span class="math notranslate nohighlight">\(\Box a \mapsto \{s\in \mathcal H X
 \mid a \in s \}\)</span>.</p></li>
 </ul>
-<p>and extend them inductively to <span class="math notranslate nohighlight">\(\delta_T:L_T\Pi\to\Pi T \)</span> for all gKPF
+<p>and extend them inductively to <span class="math notranslate nohighlight">\(\delta_T:L_T\Pi\to\Pi T \)</span> for all
 <span class="math notranslate nohighlight">\(T\)</span>. Items (1)-(3) are slight variations of cases appearing in
 <span id="id1">[<a class="reference internal" href="../intro.html#id28" title="Samson Abramsky. Domain theory in logical form. Ann. Pure Appl. Logic, 1991.">Abramsky, 1991</a>]</span>, (4) is in <span id="id2">[<a class="reference internal" href="../intro.html#id25" title="S. Abramsky. A Cook's tour of the finitary non-well-founded sets. In We Will Show Them: Essays in Honour of Dov Gabbay. College Publications, 2005.">Abramsky, 2005</a>]</span>, and <span class="math notranslate nohighlight">\(\delta_X\)</span> in (5) is given by
 the identity on <span class="math notranslate nohighlight">\(2^{2^{2^X}}\)</span>.</p>

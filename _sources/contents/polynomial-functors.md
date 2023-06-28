@@ -4,7 +4,7 @@ $\newcommand{\BA}{{\sf BA}}$
 
 (under construction)
 
-We use $\mathcal P$ for the powerset functor and $\mathcal H X=2^{2^X}$. Below we indicate how to construct a modal logic for any functor $T$ built according to the following context-free grammar.
+We use $\mathcal P$ for the powerset functor and $\mathcal H X=2^{2^X}$. In this section we indicate how to construct a modal logic for any functor $T$ built according to the following context-free grammar.
 
 $$T ::= Id \mid K_C \mid T \times T \mid T + T \mid \mathcal P T \mid \mathcal H T$$
 
@@ -35,7 +35,7 @@ For the semantics, we define Boolean algebra morphisms $\delta_T$
 - $L_\mathcal H \Pi X\to \Pi\mathcal H X$  by  $\Box a \mapsto \{s\in \mathcal H X
   \mid a \in s \}$.
   
-and extend them inductively to $\delta_T:L_T\Pi\to\Pi T $ for all gKPF
+and extend them inductively to $\delta_T:L_T\Pi\to\Pi T $ for all
 $T$. Items (1)-(3) are slight variations of cases appearing in
 {cite}`abramsky:dtlf`, (4) is in {cite}`abramsky:cooks-tour`, and $\delta_X$ in (5) is given by
 the identity on $2^{2^{2^X}}$.
