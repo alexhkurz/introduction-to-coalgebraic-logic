@@ -1,11 +1,13 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Powerdomains &#8212; Coalgebraic Logic</title>
   
   
@@ -16,18 +18,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -35,16 +37,17 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -57,577 +60,88 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Powerdomains';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Neighbourhood Frames" href="Neighbourhood-Frames.html" />
-    <link rel="prev" title="The Landscape" href="The-Landscape-of-Coalgebraic-Logic.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="None">
+    <link rel="prev" title="Polyonomial Functors" href="polynomial-functors.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
   <label class="overlay overlay-primary" for="__primary"></label>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
   <label class="overlay overlay-secondary" for="__secondary"></label>
-
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-      
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
+</form></div>
   </div>
-
   
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fa-solid fa-bars"></span>
-  </label>
-  <div id="navbar-start">
-    
-    
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
-
-<a class="navbar-brand logo" href="../intro.html">
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-    <p class="title logo__title">Coalgebraic Logic</p>
-  
-</a>
-    
-  </div>
-
-  
-  <div class="col-lg-9 navbar-header-items">
-    <div id="navbar-center" class="mr-auto">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
-                        Introduction to Modal Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Introduction-to-Coalgebraic-Logic.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">
-                        Origins in Domain Theory
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="The-Landscape-of-Coalgebraic-Logic.html">
-                        The Landscape
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        Powerdomains
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Neighbourhood-Frames.html">
-                        Neighbourhood Frames
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Coalgebraic-BiSimilarity.html">
-                        Coalgebraic (Bi)Similarity
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Basic-Coalgebraic-Logic.html">
-                        Basic Coalgebraic Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Predicate-Liftings.html">
-                        Predicate Liftings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Monotone-Predicate-Liftings.html">
-                        Monotone Predicate Liftings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Expressive-Predicate-Liftings.html">
-                        Expressive Predicate Liftings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Relation-Lifting.html">
-                        Relation Lifting
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Moss-Coalgebraic-Logic.html">
-                        Moss’s Coalgebraic Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Introduction-to-Functorial-Modal-Logic.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Presenting-Functors-by-Operations-and-Equations.html">
-                        Presenting Functors
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Boolean-Logic-for-Set-Coalgebras.html">
-                        Boolean Logic for Set-Coalgebras
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Semantics.html">
-                        Semantics of Coalgebraic Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Completeness.html">
-                        Completeness
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Expressivity.html">
-                        Expressivity
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Translations.html">
-                        Translations of Logics
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
-                        Cospan Bisimulation: Overview
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
-                        Cospan Bisimulation
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
-                        Neighbourhood Coalgebras
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
-                        Bisimulation for Ordered Coalgebras
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-2.html">
-                        Cospan Bisimulation 2
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
-            
-    </ul>
-</nav>
-      </div>
-      
-    </div>
-
-    <div id="navbar-end">
-      
-        <div class="navbar-end-item navbar-persistent--container">
-          
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-        </div>
-      
-      
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul>
-      </div>
-      
-    </div>
-  </div>
-
-
-  
-  
-    <div class="navbar-persistent--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-    </div>
-  
-
-  
-  <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fa-solid fa-outdent"></span>
-  </label>
-  
-
-</div>
-  </nav>
-  
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       <div class="bd-sidebar-primary bd-sidebar">
         
+
   
   <div class="sidebar-header-items sidebar-primary__section">
     
     
-      <div class="sidebar-header-items__center">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Introduction-to-Modal-Logic.html">
-                        Introduction to Modal Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Introduction-to-Coalgebraic-Logic.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">
-                        Origins in Domain Theory
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="The-Landscape-of-Coalgebraic-Logic.html">
-                        The Landscape
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        Powerdomains
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Neighbourhood-Frames.html">
-                        Neighbourhood Frames
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Coalgebraic-BiSimilarity.html">
-                        Coalgebraic (Bi)Similarity
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Basic-Coalgebraic-Logic.html">
-                        Basic Coalgebraic Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Predicate-Liftings.html">
-                        Predicate Liftings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Monotone-Predicate-Liftings.html">
-                        Monotone Predicate Liftings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Expressive-Predicate-Liftings.html">
-                        Expressive Predicate Liftings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Relation-Lifting.html">
-                        Relation Lifting
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Moss-Coalgebraic-Logic.html">
-                        Moss’s Coalgebraic Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Introduction-to-Functorial-Modal-Logic.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Presenting-Functors-by-Operations-and-Equations.html">
-                        Presenting Functors
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Boolean-Logic-for-Set-Coalgebras.html">
-                        Boolean Logic for Set-Coalgebras
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Semantics.html">
-                        Semantics of Coalgebraic Logic
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Completeness.html">
-                        Completeness
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Expressivity.html">
-                        Expressivity
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Translations.html">
-                        Translations of Logics
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-Introduction.html">
-                        Cospan Bisimulation: Overview
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Cospan-Bisimulation.html">
-                        Cospan Bisimulation
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Neighbourhood-Coalgebras.html">
-                        Neighbourhood Coalgebras
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">
-                        Bisimulation for Ordered Coalgebras
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="Cospan-Bisimulation-2.html">
-                        Cospan Bisimulation 2
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
-            
-    </ul>
-</nav>
-      </div>
-      
-      </div>
     
-
-    
-    
-    <div class="sidebar-header-items__end">
-      
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul>
-      </div>
-      
-    </div>
     
   </div>
-
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item">
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
   
-
 
 <a class="navbar-brand logo" href="../intro.html">
-
   
   
   
-  
-  
-  
-  
-
   
   
     <p class="title logo__title">Coalgebraic Logic</p>
   
-</a>
-    </div>
-    <div class="sidebar-start-items__item">
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
-    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -647,8 +161,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">Origins in Domain Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="The-Landscape-of-Coalgebraic-Logic.html">The Landscape</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Paradigmatic Examples</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="polynomial-functors.html">Polyonomial Functors</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Powerdomains</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Frames.html">Neighbourhood Frames</a></li>
 </ul>
@@ -671,6 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Completeness.html">Completeness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Expressivity.html">Expressivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CoLog.html">Chen’s Category CoLog</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
 <ul class="nav bd-sidenav">
@@ -682,47 +198,146 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav>
+</nav></div>
     </div>
-  </div>
   
-
   
-  <div class="sidebar-end-items sidebar-primary__section">
-    <div class="sidebar-end-items__item">
-    </div>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
-
   
   <div id="rtd-footer-container"></div>
 
+
       </div>
+      
       <main id="main-content" class="bd-main">
         
         
 
 <div class="sbt-scroll-pixel-helper"></div>
 
-        <div class="bd-content">
-          <div class="bd-article-container">
-            
-            <div class="bd-header-article">
-                
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
-            <span class="fa-solid fa-bars"></span>
-        </label>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/issues/new?title=Issue%20on%20page%20%2Fcontents/Powerdomains.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/contents/Powerdomains.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
@@ -733,93 +348,34 @@ title="Fullscreen mode"
 </button>
 
 
-
-<div class="dropdown dropdown-repository-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <ul class="dropdown-menu">
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/" target="_blank"
-   class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">repository</span>
-</a>
-</a>
-      
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter//issues/new?title=Issue%20on%20page%20%2Fcontents/Powerdomains.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">open issue</span>
-</a>
-</a>
-      
-  </ul>
-</div>
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <ul class="dropdown-menu">
-      <li><a href="../_sources/contents/Powerdomains.md" target="_blank"
-   class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</a>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
       
-      <li>
-<button onclick="printPdf(this)"
-  class="btn btn-sm dropdown-item"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</a>
-      
-  </ul>
-</div>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
-            <span class="fa-solid fa-list"></span>
-        </label>
     </div>
+  
 </div>
-            </div>
-            
-            
+</div>
+              
+              
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>Powerdomains</h1>
@@ -832,138 +388,56 @@ title="Print to PDF"
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-axiomatic-account-of-choice">
-   An Axiomatic Account of Choice
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coalgebras-for-the-powerset-functor">
-   Coalgebras for the Powerset Functor
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#powerdomains-on-posets">
-   Powerdomains on Posets
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functors">
-     Functors
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#convex-powerdomain">
-       Convex Powerdomain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lower-powerdomain">
-       Lower Powerdomain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#upper-powerdomain">
-       Upper Powerdomain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#coalgebras">
-     Coalgebras
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bi-simulations">
-     (Bi)simulations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#simulations-for-set-coalgebras">
-     Simulations for Set-Coalgebras
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#powerdomains-via-generators-and-relations">
-   Powerdomains via Generators and Relations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modal-logic">
-   Modal Logic
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-logic-of-bisimulation">
-     The Logic of Bisimulation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logics-of-simulation">
-     Logics of Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generalisations">
-   Generalisations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-reading">
-   Further Reading
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#topology">
-     Topology
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id15">
-     Modal Logic
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#domain-theory">
-     Domain Theory
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#coalgebra">
-     Coalgebra
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-axiomatic-account-of-choice">An Axiomatic Account of Choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coalgebras-for-the-powerset-functor">Coalgebras for the Powerset Functor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powerdomains-on-posets">Powerdomains on Posets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functors">Functors</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-powerdomain">Convex Powerdomain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lower-powerdomain">Lower Powerdomain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upper-powerdomain">Upper Powerdomain</a></li>
 </ul>
-
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coalgebras">Coalgebras</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bi-simulations">(Bi)simulations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulations-for-set-coalgebras">Simulations for Set-Coalgebras</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powerdomains-via-generators-and-relations">Powerdomains via Generators and Relations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modal-logic">Modal Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-logic-of-bisimulation">The Logic of Bisimulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logics-of-simulation">Logics of Simulation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalisations">Generalisations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topology">Topology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Modal Logic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-theory">Domain Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coalgebra">Coalgebra</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
 
-            <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="powerdomains">
-<h1>Powerdomains<a class="headerlink" href="#powerdomains" title="Permalink to this headline">#</a></h1>
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="powerdomains">
+<h1>Powerdomains<a class="headerlink" href="#powerdomains" title="Permalink to this heading">#</a></h1>
 <p>Powerdomains can be seen as modelling non-determinstic choice. They appear in various areas of mathematics and computer science.</p>
 <p>We review the basic relationships between lower/upper powerdomains, forward and backward simulation, and <span class="math notranslate nohighlight">\(\Diamond\)</span> and <span class="math notranslate nohighlight">\(\Box\)</span> modalities.</p>
 <p>It may be worth to read the <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1SJ8lizO#Summary">Summary</a> first.</p>
-<section id="an-axiomatic-account-of-choice">
-<h2>An Axiomatic Account of Choice<a class="headerlink" href="#an-axiomatic-account-of-choice" title="Permalink to this headline">#</a></h2>
+<div class="section" id="an-axiomatic-account-of-choice">
+<h2>An Axiomatic Account of Choice<a class="headerlink" href="#an-axiomatic-account-of-choice" title="Permalink to this heading">#</a></h2>
 <p>A somewhat minimal axiomatisation of a choice operator <span class="math notranslate nohighlight">\(\odot\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-761e424a-b04a-441e-84d8-b1347ed933db">
-<span class="eqno">(2)<a class="headerlink" href="#equation-761e424a-b04a-441e-84d8-b1347ed933db" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-7134e0ee-084e-411d-9d04-3ec834db11ce">
+<span class="eqno">(2)<a class="headerlink" href="#equation-7134e0ee-084e-411d-9d04-3ec834db11ce" title="Permalink to this equation">#</a></span>\[\begin{gather}
 (x\odot y)\odot z= x\odot (y\odot z)\\
 x\odot y = y\odot x\\
 x\odot x = x
@@ -982,9 +456,9 @@ x\odot x = x
 <li><p>Similarly, <span class="math notranslate nohighlight">\(\mathcal P\)</span> gives us complete semi-lattices. The initial algebra for the functor <span class="math notranslate nohighlight">\(\mathcal P\)</span> is our usual set-theoretic universe, while the final coalgebra fo the functor <span class="math notranslate nohighlight">\(\mathcal P\)</span> is Aczel’s universe of non-well founded sets. <a class="footnote-reference brackets" href="#size" id="id1">1</a></p></li>
 </ul>
 <p><strong>Remark:</strong> Semi-lattices exist in many categories. This often allows us to generalise non-determinism.</p>
-</section>
-<section id="coalgebras-for-the-powerset-functor">
-<h2>Coalgebras for the Powerset Functor<a class="headerlink" href="#coalgebras-for-the-powerset-functor" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="coalgebras-for-the-powerset-functor">
+<h2>Coalgebras for the Powerset Functor<a class="headerlink" href="#coalgebras-for-the-powerset-functor" title="Permalink to this heading">#</a></h2>
 <p>More often than not, the reason to investigate choice is to model dynamic scenarios where agents change state by making choices. Such dynamical systems are known as <em>coalgebras</em> for the powerset functor and also as  <em>transition systems</em> in process algebra and as <em>non-determinstic automata</em> in the theory of automata and formal languages and as <strong>Kripke frames</strong> in the theory of modal logic.</p>
 <p>Mathematically, a coalgebra is a function <span class="math notranslate nohighlight">\(X\to\mathcal PX\)</span>. A coalgebra morphism</p>
 <div class="math notranslate nohighlight">
@@ -999,70 +473,70 @@ x\odot x = x
 <p><img alt="" src="https://i.imgur.com/wpaU0or.png" /></p>
 <p>Of course, a coalgebra on <span class="math notranslate nohighlight">\(X\)</span> is nothing but a set with a relation <span class="math notranslate nohighlight">\(R\subseteq X\times X\)</span>. But coalgebra morphisms do not only preserve the relation but also reflect it in a particular way. Key to this is the following.</p>
 <p><strong>Exercise on (bi)simulation:</strong> We write <span class="math notranslate nohighlight">\(xRy\)</span> for <span class="math notranslate nohighlight">\(y\in\xi(x)\)</span>. The following are equivalent conditions for <span class="math notranslate nohighlight">\(f\)</span> being a <strong>forward simulation</strong>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1235751-b0ec-4806-abf4-bd91f8f8773c">
-<span class="eqno">(3)<a class="headerlink" href="#equation-f1235751-b0ec-4806-abf4-bd91f8f8773c" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-61c4ac23-a094-41b2-b986-80979b7717d6">
+<span class="eqno">(3)<a class="headerlink" href="#equation-61c4ac23-a094-41b2-b986-80979b7717d6" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \mathcal Pf\circ \xi \ \subseteq \ \xi'\circ f\\
 xRy \ \Rightarrow \ f(x) R' f(y)\\
 x'=f(x) \ \Rightarrow \ \forall y\in\xi(x)\,.\,\exists y'\in\xi'(x')\,.\,y'=f(x')
 \end{gather}\]</div>
 <p>The following are equivalent conditions for <span class="math notranslate nohighlight">\(f\)</span> being a <strong>backward simulation</strong>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6d502144-b2ab-4123-ac51-944a206dc067">
-<span class="eqno">(4)<a class="headerlink" href="#equation-6d502144-b2ab-4123-ac51-944a206dc067" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-d63f7587-c992-4dd9-a919-a8c6e253a948">
+<span class="eqno">(4)<a class="headerlink" href="#equation-d63f7587-c992-4dd9-a919-a8c6e253a948" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \mathcal Pf\circ \xi \ \supseteq \ \xi'\circ f\\
 f(x)R'y' \ \Rightarrow \ \exists y\,.\, xRy \ \&amp; \  y'=f(y)\\
 x'=f(x) \ \Rightarrow \ \forall y'\in\xi'(x')\,.\,\exists y\in\xi(x)\,.\,y'=f(x')
 \end{gather}\]</div>
 <p>The advantage of the first conditions is that they are parametric in the functor<a class="footnote-reference brackets" href="#parametric" id="id2">2</a>, the second condition is how so-called zig-zag morphisms or p-morphisms or bounded morphisms are defined in modal logic and the third conditions establish the following important fact that will continue to play a role in this note (we will give a precise definition of bisimulation later).</p>
 <p><strong>Fact:</strong> A function is a coalgebra morphism iff its graph is a bisimulation.</p>
-</section>
-<section id="powerdomains-on-posets">
-<h2>Powerdomains on Posets<a class="headerlink" href="#powerdomains-on-posets" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="powerdomains-on-posets">
+<h2>Powerdomains on Posets<a class="headerlink" href="#powerdomains-on-posets" title="Permalink to this heading">#</a></h2>
 <p>The “domain” in powerdomain comes from domain theory and the theory of programming languages. It is well-known that in order to model recursively defined programs and datatypes in general one needs to extend the types-as-sets paradigm to types-as-domains. There are different ways to define domains. Typically, they  involve some kind of complete order or complete metric that supports the taking of certain limits to interpret recursively defined functions. In this section, I simplify by ignoring completeness and only look at domains as ordered sets.</p>
-<section id="functors">
-<h3>Functors<a class="headerlink" href="#functors" title="Permalink to this headline">#</a></h3>
+<div class="section" id="functors">
+<h3>Functors<a class="headerlink" href="#functors" title="Permalink to this heading">#</a></h3>
 <p>The powerset functor gives rise to three different powerdomains on the category of partial orders according to whether we enforce one of one of the following two alternatives.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dc0d598c-1eb9-49b9-a9ff-4da9e5bac53e">
-<span class="eqno">(5)<a class="headerlink" href="#equation-dc0d598c-1eb9-49b9-a9ff-4da9e5bac53e" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-2f9b21b2-7319-4507-908c-3a918422fe60">
+<span class="eqno">(5)<a class="headerlink" href="#equation-2f9b21b2-7319-4507-908c-3a918422fe60" title="Permalink to this equation">#</a></span>\[\begin{gather}
 x\le x\odot y\\
 x\ge x\odot y
 \end{gather}\]</div>
-<section id="convex-powerdomain">
-<h4>Convex Powerdomain<a class="headerlink" href="#convex-powerdomain" title="Permalink to this headline">#</a></h4>
+<div class="section" id="convex-powerdomain">
+<h4>Convex Powerdomain<a class="headerlink" href="#convex-powerdomain" title="Permalink to this heading">#</a></h4>
 <p>The functor</p>
 <div class="math notranslate nohighlight">
 \[\mathcal P^\rm c:\sf Pos \to Pos\]</div>
 <p>maps a poset <span class="math notranslate nohighlight">\((X,\le)\)</span> to the set of convex subsets <span class="math notranslate nohighlight">\(\mathcal PX\)</span>. The order on convex subsets is defined as follows. <a class="footnote-reference brackets" href="#back-forth" id="id3">3</a> <a class="footnote-reference brackets" href="#pjust" id="id4">4</a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-cc12d828-70bc-4777-adfb-429b2759ef11">
-<span class="eqno">(6)<a class="headerlink" href="#equation-cc12d828-70bc-4777-adfb-429b2759ef11" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6b357814-7010-409c-b537-775d367cb74d">
+<span class="eqno">(6)<a class="headerlink" href="#equation-6b357814-7010-409c-b537-775d367cb74d" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\le y \quad \textrm{ and }\\
 &amp;\forall y\in b\,.\,\exists x\in a. x\le y\\
 \end{align}\]</div>
 <p>If <span class="math notranslate nohighlight">\(X\)</span> is discrete then <span class="math notranslate nohighlight">\(\mathcal P^\rm c X\)</span> is just  <span class="math notranslate nohighlight">\(\mathcal PX\)</span> and <span class="math notranslate nohighlight">\(\le\)</span> is equality.</p>
-</section>
-<section id="lower-powerdomain">
-<h4>Lower Powerdomain<a class="headerlink" href="#lower-powerdomain" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="lower-powerdomain">
+<h4>Lower Powerdomain<a class="headerlink" href="#lower-powerdomain" title="Permalink to this heading">#</a></h4>
 <p>The functor</p>
 <div class="math notranslate nohighlight">
 \[\mathcal D:\sf Pos \to Pos\]</div>
 <p>maps a poset <span class="math notranslate nohighlight">\((X,\le)\)</span> to the set of downward closed subsets (downsets) <span class="math notranslate nohighlight">\(\mathcal DX\)</span>. The order on subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> is defined as <a class="footnote-reference brackets" href="#dpre" id="id5">5</a> <a class="footnote-reference brackets" href="#djust" id="id6">6</a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-5833e3f0-be7a-42d9-af3b-06c54cddb34d">
-<span class="eqno">(7)<a class="headerlink" href="#equation-5833e3f0-be7a-42d9-af3b-06c54cddb34d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4fc65e20-d635-4f90-b9d0-8abecbf2d244">
+<span class="eqno">(7)<a class="headerlink" href="#equation-4fc65e20-d635-4f90-b9d0-8abecbf2d244" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\le y
 \end{align}\]</div>
 <p>which amounts to inclusion of downsets. If <span class="math notranslate nohighlight">\(X\)</span> is discrete then <span class="math notranslate nohighlight">\(\mathcal DX\)</span> is <span class="math notranslate nohighlight">\(\mathcal PX\)</span> ordered by <span class="math notranslate nohighlight">\(\subseteq\)</span>.</p>
-</section>
-<section id="upper-powerdomain">
-<h4>Upper Powerdomain<a class="headerlink" href="#upper-powerdomain" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="upper-powerdomain">
+<h4>Upper Powerdomain<a class="headerlink" href="#upper-powerdomain" title="Permalink to this heading">#</a></h4>
 <p>The functor <span class="math notranslate nohighlight">\(\mathcal U:\sf Pos \to Pos\)</span> maps a poset <span class="math notranslate nohighlight">\((X,\le)\)</span> to the set of upward closed subsets (upsets) <span class="math notranslate nohighlight">\(\mathcal UX\)</span>. The order on upsets is defined as <a class="footnote-reference brackets" href="#ujust" id="id7">7</a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b06680bb-31f4-4d27-baab-fecb9713507b">
-<span class="eqno">(8)<a class="headerlink" href="#equation-b06680bb-31f4-4d27-baab-fecb9713507b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-70290d79-1db0-4607-bee0-d4dfaf331ce9">
+<span class="eqno">(8)<a class="headerlink" href="#equation-70290d79-1db0-4607-bee0-d4dfaf331ce9" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le y
 \end{align}\]</div>
 <p>which amounts to reverse inclusion of upsets. If <span class="math notranslate nohighlight">\(X\)</span> is discrete then <span class="math notranslate nohighlight">\(\mathcal UX\)</span> is <span class="math notranslate nohighlight">\(\mathcal PX\)</span> ordered by <span class="math notranslate nohighlight">\(\supseteq\)</span>.</p>
-</section>
-</section>
-<section id="coalgebras">
-<h3>Coalgebras<a class="headerlink" href="#coalgebras" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="coalgebras">
+<h3>Coalgebras<a class="headerlink" href="#coalgebras" title="Permalink to this heading">#</a></h3>
 <p>As noted above, coalgebras <span class="math notranslate nohighlight">\(X\to\mathcal PX\)</span> are in bijective correspondence with Kripke frames <span class="math notranslate nohighlight">\((X,R)\)</span>. This continues to hold in the ordered setting under appropriate conditions on the relation <span class="math notranslate nohighlight">\(R\)</span>.</p>
 <p><span class="math notranslate nohighlight">\((X,R)\)</span> is an <span class="math notranslate nohighlight">\(\mathcal U\)</span>-coalgebra iff <span class="math notranslate nohighlight">\(R\)</span> is a weakening relation, that is, iff</p>
 <div class="math notranslate nohighlight">
@@ -1071,9 +545,9 @@ a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le
 <div class="math notranslate nohighlight">
 \[\frac{x'\ge x R y \ge y'}{x'R y'}\]</div>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\(X=\{x,y\}\)</span> be a Kripke frame where <span class="math notranslate nohighlight">\(x\)</span> has no successor and <span class="math notranslate nohighlight">\(y\)</span> is reflexive. We can turn <span class="math notranslate nohighlight">\(X\)</span> into a <span class="math notranslate nohighlight">\(\mathcal U\)</span>-coalgebra by setting <span class="math notranslate nohighlight">\(x\le y\)</span> and into a <span class="math notranslate nohighlight">\(\mathcal D\)</span>-coalgebra by setting <span class="math notranslate nohighlight">\(x\ge y\)</span>.</p>
-</section>
-<section id="bi-simulations">
-<h3>(Bi)simulations<a class="headerlink" href="#bi-simulations" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="bi-simulations">
+<h3>(Bi)simulations<a class="headerlink" href="#bi-simulations" title="Permalink to this heading">#</a></h3>
 <p>As for set-functors, any functor on ordered sets gives rise to a canonical notion of <strong>(bi)simulation</strong>,  <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/HyQxhrh_v">cospan bisimulation</a>. In case of <span class="math notranslate nohighlight">\(\mathcal P^\rm c\)</span>-coalgebras (bi)simulation is bisimulation, in case of <span class="math notranslate nohighlight">\(\mathcal U\)</span>-coalgebras (bi)simulation is backward simulation and in case of  <span class="math notranslate nohighlight">\(\mathcal D\)</span>-coalgebras (bi)simulation is forward simulation.</p>
 <p><strong>Fact:</strong> The largest preorder on a <span class="math notranslate nohighlight">\(\mathcal U\)</span>-coalgebra (<span class="math notranslate nohighlight">\(\mathcal D\)</span>-coalgebra) compatible with the coalgebra structure is the largest backward-simulation (forward simulation) on that coalgebra. <a class="footnote-reference brackets" href="#compatible" id="id8">8</a></p>
 <p>To understand this better it helps to know more about <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJs53demu">coalgebraic (bi)similarity</a>. But I will try to shortcut this here, with more details available at <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/HyQxhrh_v">cospan (bi)simulation</a>.</p>
@@ -1085,42 +559,42 @@ a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le
 </ul>
 <p>Recall from the definition of  <span class="math notranslate nohighlight">\(\mathcal D\)</span> and <span class="math notranslate nohighlight">\(\mathcal U\)</span> how these functors act on ordered sets.<a class="footnote-reference brackets" href="#du" id="id9">9</a> Instantiating this procedure it is not difficult to see the following.</p>
 <p><strong>Proposition on <span class="math notranslate nohighlight">\(\mathcal D\)</span>- and <span class="math notranslate nohighlight">\(\mathcal U\)</span>-(bi)simulation:</strong> <span class="math notranslate nohighlight">\(\mathcal D\)</span>-(bi)simulation is forward-simulation and <span class="math notranslate nohighlight">\(\mathcal U\)</span>-(bi)simulation is backward-simulation.</p>
-</section>
-<section id="simulations-for-set-coalgebras">
-<h3>Simulations for Set-Coalgebras<a class="headerlink" href="#simulations-for-set-coalgebras" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="simulations-for-set-coalgebras">
+<h3>Simulations for Set-Coalgebras<a class="headerlink" href="#simulations-for-set-coalgebras" title="Permalink to this heading">#</a></h3>
 <p>Each functor <span class="math notranslate nohighlight">\(T:\sf Set\to Set\)</span> induces a notion of <span class="math notranslate nohighlight">\(T\)</span>-bisimulation.</p>
 <p>What about simulations?</p>
 <p>We first note that each functor <span class="math notranslate nohighlight">\(T:\sf Ord\to Ord\)</span> induces a notion of <span class="math notranslate nohighlight">\(T\)</span>-(bi)simulation.<a class="footnote-reference brackets" href="#ord" id="id10">10</a> I write (bi)simulation here because technically this notion works much in the same way for <span class="math notranslate nohighlight">\(\sf Set\)</span>-functors and for <span class="math notranslate nohighlight">\(\sf Ord\)</span>-functors. But for <span class="math notranslate nohighlight">\(\sf Ord\)</span>-functors, it encompasses both simulations and bisimulations, depending on the functor.</p>
 <p>A general way to introduce notions of simulation for <span class="math notranslate nohighlight">\(\sf Set\)</span> functors is as follows. Let <span class="math notranslate nohighlight">\(T:\sf Set\to Set\)</span> be a functor. Extend <span class="math notranslate nohighlight">\(T\)</span> to a functor <span class="math notranslate nohighlight">\(T':\sf Ord\to Ord\)</span>.<a class="footnote-reference brackets" href="#extend" id="id11">11</a> Then restrict <span class="math notranslate nohighlight">\(T'\)</span>-(bi)simulation to <span class="math notranslate nohighlight">\(T\)</span>-coalgebras.</p>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\(T=\mathcal P\)</span>. We can let <span class="math notranslate nohighlight">\(T'\)</span> be one of <span class="math notranslate nohighlight">\(\mathcal P^\rm c\)</span> or <span class="math notranslate nohighlight">\(\mathcal U\)</span> or <span class="math notranslate nohighlight">\(\mathcal D\)</span> to capture bisimulation or forward simulation or backward simulation.</p>
 <p><strong>Remark:</strong> The ordered setting is the right one if we want to exploit that the structures at hand support an order-duality. In the example, <span class="math notranslate nohighlight">\(\mathcal U\)</span> and <span class="math notranslate nohighlight">\(\mathcal D\)</span> capture <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> separately and both extend <span class="math notranslate nohighlight">\(\mathcal P\)</span>.</p>
-</section>
-</section>
-<section id="powerdomains-via-generators-and-relations">
-<h2>Powerdomains via Generators and Relations<a class="headerlink" href="#powerdomains-via-generators-and-relations" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="powerdomains-via-generators-and-relations">
+<h2>Powerdomains via Generators and Relations<a class="headerlink" href="#powerdomains-via-generators-and-relations" title="Permalink to this heading">#</a></h2>
 <p>The finitary versions of the three powerdomains can be generated as follows. The way we describe algebras by generators and relation is the same as over sets, with the only difference that we now require <span class="math notranslate nohighlight">\(\odot\)</span> to be order-preserving (monotone).</p>
 <p>If <span class="math notranslate nohighlight">\(X\)</span> is a finite poset, then the finitely generated convex subsets <span class="math notranslate nohighlight">\(\mathcal P_\omega^\rm c X\)</span> are ismorphic to the free semi-lattice over <span class="math notranslate nohighlight">\(X\)</span>. Convexity is captured by the requirement that <span class="math notranslate nohighlight">\(\odot\)</span> is montone. <a class="footnote-reference brackets" href="#fingenconv" id="id12">12</a></p>
 <p>If <span class="math notranslate nohighlight">\(X\)</span> is a finite poset, then the finitely generated downsets <span class="math notranslate nohighlight">\(\mathcal D_\omega X\)</span> are ismorphic to the free semi-lattice over <span class="math notranslate nohighlight">\(X\)</span> satisfying <span class="math notranslate nohighlight">\(x\le x\odot y\)</span>, or, equivalently, the free join semi-lattice over <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>If <span class="math notranslate nohighlight">\(X\)</span> is a finite poset, then the finitely generated upsets <span class="math notranslate nohighlight">\(\mathcal U_\omega X\)</span> are ismorphic to the free semi-lattice over <span class="math notranslate nohighlight">\(X\)</span> satisfying <span class="math notranslate nohighlight">\(x\odot y\le x\)</span>, or, equivalently, the free meet semi-lattice over <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>To remember how taking upsets and downsets interacts with the order, it is helpful to know the following.</p>
 <p><strong>Facts:</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be a preorder. <span class="math notranslate nohighlight">\(\mathcal DX\)</span> is the free complete join semi lattice over <span class="math notranslate nohighlight">\(X\)</span>. <span class="math notranslate nohighlight">\(\mathcal D\)</span> is a monad on preorders (and also on posets). The unit <span class="math notranslate nohighlight">\(X\to\mathcal DX=[X^\rm o,2]\)</span> is the order enriched Yoneda embedding.<a class="footnote-reference brackets" href="#yoneda" id="id13">13</a> The Yoneda embedding is a free completion by colimits (joins). The <span class="math notranslate nohighlight">\(x\le x\odot y\)</span> play the role of the arrows into the colimit (coproduct, join). (The Yoneda embedding preserves all limits (meets) that may already exist in <span class="math notranslate nohighlight">\(X\)</span>.) The multiplication of the monad is the free extension of the identity <span class="math notranslate nohighlight">\(\mathcal DX\to\mathcal DX\)</span>.</p>
-</section>
-<section id="modal-logic">
-<h2>Modal Logic<a class="headerlink" href="#modal-logic" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="modal-logic">
+<h2>Modal Logic<a class="headerlink" href="#modal-logic" title="Permalink to this heading">#</a></h2>
 <p>We have seen that coalgebra morphisms express a particular back-and-forth condition. It is interesting to study its logical ramifications.</p>
 <p>The key questions are: Which logic is invariant under coalgebra morphisms (bisimulation)? Which logic is invariant under forward (or backward) simulation?</p>
-<section id="the-logic-of-bisimulation">
-<h3>The Logic of Bisimulation<a class="headerlink" href="#the-logic-of-bisimulation" title="Permalink to this headline">#</a></h3>
+<div class="section" id="the-logic-of-bisimulation">
+<h3>The Logic of Bisimulation<a class="headerlink" href="#the-logic-of-bisimulation" title="Permalink to this heading">#</a></h3>
 <p>The answer is given by the “bounded quantifiers” <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>. Usually they are considered as syntactic operations on formulas. But I want to treat them here as operations on “semantic” propositions, that is, on subsets of <span class="math notranslate nohighlight">\(X\)</span> where $<span class="math notranslate nohighlight">\(\xi:X\to\mathcal PX\)</span>$</p>
 <p>is a coalgebra. We rewrite the usual definition of the semantics of <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> in terms of the coalgebra structure <span class="math notranslate nohighlight">\(\xi\)</span> as follows.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c930642b-c199-411a-852a-11413c94326d">
-<span class="eqno">(9)<a class="headerlink" href="#equation-c930642b-c199-411a-852a-11413c94326d" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-3bdfad06-427c-4619-a0cb-48766865d937">
+<span class="eqno">(9)<a class="headerlink" href="#equation-3bdfad06-427c-4619-a0cb-48766865d937" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \Box a = \xi^{-1}(\{b\subseteq X \mid b\subseteq a\})\\
 \Diamond a =  \xi^{-1}(\{b\subseteq X \mid a\cap b\not=\emptyset\})
 \end{gather}\]</div>
 <p><strong>Exercise:</strong> The following are a direct consequence of the definition above.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b03196f-da6f-471c-8735-ce188c4f612f">
-<span class="eqno">(10)<a class="headerlink" href="#equation-5b03196f-da6f-471c-8735-ce188c4f612f" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-3c25ed66-c99b-464f-a57c-7a3590f0a782">
+<span class="eqno">(10)<a class="headerlink" href="#equation-3c25ed66-c99b-464f-a57c-7a3590f0a782" title="Permalink to this equation">#</a></span>\[\begin{gather}
 x\in \Box a \quad \Longleftrightarrow \quad \forall y\in\xi(x)\,.\, y\in a\\
 x\in \Diamond a \quad \Longleftrightarrow \quad \exists y\in\xi(x)\,.\, y\in a
 \end{gather}\]</div>
@@ -1131,16 +605,16 @@ x\in \Diamond a \quad \Longleftrightarrow \quad \exists y\in\xi(x)\,.\, y\in a
 <p>Two elements of two <span class="math notranslate nohighlight">\(\mathcal P\)</span>-coalgebras are <strong>bisimilar</strong> (or <strong>behaviourally equivalent</strong>) iff they can be connected by some zig-zag of morphisms. <a class="footnote-reference brackets" href="#bisimilar" id="id14">14</a></p>
 <p>The advantage of this definition is that it captures the informal idea that coalgebra-morphisms preserve behaviour and that it is parametric in the functor. But we also want a more combinatorial characterisation:</p>
 <p>Given two coalgebras <span class="math notranslate nohighlight">\(X\stackrel \xi \to \mathcal PX\)</span> and <span class="math notranslate nohighlight">\(X'\stackrel {\xi'} \to \mathcal PX'\)</span> a relation <span class="math notranslate nohighlight">\(R\subseteq X\times X'\)</span> is called a <strong>bisimulation</strong> if</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ad000965-c197-47d9-9c5c-8fca24a1b558">
-<span class="eqno">(11)<a class="headerlink" href="#equation-ad000965-c197-47d9-9c5c-8fca24a1b558" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-7c76a4f3-4ecb-4f53-a07c-e5383dac80ac">
+<span class="eqno">(11)<a class="headerlink" href="#equation-7c76a4f3-4ecb-4f53-a07c-e5383dac80ac" title="Permalink to this equation">#</a></span>\[\begin{align} 
 x Rx' \ \ \textrm{ only if } \quad
 &amp; \forall y\in \xi(x)\,.\,\exists y'\in\xi'(x')\,.\, x'Ry' \quad \textrm {and}\\
 &amp; \forall y'\in \xi'(x')\,.\,\exists y\in\xi(x)\,.\, x'Ry'\\
 \end{align}\]</div>
 <p><strong>Facts:</strong> Two elements of two coalgebras are bisimilar iff there is a bisimulation relating them. If two elements of two coalgebras are bisimular then they satisfy the same modal formulas. The converse is true on finite coalgebras (or if we extend modal logic by infinitary conjunctions).</p>
-</section>
-<section id="logics-of-simulation">
-<h3>Logics of Simulation<a class="headerlink" href="#logics-of-simulation" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="logics-of-simulation">
+<h3>Logics of Simulation<a class="headerlink" href="#logics-of-simulation" title="Permalink to this heading">#</a></h3>
 <p>A finer analysis, separating forward and backward simulation, is possible. It also sheds light on the ordered generalisations of the powerset functor.</p>
 <p>Let me write <span class="math notranslate nohighlight">\({\bf K}^\Box\)</span> and <span class="math notranslate nohighlight">\({\bf K}^\Diamond\)</span> (this is not standard notation) for the negation-free fragment of <span class="math notranslate nohighlight">\(\bf K\)</span> that only contains <span class="math notranslate nohighlight">\(\Box\)</span> (respectively <span class="math notranslate nohighlight">\(\Diamond\)</span>) formulas. It now turns out that preservation of <span class="math notranslate nohighlight">\({\bf K}^\Box\)</span>-formulas and preservation of <span class="math notranslate nohighlight">\({\bf K}^\Diamond\)</span>-formulas each corresponds to one direction of the definition of bisimulation.</p>
 <!--
@@ -1150,10 +624,10 @@ $$x\in\phi \quad \Longleftrightarrow \quad $$
 <p>As the <em>Exercise on (bi)simulation</em> above shows, <span class="math notranslate nohighlight">\({\bf K}^\Diamond\)</span>-formulas are invariant under forward-simulation and <span class="math notranslate nohighlight">\({\bf K}^\Box\)</span>-formulas are invariant under backward-simulation.</p>
 <p>On the other hand, we know from the <em>Proposition on <span class="math notranslate nohighlight">\(\mathcal D\)</span>- and <span class="math notranslate nohighlight">\(\mathcal U\)</span>-(bi)simulation</em> that <span class="math notranslate nohighlight">\(\mathcal D\)</span>-(bi)simulation is forward-simulation and <span class="math notranslate nohighlight">\(\mathcal U\)</span>-(bi)simulation is backward simulation.</p>
 <p>We now assembled all the pieces needed for the table below.</p>
-</section>
-</section>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>To read the table recall that, for a poset <span class="math notranslate nohighlight">\(X\)</span>,  the elements of <span class="math notranslate nohighlight">\(\mathcal DX\)</span> are downsets ordered according to <span class="math notranslate nohighlight">\(\ a\le b \ \Leftrightarrow\  a\subseteq b\)</span> and the elements of <span class="math notranslate nohighlight">\(\mathcal UX\)</span> are upsets ordered as  <span class="math notranslate nohighlight">\(\ a\le b \ \Leftrightarrow\  a\supseteq b\)</span> .</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1199,9 +673,9 @@ $$x\in\phi \quad \Longleftrightarrow \quad $$
 </table>
 <p>Maybe the most principled way to remember that <span class="math notranslate nohighlight">\(\mathcal U\)</span> gives <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\mathcal D\)</span> gives <span class="math notranslate nohighlight">\(\Diamond\)</span> is via a direct analysis of the predicate liftings of these functors, see my note on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Sk4WH_fNd">monotone predicate liftings</a>.</p>
 <p>A choice satisfying <span class="math notranslate nohighlight">\(a\le a\odot b\)</span> is sometimes called angelic because, whatever <span class="math notranslate nohighlight">\(a\odot b\)</span> is, it is better than what I have, <span class="math notranslate nohighlight">\(a\)</span>. Dually, a demon would make sure that <span class="math notranslate nohighlight">\(a\odot b\)</span> is not better than <span class="math notranslate nohighlight">\(a\)</span> and not better than <span class="math notranslate nohighlight">\(b\)</span>.</p>
-</section>
-<section id="generalisations">
-<h2>Generalisations<a class="headerlink" href="#generalisations" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="generalisations">
+<h2>Generalisations<a class="headerlink" href="#generalisations" title="Permalink to this heading">#</a></h2>
 <p>The basic ideas we have seen so far generalise in many directions.</p>
 <p>In domain theory we are typically interested in directed complete partial orders with the Scott topology.</p>
 <p>Domains can be seen as particular topological spaces. Many different topological spaces support some kind of powerspace, often called the Vietoris construction.</p>
@@ -1209,26 +683,26 @@ $$x\in\phi \quad \Longleftrightarrow \quad $$
 <p>The theory can also be developed internally in a topos.</p>
 <p>Many results on powerdomains generalise to quantale enriched categories. And some even survive the move to categories or higher categories. The analogy here is that the powerset functor, or rather <span class="math notranslate nohighlight">\(\mathcal U\)</span> and <span class="math notranslate nohighlight">\(\mathcal D\)</span>, generalise to taking presheaves.</p>
 <p>…</p>
-</section>
-<section id="further-reading">
-<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <p>(very incomplete)</p>
-<section id="topology">
-<h3>Topology<a class="headerlink" href="#topology" title="Permalink to this headline">#</a></h3>
+<div class="section" id="topology">
+<h3>Topology<a class="headerlink" href="#topology" title="Permalink to this heading">#</a></h3>
 <p>Vietoris</p>
 <p>Johnstone: Stone Spaces. 1982. See in particular Chapter III.4. On page 112 one finds the definitions of <span class="math notranslate nohighlight">\(\Box\)</span> (called <span class="math notranslate nohighlight">\(t\)</span>) and <span class="math notranslate nohighlight">\(\Diamond\)</span> (called <span class="math notranslate nohighlight">\(m\)</span>). This also works for ordered compact Hausdorff spaces and many other settings, see Guram Bezhanishvili’s talk.</p>
 <p>G. Bezhanishvili: Talk on <a class="reference external" href="https://udenver.zoom.us/rec/play/7RjX2tLeKT1k77hAYU5ESknnw_mF81T3pQyOb9GwVCrfmJTcUVZ1UCB5J4bZ6arcFfDV7e2x-AXpZ9UM.S7zfu-HmUau4bDIJ?continueMode=true&amp;_x_zm_rtaid=z4OFcm27QFSp69I_BMOUkQ.1614750538907.e7098d2d8761d7702e11f6228f8a9179&amp;_x_zm_rhtaid=606">The hit-or-miss toplogy</a>. (Passcode: ?D3q#^mw).</p>
-</section>
-<section id="id15">
-<h3>Modal Logic<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="id15">
+<h3>Modal Logic<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
 <p>van Benthem, Segerberg, Goldblatt, …</p>
-</section>
-<section id="domain-theory">
-<h3>Domain Theory<a class="headerlink" href="#domain-theory" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="domain-theory">
+<h3>Domain Theory<a class="headerlink" href="#domain-theory" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://homepages.inf.ed.ac.uk/gdp/publications/Powerdomain_Construction.pdf">Plotkin 1976</a>, <a class="reference external" href="https://homepages.inf.ed.ac.uk/gdp/publications/Dijkstras_Predicate_Transformers.pdf">Smyth 1978</a>  <a class="footnote-reference brackets" href="#smyth" id="id16">15</a>, <a class="reference external" href="https://homepages.inf.ed.ac.uk/gdp/publications/Dijkstras_Predicate_Transformers.pdf">Plotkin 1980</a>, <a class="reference external" href="https://ir.cwi.nl/pub/10433">Apt-Plotkin 1981</a>, <a class="reference external" href="https://core.ac.uk/display/82360862">Winskel 1985</a> <a class="footnote-reference brackets" href="#winskel" id="id17">16</a>, Section 6.2 of <a class="reference external" href="https://www.cs.bham.ac.uk/~axj/pub/papers/handy1.pdf">Abramsky-Jung 1994</a>, <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0167642306002115">Martin-Curtis-Rewitzky 2007</a>, Section 3 of <a class="reference external" href="https://www.informatics.sussex.ac.uk/events/domains9/MSCS/Goubault.pdf">Goubault-Larreque 2010</a>, …</p>
-</section>
-<section id="coalgebra">
-<h3>Coalgebra<a class="headerlink" href="#coalgebra" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="coalgebra">
+<h3>Coalgebra<a class="headerlink" href="#coalgebra" title="Permalink to this heading">#</a></h3>
 <p>Aczel: Non-well founded set theory. Aczel-Mendler, …</p>
 <p>Barwise, Moss: Vicious Circles.</p>
 <p>Baltag: A structural theory of sets.</p>
@@ -1269,8 +743,8 @@ $$x\in\phi \quad \Longleftrightarrow \quad $$
 a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a,.,\exists y\in b. x\le y
 \end{align}</p>
 <p>and the order on <span class="math notranslate nohighlight">\(\mathcal UX\)</span> by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e8afc08e-74b4-44bf-8083-1dae8edc922f">
-<span class="eqno">(12)<a class="headerlink" href="#equation-e8afc08e-74b4-44bf-8083-1dae8edc922f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-98bffcf2-e39f-402c-99e5-73b10588732a">
+<span class="eqno">(12)<a class="headerlink" href="#equation-98bffcf2-e39f-402c-99e5-73b10588732a" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le y
 \end{align}\]</div>
 </dd>
@@ -1298,9 +772,9 @@ a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le
 <img alt="" src="https://hackmd.io/_uploads/r17WO9_0K.png" /></p>
 </dd>
 </dl>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1322,168 +796,90 @@ a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le
     </script>
     <script>kernelName = 'python3'</script>
 
-            </article>
-            
+                </article>
+              
 
-            
-            
-            <footer class="bd-footer-article">
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="The-Landscape-of-Coalgebraic-Logic.html" title="previous page">
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="polynomial-functors.html"
+       title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">The Landscape</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Polyonomial Functors</p>
       </div>
-  </a>
-  <a class='right-next' id="next-link" href="Neighbourhood-Frames.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Neighbourhood Frames</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
+    </a>
+    <a class="right-next"
+       href="Neighbourhood-Frames.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Neighbourhood Frames</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
 </div>
-            </footer>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-axiomatic-account-of-choice">An Axiomatic Account of Choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coalgebras-for-the-powerset-functor">Coalgebras for the Powerset Functor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powerdomains-on-posets">Powerdomains on Posets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functors">Functors</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-powerdomain">Convex Powerdomain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lower-powerdomain">Lower Powerdomain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upper-powerdomain">Upper Powerdomain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coalgebras">Coalgebras</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bi-simulations">(Bi)simulations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulations-for-set-coalgebras">Simulations for Set-Coalgebras</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powerdomains-via-generators-and-relations">Powerdomains via Generators and Relations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modal-logic">Modal Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-logic-of-bisimulation">The Logic of Bisimulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logics-of-simulation">Logics of Simulation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalisations">Generalisations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topology">Topology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Modal Logic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-theory">Domain Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coalgebra">Coalgebra</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
-          
-          
-          
-            <div class="bd-sidebar-secondary bd-toc">
-              
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-axiomatic-account-of-choice">
-   An Axiomatic Account of Choice
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coalgebras-for-the-powerset-functor">
-   Coalgebras for the Powerset Functor
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#powerdomains-on-posets">
-   Powerdomains on Posets
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functors">
-     Functors
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#convex-powerdomain">
-       Convex Powerdomain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lower-powerdomain">
-       Lower Powerdomain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#upper-powerdomain">
-       Upper Powerdomain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#coalgebras">
-     Coalgebras
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bi-simulations">
-     (Bi)simulations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#simulations-for-set-coalgebras">
-     Simulations for Set-Coalgebras
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#powerdomains-via-generators-and-relations">
-   Powerdomains via Generators and Relations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modal-logic">
-   Modal Logic
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-logic-of-bisimulation">
-     The Logic of Bisimulation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logics-of-simulation">
-     Logics of Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generalisations">
-   Generalisations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-reading">
-   Further Reading
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#topology">
-     Topology
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id15">
-     Modal Logic
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#domain-theory">
-     Domain Theory
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#coalgebra">
-     Coalgebra
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-</nav>
-</div>
-
-            </div>
-          
-          
-        </div>
-        <footer class="bd-footer-content">
-          <div class="bd-footer-content__inner">
+          <footer class="bd-footer-content">
             
 <div class="bd-footer-content__inner container">
   
@@ -1497,18 +893,17 @@ By Alexander Kurz
   
   <div class="footer-item">
     
-<p class="copyright">
-
-    &copy; Copyright 2022.<br>
-
-</p>
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
 
   </div>
   
   <div class="footer-item">
-    <p class="last-updated">
-Last updated on None.<br>
-</p>
+    
   </div>
   
   <div class="footer-item">
@@ -1516,19 +911,18 @@ Last updated on None.<br>
   </div>
   
 </div>
-          </div>
-        </footer>
+          </footer>
         
 
       </main>
     </div>
   </div>
-
   
-    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
