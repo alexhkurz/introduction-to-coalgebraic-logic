@@ -1,6 +1,6 @@
 jupyter-book
 matplotlib
 numpy
-docutils<0.18
-mdit-py-plugins==0.2.8
-markdown-it-py==1.1.0
+docutils
+mdit-py-plugins
+markdown-it-py
