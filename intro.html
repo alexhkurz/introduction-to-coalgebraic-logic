@@ -1,65 +1,62 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Introduction &#8212; Coalgebraic Logic</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
@@ -75,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,12 +110,22 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,6 +140,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="#">
@@ -137,10 +151,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -209,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -218,14 +244,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -347,26 +373,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -387,7 +415,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sketches-on-coalgebraic-logic">sketches on coalgebraic logic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 </ul>
@@ -399,106 +426,43 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
-<p>(…after some pause under construction again…)</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<p>(under construction … notes from <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ryrkkYZZc">hackmd</a> moved here now)</p>
 <p>Coalgebraic logic, in the wider sense of coalgebraic methods applied to (modal) logic, started in the late 1990ies with Larry Moss’s article <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0168007298000426">Coalgebraic Logic</a> in which he presented what is today considered one of several coalgebraic logics. In these notes I will take the particular view that a modal or coalgebraic <strong>logic is given by a functor</strong> <span class="math notranslate nohighlight">\(L\)</span> on the category of Boolean algebras (or another suitable variety of algebras). To distinguish this approach from other approaches to coalgebraic I sometimes call it functorial modal logic or functorial coalgebraic logic.</p>
-<p><strong>Part 1</strong> on <strong>Modal Logic</strong> is a very brief introduction to modal logic with pointers to the literature. I may try to write the other parts so that they do not depend too much on Part 1, but it is natural to view coalgebraic logic as an extension and generalisation of modal logic.</p>
-<p><strong>Part 2</strong> gives an <strong>Overview of Coalgebraic Logic</strong>. It shows how the Kripke frames of  Modal Logic and various models of computation of Domain Theory are unified and generalised by the notion of a coalgebra <span class="math notranslate nohighlight">\(X\to TX\)</span> for a functor <span class="math notranslate nohighlight">\(T\)</span>. We review the various parameters along which the theory of coalgebras (and their logics) can be developed.</p>
-<p><strong>Part 3</strong> reviews <strong>Paradigmatic Examples</strong> and could be a good place to start reading these notes. The examples are  of interest in their own right and have been studied long before coalgebra became a research area.</p>
-<p><strong>Part 4</strong> properly begins the subject matter of this book with an <strong>Introduction to Coalgebraic Logic</strong>. It makes use of the concept of a modal logic as a functor mostly as a linguistic device facilitating concise notation. One immediate benefit is that the notion of a <em>modal algebra</em> as an algebra <span class="math notranslate nohighlight">\(LA\to A\)</span> dualises the notion of coalgebra <span class="math notranslate nohighlight">\(X\to TX\)</span> are dynamic systems given with respect to a type functor <span class="math notranslate nohighlight">\(T\)</span> that specifies the type of possible transitions. A logical description of a coalgebra is an algebra <span class="math notranslate nohighlight">\(LA\to A\)</span> where <span class="math notranslate nohighlight">\(A\)</span> is a propositional logic talking about states in <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(L\)</span> is a functor on Boolean algebras built from the modal operators that allow us to express the dynamic properties of the coalgebra. In fact, we will see that we can create a logic <span class="math notranslate nohighlight">\(L\)</span> from <span class="math notranslate nohighlight">\(T\)</span> by dualising <span class="math notranslate nohighlight">\(T\)</span> in a technical precise sense (provided by Stone duality and category theory) and then presenting the functor <span class="math notranslate nohighlight">\(L\)</span> by modal operators and equations.</p>
+<p>These notes consist of the following parts.</p>
+<p><strong>Modal Logic</strong> is a very brief introduction to modal logic with pointers to the literature. I will try to write the other parts so that they do not depend too much on Part 1, but it is natural to view coalgebraic logic as an extension and generalisation of modal logic.</p>
+<p><strong>Overview of Coalgebraic Logic</strong> shows how the Kripke frames of  Modal Logic and various models of computation of Domain Theory are unified and generalised by the notion of a coalgebra <span class="math notranslate nohighlight">\(X\to TX\)</span> for a functor <span class="math notranslate nohighlight">\(T\)</span>. We review the various parameters along which the theory of coalgebras can be developed.</p>
+<p><strong>Paradigmatic Examples</strong> could be a good place to start. The examples are  of interest in their own right and have been studied long before coalgebra became a research area. We look in more detail than above at Kripke frames and powerdomains .. add more on probabilistic transition systems and neighbourhood coalgebras.</p>
+<p><strong>Introduction to Coalgebraic Logic</strong> makes use of the concept of a modal logic as a functor mostly as a linguistic device facilitating concise notation. One immediate benefit is that the notion of a <em>modal algebra</em> as an algebra <span class="math notranslate nohighlight">\(LA\to A\)</span> for a functor <span class="math notranslate nohighlight">\(L\)</span> (the <em><strong>L</strong></em>ogic) dualises the notion of coalgebra <span class="math notranslate nohighlight">\(X\to TX\)</span> for a functor <span class="math notranslate nohighlight">\(T\)</span> (the <em><strong>t</strong></em>ype of the <em><strong>t</strong></em>ransition). In fact, we will see that we can create a logic <span class="math notranslate nohighlight">\(L\)</span> from <span class="math notranslate nohighlight">\(T\)</span> by dualising <span class="math notranslate nohighlight">\(T\)</span> in a technically precise sense (provided by Stone duality and category theory) and then presenting the functor <span class="math notranslate nohighlight">\(L\)</span> by modal operators and equations.</p>
 <p><strong>Part 5</strong> on <em>Functorial Modal Logic</em> develops the particular category theoretic methods that allow us to reason about coalgebraic models on the level of abstraction of functors and natural transformations, abstracting as much as possible from the concrete definition of a particular logic. These methods can be used to prove general theorems parametric in functors <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(T\)</span> (invariance of formulas under bisimilarity, completeness, expressiveness), are useful to relate different logics and become particularly valuable for moving away from set-based models and classical propositional logic. The connection between <strong>abstract coalgebraic logics</strong> (given by a functor) and <strong>concrete coalgebraic logics</strong> (given by operations and equations) is facilitated by the notion of a <strong>presentation of a functor by operations and equations</strong>.</p>
 <p><strong>Part 6</strong> on <strong>Cospan (Bi)Similarity</strong> presents a new take on the notion of behavioural equivalence (coalgebraic bisimilarity). While it has been known since Worrell’s PhD Thesis that one can use cospans (aka collages) to describe coalgebraic similarity in the quantale-enriched setting, we show that the quantale-enriched setting contains behavioural equivalence of ordinary coalgebras as a special case.</p>
 <p><strong>Part 7</strong> on <strong>Ordered Coalgebras</strong> starts the development of coalgebra over enriched categories.</p>
 <p><strong>Part 8</strong> will extend <strong>Part 7</strong> to quantale-enriched coalgebra.</p>
-<div class="section" id="sketches-on-coalgebraic-logic">
-<h2>sketches on coalgebraic logic<a class="headerlink" href="#sketches-on-coalgebraic-logic" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/H1zAiN1LO">Modal Logic</a></p></li>
-<li><p>Overview and Background on Coalgebraic Logic</p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1t-Y6f8L">Introduction to Coalgebraic Logic</a></p></li>
-<li><p>Sketch on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ryq8jvZZ5">The Origins of Coalgebra in Domain Theory</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Skc7tOx6F">The Landscape of Coalgebraic Logic</a>: Varying the parameters.</p></li>
-</ul>
-</li>
-<li><p>Examples</p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1SJ8lizO">Powerdomains: The Paradigmatic Example</a></p></li>
-<li><p>Double Powerdomains: Neighbourhood Semantics</p></li>
-</ul>
-</li>
-<li><p>Introductions to Coalgebra</p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJs53demu">Coalgebraic Bisimilarity</a></p></li>
-</ul>
-</li>
-<li><p>Introductions to Coalgebraic Logic</p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rJ7UTo788">Modal Logic as Coalgebraic Logic</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJcARPMVO">Predicate Liftings</a> and  <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Sk4WH_fNd">Monotone PLs</a> and <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rkPk_3sNd">Expressive PLs</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ByPA9_Juu">Relation Lifting</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rJksR4sso">Moss’s Coalgebraic Logic</a></p></li>
-</ul>
-</li>
-<li><p>Functorial Modal Logic</p>
-<ul>
-<li><p>Introduction to Functorial Modal Logic</p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ByRlkfCio">Presenting Functors by Operations and Equations</a></p></li>
-<li><p>Example: <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rkWfcZAjs">Boolean logic for Set-coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/BylEPbhHu">Semantics</a></p></li>
-<li><p>Completeness</p></li>
-<li><p>Expressivity</p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJVzK6TUI">Functors Presented by Operations and Equations</a></p></li>
-<li><p>Translations of Logics</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rk4TFb8FP">Cospan (Bi)Simulation</a></p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/HyQxhrh_v">Cospan Bisimulation</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/BJfhgfLYv">Neighbourhood Coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJZPcfMdv">Bisimulation for Ordered Coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/S1IWPOVKv">Cospan Bisimulation 2</a></p></li>
-</ul>
-</li>
-<li><p>Coalgebraic Logic over Orders</p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/H1fd1IIB_">Coalgebras over Preorders</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/BkSdWhVtP">Examples of Poset-Functors</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/HJM0YyZ_w">Montone Neighbourhood Coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/S13JWraOI">Logic of Ordered Neighbourhood Coalgebras</a></p></li>
-</ul>
-</li>
-<li><p>Colagebraic Logic over Generalized Metric Spaces</p>
-<ul>
-<li><p>…</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
+<p><strong>Ordered Coalgebras</strong> starts the development of coalgebra over enriched categories.</p>
+<p><strong>Quantale-Enriched Coalgebra</strong> …</p>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
 <p>These notes have been written in discussions with Adriana Balan, Daniel Briseno, Luke Burns, Justin Dressel, Jim de Groot, Helle Hansen, Peter Jipsen, Nima Motamed, Drew Moshier, Wolfgang Poiger, Bruno Teheux, Yde Venema, Jeremy Wayland and others.</p>
-</div>
-<div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Link to this heading">#</a></h2>
 <p>(just started)</p>
 <div class="docutils container" id="id1">
-<dl class="citation">
-<dt class="label" id="id25"><span class="brackets">Abr05</span></dt>
-<dd><p>S. Abramsky. A Cook's tour of the finitary non-well-founded sets. In <em>We Will Show Them: Essays in Honour of Dov Gabbay</em>. College Publications, 2005.</p>
-</dd>
-<dt class="label" id="id28"><span class="brackets">Abr91</span></dt>
-<dd><p>Samson Abramsky. Domain theory in logical form. <em>Ann. Pure Appl. Logic</em>, 1991.</p>
-</dd>
-<dt class="label" id="id536"><span class="brackets">Wor05</span></dt>
-<dd><p>James Worrell. On the final sequence of an finitary set functor. <em>Theor. Comp. Sci.</em>, 2005.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Abr05<span class="fn-bracket">]</span></span>
+<p>S. Abramsky. A Cook's tour of the finitary non-well-founded sets. In <em>We Will Show Them: Essays in Honour of Dov Gabbay</em>. College Publications, 2005.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Abr91<span class="fn-bracket">]</span></span>
+<p>Samson Abramsky. Domain theory in logical form. <em>Ann. Pure Appl. Logic</em>, 1991.</p>
 </div>
 </div>
+</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -511,7 +475,7 @@ document.write(`
 </div>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -538,11 +502,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
        href="contents/Introduction-to-Modal-Logic.html"
@@ -553,10 +516,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -565,13 +525,13 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sketches-on-coalgebraic-logic">sketches on coalgebraic logic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 </ul>
@@ -595,9 +555,10 @@ By Alexander Kurz
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -621,8 +582,8 @@ By Alexander Kurz
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

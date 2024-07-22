@@ -1,65 +1,62 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Predicate Liftings &#8212; Coalgebraic Logic</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Predicate-Liftings';</script>
@@ -76,19 +73,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +111,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +139,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +150,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -210,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -219,14 +243,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -348,26 +372,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -400,14 +426,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <p><span class="math notranslate nohighlight">\(\newcommand{\sem}[1]{\mathopen{[\![}#1\mathclose{]\!]}}\)</span></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="predicate-liftings">
-<h1>Predicate Liftings<a class="headerlink" href="#predicate-liftings" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="predicate-liftings">
+<h1>Predicate Liftings<a class="headerlink" href="#predicate-liftings" title="Link to this heading">#</a></h1>
 <p>(draft)</p>
-<div class="section" id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h2>
 <p>A <span class="math notranslate nohighlight">\(n\)</span>-ary predicate lifting for a functor <span class="math notranslate nohighlight">\(T:\sf Set\to Set\)</span> is a natural transformation</p>
 <div class="math notranslate nohighlight">
 \[{2^n}^X\to 2^{TX}\]</div>
@@ -439,16 +465,16 @@ document.write(`
 <li><p>modal operator: <span class="math notranslate nohighlight">\(T2\to 2\)</span></p></li>
 </ul>
 <p><strong>Anyway:</strong> Since there is a bijection between predicate liftings and modal operators, we may blur the distinction on occasion.</p>
-</div>
-<div class="section" id="example-powerset">
-<h2>Example: Powerset<a class="headerlink" href="#example-powerset" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="example-powerset">
+<h2>Example: Powerset<a class="headerlink" href="#example-powerset" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> be the powerset functor.</p>
 <p>We see right away that there are 16 modal operators</p>
 <div class="math notranslate nohighlight">
 \[\mathcal P2\to 2\]</div>
 <p>because that is the cardinality of the set of functions of type <span class="math notranslate nohighlight">\(\mathcal P2\to 2\)</span>.</p>
 <p>We are interested in explicitely describing all modal operators <span class="math notranslate nohighlight">\(\triangle:\mathcal P2\to 2\)</span> taking predicates <span class="math notranslate nohighlight">\(\phi:X\to 2\)</span> to $<span class="math notranslate nohighlight">\(\mathcal PX\stackrel {\mathcal P\phi}\longrightarrow \mathcal P2\stackrel\triangle\longrightarrow 2\)</span>$</p>
-<p>We need to know that <span class="math notranslate nohighlight">\(\mathcal P\phi\)</span> takes direct image. This tells us how to interpret the 4 possible results of applying <span class="math notranslate nohighlight">\(\mathcal P \phi\)</span> to a set <span class="math notranslate nohighlight">\(S\)</span> of successors. Writing <span class="math notranslate nohighlight">\(2=\{0,1\}\)</span>, if <span class="math notranslate nohighlight">\((\mathcal P\phi)S\)</span> is <a class="footnote-reference brackets" href="#aristotle" id="id1">1</a></p>
+<p>We need to know that <span class="math notranslate nohighlight">\(\mathcal P\phi\)</span> takes direct image. This tells us how to interpret the 4 possible results of applying <span class="math notranslate nohighlight">\(\mathcal P \phi\)</span> to a set <span class="math notranslate nohighlight">\(S\)</span> of successors. Writing <span class="math notranslate nohighlight">\(2=\{0,1\}\)</span>, if <span class="math notranslate nohighlight">\((\mathcal P\phi)S\)</span> is <a class="footnote-reference brackets" href="#aristotle" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\{0,1\}\)</span> then some successors are outside of <span class="math notranslate nohighlight">\(\phi\)</span> and some are inside of <span class="math notranslate nohighlight">\(\phi\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\{0\}\)</span> then all and some successors are out.</p></li>
@@ -467,19 +493,19 @@ document.write(`
 \]</div>
 <p>for the elements of <span class="math notranslate nohighlight">\(\mathcal P2\)</span>.</p>
 <p><img alt="" src="https://i.imgur.com/QXnFCEZ.png" /></p>
-<p><strong>Exercise:</strong> (Assumes familiarity with the classical definition of the modal operators <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>). Show that <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> defines <span class="math notranslate nohighlight">\(\Box\)</span> and that <span class="math notranslate nohighlight">\(\overline 1,\overline{01}\mapsto 1\)</span> defines <span class="math notranslate nohighlight">\(\Diamond\)</span>. <a class="footnote-reference brackets" href="#zero" id="id2">2</a></p>
-<p><strong>Answer.</strong> <a class="footnote-reference brackets" href="#boxdiamond" id="id3">3</a></p>
+<p><strong>Exercise:</strong> (Assumes familiarity with the classical definition of the modal operators <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>). Show that <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> defines <span class="math notranslate nohighlight">\(\Box\)</span> and that <span class="math notranslate nohighlight">\(\overline 1,\overline{01}\mapsto 1\)</span> defines <span class="math notranslate nohighlight">\(\Diamond\)</span>. <a class="footnote-reference brackets" href="#zero" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p><strong>Answer.</strong> <a class="footnote-reference brackets" href="#boxdiamond" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <p><strong>Observation:</strong> The modal operator <span class="math notranslate nohighlight">\(\Box:\mathcal P2\to 2\)</span> coincides with <span class="math notranslate nohighlight">\(\bigwedge: \mathcal P2\to 2\)</span> and the modal operator <span class="math notranslate nohighlight">\(\Diamond:\mathcal P2\to 2\)</span> coincides with <span class="math notranslate nohighlight">\(\bigvee: \mathcal P2\to 2\)</span>.</p>
 <p>Modal logic is expressive up to bisimilarity and this means here that all predicate liftings <span class="math notranslate nohighlight">\(\mathcal P2\to 2\)</span> (and also all <span class="math notranslate nohighlight">\(\mathcal P2^n\to 2\)</span>) are generated by those for <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>. Let us try to support this with some examples:</p>
 <p><strong>Exercise:</strong> Using <span class="math notranslate nohighlight">\(\Box,\Diamond\)</span> as well as propositional connectives, express the predicate liftings <span class="math notranslate nohighlight">\(\triangle_\sigma\)</span> defined by <span class="math notranslate nohighlight">\(\sigma\mapsto 1\)</span> where <span class="math notranslate nohighlight">\(\sigma\)</span> ranges over <span class="math notranslate nohighlight">\(\{\varnothing,\overline 0,  \overline{01},\overline 1\}\)</span>. Also verify that <span class="math notranslate nohighlight">\(\Diamond=\neg\Box\neg\)</span> holds for the corresponding predicate liftings.</p>
 <p>Our next concern is to better understand the lattice (Boolean algebra) of all unary modal operators of the powerset functor <span class="math notranslate nohighlight">\(\mathcal P\)</span>.</p>
 <p>We already noted that there are 16 unary modal operators <span class="math notranslate nohighlight">\(P2\to 2\)</span> and we exhibited some salient examples.</p>
-<p>From general facts about Boolean algebras we can deduce the following. The Boolean algebra of modal operators <span class="math notranslate nohighlight">\(P2\to 2\)</span> is isomorphic to the free Boolean algebra on two generators, which I call <span class="math notranslate nohighlight">\(\sf o\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span>. <a class="footnote-reference brackets" href="#generators" id="id4">4</a> These generators combine to the atoms of the Boolean algebra as</p>
+<p>From general facts about Boolean algebras we can deduce the following. The Boolean algebra of modal operators <span class="math notranslate nohighlight">\(P2\to 2\)</span> is isomorphic to the free Boolean algebra on two generators, which I call <span class="math notranslate nohighlight">\(\sf o\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span>. <a class="footnote-reference brackets" href="#generators" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> These generators combine to the atoms of the Boolean algebra as</p>
 <div class="math notranslate nohighlight">
 \[\sf o\wedge i, o\wedge\neg i, \neg o\wedge i, \neg o\wedge\neg i.\]</div>
 <p>Every element of the Boolean algebra of modal operators is a join of these atoms.</p>
 <p><strong>Exercise:</strong> Define an isomorphism between predicate liftings <span class="math notranslate nohighlight">\(\mathcal P2\to 2\)</span> and the free Boolean algebra generated by <span class="math notranslate nohighlight">\(\{\sf o,i\}\)</span> which maps <span class="math notranslate nohighlight">\(\Box\)</span> to <span class="math notranslate nohighlight">\(\neg\sf o\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> to <span class="math notranslate nohighlight">\(\sf i\)</span>.</p>
-<p><strong>Answer.</strong> <a class="footnote-reference brackets" href="#atoms" id="id5">5</a></p>
+<p><strong>Answer.</strong> <a class="footnote-reference brackets" href="#atoms" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
 <p><strong>Remark:</strong> The isomorphism in the previous exercise has been chosen in such a way that the generator <span class="math notranslate nohighlight">\(\sf o\)</span> is interpreted as “some  successors are <strong>o</strong>utside of <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\sf i\)</span> as “some successors are <strong>i</strong>nside”.</p>
 <ol class="arabic simple">
 <li><p>This choice of interpretation is suggested by how the functor <span class="math notranslate nohighlight">\(\mathcal P\)</span> acts on <span class="math notranslate nohighlight">\(\phi\)</span> (as direct image). In particular, <span class="math notranslate nohighlight">\(\sf o\)</span> symbolizes the observation that the direct image under <span class="math notranslate nohighlight">\(\phi\)</span> of the set of successors  contains <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span> that the direct image contains <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
@@ -494,13 +520,13 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(\Diamond = \{\overline 1,\overline{01}\} = \sf i\)</span> (“at least one in”)</p></li>
 </ul>
 <p>As a corollary we identified <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> as the generators of the free Boolean algebra of all unary predicate liftings.</p>
-<p><strong>Puzzle:</strong> If we equip <span class="math notranslate nohighlight">\(\mathcal P2\)</span> with the inclusion order, then <span class="math notranslate nohighlight">\(\Box\)</span> is not a monotone function <span class="math notranslate nohighlight">\(\mathcal P2 \to 2\)</span> (when <span class="math notranslate nohighlight">\(2\)</span> is ordered as <span class="math notranslate nohighlight">\(0&lt;1\)</span>). On the other hand, we do know that <span class="math notranslate nohighlight">\(\Box\)</span> is a monotone modal operator in the sense that <a class="footnote-reference brackets" href="#monotonebox" id="id6">6</a></p>
+<p><strong>Puzzle:</strong> If we equip <span class="math notranslate nohighlight">\(\mathcal P2\)</span> with the inclusion order, then <span class="math notranslate nohighlight">\(\Box\)</span> is not a monotone function <span class="math notranslate nohighlight">\(\mathcal P2 \to 2\)</span> (when <span class="math notranslate nohighlight">\(2\)</span> is ordered as <span class="math notranslate nohighlight">\(0&lt;1\)</span>). On the other hand, we do know that <span class="math notranslate nohighlight">\(\Box\)</span> is a monotone modal operator in the sense that <a class="footnote-reference brackets" href="#monotonebox" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[\frac{\phi\to\psi}{\Box\phi\to\Box\psi}\]</div>
 <p>This puzzle will be resolved in a follow-up note on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Sk4WH_fNd">monotone predicate liftings</a>.</p>
-</div>
-<div class="section" id="example-probability-distributions">
-<h2>Example: Probability Distributions<a class="headerlink" href="#example-probability-distributions" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="example-probability-distributions">
+<h2>Example: Probability Distributions<a class="headerlink" href="#example-probability-distributions" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(\mathcal D\)</span> be the functor that maps a set <span class="math notranslate nohighlight">\(X\)</span> to the set <span class="math notranslate nohighlight">\(\mathcal DX\)</span> of finitely supported probability distributions.</p>
 <p>The unary modalities are given by sets of distributions on 2
 $<span class="math notranslate nohighlight">\(\mathcal D2\to 2.\)</span>$</p>
@@ -513,29 +539,35 @@ D\phi}\longrightarrow \mathcal D2\stackrel\triangle\longrightarrow 2\]</div>
 \[p\in \sem{\triangle\phi}\ \Leftrightarrow \ Pr(x\in\phi)
 =r\]</div>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="aristotle"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>This reminds me of the <a class="reference external" href="https://plato.stanford.edu/entries/square/">square of opposition</a> in Aristotelian logic. <span class="math notranslate nohighlight">\(\{1\}\)</span> corresponds to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to all successors”, <span class="math notranslate nohighlight">\(\{0\}\)</span> to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to no successors”, <span class="math notranslate nohighlight">\(\top\)</span> to “belongs to some but not all”. As far as I understand (not my area of expertise) Aristotle’s logic does not admit <span class="math notranslate nohighlight">\(\varnothing\)</span>.</p>
-</dd>
-<dt class="label" id="zero"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Here and in the following all elements not explicitly mentioned are sent to <span class="math notranslate nohighlight">\(0\)</span>. For example, writing <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> implies  <span class="math notranslate nohighlight">\(\overline 0,\overline{01}\mapsto 0\)</span>.</p>
-</dd>
-<dt class="label" id="boxdiamond"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>For example, in the case of <span class="math notranslate nohighlight">\(\Box\)</span>, one has to verify that with <span class="math notranslate nohighlight">\(\triangle\)</span> defined as <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> the function <span class="math notranslate nohighlight">\(\mathcal PX\stackrel {\mathcal P\phi}\longrightarrow \mathcal P2\stackrel\triangle\longrightarrow 2\)</span> maps <span class="math notranslate nohighlight">\(S\subseteq X\)</span> to <span class="math notranslate nohighlight">\(1\)</span> iff <span class="math notranslate nohighlight">\(S\subseteq\phi\)</span>.</p>
-</dd>
-<dt class="label" id="generators"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>Intuitively, <span class="math notranslate nohighlight">\(\sf o\)</span> means “some successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\sf i\)</span> means “some successor inside <span class="math notranslate nohighlight">\(\phi\)</span>”. It is a lucky coincidence that the symbol <span class="math notranslate nohighlight">\(\sf o\)</span> reminds us of both <strong>o</strong>ut and <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span> of both <strong>i</strong>n and <span class="math notranslate nohighlight">\(1\)</span>.</p>
-</dd>
-<dt class="label" id="atoms"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
-<dd><p>Recall that <span class="math notranslate nohighlight">\(\varnothing\)</span> means “no successor”, <span class="math notranslate nohighlight">\(\overline 0\)</span> means “some and all successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>”, <span class="math notranslate nohighlight">\(\overline 1\)</span> means “some and all successors in <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\overline{01}\)</span> means “some out and some in”.
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="aristotle" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>This reminds me of the <a class="reference external" href="https://plato.stanford.edu/entries/square/">square of opposition</a> in Aristotelian logic. <span class="math notranslate nohighlight">\(\{1\}\)</span> corresponds to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to all successors”, <span class="math notranslate nohighlight">\(\{0\}\)</span> to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to no successors”, <span class="math notranslate nohighlight">\(\top\)</span> to “belongs to some but not all”. As far as I understand (not my area of expertise) Aristotle’s logic does not admit <span class="math notranslate nohighlight">\(\varnothing\)</span>.</p>
+</aside>
+<aside class="footnote brackets" id="zero" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Here and in the following all elements not explicitly mentioned are sent to <span class="math notranslate nohighlight">\(0\)</span>. For example, writing <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> implies  <span class="math notranslate nohighlight">\(\overline 0,\overline{01}\mapsto 0\)</span>.</p>
+</aside>
+<aside class="footnote brackets" id="boxdiamond" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>For example, in the case of <span class="math notranslate nohighlight">\(\Box\)</span>, one has to verify that with <span class="math notranslate nohighlight">\(\triangle\)</span> defined as <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> the function <span class="math notranslate nohighlight">\(\mathcal PX\stackrel {\mathcal P\phi}\longrightarrow \mathcal P2\stackrel\triangle\longrightarrow 2\)</span> maps <span class="math notranslate nohighlight">\(S\subseteq X\)</span> to <span class="math notranslate nohighlight">\(1\)</span> iff <span class="math notranslate nohighlight">\(S\subseteq\phi\)</span>.</p>
+</aside>
+<aside class="footnote brackets" id="generators" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Intuitively, <span class="math notranslate nohighlight">\(\sf o\)</span> means “some successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\sf i\)</span> means “some successor inside <span class="math notranslate nohighlight">\(\phi\)</span>”. It is a lucky coincidence that the symbol <span class="math notranslate nohighlight">\(\sf o\)</span> reminds us of both <strong>o</strong>ut and <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span> of both <strong>i</strong>n and <span class="math notranslate nohighlight">\(1\)</span>.</p>
+</aside>
+<aside class="footnote brackets" id="atoms" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Recall that <span class="math notranslate nohighlight">\(\varnothing\)</span> means “no successor”, <span class="math notranslate nohighlight">\(\overline 0\)</span> means “some and all successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>”, <span class="math notranslate nohighlight">\(\overline 1\)</span> means “some and all successors in <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\overline{01}\)</span> means “some out and some in”.
 Accordingly, we map the elements <span class="math notranslate nohighlight">\(\varnothing,\overline 0,\overline{01},\overline 1\in\mathcal P2\)</span> to conjunctions of generators as follows. <span class="math notranslate nohighlight">\(\varnothing \mapsto \sf \neg o\wedge\neg i\)</span>, <span class="math notranslate nohighlight">\(\overline 0\mapsto \sf o\wedge\neg i\)</span>, <span class="math notranslate nohighlight">\(\overline{01}\mapsto \sf o\wedge i\)</span>, <span class="math notranslate nohighlight">\(\overline 1\mapsto \sf\neg o\wedge i\)</span>.</p>
-</dd>
-<dt class="label" id="monotonebox"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
-<dd><p>It also makes sense to replace <span class="math notranslate nohighlight">\(\to\)</span> by <span class="math notranslate nohighlight">\(\le\)</span> if we think of predicates as propositional functions to <span class="math notranslate nohighlight">\(2=\{0&lt;1\}\)</span>.</p>
-</dd>
-</dl>
-</div>
-</div>
+</aside>
+<aside class="footnote brackets" id="monotonebox" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>It also makes sense to replace <span class="math notranslate nohighlight">\(\to\)</span> by <span class="math notranslate nohighlight">\(\le\)</span> if we think of predicates as propositional functions to <span class="math notranslate nohighlight">\(2=\{0&lt;1\}\)</span>.</p>
+</aside>
+</aside>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -562,11 +594,10 @@ Accordingly, we map the elements <span class="math notranslate nohighlight">\(\v
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Basic-Coalgebraic-Logic.html"
@@ -586,10 +617,7 @@ Accordingly, we map the elements <span class="math notranslate nohighlight">\(\v
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -597,6 +625,7 @@ Accordingly, we map the elements <span class="math notranslate nohighlight">\(\v
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -628,9 +657,10 @@ By Alexander Kurz
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -654,8 +684,8 @@ By Alexander Kurz
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

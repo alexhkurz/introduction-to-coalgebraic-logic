@@ -3,7 +3,7 @@ tags: coalgebraic logic
 ---
 # Introduction
 
-(draft ... references to be added) ... ([up](https://hackmd.io/@alexhkurz/ryrkkYZZc))
+(draft ... references to be added)
 
 We assume here that the reader has seen some propositional and modal logic and is interested in how Kripke structures  can be generalised to coalgebras. Coalgebraic logic can be seen as generalising modal logic along the following parameters:
 

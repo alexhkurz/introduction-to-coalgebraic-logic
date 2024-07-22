@@ -1,65 +1,62 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Cospan Bisimulation 2 &#8212; Coalgebraic Logic</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Cospan-Bisimulation-2';</script>
@@ -75,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -137,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -209,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -218,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -347,26 +371,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -409,33 +435,33 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="cospan-bisimulation-2">
-<h1>Cospan Bisimulation 2<a class="headerlink" href="#cospan-bisimulation-2" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="cospan-bisimulation-2">
+<h1>Cospan Bisimulation 2<a class="headerlink" href="#cospan-bisimulation-2" title="Link to this heading">#</a></h1>
 <p>(draft … references to be added)</p>
 <hr class="docutils" />
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>We collect some results on cospan bisimulations. These results invariable relate ordinary bisimulations on sets with ordered bisimulation on ordered sets. Since bisimulations on ordered sets include simulations as well as bisimulations we will call them <strong>(bi)simulations</strong>.</p>
-<div class="section" id="overview">
-<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h3>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h3>
 <p>We first review <strong>notation</strong> and define the notion of an <strong>order-extension</strong> of a set-functor.</p>
 <p>The subsection <strong>span and cospan bisimulations</strong> investigates the relationship between cospan bisimulations and span bisimulations.</p>
 <p>The subsection <strong>cospan (bi)simulations and change of base</strong> looks at cospan (bi)simulations enriched over different quantales.</p>
-</div>
-<div class="section" id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
 <p>Together this shows that cospan (bi)simulation works uniformly over sets, orders, metric spaces and <span class="math notranslate nohighlight">\(\Omega\)</span>-categories. For example, Rutten’s final coalgebra theorem for sets can now be seen as a special case of Worrell’s final coalgebra theorem for <span class="math notranslate nohighlight">\(\Omega\)</span>-categories.</p>
-</div>
-</div>
-<div class="section" id="questions">
-<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Link to this heading">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(f_\diamond\)</span> and <span class="math notranslate nohighlight">\(f^\diamond\)</span> are cospan-bisimulations, is then <span class="math notranslate nohighlight">\(f\)</span> a coalgebra morphism?</p>
 <p>Connections with <em>logic induced bisimulations</em>?</p>
-</div>
-<div class="section" id="notation">
-<h2>Notation<a class="headerlink" href="#notation" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="notation">
+<h2>Notation<a class="headerlink" href="#notation" title="Link to this heading">#</a></h2>
 <p>In this section,</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(Ord\)</span> denotes the category <span class="math notranslate nohighlight">\(Pre\)</span> of preorders or the category <span class="math notranslate nohighlight">\(Pos\)</span> of posets.</p></li>
@@ -443,9 +469,9 @@ document.write(`
 $<span class="math notranslate nohighlight">\(C\dashv D\dashv V\)</span>$ for the induced chain of adjoints.</p></li>
 <li><p><span class="math notranslate nohighlight">\(T\)</span> denotes a functor <span class="math notranslate nohighlight">\(Set\to Set\)</span>.</p></li>
 </ul>
-</div>
-<div class="section" id="order-extensions">
-<h2>Order-Extensions<a class="headerlink" href="#order-extensions" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="order-extensions">
+<h2>Order-Extensions<a class="headerlink" href="#order-extensions" title="Link to this heading">#</a></h2>
 <p>Following on from <a class="reference external" href="https://hackmd.io/6Ehr9bIQQgSZKeeasdSKoQ">part one</a>, we are interested in preordification <span class="math notranslate nohighlight">\(T'\)</span> of <span class="math notranslate nohighlight">\(T\)</span>. Preordifictions are universal solutions to the problem of finding a <span class="math notranslate nohighlight">\(T'\)</span> together with a transformation <span class="math notranslate nohighlight">\(DT\to T'D\)</span>. In fact, the preordification <span class="math notranslate nohighlight">\(T'\)</span> of <span class="math notranslate nohighlight">\(T\)</span> can be defined as the <span class="math notranslate nohighlight">\(Ord\)</span>-enriched left Kan extension of <span class="math notranslate nohighlight">\(DT\)</span> along <span class="math notranslate nohighlight">\(D\)</span>. But some results hold more generally for any ordered extension <span class="math notranslate nohighlight">\(DT\to T'D\)</span>.</p>
 <p><strong>Definition:</strong> We call <span class="math notranslate nohighlight">\(T':Ord\to Ord\)</span> an <strong>order-extension</strong> of <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> if there is a natural transformation</p>
 <div class="math notranslate nohighlight">
@@ -453,7 +479,7 @@ $<span class="math notranslate nohighlight">\(C\dashv D\dashv V\)</span>$ for th
 <p><strong>Remark:</strong> Equivalently, <span class="math notranslate nohighlight">\(T'\)</span> is an order-extension of <span class="math notranslate nohighlight">\(T\)</span> if there is a natural tranformation <span class="math notranslate nohighlight">\(T\to DT'V\)</span>. This also captures the intuition that <span class="math notranslate nohighlight">\(T'\)</span> adds ordering to <span class="math notranslate nohighlight">\(T\)</span>. If one insists on <span class="math notranslate nohighlight">\(T\to DT'V\)</span> being an iso, this notion is equivalent to the one of Jacobs and Jacobs-Hughes (ADD REFERENCES).</p>
 <p><strong>Question:</strong> <span class="math notranslate nohighlight">\(T\to DT'V\)</span> iso is equivalent to <span class="math notranslate nohighlight">\(DT\to T'D\)</span> being bijective. Is there an interesting example of an order-extension for which <span class="math notranslate nohighlight">\(DT\to T'D\)</span> is not bijective?</p>
 <p><strong>Remark:</strong> The mate of <span class="math notranslate nohighlight">\(DT\to T'D\)</span> is <span class="math notranslate nohighlight">\(TV\to VT'\)</span>. If <span class="math notranslate nohighlight">\(T'\)</span> is the preordification then <span class="math notranslate nohighlight">\(TV\to VT'\)</span> is an iso, but for posetifications this does not need to be the case as the example of convex powerset (=the posetification of  powerset) shows. We summarise some of the relationships between properties of these natural transformations in the table below.</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p></p></th>
@@ -489,10 +515,11 @@ $<span class="math notranslate nohighlight">\(C\dashv D\dashv V\)</span>$ for th
 </tr>
 </tbody>
 </table>
-<p><span class="math notranslate nohighlight">\(3\Rightarrow 2\Rightarrow 1\)</span> and <span class="math notranslate nohighlight">\(2\Rightarrow 5\)</span> and <span class="math notranslate nohighlight">\(4\Rightarrow 5\)</span>. If <span class="math notranslate nohighlight">\(Ord=Pre\)</span>, then also <span class="math notranslate nohighlight">\(3\Rightarrow 4\)</span>.</p>
 </div>
-<div class="section" id="span-and-cospan-bisimulations">
-<h2>Span and cospan bisimulations<a class="headerlink" href="#span-and-cospan-bisimulations" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(3\Rightarrow 2\Rightarrow 1\)</span> and <span class="math notranslate nohighlight">\(2\Rightarrow 5\)</span> and <span class="math notranslate nohighlight">\(4\Rightarrow 5\)</span>. If <span class="math notranslate nohighlight">\(Ord=Pre\)</span>, then also <span class="math notranslate nohighlight">\(3\Rightarrow 4\)</span>.</p>
+</section>
+<section id="span-and-cospan-bisimulations">
+<h2>Span and cospan bisimulations<a class="headerlink" href="#span-and-cospan-bisimulations" title="Link to this heading">#</a></h2>
 <p>The following result makes precise that every span bisimulation is a cospan (bi)simulation.</p>
 <p><strong>Proposition:</strong> Let <span class="math notranslate nohighlight">\(T'\)</span> be an order-extension of <span class="math notranslate nohighlight">\(T\)</span>. If two states in two <span class="math notranslate nohighlight">\(T\)</span>-coalgebras are <span class="math notranslate nohighlight">\(T\)</span>-span-bisimilar then they are <span class="math notranslate nohighlight">\(T'\)</span>-cospan-(bi)similar.</p>
 <p><em>Proof:</em> Let <span class="math notranslate nohighlight">\(X\to TX\)</span> and <span class="math notranslate nohighlight">\(Y\to TY\)</span> be two <span class="math notranslate nohighlight">\(T\)</span>-caolgebras. Let <span class="math notranslate nohighlight">\(X\leftarrow R \rightarrow Y\)</span> be a <span class="math notranslate nohighlight">\(T\)</span>-span bisimulation. Let <span class="math notranslate nohighlight">\(R'\)</span> be the cocomma of <span class="math notranslate nohighlight">\(X\leftarrow R \rightarrow Y\)</span>. Applying <span class="math notranslate nohighlight">\(T'\)</span> to the square</p>
@@ -517,9 +544,9 @@ DX&amp;&amp;&amp;&amp;DY\\
 <p>For weak pullback preserving functors, we also have the converse of the previous proposition.</p>
 <p><strong>Proposition:</strong> Let <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> preserve weak pullbacks. If two states in two <span class="math notranslate nohighlight">\(T\)</span>-coalgebras are cospan-bisimilar then they are span-bisimilar.</p>
 <p><em>Proof:</em> Let <span class="math notranslate nohighlight">\(R\)</span> be a cospan bisimulation and <span class="math notranslate nohighlight">\(X\to R' \leftarrow Y\)</span> be the collage, hence cocomma, of <span class="math notranslate nohighlight">\(R\)</span>.  Let <span class="math notranslate nohighlight">\(T'\)</span> be the ordification of <span class="math notranslate nohighlight">\(T\)</span>. With the help of the iso <span class="math notranslate nohighlight">\(DT\to T'D\)</span> we can consider the <span class="math notranslate nohighlight">\((R,R')\)</span>-square as a cocomma in ordered sets. Cocommas are exact. Since ordifications <span class="math notranslate nohighlight">\(T'\)</span> preserve exact squares if <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks [Theorem 4.11,BKV15] , the <span class="math notranslate nohighlight">\((TR,T'R')\)</span>-square is exact. But exact squares in posets are weak comma squares, hence there is an <span class="math notranslate nohighlight">\(R\to TR\)</span> making <span class="math notranslate nohighlight">\(R\)</span> into a span bisimulation. QED</p>
-</div>
-<div class="section" id="morphisms-and-bisimulations">
-<h2>Morphisms and Bisimulations<a class="headerlink" href="#morphisms-and-bisimulations" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="morphisms-and-bisimulations">
+<h2>Morphisms and Bisimulations<a class="headerlink" href="#morphisms-and-bisimulations" title="Link to this heading">#</a></h2>
 <p>In sets every function is a relation and every coalgebra morphism a bisimulation. In ordered sets every function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> gives rise to two relation <span class="math notranslate nohighlight">\(f_\diamond:X\looparrowright Y\)</span> and <span class="math notranslate nohighlight">\(f^\diamond: Y\looparrowright X\)</span> with
 $<span class="math notranslate nohighlight">\( (x,y)\in f_\diamond \ \Leftrightarrow \ fx\le y
 \quad\quad\quad\quad
@@ -527,46 +554,47 @@ $<span class="math notranslate nohighlight">\( (x,y)\in f_\diamond \ \Leftrighta
 <p><strong>Proposition:</strong> Let <span class="math notranslate nohighlight">\(T:Ord\to Ord\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is a <span class="math notranslate nohighlight">\(T\)</span>-coalgebra morphism, then <span class="math notranslate nohighlight">\(f_\diamond\)</span> and <span class="math notranslate nohighlight">\(f^\diamond\)</span> are cospan-(bi)simulations.</p>
 <p><em>Proof:</em> <span class="math notranslate nohighlight">\(f_\diamond\)</span> and <span class="math notranslate nohighlight">\(f^\diamond\)</span> are the weakening closures of the spans <span class="math notranslate nohighlight">\((id,f)\)</span> and <span class="math notranslate nohighlight">\((f,id)\)</span>, respectively. Recall the definition of cospan-(bi)simulation and the fact that the collage of the weakening closure of a relation represented by a span <span class="math notranslate nohighlight">\((p,q)\)</span> is the cocomma of <span class="math notranslate nohighlight">\((p,q)\)</span>. Now the proposition follows from the universal property of cocommas. QED</p>
 <p><strong>Example:</strong> <a class="reference external" href="https://hackmd.io/V6m2cAy_TdagteE4RG_sbw#mathcal-Dmathcal-U-coalgebras">Recall</a> that <span class="math notranslate nohighlight">\(R\)</span> is a <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-cospan-(bi)simulation iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ed4edf21-3252-4a44-a792-5c5b3d02ea45">
-<span class="eqno">(38)<a class="headerlink" href="#equation-ed4edf21-3252-4a44-a792-5c5b3d02ea45" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-105581d1-47ae-43d0-943b-21bed8815f55">
+<span class="eqno">(38)<a class="headerlink" href="#equation-105581d1-47ae-43d0-943b-21bed8815f55" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \ \Rightarrow \ \ &amp; 
 \forall a\in\xi x.\exists b\in\nu y. \forall y'\in b.\exists x'\in a.\ x'Ry' 
 \end{align}\]</div>
 <p>We also <a class="reference external" href="https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w">know</a> that <span class="math notranslate nohighlight">\(f:X\to Y\)</span> is a morphism <span class="math notranslate nohighlight">\((X,\xi)\to(Y,\nu)\)</span> of <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-coalegbras iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6536a793-e733-4af6-bdfa-a9fe2803e88a">
-<span class="eqno">(39)<a class="headerlink" href="#equation-6536a793-e733-4af6-bdfa-a9fe2803e88a" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-5b1a72d8-fc83-4190-97c5-7f72d03ab238">
+<span class="eqno">(39)<a class="headerlink" href="#equation-5b1a72d8-fc83-4190-97c5-7f72d03ab238" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in \xi x.\exists b\in\nu(fx).\forall y\in b.\exists x\in a. fx \le y\\[1ex]
 \forall b\in \nu(fx).\exists a\in\xi(x).\forall x\in a.\exists y\in b. \ y\le fx
 \end{gather}\]</div>
 <p>It is now easy to check that the first clause says precisely that <span class="math notranslate nohighlight">\(f_\diamond\)</span> is a (bi)simulation and the second clause that <span class="math notranslate nohighlight">\(f^\diamond\)</span> is a (bi)simulation. (I find this very pretty.)</p>
 <p><strong>Question:</strong> Can we prove the converse of the proposition?  - - - This is interesting, I wrote out the obvious diagrams, but I didn’t see how to proceed. - - - Maybe the converse is only true in special cases?</p>
-</div>
-<div class="section" id="cospan-bi-simulations-and-change-of-base">
-<h2>Cospan (bi)simulations and change of base<a class="headerlink" href="#cospan-bi-simulations-and-change-of-base" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="cospan-bi-simulations-and-change-of-base">
+<h2>Cospan (bi)simulations and change of base<a class="headerlink" href="#cospan-bi-simulations-and-change-of-base" title="Link to this heading">#</a></h2>
 <p>Cospan (bi)simulations allow us to see ordinary coalgebraic bisimulations as well as quantale enriched ones in the same framwork. The basic picture, taken from Section 4 of [BKV19] is as follows. <span class="math notranslate nohighlight">\(C\dashv D\dashv V\)</span> take, respectively, connected components, discrete preorders and underlying sets. They lift via <a class="reference external" href="https://hackmd.io/V-YOMuAZTOSZpZUC8mC2tw">doctrinal adjunction</a> to coalgebras since the right adjoints satisfy <span class="math notranslate nohighlight">\(DT_{Set}\cong T_{Pre}D\)</span> and <span class="math notranslate nohighlight">\(VT_{Pre}\cong T_{Set}V\)</span>.</p>
 <p><img alt="" src="https://i.imgur.com/LCIbNBE.png" /></p>
-<p>On the right-hand side, <span class="math notranslate nohighlight">\(d'\)</span> is the top and bottom preserving embedding with a right adjoint <span class="math notranslate nohighlight">\(v'\)</span> and, if <span class="math notranslate nohighlight">\(\Omega\)</span> is non-trivial and integral<a class="footnote-reference brackets" href="#integral" id="id1">1</a>, a left adjoint <span class="math notranslate nohighlight">\(c'\)</span>. The left ajoint <span class="math notranslate nohighlight">\(c'\)</span> maps all elements other than bottom to <span class="math notranslate nohighlight">\(1\)</span> and the right adjoint <span class="math notranslate nohighlight">\(v'\)</span> maps all elements other than top to <span class="math notranslate nohighlight">\(0\)</span>. The adjunction <span class="math notranslate nohighlight">\(d'\dashv v'\)</span> lifts to a <span class="math notranslate nohighlight">\(Pre\)</span>-enriched adjunction between the categories of coalgebras. If the quantale <span class="math notranslate nohighlight">\(\Omega\)</span> has no zero-divisors, then <span class="math notranslate nohighlight">\(c'\)</span> is a quantale-morphism and <span class="math notranslate nohighlight">\(c'\dashv d'\)</span> lifts to <span class="math notranslate nohighlight">\(\Omega\)</span>-cat enriched adjunction between categories of coalgebras. See Propositions 4.9 and 4.10 of [BKV19] for details.</p>
+<p>On the right-hand side, <span class="math notranslate nohighlight">\(d'\)</span> is the top and bottom preserving embedding with a right adjoint <span class="math notranslate nohighlight">\(v'\)</span> and, if <span class="math notranslate nohighlight">\(\Omega\)</span> is non-trivial and integral<a class="footnote-reference brackets" href="#integral" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, a left adjoint <span class="math notranslate nohighlight">\(c'\)</span>. The left ajoint <span class="math notranslate nohighlight">\(c'\)</span> maps all elements other than bottom to <span class="math notranslate nohighlight">\(1\)</span> and the right adjoint <span class="math notranslate nohighlight">\(v'\)</span> maps all elements other than top to <span class="math notranslate nohighlight">\(0\)</span>. The adjunction <span class="math notranslate nohighlight">\(d'\dashv v'\)</span> lifts to a <span class="math notranslate nohighlight">\(Pre\)</span>-enriched adjunction between the categories of coalgebras. If the quantale <span class="math notranslate nohighlight">\(\Omega\)</span> has no zero-divisors, then <span class="math notranslate nohighlight">\(c'\)</span> is a quantale-morphism and <span class="math notranslate nohighlight">\(c'\dashv d'\)</span> lifts to <span class="math notranslate nohighlight">\(\Omega\)</span>-cat enriched adjunction between categories of coalgebras. See Propositions 4.9 and 4.10 of [BKV19] for details.</p>
 <p><strong>Propositions ??</strong> … I think, mutatis mutandis, we can move the two propositions above from the left Set/Pre column to the right Pre/<span class="math notranslate nohighlight">\(\Omega\)</span>-cat column …</p>
 <p><strong>Examples ??</strong> Can we make an example of ordinary transition systems and bisimulation and then a metric example? Are there scenarios where one would want an orderd coalgebra as an abstraction of a metric coalgebra? I never really looked so much at Kripke frames over metric spaces … any ideas?</p>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>Balan, Kurz, Velebil: <a class="reference external" href="https://arxiv.org/pdf/1402.5922v4">Positive fragments of coalgebraic logics</a>. 2015.</p>
 <p>Balan, Kurz, Velebil: <a class="reference external" href="https://lmcs.episciences.org/5132/pdf">Extending set functors to generalised metric spaces</a>. 2019.</p>
 <p>Jacobs</p>
 <p>Hughes-Jacobs</p>
-</div>
-<div class="section" id="further">
-<h2>Further<a class="headerlink" href="#further" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="further">
+<h2>Further<a class="headerlink" href="#further" title="Link to this heading">#</a></h2>
 <p>Scratch notes on <a class="reference external" href="https://hackmd.io/uGb9AQJnRsCWk3yd_kE1lw">exact squares</a></p>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="integral"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>A quantale is integral if the neutral element of the multiplication is the top element.</p>
-</dd>
-</dl>
-</div>
-</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="integral" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>A quantale is integral if the neutral element of the multiplication is the top element.</p>
+</aside>
+</aside>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -593,11 +621,10 @@ xRy \ \ \Rightarrow \ \ &amp;
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Bisimulation-for-Order-Enriched-Coalgebras.html"
@@ -608,10 +635,7 @@ xRy \ \ \Rightarrow \ \ &amp;
         <p class="prev-next-title">Bisimulation for Ordered Coalgebras</p>
       </div>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -619,6 +643,7 @@ xRy \ \ \Rightarrow \ \ &amp;
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -660,9 +685,10 @@ By Alexander Kurz
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -686,8 +712,8 @@ By Alexander Kurz
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

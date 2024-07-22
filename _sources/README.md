@@ -6,7 +6,7 @@
 
 This is the repo in which I keep [my notes on coalgebraic logic](https://alexhkurz.github.io/introduction-to-coalgebraic-logic).
 
-I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had various problems, in particular when it came to latex. 
+I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had problems, in particular when it came to combining markdown with latex. 
 
 So far, jupyter-book seems to work well [^slow] and the next section contains a summary of how I set it up (but the available documentation works almost out of the box anyway).
 
@@ -18,7 +18,7 @@ Starting from [Create your first book](https://jupyterbook.org/en/stable/start/y
 
 ### basics
 
-After creating this repo, cloning it (assuming it is called `root` locally), I run the following from the commandline in the folder containing `root`.
+After creating this repo, cloning it (assume it is called `root` locally), I run the following from the commandline in the folder containing `root`.
 
 ```
 pip install -U jupyter-book
@@ -54,25 +54,31 @@ Before committing and pushing to git, I downloaded a `.gitignore`:
 curl https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.gitignore > .gitignore
 ```
 
-### publishing
+One question I have is how to adjust the size of screenshots and other images.
 
-Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html) install `ghp-import`
+### publish on the web
 
-```
-pip install ghp-import
-```
-
-and then publish the book by running
+Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html) install `ghp-import` with
+`pip install ghp-import` and then publish the book by running
 
 ```
 ghp-import -n -p -f _build/html
 ```
 
-This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch.
+This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter). It also keeps the source files in the `main`-branch separate from the html-files in `_build` in the `gh-pages` branch.
 
+### create a pdf
+
+Following [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html), I first run `pip install pyppeteer` to use with  `jb build . --builder pdfhtml` but this produced the error `pyppeteer.errors.TimeoutError: Navigation Timeout Exceeded: 30000 ms exceeded.` The following did produce a pdf.
+
+```
+jb build . --builder pdflatex
+```
+
+This would need some work by hand to have a nice layout. Maybe worth the effort once a book reaches a state where a book can be considered more or less finished ... 
 ### important commands
 
-If, for example, the table of contents in the left-ahnd pane behaves in a strange way, clean out `_build`:
+If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build`:
 
 ```
 jupyter-book clean .

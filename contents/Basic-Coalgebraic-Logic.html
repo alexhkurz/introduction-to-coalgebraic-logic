@@ -1,65 +1,62 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Basic Coalgebraic Logic &#8212; Coalgebraic Logic</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Basic-Coalgebraic-Logic';</script>
@@ -76,19 +73,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +111,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +139,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +150,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -210,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -219,14 +243,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -348,26 +372,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -405,14 +431,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <p><span class="math notranslate nohighlight">\(\newcommand{\sem}[1]{\mathopen{[\![} #1 \mathclose{]\!]}}\)</span></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="basic-coalgebraic-logic">
-<h1>Basic Coalgebraic Logic<a class="headerlink" href="#basic-coalgebraic-logic" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="basic-coalgebraic-logic">
+<h1>Basic Coalgebraic Logic<a class="headerlink" href="#basic-coalgebraic-logic" title="Link to this heading">#</a></h1>
 <p>(draft … references to be added)</p>
-<div class="section" id="idea">
-<h2>Idea<a class="headerlink" href="#idea" title="Permalink to this heading">#</a></h2>
+<section id="idea">
+<h2>Idea<a class="headerlink" href="#idea" title="Link to this heading">#</a></h2>
 <p>We continue from the <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1t-Y6f8L">introduction</a>.</p>
 <p>Let</p>
 <ul class="simple">
@@ -427,24 +453,24 @@ document.write(`
 <p>where BAOs is the category of Boolean algebras with operators, the standard algebraic semantics of classical modal logic.</p>
 <p>In particular,</p>
 <ul class="simple">
-<li><p>the initial <span class="math notranslate nohighlight">\(L\)</span>-algebra is (the Lindenbaum-Tarski algebra of) basic modal logic. <a class="footnote-reference brackets" href="#freelalgebra" id="id1">1</a></p></li>
+<li><p>the initial <span class="math notranslate nohighlight">\(L\)</span>-algebra is (the Lindenbaum-Tarski algebra of) basic modal logic. <a class="footnote-reference brackets" href="#freelalgebra" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
 </ul>
 <p>Moreover,</p>
 <ul class="simple">
 <li><p>LA is the free Boolean algebra over <span class="math notranslate nohighlight">\(\Box a\)</span>, <span class="math notranslate nohighlight">\(a\in A\)</span> module the equations</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-2c2d7d50-76a8-46dd-a2ca-763bec31f1ee">
-<span class="eqno">(13)<a class="headerlink" href="#equation-2c2d7d50-76a8-46dd-a2ca-763bec31f1ee" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7c12ed9e-4eb0-4ab2-9d37-c42079660515">
+<span class="eqno">(13)<a class="headerlink" href="#equation-7c12ed9e-4eb0-4ab2-9d37-c42079660515" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Box\top &amp;= \top \\
 \Box(a\wedge b) &amp; = \Box a\wedge \Box b
 \end{align}\]</div>
-</div>
-<div class="section" id="the-category-theoretic-approach">
-<h2>The category theoretic approach<a class="headerlink" href="#the-category-theoretic-approach" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="the-category-theoretic-approach">
+<h2>The category theoretic approach<a class="headerlink" href="#the-category-theoretic-approach" title="Link to this heading">#</a></h2>
 <p>(should this section go into the intro?)</p>
 <p>Here are some simplifications that the category theoretic approach offers:</p>
 <ul class="simple">
-<li><p><strong>Restricting to the one-step case:</strong> <span class="math notranslate nohighlight">\(TX\)</span> describes the possible successors, here sets of states. <span class="math notranslate nohighlight">\(LPX\)</span> describes one-step modal formulas over sets of successors. <a class="footnote-reference brackets" href="#rank-one" id="id2">2</a> By directly relating <span class="math notranslate nohighlight">\(TX\)</span> and <span class="math notranslate nohighlight">\(LPX\)</span> we can prove many results of modal logic in a one-step form without ever having to nest modal operators.</p></li>
+<li><p><strong>Restricting to the one-step case:</strong> <span class="math notranslate nohighlight">\(TX\)</span> describes the possible successors, here sets of states. <span class="math notranslate nohighlight">\(LPX\)</span> describes one-step modal formulas over sets of successors. <a class="footnote-reference brackets" href="#rank-one" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> By directly relating <span class="math notranslate nohighlight">\(TX\)</span> and <span class="math notranslate nohighlight">\(LPX\)</span> we can prove many results of modal logic in a one-step form without ever having to nest modal operators.</p></li>
 <li><p><strong>Restricting to the finite case:</strong> Since Boolean algebras are defined by operations with finite arity, it is enough to describe <span class="math notranslate nohighlight">\(L\)</span> on the category <span class="math notranslate nohighlight">\(BA_\omega\)</span> of finite Boolean algebras. (Note that <span class="math notranslate nohighlight">\(BA_\omega\)</span> can also be described as the category of finitely presentable BAs and the category of finitely generated BAs.) This has the benefit that we can make explicit use of the fact that <span class="math notranslate nohighlight">\(Set_\omega\)</span> and <span class="math notranslate nohighlight">\(BA_\omega\)</span> are dually equivalent.</p></li>
 </ul>
 <p>In both situations, the move from the special case to the general case can then be performed by appealing to generic categorical techniques.</p>
@@ -460,13 +486,13 @@ document.write(`
 </ul>
 <p>We need to emphasise that the best results of the coalgebraic approach to modal logic generalise the results from basic modal logic from Kripke frames to other functors <span class="math notranslate nohighlight">\(T\)</span> on a category of “spaces” <span class="math notranslate nohighlight">\(\mathcal X\)</span>. Thus, when we talk about completeness, decidability, complexity, etc this refers to the logics of the functors, not to more general logics that are obtained by adding additional axioms to these logics.</p>
 <p>(<em>We need to elaborate on the last point above somewhere!</em>)</p>
-</div>
-<div class="section" id="finding-the-logic-of-a-functor">
-<h2>Finding the logic of a functor<a class="headerlink" href="#finding-the-logic-of-a-functor" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="finding-the-logic-of-a-functor">
+<h2>Finding the logic of a functor<a class="headerlink" href="#finding-the-logic-of-a-functor" title="Link to this heading">#</a></h2>
 <p>Starting from a functor <span class="math notranslate nohighlight">\(T:Set\to Set\)</span>, what is the modal logic of <span class="math notranslate nohighlight">\(T\)</span>-coalgebras?</p>
 <p>According to the discussion above, the task is to find a functor <span class="math notranslate nohighlight">\(L:BA\to BA\)</span> such that, restricted to finite sets and finite Boolean algebras, <span class="math notranslate nohighlight">\(L\)</span> is the dual of <span class="math notranslate nohighlight">\(T\)</span>. More precisely, we have to find <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span> such that
 $<span class="math notranslate nohighlight">\(\delta:LP\to PT\)</span>$</p>
-<p>is an isomorphism. <a class="footnote-reference brackets" href="#natural-isomorphism" id="id3">3</a></p>
+<p>is an isomorphism. <a class="footnote-reference brackets" href="#natural-isomorphism" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <p>We do this in two steps. The first step is to describe
 $<span class="math notranslate nohighlight">\(\delta':L'P\to PT\)</span>$</p>
 <p>for <span class="math notranslate nohighlight">\(L'P\)</span> being freely generated by enough modal operators so that <span class="math notranslate nohighlight">\(\delta'\)</span> is injective. This means that the logical one-step language <span class="math notranslate nohighlight">\(L'\)</span> is expressive enough to describe all elements of <span class="math notranslate nohighlight">\(PTX\)</span> uniquely.</p>
@@ -477,23 +503,23 @@ $<span class="math notranslate nohighlight">\(PT\to L'P\to LP\)</span>$</p>
 <p>becomes an isomorphism. This quotient then describes the axioms of the modal logic. Completeness, as well as other nice properties of the modal logic <span class="math notranslate nohighlight">\(L\)</span> then follow for free from the category theoretic approach hinted at in the previous subsection.</p>
 <p>How general is this methodology?</p>
 <p>In order to find a nice presentation of <span class="math notranslate nohighlight">\(L\)</span> by generators (modal operators) and relations (modal axioms) one, of course, needs to understand the particular functor <span class="math notranslate nohighlight">\(T\)</span> and this can require a lot of work. But there are general theorems that for all functors <span class="math notranslate nohighlight">\(T\)</span> there exists a functor <span class="math notranslate nohighlight">\(L\)</span>. And, conversely, all functors preserving so-called sifted colimits describe a modal logic given by operations and equations.</p>
-</div>
-<div class="section" id="finding-the-logic-of-the-powerset-functor">
-<h2>Finding the logic of the powerset functor<a class="headerlink" href="#finding-the-logic-of-the-powerset-functor" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="finding-the-logic-of-the-powerset-functor">
+<h2>Finding the logic of the powerset functor<a class="headerlink" href="#finding-the-logic-of-the-powerset-functor" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> be the powerset functor. <span class="math notranslate nohighlight">\(T\)</span>-coalgebras are precisely Kripke frames.</p>
-<div class="section" id="step-1-the-language-and-modal-operations">
-<h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Permalink to this heading">#</a></h3>
+<section id="step-1-the-language-and-modal-operations">
+<h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Link to this heading">#</a></h3>
 <p>For now we side-step the question of how to find the language. We start from the language we know and love, namely the one given by one modal operation <span class="math notranslate nohighlight">\(\Box\)</span>. We also know the standard Kripke semantics of the <span class="math notranslate nohighlight">\(\Box\)</span> via sets of successors. The aim is to show a methodology of how to find the axioms.</p>
 <p>The functor <span class="math notranslate nohighlight">\(L'\)</span> is represented by the language without the axioms. It is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c1a8eb75-1ba2-4109-aae4-e5e43d4ce8e0">
-<span class="eqno">(14)<a class="headerlink" href="#equation-c1a8eb75-1ba2-4109-aae4-e5e43d4ce8e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8364521f-afc8-4244-ac33-ee3833e8d420">
+<span class="eqno">(14)<a class="headerlink" href="#equation-8364521f-afc8-4244-ac33-ee3833e8d420" title="Permalink to this equation">#</a></span>\[\begin{align}
 L':BA&amp; \to BA\\
  A &amp; \mapsto F\{\Box a \mid a\in A\}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(FX\)</span> denotes the free Boolean algebra over <span class="math notranslate nohighlight">\(X\)</span>. Categorically <span class="math notranslate nohighlight">\(F\)</span> is the left adjoint of the forgetful functor <span class="math notranslate nohighlight">\(U:BA\to Set\)</span>.</p>
 <p>The semantics of the language is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-169f03d6-5bc0-4671-a31f-aafac43e4b45">
-<span class="eqno">(15)<a class="headerlink" href="#equation-169f03d6-5bc0-4671-a31f-aafac43e4b45" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-66ba9098-f4b4-4954-bf8b-899d2c4fa48e">
+<span class="eqno">(15)<a class="headerlink" href="#equation-66ba9098-f4b4-4954-bf8b-899d2c4fa48e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta'_X:L'PX &amp; \to PTX\\
            \Box a &amp; \mapsto \{S\in PTX \mid S\subseteq a\}
 \end{align}\]</div>
@@ -508,17 +534,17 @@ $<span class="math notranslate nohighlight">\(\sem{-}:\Phi\to PX\)</span>$</p>
 </li>
 </ul>
 <p>Spelling this out in detail, gives us back the usual definition of the semantics of modal logic:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-659bdfb6-29d5-47d8-9655-c9b5cba5ca54">
-<span class="eqno">(16)<a class="headerlink" href="#equation-659bdfb6-29d5-47d8-9655-c9b5cba5ca54" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3d798c3b-e771-4e04-b3a0-b177e8a873d2">
+<span class="eqno">(16)<a class="headerlink" href="#equation-3d798c3b-e771-4e04-b3a0-b177e8a873d2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sem{\top} &amp; = X\\
 \sem{\phi\wedge \psi} &amp; = \sem{\phi}\wedge\sem{\psi}\\
 \sem{\neg\phi} &amp; = X\setminus \sem{\phi}\\
 \sem{\Box\phi} &amp; = \{x\in X\mid \xi(x)\in \sem{\phi}\}\\
 \end{align}\]</div>
 <p>The first three lines come from <span class="math notranslate nohighlight">\(\sem{-}\)</span> being a Boolean algebra morphism and the fourth one from being an <span class="math notranslate nohighlight">\(L\)</span>-algebra morphism.</p>
-</div>
-<div class="section" id="step-2-finding-the-normal-form-of-operations">
-<h3>Step 2: Finding the Normal Form of Operations<a class="headerlink" href="#step-2-finding-the-normal-form-of-operations" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="step-2-finding-the-normal-form-of-operations">
+<h3>Step 2: Finding the Normal Form of Operations<a class="headerlink" href="#step-2-finding-the-normal-form-of-operations" title="Link to this heading">#</a></h3>
 <p>We now turn to the task of finding the axioms via normal forms. This involves finding a map
 $<span class="math notranslate nohighlight">\( nf: PTX\to L'PX\)</span>$</p>
 <p>such that <span class="math notranslate nohighlight">\(\delta'\circ nf = id\)</span>. Since <span class="math notranslate nohighlight">\(PTX\)</span> is a Boolean algebra, it is enough to define <span class="math notranslate nohighlight">\(nf\)</span> on generators and since we can assume <span class="math notranslate nohighlight">\(X\)</span> to be finite, it is enough to give <span class="math notranslate nohighlight">\(nf\)</span> on singletons <span class="math notranslate nohighlight">\(\{t\}\)</span> with <span class="math notranslate nohighlight">\(t\in TX\)</span>. Since <span class="math notranslate nohighlight">\(T=\mathcal P\)</span>, <span class="math notranslate nohighlight">\(t\)</span> is a subset of <span class="math notranslate nohighlight">\(X\)</span>.</p>
@@ -527,20 +553,23 @@ $<span class="math notranslate nohighlight">\( nf: PTX\to L'PX\)</span>$</p>
 <div class="math notranslate nohighlight">
 \[\sem{...}\]</div>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="freelalgebra"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>More precisely, the initial <span class="math notranslate nohighlight">\(L\)</span>-algebra will be the Lindenbaum-Tarski algebra of classical modal logic with no atomic propositions. To account for a set of atomic proposisions, one takes the free <span class="math notranslate nohighlight">\(L\)</span>-algebra over the Boolean algebra freely generated by the set of atomic propositions.</p>
-</dd>
-<dt class="label" id="rank-one"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>More precisely, <span class="math notranslate nohighlight">\(LPX\)</span> has formulas in which every generator <span class="math notranslate nohighlight">\(a\in PX\)</span> is under the scope of exactly one modal operation. For example <span class="math notranslate nohighlight">\(\Box(a\wedge b)\)</span> is of rank 1 but neither are <span class="math notranslate nohighlight">\(a\to \Box a\)</span> nor <span class="math notranslate nohighlight">\(\Box\Box a\to \Box a\)</span>. Intuitively, <span class="math notranslate nohighlight">\(a\to \Box a\)</span> expresses a relationship between states in <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(TX\)</span> and <span class="math notranslate nohighlight">\(\Box\Box a\to \Box a\)</span> between states in <span class="math notranslate nohighlight">\(TTX\)</span> and <span class="math notranslate nohighlight">\(TX\)</span>, whereas formulas in <span class="math notranslate nohighlight">\(LPX\)</span> express only relationships between states in <span class="math notranslate nohighlight">\(TX\)</span>.</p>
-</dd>
-<dt class="label" id="natural-isomorphism"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p><span class="math notranslate nohighlight">\(PT\)</span> and <span class="math notranslate nohighlight">\(LP\)</span> are functors <span class="math notranslate nohighlight">\(Set\to BA\)</span>. Hence <span class="math notranslate nohighlight">\(\delta\)</span> should be an arrow in the category of functors <span class="math notranslate nohighlight">\(Set\to BA\)</span>, that is, we require <span class="math notranslate nohighlight">\(\delta\)</span> to be a natural transformation such that all components <span class="math notranslate nohighlight">\(\delta_X:PTX\to LPX\)</span> are isomorphisms.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="freelalgebra" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>More precisely, the initial <span class="math notranslate nohighlight">\(L\)</span>-algebra will be the Lindenbaum-Tarski algebra of classical modal logic with no atomic propositions. To account for a set of atomic proposisions, one takes the free <span class="math notranslate nohighlight">\(L\)</span>-algebra over the Boolean algebra freely generated by the set of atomic propositions.</p>
+</aside>
+<aside class="footnote brackets" id="rank-one" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>More precisely, <span class="math notranslate nohighlight">\(LPX\)</span> has formulas in which every generator <span class="math notranslate nohighlight">\(a\in PX\)</span> is under the scope of exactly one modal operation. For example <span class="math notranslate nohighlight">\(\Box(a\wedge b)\)</span> is of rank 1 but neither are <span class="math notranslate nohighlight">\(a\to \Box a\)</span> nor <span class="math notranslate nohighlight">\(\Box\Box a\to \Box a\)</span>. Intuitively, <span class="math notranslate nohighlight">\(a\to \Box a\)</span> expresses a relationship between states in <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(TX\)</span> and <span class="math notranslate nohighlight">\(\Box\Box a\to \Box a\)</span> between states in <span class="math notranslate nohighlight">\(TTX\)</span> and <span class="math notranslate nohighlight">\(TX\)</span>, whereas formulas in <span class="math notranslate nohighlight">\(LPX\)</span> express only relationships between states in <span class="math notranslate nohighlight">\(TX\)</span>.</p>
+</aside>
+<aside class="footnote brackets" id="natural-isomorphism" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p><span class="math notranslate nohighlight">\(PT\)</span> and <span class="math notranslate nohighlight">\(LP\)</span> are functors <span class="math notranslate nohighlight">\(Set\to BA\)</span>. Hence <span class="math notranslate nohighlight">\(\delta\)</span> should be an arrow in the category of functors <span class="math notranslate nohighlight">\(Set\to BA\)</span>, that is, we require <span class="math notranslate nohighlight">\(\delta\)</span> to be a natural transformation such that all components <span class="math notranslate nohighlight">\(\delta_X:PTX\to LPX\)</span> are isomorphisms.</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -567,11 +596,10 @@ $<span class="math notranslate nohighlight">\( nf: PTX\to L'PX\)</span>$</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Coalgebraic-BiSimilarity.html"
@@ -591,10 +619,7 @@ $<span class="math notranslate nohighlight">\( nf: PTX\to L'PX\)</span>$</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -602,6 +627,7 @@ $<span class="math notranslate nohighlight">\( nf: PTX\to L'PX\)</span>$</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -638,9 +664,10 @@ By Alexander Kurz
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -664,8 +691,8 @@ By Alexander Kurz
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
