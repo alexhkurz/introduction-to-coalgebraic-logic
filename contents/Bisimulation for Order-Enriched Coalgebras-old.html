@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -468,8 +468,8 @@ TX  &amp; \rightarrow &amp; T\overline R &amp; \leftarrow &amp; TY
 <p>or, more explicitely, <a class="footnote-reference brackets" href="#xtox" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 </li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-5f328e1a-f1c2-4b21-9d8d-b4ffed56f979">
-<span class="eqno">()<a class="headerlink" href="#equation-5f328e1a-f1c2-4b21-9d8d-b4ffed56f979" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ca04508e-93e5-4399-bcd3-47bc728e2010">
+<span class="eqno">()<a class="headerlink" href="#equation-ca04508e-93e5-4399-bcd3-47bc728e2010" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \Rightarrow \ &amp; \forall x\to x'.\exists y\to y'. x' R\, y' 
 \end{align}\]</div>
 <ul>
@@ -477,8 +477,8 @@ xRy \ \Rightarrow \ &amp; \forall x\to x'.\exists y\to y'. x' R\, y'
 <p>or, more explicitely,</p>
 </li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-054f990d-bb67-4986-9be9-61ba4410dbd0">
-<span class="eqno">()<a class="headerlink" href="#equation-054f990d-bb67-4986-9be9-61ba4410dbd0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6a6e0cec-7493-4cf3-a8f7-44d66390192c">
+<span class="eqno">()<a class="headerlink" href="#equation-6a6e0cec-7493-4cf3-a8f7-44d66390192c" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \Rightarrow \ &amp; \forall y\to y'.\exists x\to x'. x' \le y' 
 \end{align}\]</div>
 <p>Intuitively, a <span class="math notranslate nohighlight">\(D\)</span>-bisimulation is forward simulation: Every move in the domain can be simulated by a “larger” move in the codomain. Conversely, <span class="math notranslate nohighlight">\(U\)</span>-bisimulation is backward simulation: Every move in the codomain can be simulated by “smaller” move in the domain. (The words “smaller” and “larger” are intended to remind us of the fact that <span class="math notranslate nohighlight">\(R\)</span> is a weakening relation closed under the order in <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>.)</p>
@@ -490,8 +490,8 @@ xRy \ \Rightarrow \ &amp; \forall y\to y'.\exists x\to x'. x' \le y'
 <p>An ordered bisimulation <span class="math notranslate nohighlight">\(R:(X,\xi)\looparrowright (Y,\nu)\)</span> between ordered neighbourhood frames satisfies (see the case of <span class="math notranslate nohighlight">\(U\)</span>-bisimulations above)
 $<span class="math notranslate nohighlight">\( xRy \ \Rightarrow \ \xi x \supseteq \nu y,\)</span>$</p>
 <p>or, more explicitely, <a class="footnote-reference brackets" href="#xtoa" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-48d5f564-f8d6-4611-a3be-57e18ee2f2d8">
-<span class="eqno">()<a class="headerlink" href="#equation-48d5f564-f8d6-4611-a3be-57e18ee2f2d8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9e785f33-a831-41d8-9ad0-b2d20fb37b7e">
+<span class="eqno">()<a class="headerlink" href="#equation-9e785f33-a831-41d8-9ad0-b2d20fb37b7e" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \ \Rightarrow \ \ &amp; \forall y\to b.\exists x\to a. \forall y'\in b.\exists x'\in a. x'Ry' 
 \end{align}\]</div>
 <p>Can this be simplified using the ordered version of <span class="math notranslate nohighlight">\(R\)</span>-coherent pairs?</p>
@@ -515,8 +515,8 @@ $<span class="math notranslate nohighlight">\(xRy \ \ \Rightarrow \ \
 <p><strong>Example:</strong> For a starter we can illustrate what happens in the case of Kripke frames, that is, coalgebras <span class="math notranslate nohighlight">\(X\to\mathcal PX\)</span>. The posetification of <span class="math notranslate nohighlight">\(\mathcal P\)</span> is the convex powerset functor <span class="math notranslate nohighlight">\(\mathcal{\overline P}\)</span>. <span class="math notranslate nohighlight">\(R\)</span> is a <span class="math notranslate nohighlight">\(\mathcal{\overline P}\)</span>-bisimulation iff
 $<span class="math notranslate nohighlight">\(xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,\)</span>$</p>
 <p>which, by definition<a class="footnote-reference brackets" href="#eglimilner" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> of the order on <span class="math notranslate nohighlight">\(\mathcal{\overline P}R\)</span>, unfolds to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-092a6cba-9120-44a2-bbaa-3fc75a3101f1">
-<span class="eqno">()<a class="headerlink" href="#equation-092a6cba-9120-44a2-bbaa-3fc75a3101f1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-447ec952-7837-4dff-86f8-88c4bbcfe067">
+<span class="eqno">()<a class="headerlink" href="#equation-447ec952-7837-4dff-86f8-88c4bbcfe067" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \ \Rightarrow \ \ &amp; \forall x\to x'.\exists y\to y'.  x'Ry' \ \ \textrm { and }\\  
 &amp; \forall y\to y'.\exists x\to x'.  x'Ry' \\  
 \end{align}\]</div>

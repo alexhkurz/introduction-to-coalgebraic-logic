@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -459,8 +459,8 @@ document.write(`
 <ul class="simple">
 <li><p>LA is the free Boolean algebra over <span class="math notranslate nohighlight">\(\Box a\)</span>, <span class="math notranslate nohighlight">\(a\in A\)</span> module the equations</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-7c12ed9e-4eb0-4ab2-9d37-c42079660515">
-<span class="eqno">(13)<a class="headerlink" href="#equation-7c12ed9e-4eb0-4ab2-9d37-c42079660515" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9b85d452-07c5-4a08-8a54-38f2f12c5668">
+<span class="eqno">(13)<a class="headerlink" href="#equation-9b85d452-07c5-4a08-8a54-38f2f12c5668" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Box\top &amp;= \top \\
 \Box(a\wedge b) &amp; = \Box a\wedge \Box b
 \end{align}\]</div>
@@ -511,15 +511,15 @@ $<span class="math notranslate nohighlight">\(PT\to L'P\to LP\)</span>$</p>
 <h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Link to this heading">#</a></h3>
 <p>For now we side-step the question of how to find the language. We start from the language we know and love, namely the one given by one modal operation <span class="math notranslate nohighlight">\(\Box\)</span>. We also know the standard Kripke semantics of the <span class="math notranslate nohighlight">\(\Box\)</span> via sets of successors. The aim is to show a methodology of how to find the axioms.</p>
 <p>The functor <span class="math notranslate nohighlight">\(L'\)</span> is represented by the language without the axioms. It is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8364521f-afc8-4244-ac33-ee3833e8d420">
-<span class="eqno">(14)<a class="headerlink" href="#equation-8364521f-afc8-4244-ac33-ee3833e8d420" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0fc1def8-4df6-420e-98bb-cb4b93a8f229">
+<span class="eqno">(14)<a class="headerlink" href="#equation-0fc1def8-4df6-420e-98bb-cb4b93a8f229" title="Permalink to this equation">#</a></span>\[\begin{align}
 L':BA&amp; \to BA\\
  A &amp; \mapsto F\{\Box a \mid a\in A\}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(FX\)</span> denotes the free Boolean algebra over <span class="math notranslate nohighlight">\(X\)</span>. Categorically <span class="math notranslate nohighlight">\(F\)</span> is the left adjoint of the forgetful functor <span class="math notranslate nohighlight">\(U:BA\to Set\)</span>.</p>
 <p>The semantics of the language is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-66ba9098-f4b4-4954-bf8b-899d2c4fa48e">
-<span class="eqno">(15)<a class="headerlink" href="#equation-66ba9098-f4b4-4954-bf8b-899d2c4fa48e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3afcd6db-b9c0-4f0d-9c93-b9fd5c999331">
+<span class="eqno">(15)<a class="headerlink" href="#equation-3afcd6db-b9c0-4f0d-9c93-b9fd5c999331" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta'_X:L'PX &amp; \to PTX\\
            \Box a &amp; \mapsto \{S\in PTX \mid S\subseteq a\}
 \end{align}\]</div>
@@ -534,8 +534,8 @@ $<span class="math notranslate nohighlight">\(\sem{-}:\Phi\to PX\)</span>$</p>
 </li>
 </ul>
 <p>Spelling this out in detail, gives us back the usual definition of the semantics of modal logic:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d798c3b-e771-4e04-b3a0-b177e8a873d2">
-<span class="eqno">(16)<a class="headerlink" href="#equation-3d798c3b-e771-4e04-b3a0-b177e8a873d2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-07b0f8d7-e5d6-4784-a69e-4e512310c31c">
+<span class="eqno">(16)<a class="headerlink" href="#equation-07b0f8d7-e5d6-4784-a69e-4e512310c31c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sem{\top} &amp; = X\\
 \sem{\phi\wedge \psi} &amp; = \sem{\phi}\wedge\sem{\psi}\\
 \sem{\neg\phi} &amp; = X\setminus \sem{\phi}\\

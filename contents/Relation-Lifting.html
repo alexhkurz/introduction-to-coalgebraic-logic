@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -448,8 +448,8 @@ document.write(`
 <p><strong>Remark:</strong> This formulation is specific to set-functors, but can be generalised to other base categories.</p>
 <p><strong>Fact:</strong> <span class="math notranslate nohighlight">\(\overline T\)</span> preserves composition (and therefore is a functor on <span class="math notranslate nohighlight">\(\sf Rel\)</span>) if <span class="math notranslate nohighlight">\(T\)</span> preserves weak-pullbacks.</p>
 <p><strong>Example/Exercise:</strong> Let <span class="math notranslate nohighlight">\(\mathcal P\)</span> be the powerset functor. It is an interesting exercise to check that <span class="math notranslate nohighlight">\((a,b)\in \overline{\mathcal P}X\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e6fb0cc4-9ff6-4b5e-96bc-2415883beba6">
-<span class="eqno">(18)<a class="headerlink" href="#equation-e6fb0cc4-9ff6-4b5e-96bc-2415883beba6" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-7b57a31a-fa7f-4581-9a3f-12af2119ada7">
+<span class="eqno">(18)<a class="headerlink" href="#equation-7b57a31a-fa7f-4581-9a3f-12af2119ada7" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,xRy \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,xRy \\
 \end{gather}\]</div>
@@ -471,8 +471,8 @@ document.write(`
 <p>The following fact allows us to use known results about the span-based relation lifting to compute the order-extension of a set-functor in many examples.</p>
 <p><strong>Fact:</strong> If <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks, then applying <span class="math notranslate nohighlight">\(\widetilde T\)</span> to a preorder <span class="math notranslate nohighlight">\((X,\le)\)</span> agrees with applying the relation lifting <span class="math notranslate nohighlight">\(\overline T\)</span> to <span class="math notranslate nohighlight">\(\le\)</span>.</p>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\((X,\le)\)</span> be a preorder. For subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> we have <span class="math notranslate nohighlight">\(a\le b\in \widetilde{\mathcal P}(X,\le)\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d17cc3cb-a2e4-451a-b53d-2fe72e11189a">
-<span class="eqno">(19)<a class="headerlink" href="#equation-d17cc3cb-a2e4-451a-b53d-2fe72e11189a" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-dc10b572-30ae-4476-bb96-a0bfa44eb5ab">
+<span class="eqno">(19)<a class="headerlink" href="#equation-dc10b572-30ae-4476-bb96-a0bfa44eb5ab" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,x\le y \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,x\le y \\
 \end{gather}\]</div>

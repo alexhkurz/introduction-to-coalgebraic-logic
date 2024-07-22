@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -435,14 +435,14 @@ document.write(`
 <p>Recall that the connected component functor <span class="math notranslate nohighlight">\(C:Ord\to Set\)</span> is left-adjoint to the discrete functor <span class="math notranslate nohighlight">\(D:Set\to Ord\)</span>. Also recall that the ordification of the neighbourhood functor is $D2^{2^{C-}}, see Theorem 8 in [DK17] and the section on <a class="reference external" href="https://hackmd.io/6Ehr9bIQQgSZKeeasdSKoQ#Neighbourhood-Coalgebras">Cospan Bisimulation</a>.</p>
 <p><strong>Definition:</strong> A neighbourhood frame is a set <span class="math notranslate nohighlight">\(X\)</span> with a function <span class="math notranslate nohighlight">\(X\to 2^{2^X}\)</span>. An ordered neighbourhood frame is an ordered set <span class="math notranslate nohighlight">\(X\)</span> with an order-preserving function <span class="math notranslate nohighlight">\(X\to D2^{2^{CX}}\)</span>.</p>
 <p><strong>Remark:</strong> The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Set\)</span> <a class="footnote-reference brackets" href="#ordmorph" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to 2^{2^X}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to 2^{2^Y}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6ce49272-26f2-4a43-b04f-bc6a419d6a83">
-<span class="eqno">(29)<a class="headerlink" href="#equation-6ce49272-26f2-4a43-b04f-bc6a419d6a83" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-d8ac3385-54f1-4b87-bd29-57127f3ba4bb">
+<span class="eqno">(29)<a class="headerlink" href="#equation-d8ac3385-54f1-4b87-bd29-57127f3ba4bb" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)
 \end{gather}\]</div>
 <p><strong>Remark:</strong> Similarly, <span class="math notranslate nohighlight">\(R\)</span> is a bisimulation if <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e05b2a4a-63cd-48ea-a64e-7c968c6dec63">
-<span class="eqno">(30)<a class="headerlink" href="#equation-e05b2a4a-63cd-48ea-a64e-7c968c6dec63" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-706b7c90-b6a8-4c8e-8768-ef810a45ac9c">
+<span class="eqno">(30)<a class="headerlink" href="#equation-706b7c90-b6a8-4c8e-8768-ef810a45ac9c" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)
 \end{gather}\]</div>
@@ -455,8 +455,8 @@ document.write(`
 <aside class="footnote brackets" id="ordmorph" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Ord\)</span> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to D2^{2^{CX}}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to D2^{2^{CY}}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7e6119fa-0354-47f1-b651-32b21b76afe2">
-<span class="eqno">(31)<a class="headerlink" href="#equation-7e6119fa-0354-47f1-b651-32b21b76afe2" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-ec72ec0e-6062-47ef-a0ec-770b1fea9645">
+<span class="eqno">(31)<a class="headerlink" href="#equation-ec72ec0e-6062-47ef-a0ec-770b1fea9645" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)
 \end{gather}\]</div>
