@@ -145,3 +145,4 @@ dmypy.json
 
 # OSX
 .DS_Store
+.aider*
