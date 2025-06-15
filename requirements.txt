@@ -1,6 +1,3 @@
 jupyter-book
 matplotlib
 numpy
-docutils
-mdit-py-plugins
-markdown-it-py

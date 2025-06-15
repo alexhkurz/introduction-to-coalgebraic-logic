@@ -8,7 +8,7 @@ parts:
   - caption: Modal Logic
     chapters:
     - file: contents/Introduction-to-Modal-Logic.md
-  - caption: Overview or Coalgebraic Logic
+  - caption: Overview of Coalgebraic Logic
     chapters:
     - file: contents/Introduction-to-Coalgebraic-Logic.md
     - file: contents/The-Origins-of-Coalgebra-in-Domain-Theory.md
@@ -37,11 +37,14 @@ parts:
     - file: contents/Expressivity.md
     - file: contents/Translations.md
     - file: contents/CoLog.md
-  - caption: Cospan (Bi)Similarity.md
+  - caption: Order Enriched Coalgebraic Logic
+    chapters:
+    - file: contents/OECL-introduction.md
+    - file: contents/OECL-posetification.md
+  - caption: Cospan (Bi)Similarity
     chapters:
     - file: contents/Cospan-Bisimulation-Introduction.md
     - file: contents/Cospan-Bisimulation.md
     - file: contents/Neighbourhood-Coalgebras.md
     - file: contents/Bisimulation-for-Order-Enriched-Coalgebras.md
     - file: contents/Cospan-Bisimulation-2.md
-

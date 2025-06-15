@@ -1,10 +1,10 @@
 # Introduction
 
-( ... under construction ... notes from [hackmd](https://hackmd.io/@alexhkurz/ryrkkYZZc) moved here now)
+(under construction ... notes from [hackmd](https://hackmd.io/@alexhkurz/ryrkkYZZc) moved here now)
 
 Coalgebraic logic, in the wider sense of coalgebraic methods applied to (modal) logic, started in the late 1990ies with Larry Moss's article [Coalgebraic Logic](https://www.sciencedirect.com/science/article/pii/S0168007298000426) in which he presented what is today considered one of several coalgebraic logics. In these notes I will take the particular view that a modal or coalgebraic **logic is given by a functor** $L$ on the category of Boolean algebras (or another suitable variety of algebras). 
 
-To distinguish this approach from other approaches to coalgebraic I sometimes call it functorial modal logic or functorial coalgebraic logic. 
+To distinguish this approach from other approaches to coalgebraic I sometimes call it **functorial modal logic** or functorial coalgebraic logic. 
 
 These notes consist of the following parts.
 
