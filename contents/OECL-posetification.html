@@ -217,7 +217,7 @@
 <li class="toctree-l1"><a class="reference internal" href="OECL-introduction.html">Introduction</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Posetification</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
@@ -446,11 +446,14 @@ document.write(`
 <h2>Theory<a class="headerlink" href="#theory" title="Link to this heading">#</a></h2>
 <p>A Balan, A Kurz, J Velebil: <strong><a class="reference external" href="https://lmcs.episciences.org/1594">Positive Fragments of Coalgebraic Logics</a></strong>. Logical Methods in Computer Science, Vol. 11(3:18)2015, pp. 1–51 <a class="reference external" href="https://arxiv.org/pdf/1402.5922.pdf">(pdf)</a>:</p>
 <ul class="simple">
-<li><p>Denote by <span class="math notranslate nohighlight">\(D:Set\to Pos\)</span>  prese ‘discrete’ functor. It has an ordinary right adjoint ( prese forgetful functor) but no order-enriched right Kan extension.</p></li>
-<li><p>(Def 4.1, Thm 4.3): The <em>posetification</em> of an Set-endofunctor <span class="math notranslate nohighlight">\(T\)</span> is  prese  prese (Pos-enriched) left Kan-extension of <span class="math notranslate nohighlight">\(DT\)</span> along <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(D:Set\to Pos\)</span> is dense and has a density presentation given by reflexive coinserters.</p></li>
-<li><p>(Def 4.7): A Pos-endofunctor has a <em>presentation in discrete arities</em> if it is  prese posetification of a <span class="math notranslate nohighlight">\(Set\)</span>-endofunctor.</p></li>
+<li><p>Denote by <span class="math notranslate nohighlight">\(D:Set\to Pos\)</span>  the ‘discrete’ functor. It has an ordinary right adjoint (the forgetful functor) but no order-enriched right Kan extension.</p></li>
+<li><p>(Def 4.1, Thm 4.3): The <strong>posetification</strong> of a Set-endofunctor <span class="math notranslate nohighlight">\(T\)</span> is the (Pos-enriched) left Kan-extension of <span class="math notranslate nohighlight">\(DT\)</span> along <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(X\)</span> be a poset with carrier <span class="math notranslate nohighlight">\(X_0\)</span> and order <span class="math notranslate nohighlight">\(X_1\)</span>. The coinserter given by the projections <span class="math notranslate nohighlight">\(\pi_1,\pi_2:DX_1\to DX_0\)</span>, <span class="math notranslate nohighlight">\(\pi_1\le\pi_2\)</span>,  is called the <strong>nerve</strong> of the poset <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(D:Set\to Pos\)</span> is dense and has a density presentation given by nerves of posets.</p></li>
+<li><p>(Def 4.7): A Pos-endofunctor has a <strong>presentation in discrete arities</strong> if it is the posetification of a <span class="math notranslate nohighlight">\(Set\)</span>-endofunctor.</p></li>
 <li><p>(Thm 4.10): A Set-endofunctor preserves weak pullbacks if and only if its posetification preserves exact squares.</p></li>
+<li><p>The posetification of a functor <span class="math notranslate nohighlight">\(T:Set\to Pos\)</span> is the left Kan extension of <span class="math notranslate nohighlight">\(T\)</span> along <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
+<li><p>…</p></li>
 </ul>
 </section>
 <section id="examples-of-extensions-of-functors">
@@ -460,10 +463,11 @@ document.write(`
 <li><p>(BKV Thm …) If <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks then <span class="math notranslate nohighlight">\(T'(X,\le_X)\)</span> is given by <span class="math notranslate nohighlight">\(TX\)</span> and the relation lifting of <span class="math notranslate nohighlight">\(\le_X\)</span>.</p></li>
 <li><p>Let <span class="math notranslate nohighlight">\((\Sigma, E)\)</span> be a presention of <span class="math notranslate nohighlight">\(T\)</span>. Then <span class="math notranslate nohighlight">\(T'(X,\le_X)\)</span> is presented by <span class="math notranslate nohighlight">\((\Sigma(TX),E \cup{\le_X})\)</span> … this needs some refinement.</p></li>
 </ul>
-<p>In the following, given a poset <span class="math notranslate nohighlight">\((X,\le)\)</span>, a Set-endofunctor <span class="math notranslate nohighlight">\(T\)</span> and its posetification <span class="math notranslate nohighlight">\(T'\)</span>, we denote by <span class="math notranslate nohighlight">\(\sqsubseteq\)</span> the order on <span class="math notranslate nohighlight">\(T'(X,\le)\)</span>.</p>
+<p>In the following, given a poset <span class="math notranslate nohighlight">\((X,\le_X)\)</span>, a Set-endofunctor <span class="math notranslate nohighlight">\(T\)</span> and its posetification <span class="math notranslate nohighlight">\(T'\)</span>, we denote by <span class="math notranslate nohighlight">\(\sqsubseteq\)</span> the order on <span class="math notranslate nohighlight">\(T'(X,\le_X)\)</span>.</p>
 <section id="the-list-functor">
 <h3>The List Functor<a class="headerlink" href="#the-list-functor" title="Link to this heading">#</a></h3>
-<p>Let <span class="math notranslate nohighlight">\((X,\le)\)</span> be a poset then we have <span class="math notranslate nohighlight">\(l\sqsubseteq l'\)</span> if the lists have the same length and <span class="math notranslate nohighlight">\(l[i]\le l'[i]\)</span> for all indices <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<p>We have <span class="math notranslate nohighlight">\(l\sqsubseteq l'\)</span> if the lists have the same length and <span class="math notranslate nohighlight">\(l[i]\le_X l'[i]\)</span> for all indices <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<p>One can relax the requirement that the lists have the same length if one considers the list-functor as a functor <span class="math notranslate nohighlight">\(Set\to Pos\)</span> and equips the image with the prefix order (or the consverse of the prefix order).</p>
 </section>
 <section id="the-multiset-functor">
 <h3>The Multiset Functor<a class="headerlink" href="#the-multiset-functor" title="Link to this heading">#</a></h3>
@@ -478,6 +482,8 @@ document.write(`
 </section>
 <section id="examples-of-extensions-of-monads">
 <h2>Examples of Extensions of Monads<a class="headerlink" href="#examples-of-extensions-of-monads" title="Link to this heading">#</a></h2>
+<p>In this section we ask the questions whether the posetification of a monad is a monad.</p>
+<p>…</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
@@ -486,6 +492,8 @@ document.write(`
 <li><p>Kelly …</p></li>
 <li><p>Alexander Kurz and Nima Motamed: <a class="reference external" href="https://drive.google.com/file/d/1SJtAlq-fAw2npJ3YdzBdezZi4Qm0l6Rn/view">Boolean-Valued Multiagent Coalgebraic Logic</a>, 2022.</p></li>
 <li><p>Worrell, J.: Coinduction for recursive data types: partial orders, metric spaces and Ω-categories. Electronic Notes in Theoretical Computer Science 33, 337–356 (2000). https://doi.org/10.1016/S1571-0661(05)80356-1</p></li>
+<li><p>Dahlqvist, Fredrik ; Kurz, Alexander: <b><a
+  href="http://drops.dagstuhl.de/opus/volltexte/2017/8042/pdf/LIPIcs-CALCO-2017-9.pdf">The Positivication of Coalgebraic Logics.</a></b> CALCO 2017</p></li>
 <li><p>…</p></li>
 </ul>
 </section>
