@@ -179,7 +179,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview or Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview of Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Coalgebraic-Logic.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">Origins in Domain Theory</a></li>
@@ -212,13 +212,22 @@
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CoLog.html">Chen’s Category CoLog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Order Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="OECL-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OECL-posetification.html">Posetification</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 </ul>
 
     </div>
@@ -459,8 +468,8 @@ document.write(`
 <ul class="simple">
 <li><p>LA is the free Boolean algebra over <span class="math notranslate nohighlight">\(\Box a\)</span>, <span class="math notranslate nohighlight">\(a\in A\)</span> module the equations</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-9b85d452-07c5-4a08-8a54-38f2f12c5668">
-<span class="eqno">(13)<a class="headerlink" href="#equation-9b85d452-07c5-4a08-8a54-38f2f12c5668" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ae4be978-79fd-4d9b-90a7-1d09b901930d">
+<span class="eqno">(13)<a class="headerlink" href="#equation-ae4be978-79fd-4d9b-90a7-1d09b901930d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Box\top &amp;= \top \\
 \Box(a\wedge b) &amp; = \Box a\wedge \Box b
 \end{align}\]</div>
@@ -511,15 +520,15 @@ $<span class="math notranslate nohighlight">\(PT\to L'P\to LP\)</span>$</p>
 <h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Link to this heading">#</a></h3>
 <p>For now we side-step the question of how to find the language. We start from the language we know and love, namely the one given by one modal operation <span class="math notranslate nohighlight">\(\Box\)</span>. We also know the standard Kripke semantics of the <span class="math notranslate nohighlight">\(\Box\)</span> via sets of successors. The aim is to show a methodology of how to find the axioms.</p>
 <p>The functor <span class="math notranslate nohighlight">\(L'\)</span> is represented by the language without the axioms. It is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0fc1def8-4df6-420e-98bb-cb4b93a8f229">
-<span class="eqno">(14)<a class="headerlink" href="#equation-0fc1def8-4df6-420e-98bb-cb4b93a8f229" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5fc59585-a196-4ce6-afa4-c7f60d875056">
+<span class="eqno">(14)<a class="headerlink" href="#equation-5fc59585-a196-4ce6-afa4-c7f60d875056" title="Permalink to this equation">#</a></span>\[\begin{align}
 L':BA&amp; \to BA\\
  A &amp; \mapsto F\{\Box a \mid a\in A\}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(FX\)</span> denotes the free Boolean algebra over <span class="math notranslate nohighlight">\(X\)</span>. Categorically <span class="math notranslate nohighlight">\(F\)</span> is the left adjoint of the forgetful functor <span class="math notranslate nohighlight">\(U:BA\to Set\)</span>.</p>
 <p>The semantics of the language is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3afcd6db-b9c0-4f0d-9c93-b9fd5c999331">
-<span class="eqno">(15)<a class="headerlink" href="#equation-3afcd6db-b9c0-4f0d-9c93-b9fd5c999331" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ac126fd9-6d4c-4d02-8dfb-32051b028265">
+<span class="eqno">(15)<a class="headerlink" href="#equation-ac126fd9-6d4c-4d02-8dfb-32051b028265" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta'_X:L'PX &amp; \to PTX\\
            \Box a &amp; \mapsto \{S\in PTX \mid S\subseteq a\}
 \end{align}\]</div>
@@ -534,8 +543,8 @@ $<span class="math notranslate nohighlight">\(\sem{-}:\Phi\to PX\)</span>$</p>
 </li>
 </ul>
 <p>Spelling this out in detail, gives us back the usual definition of the semantics of modal logic:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-07b0f8d7-e5d6-4784-a69e-4e512310c31c">
-<span class="eqno">(16)<a class="headerlink" href="#equation-07b0f8d7-e5d6-4784-a69e-4e512310c31c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6d7a1e7c-96b8-43b4-a9f5-22eb71a4df31">
+<span class="eqno">(16)<a class="headerlink" href="#equation-6d7a1e7c-96b8-43b4-a9f5-22eb71a4df31" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sem{\top} &amp; = X\\
 \sem{\phi\wedge \psi} &amp; = \sem{\phi}\wedge\sem{\psi}\\
 \sem{\neg\phi} &amp; = X\setminus \sem{\phi}\\

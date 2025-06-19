@@ -177,7 +177,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="contents/Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview or Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview of Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="contents/Introduction-to-Coalgebraic-Logic.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/The-Origins-of-Coalgebra-in-Domain-Theory.html">Origins in Domain Theory</a></li>
@@ -210,13 +210,22 @@
 <li class="toctree-l1"><a class="reference internal" href="contents/Translations.html">Translations of Logics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/CoLog.html">Chen’s Category CoLog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Order Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="contents/OECL-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/OECL-posetification.html">Posetification</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="contents/Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="contents/QECL-Introduction.html">Introduction</a></li>
 </ul>
 
     </div>
@@ -494,7 +503,10 @@ document.write(`
 <section id="important-commands">
 <h3>important commands<a class="headerlink" href="#important-commands" title="Link to this heading">#</a></h3>
 <p>If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out <code class="docutils literal notranslate"><span class="pre">_build</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">clean</span> <span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
+<span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">clean</span> <span class="o">.</span>
 </pre></div>
 </div>
 <hr class="footnotes docutils" />

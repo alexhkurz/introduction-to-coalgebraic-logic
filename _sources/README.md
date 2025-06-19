@@ -81,5 +81,8 @@ This would need some work by hand to have a nice layout. Maybe worth the effort 
 If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build`:
 
 ```
+jupyter-book build .
+open _build/html/index.html
+ghp-import -n -p -f _build/html
 jupyter-book clean .
 ```

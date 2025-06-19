@@ -179,7 +179,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview or Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview of Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Coalgebraic-Logic.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">Origins in Domain Theory</a></li>
@@ -212,13 +212,22 @@
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CoLog.html">Chen’s Category CoLog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Order Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="OECL-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OECL-posetification.html">Posetification</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Cospan Bisimulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 </ul>
 
     </div>
@@ -464,8 +473,8 @@ TX  &amp; \rightarrow &amp; \overline T\mathbf R &amp; \leftarrow &amp; TY
 \[xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,\]</div>
 <p>which, by definition<a class="footnote-reference brackets" href="#eglimilner" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> of the order on <span class="math notranslate nohighlight">\(\mathcal{\overline P}\mathbf R\)</span>, gives us the usual definition of a bisimulation on Kripke frames (to emphasise the coalgebraic nature of Kripke frames we write <span class="math notranslate nohighlight">\(x'\in\xi(x)\)</span> instead of <span class="math notranslate nohighlight">\(x\to x'\)</span> and <span class="math notranslate nohighlight">\(y'\in\nu(y)\)</span> instead of <span class="math notranslate nohighlight">\(y\to y'\)</span>).</p>
 <p><strong>Corollary:</strong> <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation between Kripke frames <span class="math notranslate nohighlight">\(\xi:X\to TX\)</span> and <span class="math notranslate nohighlight">\(\nu:Y\to TY\)</span> iff <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01fcecf9-e488-4677-b6d5-2c7baafa6db5">
-<span class="eqno">(28)<a class="headerlink" href="#equation-01fcecf9-e488-4677-b6d5-2c7baafa6db5" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-0bf7fb80-5190-4787-9b4e-0489a68541b7">
+<span class="eqno">(28)<a class="headerlink" href="#equation-0bf7fb80-5190-4787-9b4e-0489a68541b7" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x'\in\xi(x).\exists y'\in\nu(y).  x'Ry' \\[1ex]
 \textrm { and }\\[1ex]
 \forall y'\in\nu(y).\exists x'\in\xi(x).  x'Ry' \\  

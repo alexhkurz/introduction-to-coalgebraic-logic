@@ -179,7 +179,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview or Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview of Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Coalgebraic-Logic.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">Origins in Domain Theory</a></li>
@@ -212,13 +212,22 @@
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CoLog.html">Chen’s Category CoLog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Order Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="OECL-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OECL-posetification.html">Posetification</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-Introduction.html">Cospan Bisimulation: Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 </ul>
 
     </div>
@@ -448,8 +457,8 @@ document.write(`
 <p><strong>Remark:</strong> This formulation is specific to set-functors, but can be generalised to other base categories.</p>
 <p><strong>Fact:</strong> <span class="math notranslate nohighlight">\(\overline T\)</span> preserves composition (and therefore is a functor on <span class="math notranslate nohighlight">\(\sf Rel\)</span>) if <span class="math notranslate nohighlight">\(T\)</span> preserves weak-pullbacks.</p>
 <p><strong>Example/Exercise:</strong> Let <span class="math notranslate nohighlight">\(\mathcal P\)</span> be the powerset functor. It is an interesting exercise to check that <span class="math notranslate nohighlight">\((a,b)\in \overline{\mathcal P}X\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7b57a31a-fa7f-4581-9a3f-12af2119ada7">
-<span class="eqno">(18)<a class="headerlink" href="#equation-7b57a31a-fa7f-4581-9a3f-12af2119ada7" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-cb958439-6c36-47e0-9135-0d998de0b4cb">
+<span class="eqno">(18)<a class="headerlink" href="#equation-cb958439-6c36-47e0-9135-0d998de0b4cb" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,xRy \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,xRy \\
 \end{gather}\]</div>
@@ -471,8 +480,8 @@ document.write(`
 <p>The following fact allows us to use known results about the span-based relation lifting to compute the order-extension of a set-functor in many examples.</p>
 <p><strong>Fact:</strong> If <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks, then applying <span class="math notranslate nohighlight">\(\widetilde T\)</span> to a preorder <span class="math notranslate nohighlight">\((X,\le)\)</span> agrees with applying the relation lifting <span class="math notranslate nohighlight">\(\overline T\)</span> to <span class="math notranslate nohighlight">\(\le\)</span>.</p>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\((X,\le)\)</span> be a preorder. For subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> we have <span class="math notranslate nohighlight">\(a\le b\in \widetilde{\mathcal P}(X,\le)\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dc10b572-30ae-4476-bb96-a0bfa44eb5ab">
-<span class="eqno">(19)<a class="headerlink" href="#equation-dc10b572-30ae-4476-bb96-a0bfa44eb5ab" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-fe8d317a-03fd-465c-8698-df306f4dd9eb">
+<span class="eqno">(19)<a class="headerlink" href="#equation-fe8d317a-03fd-465c-8698-df306f4dd9eb" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,x\le y \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,x\le y \\
 \end{gather}\]</div>

@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Cospan Bisimulation" href="Cospan-Bisimulation.html" />
-    <link rel="prev" title="Chen’s Category CoLog" href="CoLog.html" />
+    <link rel="prev" title="Posetification" href="OECL-posetification.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,7 +179,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Modal-Logic.html">Introduction to Modal Logic</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview or Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview of Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Introduction-to-Coalgebraic-Logic.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="The-Origins-of-Coalgebra-in-Domain-Theory.html">Origins in Domain Theory</a></li>
@@ -212,13 +212,22 @@
 <li class="toctree-l1"><a class="reference internal" href="Translations.html">Translations of Logics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CoLog.html">Chen’s Category CoLog</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity.md</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Order Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="OECL-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OECL-posetification.html">Posetification</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cospan (Bi)Similarity</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Cospan Bisimulation: Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation.html">Cospan Bisimulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Neighbourhood-Coalgebras.html">Neighbourhood Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 </ul>
 
     </div>
@@ -447,8 +456,8 @@ document.write(`
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
 \[T=\overline{2^{2^-}}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-ddc6b013-5151-4865-ad17-99ee23593626">
-<span class="eqno">(25)<a class="headerlink" href="#equation-ddc6b013-5151-4865-ad17-99ee23593626" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-9831ade0-24ca-440d-b259-025f0f5ba5c5">
+<span class="eqno">(25)<a class="headerlink" href="#equation-9831ade0-24ca-440d-b259-025f0f5ba5c5" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)
 \end{gather}\]</div>
@@ -463,15 +472,15 @@ document.write(`
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
 \[T=\mathcal D\mathcal U\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-a3299afa-5c3a-43a7-8314-40684bb35147">
-<span class="eqno">(26)<a class="headerlink" href="#equation-a3299afa-5c3a-43a7-8314-40684bb35147" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-41e7e8ef-f920-4733-ac95-ba7b60c8bbf6">
+<span class="eqno">(26)<a class="headerlink" href="#equation-41e7e8ef-f920-4733-ac95-ba7b60c8bbf6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \forall a\in\xi x.\exists b\in\nu y. \forall y\in b.\exists x\in a.\ xRy 
 \end{align}\]</div>
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
 \[T=\mathcal U\mathcal D\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-e9520018-7be5-4c9f-9f72-f8965bec46e7">
-<span class="eqno">(27)<a class="headerlink" href="#equation-e9520018-7be5-4c9f-9f72-f8965bec46e7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e103a9ab-802c-48c2-9be2-bc874c8ded35">
+<span class="eqno">(27)<a class="headerlink" href="#equation-e103a9ab-802c-48c2-9be2-bc874c8ded35" title="Permalink to this equation">#</a></span>\[\begin{align}
 \forall b\in\nu y.\exists a\in\xi x. \forall x\in a.\exists y\in b.\  xRy 
 \end{align}\]</div>
 </section>
@@ -508,12 +517,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="CoLog.html"
+       href="OECL-posetification.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Chen’s Category CoLog</p>
+        <p class="prev-next-title">Posetification</p>
       </div>
     </a>
     <a class="right-next"
