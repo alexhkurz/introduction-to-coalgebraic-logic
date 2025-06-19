@@ -48,3 +48,6 @@ parts:
     - file: contents/Neighbourhood-Coalgebras.md
     - file: contents/Bisimulation-for-Order-Enriched-Coalgebras.md
     - file: contents/Cospan-Bisimulation-2.md
+  - caption: Quantale Enriched Coalgebraic Logic
+    chapters:
+    - file: contents/QECL-Introduction.md
