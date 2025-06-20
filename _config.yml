@@ -39,7 +39,20 @@ parse:
 
 sphinx:
   config:
+    latex_elements:
+      preamble: |
+        \usepackage{stmaryrd}
     bibtex_reference_style: author_year
+    mathjax_config:
+      tex:
+        macros:
+          Set: ["{\\sf Set}", 0]
+          Qu: ["{\\Omega}", 0]
+          QuCat: ["{\\Omega\\text{-cat}}", 0]
+          One: ["{\\mathbb{1}}", 0]
+          yo: ["よ", 0]
+          bigsqcap: ["\\sqcap", 0]
+
 
 
 

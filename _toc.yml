@@ -18,6 +18,7 @@ parts:
     - file: contents/polynomial-functors.md
     - file: contents/Powerdomains.md
     - file: contents/Neighbourhood-Frames.md
+    - file: contents/Probability-Distributions.md
   - caption: Introduction to Coalgebraic Logic
     chapters:
     - file: contents/Coalgebraic-BiSimilarity.md
@@ -48,6 +49,7 @@ parts:
     - file: contents/Neighbourhood-Coalgebras.md
     - file: contents/Bisimulation-for-Order-Enriched-Coalgebras.md
     - file: contents/Cospan-Bisimulation-2.md
-  - caption: Quantale Enriched Coalgebraic Logic
+  - caption: Outline of Quantale Enriched CL
     chapters:
-    - file: contents/QECL-Introduction.md
+    - file: contents/QECL-Introduction.md    
+    - file: contents/QECL-Quantalification.md
