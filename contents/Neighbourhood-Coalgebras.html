@@ -29,12 +29,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Qu": ["{\\Omega}", 0], "QuCat": ["{\\Omega\\text{-cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yo": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Neighbourhood-Coalgebras';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -228,6 +228,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 </ul>
 
     </div>
@@ -444,14 +445,14 @@ document.write(`
 <p>Recall that the connected component functor <span class="math notranslate nohighlight">\(C:Ord\to Set\)</span> is left-adjoint to the discrete functor <span class="math notranslate nohighlight">\(D:Set\to Ord\)</span>. Also recall that the ordification of the neighbourhood functor is $D2^{2^{C-}}, see Theorem 8 in [DK17] and the section on <a class="reference external" href="https://hackmd.io/6Ehr9bIQQgSZKeeasdSKoQ#Neighbourhood-Coalgebras">Cospan Bisimulation</a>.</p>
 <p><strong>Definition:</strong> A neighbourhood frame is a set <span class="math notranslate nohighlight">\(X\)</span> with a function <span class="math notranslate nohighlight">\(X\to 2^{2^X}\)</span>. An ordered neighbourhood frame is an ordered set <span class="math notranslate nohighlight">\(X\)</span> with an order-preserving function <span class="math notranslate nohighlight">\(X\to D2^{2^{CX}}\)</span>.</p>
 <p><strong>Remark:</strong> The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Set\)</span> <a class="footnote-reference brackets" href="#ordmorph" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to 2^{2^X}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to 2^{2^Y}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-75f5d14f-a6da-4475-bb2c-593ad238b9a6">
-<span class="eqno">(29)<a class="headerlink" href="#equation-75f5d14f-a6da-4475-bb2c-593ad238b9a6" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-254356ef-1261-453e-a569-6f7bf88b4320">
+<span class="eqno">(28)<a class="headerlink" href="#equation-254356ef-1261-453e-a569-6f7bf88b4320" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)
 \end{gather}\]</div>
 <p><strong>Remark:</strong> Similarly, <span class="math notranslate nohighlight">\(R\)</span> is a bisimulation if <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1f201c1c-41c9-4d91-bf07-260f5cf25a22">
-<span class="eqno">(30)<a class="headerlink" href="#equation-1f201c1c-41c9-4d91-bf07-260f5cf25a22" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-32dd0289-413f-43bc-8bb9-9ec95137873e">
+<span class="eqno">(29)<a class="headerlink" href="#equation-32dd0289-413f-43bc-8bb9-9ec95137873e" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)
 \end{gather}\]</div>
@@ -464,8 +465,8 @@ document.write(`
 <aside class="footnote brackets" id="ordmorph" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Ord\)</span> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to D2^{2^{CX}}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to D2^{2^{CY}}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc8c3a1d-66c3-4849-9f10-fff0a2a96170">
-<span class="eqno">(31)<a class="headerlink" href="#equation-bc8c3a1d-66c3-4849-9f10-fff0a2a96170" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-dfb59086-4ad2-4039-a90a-543ffdad2664">
+<span class="eqno">(30)<a class="headerlink" href="#equation-dfb59086-4ad2-4039-a90a-543ffdad2664" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)
 \end{gather}\]</div>

@@ -29,12 +29,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Qu": ["{\\Omega}", 0], "QuCat": ["{\\Omega\\text{-cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yo": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Montone-Neighbourhood-Coalgebras';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -228,6 +228,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 </ul>
 
     </div>
@@ -463,14 +464,14 @@ document.write(`
 <section id="coalgebra-morphisms">
 <h2>Coalgebra Morphisms<a class="headerlink" href="#coalgebra-morphisms" title="Link to this heading">#</a></h2>
 <p><strong>Proposition:</strong> <span class="math notranslate nohighlight">\(f\)</span> is a morphism of <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-coalgebras iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9c327ace-9460-4af9-9dad-448a1fa4de58">
-<span class="eqno">()<a class="headerlink" href="#equation-9c327ace-9460-4af9-9dad-448a1fa4de58" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-7d648f98-ed2f-4a32-a3fb-6c3b8829c012">
+<span class="eqno">()<a class="headerlink" href="#equation-7d648f98-ed2f-4a32-a3fb-6c3b8829c012" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in \xi x.\exists b\in\nu(fx).\forall y\in b.\exists x\in a. fx \le y\\[1ex]
 \forall b\in \nu(fx).\exists a\in\xi(x).\forall x\in a.\exists y\in b. \ y\le fx
 \end{gather}\]</div>
 <p><span class="math notranslate nohighlight">\(f\)</span> is a morphism of <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-coalgebras iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f98cd597-04d6-42cc-a756-3ad1aa09ee15">
-<span class="eqno">()<a class="headerlink" href="#equation-f98cd597-04d6-42cc-a756-3ad1aa09ee15" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-a8e7a5c6-cfa2-49f7-aa1d-80f2d2d3f37b">
+<span class="eqno">()<a class="headerlink" href="#equation-a8e7a5c6-cfa2-49f7-aa1d-80f2d2d3f37b" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in \xi x.\exists b\in\nu(fx).\forall y\in b.\exists x\in a. fx \ge y\\[1ex]
 \forall b\in \nu(fx).\exists a\in\xi x.\forall x\in a.\exists y\in b. y \ge fx 
 \end{gather}\]</div>

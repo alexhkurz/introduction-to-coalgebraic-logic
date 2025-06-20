@@ -1,6 +1,8 @@
 # Introduction
 
-under construction
+We have seen in the chapter "Ordere Enriched Coalgebraic Logic" that much of coalgebraic logic generalizes from the sets and Boolean algebras to posets and distributive lattices. 
+
+The intention of this chapter is to generalize this from the two-element quantale to a general quantale. Much of this work in progress but the outlines of this general theory are emerging ...
 
 ...
 

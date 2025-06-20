@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Coalgebraic Logic: A Survey &#8212; Coalgebraic Logic</title>
+    <title>Quantalification &#8212; Coalgebraic Logic</title>
   
   
   
@@ -57,9 +57,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Coalgebraic Logic A Survey';</script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Qu": ["{\\Omega}", 0], "QuCat": ["{\\Omega\\text{-cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yo": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/QECL-Quantalification';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Introduction" href="QECL-Introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +124,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -223,10 +224,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
-<ul class="nav bd-sidenav">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Quantalification</a></li>
 </ul>
 
     </div>
@@ -298,7 +299,7 @@
       
       
       
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/issues/new?title=Issue%20on%20page%20%2Fcontents/Coalgebraic Logic A Survey.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/issues/new?title=Issue%20on%20page%20%2Fcontents/QECL-Quantalification.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +329,7 @@
       
       
       
-      <li><a href="../_sources/contents/Coalgebraic Logic A Survey.md" target="_blank"
+      <li><a href="../_sources/contents/QECL-Quantalification.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -412,7 +413,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Coalgebraic Logic: A Survey</h1>
+    <h1>Quantalification</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -422,8 +423,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sketches-on-coalgebraic-logic">sketches on coalgebraic logic</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extending-functors-to-quantale-categories">Extending Functors to Quantale Categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-functor">Constant Functor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power">Power</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-functor">Polynomial Functor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powerset-functor">Powerset Functor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-functor">Distribution Functor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -435,60 +444,67 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="coalgebraic-logic-a-survey">
-<h1>Coalgebraic Logic: A Survey<a class="headerlink" href="#coalgebraic-logic-a-survey" title="Link to this heading">#</a></h1>
-<p>(draft … far from complete)</p>
-<p>At the moment the following is a loose collection of notes which I started to write for myself. But writing improves with an audience in mind. And markdown makes publishing easy. So while I consider these still private notes, I am happy to share them and to make any extensions and improvements. So if you happen to pass by, don’t hesitate to get in touch.</p>
-<p>Notes from a talk on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Skc7tOx6F">The Landscape of Coalgebraic Logic</a> surveying some of the reserach on coalgebraic logic since it beginnings in the 1990ies.</p>
-<p>( … I also have a page with various <a class="reference external" href="https://alexhkurz.github.io/teaching-phd-courses.html">lecture notes</a> and most of my <a class="reference external" href="https://alexhkurz.github.io/publications.html">publications</a> … )</p>
-<section id="sketches-on-coalgebraic-logic">
-<h2>sketches on coalgebraic logic<a class="headerlink" href="#sketches-on-coalgebraic-logic" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/H1zAiN1LO">Modal Logic</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1t-Y6f8L">Introduction to Coalgebraic Logic</a></p>
-<ul>
-<li><p>Sketch on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ryq8jvZZ5">The Origins of Coalgebra in Domain Theory</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1SJ8lizO">Powerdomains: The Paradigmatic Example</a></p></li>
-<li><p>Double Powerdomains: Neighbourhood Semantics</p></li>
-<li><p>Varying the Parameters: An Overview</p></li>
-<li><p>Extending and Specialising Coalgebra</p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJs53demu">Coalgebraic Bisimilarity</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rJ7UTo788">Classical Modal Logic</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJcARPMVO">Predicate Lifting</a> and  <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Sk4WH_fNd">Monotone PLs</a> and <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rkPk_3sNd">Expressive PLs</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/ByPA9_Juu">Relation Liftings</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rJksR4sso">Moss’s Coalgebraic Logic</a></p></li>
-</ul>
-</li>
-<li><p>Functorial Modal Logic</p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/BylEPbhHu">Semantics</a></p></li>
-<li><p>Completeness</p></li>
-<li><p>Expressivity</p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJVzK6TUI">Functors Presented by Operations and Equations</a></p></li>
-<li><p>Translations of Logics</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rk4TFb8FP">Cospan (Bi)Simulation</a></p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/HyQxhrh_v">Cospan Bisimulation</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/BJfhgfLYv">Neighbourhood Coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJZPcfMdv">Bisimulation for Ordered Coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/S1IWPOVKv">Cospan Bisimulation 2</a></p></li>
-</ul>
-</li>
-<li><p>Coalgebraic Logic over Orders</p>
-<ul>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/H1fd1IIB_">Coalgebras over Preorders</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/BkSdWhVtP">Examples of Poset-Functors</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/HJM0YyZ_w">Montone Neighbourhood Coalgebras</a></p></li>
-<li><p><a class="reference external" href="https://hackmd.io/&#64;alexhkurz/S13JWraOI">Logic of Ordered Neighbourhood Coalgebras</a></p></li>
-</ul>
-</li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="quantalification">
+<h1>Quantalification<a class="headerlink" href="#quantalification" title="Link to this heading">#</a></h1>
+<section id="extending-functors-to-quantale-categories">
+<h2>Extending Functors to Quantale Categories<a class="headerlink" href="#extending-functors-to-quantale-categories" title="Link to this heading">#</a></h2>
+<p>For now, assuming the quantale to be commutative, we refer to <a class="reference external" href="https://lmcs.episciences.org/5132">Adriana Balan ; Alexander Kurz ; Jiří Velebil - Extending set functors to generalised metric spaces</a> for details. We only extract some information for reference.</p>
 </section>
-<section id="acknowledgements">
-<h2>acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
-<p>These notes have been written in discussions with Adriana Balan, Daniel Briseno, Luke Burns, Justin Dressel, Jim de Groot, Helle Hansen, Peter Jipsen, Nima Motamed, Drew Moshier, Wolfgang Poiger, Bruno Teheux, Yde Venema, Jeremy Wayland and others.</p>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<section id="constant-functor">
+<h3>Constant Functor<a class="headerlink" href="#constant-functor" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(T:\Set\to\Set\)</span>, be a constant functor at a set <span class="math notranslate nohighlight">\(S\)</span>. Then <span class="math notranslate nohighlight">\(\overline T\)</span> acts as follows: For any <span class="math notranslate nohighlight">\(\Qu\)</span>-category <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(\overline TX\)</span> is the constant <span class="math notranslate nohighlight">\(\QuCat\)</span>-functor to the <span class="math notranslate nohighlight">\(\Qu\)</span>-category with <span class="math notranslate nohighlight">\(S\)</span> as set of objects, with <span class="math notranslate nohighlight">\(\Qu\)</span>-distances</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline TX(x',x) = 
+\begin{cases} 
+\, \top \ \ , \ \ x'=x
+\\
+\bot \ \ , \ \ \mbox{otherwise}
+\end{cases}
+\end{split}\]</div>
+<p>That is, <span class="math notranslate nohighlight">\(\overline TX = S \cdot \One_\top\)</span> is the coproduct in <span class="math notranslate nohighlight">\(\QuCat\)</span> of <span class="math notranslate nohighlight">\(S\)</span> copies of the terminal <span class="math notranslate nohighlight">\(\Qu\)</span>-category <span class="math notranslate nohighlight">\(\One_\top\)</span>. In case <span class="math notranslate nohighlight">\(\Qu\)</span> is integral, we have <span class="math notranslate nohighlight">\(\overline T X=D S\)</span>.</p>
+</section>
+<section id="power">
+<h3>Power<a class="headerlink" href="#power" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(T:\Set\to\Set\)</span> be the functor <span class="math notranslate nohighlight">\(TX= X^n\)</span>, for <span class="math notranslate nohighlight">\(n\)</span> a natural number.
+Then <span class="math notranslate nohighlight">\(\overline T\)</span> maps a quantale category <span class="math notranslate nohighlight">\(X\)</span> to its <span class="math notranslate nohighlight">\(n\)</span>-th power <span class="math notranslate nohighlight">\(X^n\)</span>, where</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+X^n((x'_0,\dots,x'_{n-1}),(x_0,\dots,x_{n-1}))
+=
+X(x'_0,x_0)\wedge\dots\wedge X(x'_{n-1},x_{n-1}).
+\end{equation}
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(n\)</span> is an {\em arbitrary/} cardinal number, the quantalification of
+<span class="math notranslate nohighlight">\(T:\Set\to \Set\)</span>, <span class="math notranslate nohighlight">\(TX=X^n\)</span> also exists and <span class="math notranslate nohighlight">\(\overline TX((x'_i),(x_i))=\bigsqcap_i X (x'_i,x_i)\)</span>. That is, <span class="math notranslate nohighlight">\(\overline TX=X^n\)</span>.</p>
+</section>
+<section id="polynomial-functor">
+<h3>Polynomial Functor<a class="headerlink" href="#polynomial-functor" title="Link to this heading">#</a></h3>
+<p>The quantalification of a finitary polynomial functor
+<span class="math notranslate nohighlight">\(
+X\mapsto \coprod_n X^n\coprod \Sigma n
+\)</span>
+is the ``strongly polynomial’’ <span class="math notranslate nohighlight">\(\Qu\)</span>-functor
+<span class="math notranslate nohighlight">\(
+X\mapsto \coprod_n X^n \otimes D\Sigma n
+\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> ranges over finite sets.</p>
+<p>In particular, the quantalification of the list functor <span class="math notranslate nohighlight">\(LX = X^* = \coprod_n X^n\)</span> maps a <span class="math notranslate nohighlight">\(\Qu\)</span>-category <span class="math notranslate nohighlight">\(X\)</span> to the <span class="math notranslate nohighlight">\(\Qu\)</span>-category having as objects tuples of objects of <span class="math notranslate nohighlight">\(X\)</span>, with non-trivial <span class="math notranslate nohighlight">\(\Qu\)</span>-distances only between tuples of same order</p>
+</section>
+<section id="powerset-functor">
+<h3>Powerset Functor<a class="headerlink" href="#powerset-functor" title="Link to this heading">#</a></h3>
+<p>…</p>
+</section>
+<section id="distribution-functor">
+<h3>Distribution Functor<a class="headerlink" href="#distribution-functor" title="Link to this heading">#</a></h3>
+<p>…</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p>…</p>
 </section>
 </section>
 
@@ -522,6 +538,15 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="QECL-Introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -538,8 +563,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sketches-on-coalgebraic-logic">sketches on coalgebraic logic</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extending-functors-to-quantale-categories">Extending Functors to Quantale Categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-functor">Constant Functor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power">Power</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-functor">Polynomial Functor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powerset-functor">Powerset Functor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-functor">Distribution Functor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 

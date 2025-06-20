@@ -29,12 +29,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Qu": ["{\\Omega}", 0], "QuCat": ["{\\Omega\\text{-cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yo": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Boolean-Logic-for-Set-Coalgebras';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -228,6 +228,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 </ul>
 
     </div>
@@ -500,8 +501,8 @@ document.write(`
 \[LFn = PTSFn\]</div>
 <p>We extend <span class="math notranslate nohighlight">\(L\)</span> to all algebras via sifted colimits (hence <span class="math notranslate nohighlight">\(L\)</span> preserves sifted colimits by definition).</p>
 <p>Moreover, <span class="math notranslate nohighlight">\(ULFn=UPTSFn\)</span> is the set of all <span class="math notranslate nohighlight">\(n\)</span>-ary <strong>predicate liftings</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-25e93d92-5a22-4a07-adef-68a7f0cb0925">
-<span class="eqno">(23)<a class="headerlink" href="#equation-25e93d92-5a22-4a07-adef-68a7f0cb0925" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-17ab46b2-062b-4e15-9c70-f296b3a75141">
+<span class="eqno">(22)<a class="headerlink" href="#equation-17ab46b2-062b-4e15-9c70-f296b3a75141" title="Permalink to this equation">#</a></span>\[\begin{align}
 UPTSFn &amp;\cong UPT(2^n) \\
 &amp;= 2^{T(2^n)} \\
 &amp;\cong Nat({(2^n)}^X,2^{TX}) \\
@@ -525,8 +526,8 @@ UPTSFn &amp;\cong UPT(2^n) \\
 <div class="math notranslate nohighlight">
 \[LPX=PTSPX\cong PTX\]</div>
 <p>which, in terms of the presentation of <span class="math notranslate nohighlight">\(L\)</span> by modal operators, corresponds to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-548861ff-845d-4b60-baf2-bfaf4f02ea28">
-<span class="eqno">(24)<a class="headerlink" href="#equation-548861ff-845d-4b60-baf2-bfaf4f02ea28" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-963f80df-a4b7-49a1-b76b-24105f61b27c">
+<span class="eqno">(23)<a class="headerlink" href="#equation-963f80df-a4b7-49a1-b76b-24105f61b27c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta_X: LPX &amp; \to PTX\\
 \Delta(a_1,\ldots a_n) &amp;\mapsto \Delta(a_1,\ldots a_n)
 \end{align}\]</div>
