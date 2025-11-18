@@ -10,7 +10,7 @@ The intention of this chapter is to generalize this from the two-element quantal
 - $\QuCat$, category of $\Qu$-enriched categories
 - $T:\QuCat\to\QuCat$, a functor for coalgebras
 - $:({\Qu^n})^X\to Q^{TX}$, $n$-ary predicate liftings
-- $\mathcal A$, a category of algebras containing $\Qu$, often $ISP(\Qu)$
+- $\mathcal A$, a category of algebras containing $\Qu$, typically $ISP(\Qu)$
 
 ## A Principled Approach
 
