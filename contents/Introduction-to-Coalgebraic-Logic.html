@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -225,10 +225,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
 
     </div>
@@ -446,10 +447,10 @@ document.write(`
 <p>(draft … references to be added)</p>
 <p>We assume here that the reader has seen some propositional and modal logic and is interested in how Kripke structures  can be generalised to coalgebras. Coalgebraic logic can be seen as generalising modal logic along the following parameters:</p>
 <ul class="simple">
-<li><p>a category <span class="math notranslate nohighlight">\(\mathcal X\)</span> whose objects are state spaces,</p></li>
-<li><p>a “type” functor <span class="math notranslate nohighlight">\(T:\mathcal X\to\mathcal X\)</span> specifying the type of dynamics,</p></li>
-<li><p>a category <span class="math notranslate nohighlight">\(\mathcal A\)</span> whose objects are propositional theories,</p></li>
-<li><p>a “logic” functor <span class="math notranslate nohighlight">\(L:\mathcal A \to \mathcal A\)</span> specifying modal operators and their axioms,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal X\)</span>, a category whose objects are state spaces,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T:\mathcal X\to\mathcal X\)</span>, a “type” functor specifying the type of dynamics,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal A\)</span>, a category whose objects are propositional theories,</p></li>
+<li><p><span class="math notranslate nohighlight">\(L:\mathcal A \to \mathcal A\)</span>, a “logic” functor specifying modal operators and their axioms,</p></li>
 <li><p>a contravariant adjunction relating the logic <span class="math notranslate nohighlight">\((\mathcal A,L)\)</span> and the semantics <span class="math notranslate nohighlight">\((\mathcal X,T)\)</span>.</p></li>
 </ul>
 <p>To go through this in detail will take some time. Let us start by sketching how coalgebras generalise Kripke structures.</p>
@@ -509,7 +510,7 @@ document.write(`
 <section id="the-category-theoretic-view">
 <h2>The category theoretic view<a class="headerlink" href="#the-category-theoretic-view" title="Link to this heading">#</a></h2>
 <p>The category theoretic approach to coalgebras takes an axiomatic point of view. Clearly, we cannot expect all results of modal logic to survive modifcations of the parameters
-$<span class="math notranslate nohighlight">\(\mathcal X,\mathcal A,S,P,L,T\)</span>$</p>
+<span class="math notranslate nohighlight">\(\mathcal X,\mathcal A,S,P,L,T\)</span>.</p>
 <p>On the other hand, the coalgebraic approach has shown that there is indeed a wide variety of instantiations of these parameters that allows us to extend many results of modal logic.</p>
 <p>From a category theoretic point of view we can ask the following questions:</p>
 <ul class="simple">

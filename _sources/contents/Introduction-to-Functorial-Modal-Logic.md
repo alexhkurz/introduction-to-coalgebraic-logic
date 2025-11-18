@@ -8,9 +8,11 @@ Given functors $T:\sf Set\to Set$ and $L:\sf BA\to BA$ and the contravariant adj
 
 $$ P:\sf Set \leftrightarrow BA : S$$
 
-the meaning of the logic $L$ is determined by 
+the meaning of the logic $L$ is determined by a natural transformation
 
-$$LP\to PT$$
+$$
+\delta: LP\to PT
+$$
 
 Moreover, $LP\to PT$ determines, and is determined by, its so-called mate
 \begin{gather}

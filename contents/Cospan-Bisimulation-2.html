@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -225,10 +225,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Cospan Bisimulation 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
 
     </div>
@@ -565,14 +566,14 @@ $<span class="math notranslate nohighlight">\( (x,y)\in f_\diamond \ \Leftrighta
 <p><strong>Proposition:</strong> Let <span class="math notranslate nohighlight">\(T:Ord\to Ord\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is a <span class="math notranslate nohighlight">\(T\)</span>-coalgebra morphism, then <span class="math notranslate nohighlight">\(f_\diamond\)</span> and <span class="math notranslate nohighlight">\(f^\diamond\)</span> are cospan-(bi)simulations.</p>
 <p><em>Proof:</em> <span class="math notranslate nohighlight">\(f_\diamond\)</span> and <span class="math notranslate nohighlight">\(f^\diamond\)</span> are the weakening closures of the spans <span class="math notranslate nohighlight">\((id,f)\)</span> and <span class="math notranslate nohighlight">\((f,id)\)</span>, respectively. Recall the definition of cospan-(bi)simulation and the fact that the collage of the weakening closure of a relation represented by a span <span class="math notranslate nohighlight">\((p,q)\)</span> is the cocomma of <span class="math notranslate nohighlight">\((p,q)\)</span>. Now the proposition follows from the universal property of cocommas. QED</p>
 <p><strong>Example:</strong> <a class="reference external" href="https://hackmd.io/V6m2cAy_TdagteE4RG_sbw#mathcal-Dmathcal-U-coalgebras">Recall</a> that <span class="math notranslate nohighlight">\(R\)</span> is a <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-cospan-(bi)simulation iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-866f8931-7815-403d-9fab-6cb966c65c7d">
-<span class="eqno">(35)<a class="headerlink" href="#equation-866f8931-7815-403d-9fab-6cb966c65c7d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe8cedda-4643-44be-8fff-4d1d52ee8681">
+<span class="eqno">(38)<a class="headerlink" href="#equation-fe8cedda-4643-44be-8fff-4d1d52ee8681" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \ \Rightarrow \ \ &amp; 
 \forall a\in\xi x.\exists b\in\nu y. \forall y'\in b.\exists x'\in a.\ x'Ry' 
 \end{align}\]</div>
 <p>We also <a class="reference external" href="https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w">know</a> that <span class="math notranslate nohighlight">\(f:X\to Y\)</span> is a morphism <span class="math notranslate nohighlight">\((X,\xi)\to(Y,\nu)\)</span> of <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-coalegbras iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5af838ff-a592-4d49-be50-069432cbecea">
-<span class="eqno">(36)<a class="headerlink" href="#equation-5af838ff-a592-4d49-be50-069432cbecea" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-8395f285-623c-4324-aaab-0ca5e9a733fe">
+<span class="eqno">(39)<a class="headerlink" href="#equation-8395f285-623c-4324-aaab-0ca5e9a733fe" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in \xi x.\exists b\in\nu(fx).\forall y\in b.\exists x\in a. fx \le y\\[1ex]
 \forall b\in \nu(fx).\exists a\in\xi(x).\forall x\in a.\exists y\in b. \ y\le fx
 \end{gather}\]</div>

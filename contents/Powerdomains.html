@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -225,10 +225,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
 
     </div>
@@ -472,8 +473,8 @@ document.write(`
 <section id="an-axiomatic-account-of-choice">
 <h2>An Axiomatic Account of Choice<a class="headerlink" href="#an-axiomatic-account-of-choice" title="Link to this heading">#</a></h2>
 <p>A somewhat minimal axiomatisation of a choice operator <span class="math notranslate nohighlight">\(\odot\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-98cb679c-0fed-4a8f-9f06-7627e0a59071">
-<span class="eqno">(2)<a class="headerlink" href="#equation-98cb679c-0fed-4a8f-9f06-7627e0a59071" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-e74b3dcd-e10c-41dd-b5b0-07c44b2ffc4f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-e74b3dcd-e10c-41dd-b5b0-07c44b2ffc4f" title="Permalink to this equation">#</a></span>\[\begin{gather}
 (x\odot y)\odot z= x\odot (y\odot z)\\
 x\odot y = y\odot x\\
 x\odot x = x
@@ -509,15 +510,15 @@ x\odot x = x
 <p><img alt="" src="https://i.imgur.com/wpaU0or.png" /></p>
 <p>Of course, a coalgebra on <span class="math notranslate nohighlight">\(X\)</span> is nothing but a set with a relation <span class="math notranslate nohighlight">\(R\subseteq X\times X\)</span>. But coalgebra morphisms do not only preserve the relation but also reflect it in a particular way. Key to this is the following.</p>
 <p><strong>Exercise on (bi)simulation:</strong> We write <span class="math notranslate nohighlight">\(xRy\)</span> for <span class="math notranslate nohighlight">\(y\in\xi(x)\)</span>. The following are equivalent conditions for <span class="math notranslate nohighlight">\(f\)</span> being a <strong>forward simulation</strong>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-803c1f66-ea91-4f01-a3d6-c065edd4df14">
-<span class="eqno">(3)<a class="headerlink" href="#equation-803c1f66-ea91-4f01-a3d6-c065edd4df14" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-0362ce8c-ed1e-4d4d-9bde-69884befeba3">
+<span class="eqno">(3)<a class="headerlink" href="#equation-0362ce8c-ed1e-4d4d-9bde-69884befeba3" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \mathcal Pf\circ \xi \ \subseteq \ \xi'\circ f\\
 xRy \ \Rightarrow \ f(x) R' f(y)\\
 x'=f(x) \ \Rightarrow \ \forall y\in\xi(x)\,.\,\exists y'\in\xi'(x')\,.\,y'=f(x')
 \end{gather}\]</div>
 <p>The following are equivalent conditions for <span class="math notranslate nohighlight">\(f\)</span> being a <strong>backward simulation</strong>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-66a88d51-ddcc-4698-9498-04cbe9639ec8">
-<span class="eqno">(4)<a class="headerlink" href="#equation-66a88d51-ddcc-4698-9498-04cbe9639ec8" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-71bfd3ac-c06c-4362-8c32-08be5ac8fa5d">
+<span class="eqno">(4)<a class="headerlink" href="#equation-71bfd3ac-c06c-4362-8c32-08be5ac8fa5d" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \mathcal Pf\circ \xi \ \supseteq \ \xi'\circ f\\
 f(x)R'y' \ \Rightarrow \ \exists y\,.\, xRy \ \&amp; \  y'=f(y)\\
 x'=f(x) \ \Rightarrow \ \forall y'\in\xi'(x')\,.\,\exists y\in\xi(x)\,.\,y'=f(x')
@@ -531,8 +532,8 @@ x'=f(x) \ \Rightarrow \ \forall y'\in\xi'(x')\,.\,\exists y\in\xi(x)\,.\,y'=f(x'
 <section id="functors">
 <h3>Functors<a class="headerlink" href="#functors" title="Link to this heading">#</a></h3>
 <p>The powerset functor gives rise to three different powerdomains on the category of partial orders according to whether we enforce one of one of the following two alternatives.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dee58a12-e76a-4180-87c9-92a98e986a3e">
-<span class="eqno">(5)<a class="headerlink" href="#equation-dee58a12-e76a-4180-87c9-92a98e986a3e" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-c4acaaad-320e-43ef-a1c4-8514b3bee309">
+<span class="eqno">(5)<a class="headerlink" href="#equation-c4acaaad-320e-43ef-a1c4-8514b3bee309" title="Permalink to this equation">#</a></span>\[\begin{gather}
 x\le x\odot y\\
 x\ge x\odot y
 \end{gather}\]</div>
@@ -542,8 +543,8 @@ x\ge x\odot y
 <div class="math notranslate nohighlight">
 \[\mathcal P^\rm c:\sf Pos \to Pos\]</div>
 <p>maps a poset <span class="math notranslate nohighlight">\((X,\le)\)</span> to the set of convex subsets <span class="math notranslate nohighlight">\(\mathcal PX\)</span>. The order on convex subsets is defined as follows. <a class="footnote-reference brackets" href="#back-forth" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#pjust" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab04f189-eba3-4842-8ef4-1b61c74571c1">
-<span class="eqno">(6)<a class="headerlink" href="#equation-ab04f189-eba3-4842-8ef4-1b61c74571c1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c2381713-e061-49a2-b510-44414816544d">
+<span class="eqno">(6)<a class="headerlink" href="#equation-c2381713-e061-49a2-b510-44414816544d" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\le y \quad \textrm{ and }\\
 &amp;\forall y\in b\,.\,\exists x\in a. x\le y\\
 \end{align}\]</div>
@@ -555,8 +556,8 @@ a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\le
 <div class="math notranslate nohighlight">
 \[\mathcal D:\sf Pos \to Pos\]</div>
 <p>maps a poset <span class="math notranslate nohighlight">\((X,\le)\)</span> to the set of downward closed subsets (downsets) <span class="math notranslate nohighlight">\(\mathcal DX\)</span>. The order on subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> is defined as <a class="footnote-reference brackets" href="#dpre" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#djust" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-cdd29539-0b07-40ce-bc22-87bdb36dca7a">
-<span class="eqno">(7)<a class="headerlink" href="#equation-cdd29539-0b07-40ce-bc22-87bdb36dca7a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-531272c0-9a6d-4fe2-ac0e-941d880465aa">
+<span class="eqno">(7)<a class="headerlink" href="#equation-531272c0-9a6d-4fe2-ac0e-941d880465aa" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\le y
 \end{align}\]</div>
 <p>which amounts to inclusion of downsets. If <span class="math notranslate nohighlight">\(X\)</span> is discrete then <span class="math notranslate nohighlight">\(\mathcal DX\)</span> is <span class="math notranslate nohighlight">\(\mathcal PX\)</span> ordered by <span class="math notranslate nohighlight">\(\subseteq\)</span>.</p>
@@ -564,8 +565,8 @@ a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\le
 <section id="upper-powerdomain">
 <h4>Upper Powerdomain<a class="headerlink" href="#upper-powerdomain" title="Link to this heading">#</a></h4>
 <p>The functor <span class="math notranslate nohighlight">\(\mathcal U:\sf Pos \to Pos\)</span> maps a poset <span class="math notranslate nohighlight">\((X,\le)\)</span> to the set of upward closed subsets (upsets) <span class="math notranslate nohighlight">\(\mathcal UX\)</span>. The order on upsets is defined as <a class="footnote-reference brackets" href="#ujust" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p>
-<div class="amsmath math notranslate nohighlight" id="equation-03e01eb5-aa1e-41f3-ba5a-413f8ed18c37">
-<span class="eqno">(8)<a class="headerlink" href="#equation-03e01eb5-aa1e-41f3-ba5a-413f8ed18c37" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-37a26808-cf99-48f4-8386-9a3a9a5a8f58">
+<span class="eqno">(8)<a class="headerlink" href="#equation-37a26808-cf99-48f4-8386-9a3a9a5a8f58" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le y
 \end{align}\]</div>
 <p>which amounts to reverse inclusion of upsets. If <span class="math notranslate nohighlight">\(X\)</span> is discrete then <span class="math notranslate nohighlight">\(\mathcal UX\)</span> is <span class="math notranslate nohighlight">\(\mathcal PX\)</span> ordered by <span class="math notranslate nohighlight">\(\supseteq\)</span>.</p>
@@ -623,14 +624,14 @@ a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le
 <h3>The Logic of Bisimulation<a class="headerlink" href="#the-logic-of-bisimulation" title="Link to this heading">#</a></h3>
 <p>The answer is given by the “bounded quantifiers” <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>. Usually they are considered as syntactic operations on formulas. But I want to treat them here as operations on “semantic” propositions, that is, on subsets of <span class="math notranslate nohighlight">\(X\)</span> where $<span class="math notranslate nohighlight">\(\xi:X\to\mathcal PX\)</span>$</p>
 <p>is a coalgebra. We rewrite the usual definition of the semantics of <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span> in terms of the coalgebra structure <span class="math notranslate nohighlight">\(\xi\)</span> as follows.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-63842686-6a99-4e45-855e-17151f43cd5d">
-<span class="eqno">(9)<a class="headerlink" href="#equation-63842686-6a99-4e45-855e-17151f43cd5d" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-41161750-120c-4c48-a744-9d5c7e046836">
+<span class="eqno">(9)<a class="headerlink" href="#equation-41161750-120c-4c48-a744-9d5c7e046836" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \Box a = \xi^{-1}(\{b\subseteq X \mid b\subseteq a\})\\
 \Diamond a =  \xi^{-1}(\{b\subseteq X \mid a\cap b\not=\emptyset\})
 \end{gather}\]</div>
 <p><strong>Exercise:</strong> The following are a direct consequence of the definition above.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d4680604-c1c5-41ea-84b6-e6ae42e89d1d">
-<span class="eqno">(10)<a class="headerlink" href="#equation-d4680604-c1c5-41ea-84b6-e6ae42e89d1d" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-f07b8211-1dad-481f-94e3-a9854e43b87a">
+<span class="eqno">(10)<a class="headerlink" href="#equation-f07b8211-1dad-481f-94e3-a9854e43b87a" title="Permalink to this equation">#</a></span>\[\begin{gather}
 x\in \Box a \quad \Longleftrightarrow \quad \forall y\in\xi(x)\,.\, y\in a\\
 x\in \Diamond a \quad \Longleftrightarrow \quad \exists y\in\xi(x)\,.\, y\in a
 \end{gather}\]</div>
@@ -641,8 +642,8 @@ x\in \Diamond a \quad \Longleftrightarrow \quad \exists y\in\xi(x)\,.\, y\in a
 <p>Two elements of two <span class="math notranslate nohighlight">\(\mathcal P\)</span>-coalgebras are <strong>bisimilar</strong> (or <strong>behaviourally equivalent</strong>) iff they can be connected by some zig-zag of morphisms. <a class="footnote-reference brackets" href="#bisimilar" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p>
 <p>The advantage of this definition is that it captures the informal idea that coalgebra-morphisms preserve behaviour and that it is parametric in the functor. But we also want a more combinatorial characterisation:</p>
 <p>Given two coalgebras <span class="math notranslate nohighlight">\(X\stackrel \xi \to \mathcal PX\)</span> and <span class="math notranslate nohighlight">\(X'\stackrel {\xi'} \to \mathcal PX'\)</span> a relation <span class="math notranslate nohighlight">\(R\subseteq X\times X'\)</span> is called a <strong>bisimulation</strong> if</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e842a6d8-6bd6-43b1-8de5-13a702d1a8af">
-<span class="eqno">(11)<a class="headerlink" href="#equation-e842a6d8-6bd6-43b1-8de5-13a702d1a8af" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-31ddc81b-6e74-4aca-8866-49d5602204e8">
+<span class="eqno">(11)<a class="headerlink" href="#equation-31ddc81b-6e74-4aca-8866-49d5602204e8" title="Permalink to this equation">#</a></span>\[\begin{align} 
 x Rx' \ \ \textrm{ only if } \quad
 &amp; \forall y\in \xi(x)\,.\,\exists y'\in\xi'(x')\,.\, x'Ry' \quad \textrm {and}\\
 &amp; \forall y'\in \xi'(x')\,.\,\exists y\in\xi(x)\,.\, x'Ry'\\
@@ -789,8 +790,8 @@ $$x\in\phi \quad \Longleftrightarrow \quad $$
 a\le b\  \quad \textrm{ if } \quad &amp; \forall x\in a,.,\exists y\in b. x\le y
 \end{align}</p>
 <p>and the order on <span class="math notranslate nohighlight">\(\mathcal UX\)</span> by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ef301a7-5b33-4366-9427-31d085191c87">
-<span class="eqno">(12)<a class="headerlink" href="#equation-1ef301a7-5b33-4366-9427-31d085191c87" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fb78844d-7fac-4ede-9a4b-b81ef21ea5f7">
+<span class="eqno">(12)<a class="headerlink" href="#equation-fb78844d-7fac-4ede-9a4b-b81ef21ea5f7" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ if } \quad &amp; \forall y\in b\,.\,\exists x\in a. x\le y
 \end{align}\]</div>
 </aside>

@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -225,10 +225,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Bisimulation-for-Order-Enriched-Coalgebras.html">Bisimulation for Ordered Coalgebras</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantale Enriched Coalgebraic Logic</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
 
     </div>
@@ -474,8 +475,8 @@ TX  &amp; \rightarrow &amp; \overline T\mathbf R &amp; \leftarrow &amp; TY
 \[xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,\]</div>
 <p>which, by definition<a class="footnote-reference brackets" href="#eglimilner" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> of the order on <span class="math notranslate nohighlight">\(\mathcal{\overline P}\mathbf R\)</span>, gives us the usual definition of a bisimulation on Kripke frames (to emphasise the coalgebraic nature of Kripke frames we write <span class="math notranslate nohighlight">\(x'\in\xi(x)\)</span> instead of <span class="math notranslate nohighlight">\(x\to x'\)</span> and <span class="math notranslate nohighlight">\(y'\in\nu(y)\)</span> instead of <span class="math notranslate nohighlight">\(y\to y'\)</span>).</p>
 <p><strong>Corollary:</strong> <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation between Kripke frames <span class="math notranslate nohighlight">\(\xi:X\to TX\)</span> and <span class="math notranslate nohighlight">\(\nu:Y\to TY\)</span> iff <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a08b1d4d-9fb4-4956-8411-723820f4cf73">
-<span class="eqno">(27)<a class="headerlink" href="#equation-a08b1d4d-9fb4-4956-8411-723820f4cf73" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-0407528f-a1e4-4b4c-9621-21ff18a818f0">
+<span class="eqno">(28)<a class="headerlink" href="#equation-0407528f-a1e4-4b4c-9621-21ff18a818f0" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x'\in\xi(x).\exists y'\in\nu(y).  x'Ry' \\[1ex]
 \textrm { and }\\[1ex]
 \forall y'\in\nu(y).\exists x'\in\xi(x).  x'Ry' \\  
