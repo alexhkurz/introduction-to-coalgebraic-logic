@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction &#8212; Coalgebraic Logic</title>
+    <title>Examples &#8212; Coalgebraic Logic</title>
   
   
   
@@ -59,11 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/QECL-Introduction';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/QECL-examples';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quantalification" href="QECL-Quantalification.html" />
-    <link rel="prev" title="Cospan Bisimulation 2" href="Cospan-Bisimulation-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +123,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -226,8 +226,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Cospan-Bisimulation-2.html">Cospan Bisimulation 2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
@@ -301,7 +301,7 @@
       
       
       
-      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/issues/new?title=Issue%20on%20page%20%2Fcontents/QECL-Introduction.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/coalgebraic-logic-jupyter/issues/new?title=Issue%20on%20page%20%2Fcontents/QECL-examples.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +331,7 @@
       
       
       
-      <li><a href="../_sources/contents/QECL-Introduction.md" target="_blank"
+      <li><a href="../_sources/contents/QECL-examples.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -415,7 +415,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction</h1>
+    <h1>Examples</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -425,8 +425,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-setup">A Simple Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-principled-approach">A Principled Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bou-etal-2009">Bou etal 2009</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-papers">More papers</a></li>
 </ul>
             </nav>
         </div>
@@ -438,26 +438,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
-<p>We have seen in the chapter “Ordere Enriched Coalgebraic Logic” that much of coalgebraic logic generalizes from the sets and Boolean algebras to posets and distributive lattices.</p>
-<p>The intention of this chapter is to generalize this from the two-element quantale to a general quantale. Much of this work in progress but the outlines of this general theory are emerging …</p>
-<section id="a-simple-setup">
-<h2>A Simple Setup<a class="headerlink" href="#a-simple-setup" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
+<section id="bou-etal-2009">
+<h2>Bou etal 2009<a class="headerlink" href="#bou-etal-2009" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\Qu\)</span>, a quantale</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Qu\)</span>, a finite commutative quantale</p></li>
 <li><p><span class="math notranslate nohighlight">\(\QuCat\)</span>, category of <span class="math notranslate nohighlight">\(\Qu\)</span>-enriched categories</p></li>
-<li><p><span class="math notranslate nohighlight">\(T:\QuCat\to\QuCat\)</span>, a functor for coalgebras</p></li>
-<li><p><span class="math notranslate nohighlight">\(:({\Qu^n})^X\to Q^{TX}\)</span>, <span class="math notranslate nohighlight">\(n\)</span>-ary predicate liftings</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathcal A\)</span>, a category of algebras containing <span class="math notranslate nohighlight">\(\Qu\)</span>, often <span class="math notranslate nohighlight">\(ISP(\Qu)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T:\QuCat\to\QuCat\)</span>, … powerset or upset …</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Box:({\Qu^n})^X\to Q^{TX}\)</span>, predicate liftings</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal A\)</span>, … <span class="math notranslate nohighlight">\(ISP(\Qu)\)</span> … ? …</p></li>
 </ul>
+<p>… some details …</p>
 </section>
-<section id="a-principled-approach">
-<h2>A Principled Approach<a class="headerlink" href="#a-principled-approach" title="Link to this heading">#</a></h2>
-<p>… tbc …</p>
-<p>…</p>
-<!-- https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXE9tZWdhXFx0ZXh0ey1jYXR9Il0sWzIsMCwiXFxPbWVnYVxcdGV4dHstY2F0fV57b3B9Il0sWzEsMCwiXFxib3QiXSxbMCwxLCJcXE9tZWdhXi0iLDAseyJjdXJ2ZSI6LTJ9XSxbMSwwLCJcXE9tZWdhXi0iLDAseyJjdXJ2ZSI6LTJ9XSxbMCwwLCJcXE9tZWdhXntcXE9tZWdhXi19IiwwLHsiYW5nbGUiOi05MH1dXQ== -->
-<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXE9tZWdhXFx0ZXh0ey1jYXR9Il0sWzIsMCwiXFxPbWVnYVxcdGV4dHstY2F0fV57b3B9Il0sWzEsMCwiXFxib3QiXSxbMCwxLCJcXE9tZWdhXi0iLDAseyJjdXJ2ZSI6LTJ9XSxbMSwwLCJcXE9tZWdhXi0iLDAseyJjdXJ2ZSI6LTJ9XSxbMCwwLCJcXE9tZWdhXntcXE9tZWdhXi19IiwwLHsiYW5nbGUiOi05MH1dXQ==&embed" width="500" height="130" style="border-radius: 8px; border: none; margin-left: 50px;"></iframe>
+<section id="more-papers">
+<h2>More papers<a class="headerlink" href="#more-papers" title="Link to this heading">#</a></h2>
 <p>…</p>
 </section>
 </section>
@@ -492,24 +487,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Cospan-Bisimulation-2.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Cospan Bisimulation 2</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="QECL-Quantalification.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quantalification</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -526,8 +503,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-setup">A Simple Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-principled-approach">A Principled Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bou-etal-2009">Bou etal 2009</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-papers">More papers</a></li>
 </ul>
   </nav></div>
 
