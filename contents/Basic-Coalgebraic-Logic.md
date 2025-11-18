@@ -1,6 +1,6 @@
 $\newcommand{\sem}[1]{\mathopen{[\![} #1 \mathclose{]\!]}}$
 
-# Basic Coalgebraic Logic
+# Basic Coalgebraic Modal Logic
 
 (draft ... references to be added)
 
