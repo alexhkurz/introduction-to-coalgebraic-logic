@@ -4,7 +4,7 @@
 
 ## coalgebraic logic
 
-This is the repo in which I keep [my notes on coalgebraic logic](https://alexhkurz.github.io/introduction-to-coalgebraic-logic).
+This is the repo in which I keep [my notes on coalgebraic logic](https://alexhkurz.github.io/introduction-to-coalgebraic-logic) ([local version](file:///Users/akurz/alexhkurz-at-git/introduction-to-coalgebraic-logic/_build/html/index.html)).
 
 I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had problems, in particular when it came to combining markdown with latex. 
 
