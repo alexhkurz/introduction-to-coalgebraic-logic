@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -228,6 +228,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
@@ -446,14 +447,14 @@ document.write(`
 <p>Recall that the connected component functor <span class="math notranslate nohighlight">\(C:Ord\to Set\)</span> is left-adjoint to the discrete functor <span class="math notranslate nohighlight">\(D:Set\to Ord\)</span>. Also recall that the ordification of the neighbourhood functor is $D2^{2^{C-}}, see Theorem 8 in [DK17] and the section on <a class="reference external" href="https://hackmd.io/6Ehr9bIQQgSZKeeasdSKoQ#Neighbourhood-Coalgebras">Cospan Bisimulation</a>.</p>
 <p><strong>Definition:</strong> A neighbourhood frame is a set <span class="math notranslate nohighlight">\(X\)</span> with a function <span class="math notranslate nohighlight">\(X\to 2^{2^X}\)</span>. An ordered neighbourhood frame is an ordered set <span class="math notranslate nohighlight">\(X\)</span> with an order-preserving function <span class="math notranslate nohighlight">\(X\to D2^{2^{CX}}\)</span>.</p>
 <p><strong>Remark:</strong> The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Set\)</span> <a class="footnote-reference brackets" href="#ordmorph" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to 2^{2^X}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to 2^{2^Y}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-66860bf9-f0e0-4d3a-b7d9-a090c21ce5bb">
-<span class="eqno">(29)<a class="headerlink" href="#equation-66860bf9-f0e0-4d3a-b7d9-a090c21ce5bb" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-10f5ca8b-13ea-4746-9158-a6e493731b2c">
+<span class="eqno">(29)<a class="headerlink" href="#equation-10f5ca8b-13ea-4746-9158-a6e493731b2c" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. fx=y)
 \end{gather}\]</div>
 <p><strong>Remark:</strong> Similarly, <span class="math notranslate nohighlight">\(R\)</span> is a bisimulation if <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2087602-f939-4809-90cc-6c30f8f30dfd">
-<span class="eqno">(30)<a class="headerlink" href="#equation-b2087602-f939-4809-90cc-6c30f8f30dfd" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-8d0b6d09-57a9-4500-a917-ad13b2413380">
+<span class="eqno">(30)<a class="headerlink" href="#equation-8d0b6d09-57a9-4500-a917-ad13b2413380" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. xRy) \ \&amp; \ (\forall y\in b.\exists x\in a. xRy)
 \end{gather}\]</div>
@@ -466,8 +467,8 @@ document.write(`
 <aside class="footnote brackets" id="ordmorph" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>The function <span class="math notranslate nohighlight">\(f:X\to Y\)</span> in <span class="math notranslate nohighlight">\(Ord\)</span> is a coalgebra morphism from <span class="math notranslate nohighlight">\(\xi:X\to D2^{2^{CX}}\)</span> to <span class="math notranslate nohighlight">\(\nu:Y\to D2^{2^{CY}}\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-36346484-9e1c-4506-ba2d-cead8486794d">
-<span class="eqno">(31)<a class="headerlink" href="#equation-36346484-9e1c-4506-ba2d-cead8486794d" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-57f3b1a9-705c-4ccf-9eb6-c1b5cadf5008">
+<span class="eqno">(31)<a class="headerlink" href="#equation-57f3b1a9-705c-4ccf-9eb6-c1b5cadf5008" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall a\in\xi(x).\exists b \in \nu(y). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)\\[1ex]
 \forall b\in\nu(y).\exists a \in \xi(x). (\forall x\in a.\exists y\in b. fx=y) \ \&amp; \ (\forall y\in b.\exists x\in a. \overline{fx}=\overline y)
 \end{gather}\]</div>

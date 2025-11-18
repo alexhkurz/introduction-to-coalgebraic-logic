@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -228,6 +228,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
@@ -470,8 +471,8 @@ document.write(`
 <ul class="simple">
 <li><p>LA is the free Boolean algebra over <span class="math notranslate nohighlight">\(\Box a\)</span>, <span class="math notranslate nohighlight">\(a\in A\)</span> module the equations</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-c1375ee5-50c7-4975-b7f3-285e80c1ffa4">
-<span class="eqno">(13)<a class="headerlink" href="#equation-c1375ee5-50c7-4975-b7f3-285e80c1ffa4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cf1a2da4-c365-42b6-b839-8d6e594791a2">
+<span class="eqno">(13)<a class="headerlink" href="#equation-cf1a2da4-c365-42b6-b839-8d6e594791a2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Box\top &amp;= \top \\
 \Box(a\wedge b) &amp; = \Box a\wedge \Box b
 \end{align}\]</div>
@@ -534,15 +535,15 @@ PT\to L'P\to LP
 <h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Link to this heading">#</a></h3>
 <p>For now we side-step the question of how to find the language. We start from the language we know and love, namely the one given by one modal operation <span class="math notranslate nohighlight">\(\Box\)</span>. We also know the standard Kripke semantics of the <span class="math notranslate nohighlight">\(\Box\)</span> via sets of successors. The aim is to show a methodology of how to find the axioms.</p>
 <p>The functor <span class="math notranslate nohighlight">\(L'\)</span> is represented by the language without the axioms. It is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-433dcbab-c122-457a-9e16-2b0f1bfb2ef3">
-<span class="eqno">(14)<a class="headerlink" href="#equation-433dcbab-c122-457a-9e16-2b0f1bfb2ef3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c50a231b-a717-4704-943f-d00178a6b74e">
+<span class="eqno">(14)<a class="headerlink" href="#equation-c50a231b-a717-4704-943f-d00178a6b74e" title="Permalink to this equation">#</a></span>\[\begin{align}
 L':BA&amp; \to BA\\
  A &amp; \mapsto F\{\Box a \mid a\in A\}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(FX\)</span> denotes the free Boolean algebra over <span class="math notranslate nohighlight">\(X\)</span>. Categorically <span class="math notranslate nohighlight">\(F\)</span> is the left adjoint of the forgetful functor <span class="math notranslate nohighlight">\(U:BA\to Set\)</span>.</p>
 <p>The semantics of the language is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cda81a51-1efe-49c6-9fc3-4863f291afcd">
-<span class="eqno">(15)<a class="headerlink" href="#equation-cda81a51-1efe-49c6-9fc3-4863f291afcd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-76deb731-3864-4ecb-a095-8938d73c5da0">
+<span class="eqno">(15)<a class="headerlink" href="#equation-76deb731-3864-4ecb-a095-8938d73c5da0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta'_X:L'PX &amp; \to PTX\\
            \Box a &amp; \mapsto \{S\in PTX \mid S\subseteq a\}
 \end{align}\]</div>
@@ -559,8 +560,8 @@ L':BA&amp; \to BA\\
 \]</div>
 <p>interpreting formulas as subsets of <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>Spelling this out in detail, gives us back the usual definition of the semantics of modal logic:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1837a3c5-9ac1-43da-ab2a-5e3a83cbf5f4">
-<span class="eqno">(16)<a class="headerlink" href="#equation-1837a3c5-9ac1-43da-ab2a-5e3a83cbf5f4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-873d820b-d2ea-439b-a31c-5b3f168b0346">
+<span class="eqno">(16)<a class="headerlink" href="#equation-873d820b-d2ea-439b-a31c-5b3f168b0346" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sem{\top} &amp; = X\\
 \sem{\phi\wedge \psi} &amp; = \sem{\phi}\wedge\sem{\psi}\\
 \sem{\neg\phi} &amp; = X\setminus \sem{\phi}\\

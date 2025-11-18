@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -228,6 +228,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
@@ -483,8 +484,8 @@ TX  &amp; \rightarrow &amp; T\overline R &amp; \leftarrow &amp; TY
 <p>or, more explicitely, <a class="footnote-reference brackets" href="#xtox" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 </li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-6516f3d1-12d7-4c97-af3f-1f1457234c66">
-<span class="eqno">(32)<a class="headerlink" href="#equation-6516f3d1-12d7-4c97-af3f-1f1457234c66" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5dd70a71-177d-4d70-b0d7-7d2de7762bd6">
+<span class="eqno">(32)<a class="headerlink" href="#equation-5dd70a71-177d-4d70-b0d7-7d2de7762bd6" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \Rightarrow \ &amp; \forall x\to x'.\exists y\to y'. x' R\, y' 
 \end{align}\]</div>
 <ul>
@@ -492,8 +493,8 @@ xRy \ \Rightarrow \ &amp; \forall x\to x'.\exists y\to y'. x' R\, y'
 <p>or, more explicitely,</p>
 </li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-0649a112-c059-473b-93e6-358e31250783">
-<span class="eqno">(33)<a class="headerlink" href="#equation-0649a112-c059-473b-93e6-358e31250783" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d2473dc6-720d-4fd6-8923-02c1fad797e2">
+<span class="eqno">(33)<a class="headerlink" href="#equation-d2473dc6-720d-4fd6-8923-02c1fad797e2" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \Rightarrow \ &amp; \forall y\to y'.\exists x\to x'. x' R y' 
 \end{align}\]</div>
 <p>Intuitively, a <span class="math notranslate nohighlight">\(D\)</span>-bisimulation is forward simulation: Every move in the domain can be simulated by a “larger” move in the codomain. Conversely, <span class="math notranslate nohighlight">\(U\)</span>-bisimulation is backward simulation: Every move in the codomain can be simulated by “smaller” move in the domain. (The words “smaller” and “larger” are intended to remind us of the fact that <span class="math notranslate nohighlight">\(R\)</span> is a weakening relation closed under the order in <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>.)</p>
@@ -512,8 +513,8 @@ $<span class="math notranslate nohighlight">\(a \le b\ \Longleftrightarrow \ \fo
 <p><strong>Lemma:</strong> Let <span class="math notranslate nohighlight">\(R:X\looparrowright Y\)</span> be a weakening relation and <span class="math notranslate nohighlight">\(R'\)</span> its collage. Then the order of <span class="math notranslate nohighlight">\(\mathcal D\mathcal UR'\)</span> is given by
 $<span class="math notranslate nohighlight">\( A\le B \ \Longleftrightarrow \ \forall a\in A.\exists b\in B.\forall y\in b.\exists x\in a.\ xRy\)</span>$</p>
 <p><strong>Corollary:</strong> A weakening relation <span class="math notranslate nohighlight">\(R:X\looparrowright Y\)</span> is a cospan-(bi)simulation between <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-coalgebras <span class="math notranslate nohighlight">\((X,\xi)\)</span> and <span class="math notranslate nohighlight">\((Y,\nu)\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c285f845-ebf1-44fe-862e-321d516dc169">
-<span class="eqno">(34)<a class="headerlink" href="#equation-c285f845-ebf1-44fe-862e-321d516dc169" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3be6ab13-c64f-407c-9b1b-e5de7e0d25da">
+<span class="eqno">(34)<a class="headerlink" href="#equation-3be6ab13-c64f-407c-9b1b-e5de7e0d25da" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \ \Rightarrow \ \ &amp; 
 \forall a\in\xi x.\exists b\in\nu y. \forall y'\in b.\exists x'\in a.\ x'Ry' 
 \end{align}\]</div>
@@ -525,8 +526,8 @@ xRy \ \ \Rightarrow \ \ &amp;
 $<span class="math notranslate nohighlight">\( A\le B \ \Longleftrightarrow \ \forall b\in B.\exists a\in A.\forall x\in a.\exists y\in b.\ xRy\)</span>$</p>
 <p><strong>Corollary:</strong> A weakening relation <span class="math notranslate nohighlight">\(R:X\looparrowright Y\)</span> is a cospan-(bi)simulation between <span class="math notranslate nohighlight">\(\mathcal D\mathcal U\)</span>-coalgebras <span class="math notranslate nohighlight">\((X,\xi)\)</span> and <span class="math notranslate nohighlight">\((Y,\nu)\)</span> iff
 or, more explicitely,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-15400f60-499b-4f1c-abc8-79d1a6e0ab0b">
-<span class="eqno">(35)<a class="headerlink" href="#equation-15400f60-499b-4f1c-abc8-79d1a6e0ab0b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c4ce4a44-be6f-42de-9f34-5c56280c6807">
+<span class="eqno">(35)<a class="headerlink" href="#equation-c4ce4a44-be6f-42de-9f34-5c56280c6807" title="Permalink to this equation">#</a></span>\[\begin{align}
 xRy \ \ \Rightarrow \ \ &amp; \forall b\in\nu y.\exists a\in\xi x. \forall x'\in a.\exists y'\in b.\  x'Ry' 
 \end{align}\]</div>
 </section>
@@ -552,8 +553,8 @@ a\subseteq R^o[b]\)</span>$</p>
 </section>
 <section id="downsets">
 <h3>Downsets<a class="headerlink" href="#downsets" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-256b8c18-4811-4d68-b675-e1e4095cd6ed">
-<span class="eqno">(36)<a class="headerlink" href="#equation-256b8c18-4811-4d68-b675-e1e4095cd6ed" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-1032c3ed-8567-4d59-8130-235f1321f4d2">
+<span class="eqno">(36)<a class="headerlink" href="#equation-1032c3ed-8567-4d59-8130-235f1321f4d2" title="Permalink to this equation">#</a></span>\[\begin{align} 
 xRy \ \Longrightarrow \ 
 &amp; \forall x\in\xi(x). \exists y \in b. xRy 
 \quad\quad
@@ -562,8 +563,8 @@ xRy \ \Longrightarrow \
 </section>
 <section id="upsets">
 <h3>Upsets<a class="headerlink" href="#upsets" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-cbfea264-e472-4170-b3a3-1a2bd4021e40">
-<span class="eqno">(37)<a class="headerlink" href="#equation-cbfea264-e472-4170-b3a3-1a2bd4021e40" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-01427f18-e29a-4088-88eb-e28e31c6e19b">
+<span class="eqno">(37)<a class="headerlink" href="#equation-01427f18-e29a-4088-88eb-e28e31c6e19b" title="Permalink to this equation">#</a></span>\[\begin{align} 
 xRy \ \Longrightarrow \ 
 &amp; \forall y\in\nu(y). \exists x \in \xi(x). xRy 
 \quad\quad

@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -228,6 +228,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Outline of Quantale Enriched CL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QECL-Examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
@@ -459,8 +460,8 @@ document.write(`
 <p><strong>Remark:</strong> This formulation is specific to set-functors, but can be generalised to other base categories.</p>
 <p><strong>Fact:</strong> <span class="math notranslate nohighlight">\(\overline T\)</span> preserves composition (and therefore is a functor on <span class="math notranslate nohighlight">\(\sf Rel\)</span>) if <span class="math notranslate nohighlight">\(T\)</span> preserves weak-pullbacks.</p>
 <p><strong>Example/Exercise:</strong> Let <span class="math notranslate nohighlight">\(\mathcal P\)</span> be the powerset functor. It is an interesting exercise to check that <span class="math notranslate nohighlight">\((a,b)\in \overline{\mathcal P}X\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7cc2f796-7328-4a5a-b4f0-7a1cd2d839ac">
-<span class="eqno">(18)<a class="headerlink" href="#equation-7cc2f796-7328-4a5a-b4f0-7a1cd2d839ac" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-3e25193b-635c-48b9-9818-397c4d5afa0e">
+<span class="eqno">(18)<a class="headerlink" href="#equation-3e25193b-635c-48b9-9818-397c4d5afa0e" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,xRy \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,xRy \\
 \end{gather}\]</div>
@@ -482,8 +483,8 @@ document.write(`
 <p>The following fact allows us to use known results about the span-based relation lifting to compute the order-extension of a set-functor in many examples.</p>
 <p><strong>Fact:</strong> If <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks, then applying <span class="math notranslate nohighlight">\(\widetilde T\)</span> to a preorder <span class="math notranslate nohighlight">\((X,\le)\)</span> agrees with applying the relation lifting <span class="math notranslate nohighlight">\(\overline T\)</span> to <span class="math notranslate nohighlight">\(\le\)</span>.</p>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\((X,\le)\)</span> be a preorder. For subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> we have <span class="math notranslate nohighlight">\(a\le b\in \widetilde{\mathcal P}(X,\le)\)</span> iff</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f5f43312-2236-46d8-84d2-0a9cef3972d5">
-<span class="eqno">(19)<a class="headerlink" href="#equation-f5f43312-2236-46d8-84d2-0a9cef3972d5" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-6aa98c4e-3578-400f-bf62-8e71c5c29cf1">
+<span class="eqno">(19)<a class="headerlink" href="#equation-6aa98c4e-3578-400f-bf62-8e71c5c29cf1" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x\in \mathcal a\,.\, \exists y\in b\,.\,x\le y \\
 \forall y\in \mathcal b\,.\, \exists x\in a\,.\,x\le y \\
 \end{gather}\]</div>
