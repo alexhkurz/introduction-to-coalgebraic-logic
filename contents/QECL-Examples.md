@@ -24,4 +24,6 @@ Given the covariant powerset functor on $\mathcal{Q}\text{-}\mathrm{Cat}$, a *pr
 
 which is demonstrated as those diagrams below:
 
+<!-- https://q.uiver.app/#q=WzAsMixbMCwwLCJRXFx0ZXh0ey19XFxtYXRocm17Q2F0fSJdLFsyLDAsIihRXFx0ZXh0ey19XFxtYXRocm17Q2F0fSleXFxtYXRocm17b3B9Il0sWzAsMSwiWy0sUV0iLDAseyJjdXJ2ZSI6LTJ9XSxbMSwwLCJbLSxRXSIsMCx7ImN1cnZlIjotMn1dXQ== -->
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMixbMCwwLCJRXFx0ZXh0ey19XFxtYXRocm17Q2F0fSJdLFsyLDAsIihRXFx0ZXh0ey19XFxtYXRocm17Q2F0fSleXFxtYXRocm17b3B9Il0sWzAsMSwiWy0sUV0iLDAseyJjdXJ2ZSI6LTJ9XSxbMSwwLCJbLSxRXSIsMCx7ImN1cnZlIjotMn1dXQ==&embed" width="525" height="176" style="border-radius: 8px; border: none;"></iframe>
 ... 
