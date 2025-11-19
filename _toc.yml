@@ -52,4 +52,6 @@ parts:
   - caption: Outline of Quantale Enriched CL
     chapters:
     - file: contents/QECL-Introduction.md    
-    - file: contents/QECL-Quantalification.md
+    - file: contents/QECL-Examples.md    
+    - file: contents/QECL-Quantalification.md    
+    - file: contents/QECL-Change-of-Base.md

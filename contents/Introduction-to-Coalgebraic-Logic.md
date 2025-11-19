@@ -7,10 +7,10 @@ tags: coalgebraic logic
 
 We assume here that the reader has seen some propositional and modal logic and is interested in how Kripke structures  can be generalised to coalgebras. Coalgebraic logic can be seen as generalising modal logic along the following parameters:
 
- - a category $\mathcal X$ whose objects are state spaces,
- - a "type" functor $T:\mathcal X\to\mathcal X$ specifying the type of dynamics,
- - a category $\mathcal A$ whose objects are propositional theories,
- - a "logic" functor $L:\mathcal A \to \mathcal A$ specifying modal operators and their axioms,
+ - $\mathcal X$, a category whose objects are state spaces,
+ - $T:\mathcal X\to\mathcal X$, a "type" functor specifying the type of dynamics,
+ - $\mathcal A$, a category whose objects are propositional theories,
+ - $L:\mathcal A \to \mathcal A$, a "logic" functor specifying modal operators and their axioms,
  - a contravariant adjunction relating the logic $(\mathcal A,L)$ and the semantics $(\mathcal X,T)$.
 
 To go through this in detail will take some time. Let us start by sketching how coalgebras generalise Kripke structures.
@@ -86,7 +86,7 @@ List some examples ...
 ## The category theoretic view
 
 The category theoretic approach to coalgebras takes an axiomatic point of view. Clearly, we cannot expect all results of modal logic to survive modifcations of the parameters 
-$$\mathcal X,\mathcal A,S,P,L,T$$
+$\mathcal X,\mathcal A,S,P,L,T$.
 
 On the other hand, the coalgebraic approach has shown that there is indeed a wide variety of instantiations of these parameters that allows us to extend many results of modal logic.
 

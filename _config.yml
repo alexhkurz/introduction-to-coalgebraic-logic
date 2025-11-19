@@ -47,11 +47,14 @@ sphinx:
       tex:
         macros:
           Set: ["{\\sf Set}", 0]
-          Qu: ["{\\Omega}", 0]
-          QuCat: ["{\\Omega\\text{-cat}}", 0]
+          Coalg: ["{\\sf Coalg}", 0]
+          Alg: ["{\\sf Alg}", 0]
+          Q: ["Q", 0]
+          Qu: ["{Q}", 0]
+          QuCat: ["{\\Q\\text{-Cat}}", 0]
           One: ["{\\mathbb{1}}", 0]
-          yo: ["よ", 0]
-          bigsqcap: ["\\sqcap", 0]
+          yon: ["よ", 0]
+          bigsqcap: ["⨅", 0]
 
 
 
