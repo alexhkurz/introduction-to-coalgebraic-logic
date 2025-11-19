@@ -14,13 +14,14 @@ In this section, we list the ingredients needed to apply the framework of (funct
 - $\QuCat$, category of $\Qu$-enriched categories
 - $T:\QuCat\to\QuCat$, a functor for coalgebras
 - $\triangle:({\Qu^n})^X\to Q^{TX}$, $n$-ary predicate liftings
-- $\mathcal A$, a category of algebras containing $\Qu$, typically $ISP(\Qu)$
+- $\mathcal A$, a category of algebras containing $\Qu$ such that
   - $F\dashv U:\mathcal A\to \Set$, so that $Fn$ is the free algebra on $n$-generators
 - $P:\QuCat\to\mathcal A$, a contravariant functor defined by $PX=Q^X =\QuCat(X,\Qu)$
+  - $n$-ary predicate liftings are of the form $U(PX)^n\to UPTX$.
 - $L:\mathcal A\to \mathcal A$
   - $LA=\coprod_\triangle F(UA)^n$ aggregates the domains of all predicate liftings.
 - $\delta:LP\to PT$ aggregates all predicate liftings into one natural transformation.
-  - Each $n$-ary predicate lifting $({\Qu^n})^X\to Q^{TX}$ induces an $\mathcal A$-morphism $F(UPX)^n\to PX$.
+  - Each $n$-ary predicate lifting $({\Qu^n})^X\to Q^{TX}$ induces an $\mathcal A$-morphism $F(UPX)^n\to PTX$.
   - All $F(UPX)^n\to PX$ aggregate to $\delta:LP\to PT$.
 - $\widetilde P:\Coalg(T)\to\Alg(L)$, defined by $\widetilde P(X\to TX)=LPX\to PTX\to PX$
   -  $\widetilde P(X\to TX)$ is called the "complex algebra" of $X\to TX$.
