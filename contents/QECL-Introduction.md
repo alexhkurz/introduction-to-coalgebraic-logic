@@ -14,18 +14,24 @@ In this section, we list the ingredients needed to apply the framework of (funct
 - $\QuCat$, category of $\Qu$-enriched categories
 - $T:\QuCat\to\QuCat$, a functor for coalgebras
 - $\triangle:({\Qu^n})^X\to Q^{TX}$, $n$-ary predicate liftings
-- $\mathcal A$, a category of algebras containing $\Qu$ such that
-  - $F\dashv U:\mathcal A\to \Set$, so that $Fn$ is the free algebra on $n$-generators
-- $P:\QuCat\to\mathcal A$, a contravariant functor defined by $PX=Q^X =\QuCat(X,\Qu)$
+- $\mathcal A$, a category of algebras containing $\Qu$ such that there is
+  - $F\dashv U:\mathcal A\to \Set$, so that $Fn$ is the free algebra on $n$-generators [^U]
+- $P:\QuCat\to\mathcal A$, a contravariant functor defined by $UPX=Q^X =\QuCat(X,\Qu)$
   - $n$-ary predicate liftings are of the form $U(PX)^n\to UPTX$.
 - $L:\mathcal A\to \mathcal A$
-  - $LA=\coprod_\triangle F(UA)^n$ aggregates the domains of all predicate liftings.
+  - $LA=\coprod_\triangle F(UA)^n$ aggregates the domains of all predicate liftings.[^triangle]
 - $\delta:LP\to PT$ aggregates all predicate liftings into one natural transformation.
   - Each $n$-ary predicate lifting $({\Qu^n})^X\to Q^{TX}$ induces an $\mathcal A$-morphism $F(UPX)^n\to PTX$.
-  - All $F(UPX)^n\to PX$ aggregate to $\delta:LP\to PT$.
+  - All $F(UPX)^n\to PTX$ aggregate to $\delta:LP\to PT$.
 - $\widetilde P:\Coalg(T)\to\Alg(L)$, defined by $\widetilde P(X\to TX)=LPX\to PTX\to PX$
   -  $\widetilde P(X\to TX)$ is called the "complex algebra" of $X\to TX$.
 - The semantics of the logic wrt a coalgebra $X\to TX$ is given by the unique $\mathcal A$-morphism from the initial $L$-algebra to the complex algebra $\widetilde P(X\to TX)$.
+
+**Remark:** In this minimal setting, the [dualizing object](https://ncatlab.org/nlab/show/dualizing+object) $\Qu$ induces the functor $P:\QuCat\to\mathcal A$, but for now we do not insist on the existence of an adjoint to $P$.
+
+[^U]: One might want to consider adjunctions $F\dashv U:\mathcal A\to \QuCat$ instead.
+
+[^triangle]: The coproduct is taken over all chosen predicate liftings $\triangle$, with $n\in N$ denoting their arity.
 
 ## A Principled Approach
 
