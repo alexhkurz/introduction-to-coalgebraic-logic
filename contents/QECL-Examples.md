@@ -20,4 +20,10 @@ See the section [The Logic of Chosen Predicate Liftings](QECL-Introduction.md#th
 
 ## More papers
 
+Given the covariant powerset functor on $\mathcal{Q}\text{-}\mathrm{Cat}$, a {\em predicate lifting} for $\Box$ is a natural transformation $\val{\Box}:\mathcal{Q}^{(-)}\Rightarrow\mathcal{Q}^{(-)}\circ \mathsf{P}$, such that 
+\[
+\val{\Box}_\mathbb{X}(\varphi)(\psi)=\bigwedge_x(\psi(x)\rhd\varphi(x)),
+\]
+which is demonstrated as those diagrams below:
+
 ... 
