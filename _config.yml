@@ -42,6 +42,8 @@ sphinx:
     latex_elements:
       preamble: |
         \usepackage{stmaryrd}
+        \newcommand{\val}[1]{[\![{#1}]\!]}
+        \newcommand{\descr}[1]{(\![{#1}]\!)}
     bibtex_reference_style: author_year
     mathjax_config:
       tex:
@@ -55,6 +57,8 @@ sphinx:
           One: ["{\\mathbb{1}}", 0]
           yon: ["よ", 0]
           bigsqcap: ["⨅", 0]
+          val: ["[\\![{#1}]\\!]", 1]
+          descr: ["(\\![{#1}]\\!)", 1]
 
 
 
