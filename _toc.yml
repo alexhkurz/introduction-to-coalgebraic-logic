@@ -7,51 +7,51 @@ root: intro.md
 parts:
   - caption: Modal Logic
     chapters:
-    - file: contents/Introduction-to-Modal-Logic.md
+    - file: content/Introduction-to-Modal-Logic.md
   - caption: Overview of Coalgebraic Logic
     chapters:
-    - file: contents/Introduction-to-Coalgebraic-Logic.md
-    - file: contents/The-Origins-of-Coalgebra-in-Domain-Theory.md
-    - file: contents/The-Landscape-of-Coalgebraic-Logic.md
+    - file: content/Introduction-to-Coalgebraic-Logic.md
+    - file: content/The-Origins-of-Coalgebra-in-Domain-Theory.md
+    - file: content/The-Landscape-of-Coalgebraic-Logic.md
   - caption: Examples
     chapters:
-    - file: contents/polynomial-functors.md
-    - file: contents/Powerdomains.md
-    - file: contents/Neighbourhood-Frames.md
-    - file: contents/Probability-Distributions.md
+    - file: content/polynomial-functors.md
+    - file: content/Powerdomains.md
+    - file: content/Neighbourhood-Frames.md
+    - file: content/Probability-Distributions.md
   - caption: Introduction to Coalgebraic Logic
     chapters:
-    - file: contents/Coalgebraic-BiSimilarity.md
-    - file: contents/Basic-Coalgebraic-Logic.md
-    - file: contents/Predicate-Liftings.md
-    - file: contents/Monotone-Predicate-Liftings.md
-    - file: contents/Expressive-Predicate-Liftings.md
-    - file: contents/Relation-Lifting.md
-    - file: contents/Moss-Coalgebraic-Logic.md
+    - file: content/Coalgebraic-BiSimilarity.md
+    - file: content/Basic-Coalgebraic-Logic.md
+    - file: content/Predicate-Liftings.md
+    - file: content/Monotone-Predicate-Liftings.md
+    - file: content/Expressive-Predicate-Liftings.md
+    - file: content/Relation-Lifting.md
+    - file: content/Moss-Coalgebraic-Logic.md
   - caption: Functorial Modal Logic
     chapters: 
-    - file: contents/Introduction-to-Functorial-Modal-Logic.md
-    - file: contents/Presenting-Functors-by-Operations-and-Equations.md
-    - file: contents/Boolean-Logic-for-Set-Coalgebras.md
-    - file: contents/Semantics.md
-    - file: contents/Completeness.md
-    - file: contents/Expressivity.md
-    - file: contents/Translations.md
-    - file: contents/CoLog.md
+    - file: content/Introduction-to-Functorial-Modal-Logic.md
+    - file: content/Presenting-Functors-by-Operations-and-Equations.md
+    - file: content/Boolean-Logic-for-Set-Coalgebras.md
+    - file: content/Semantics.md
+    - file: content/Completeness.md
+    - file: content/Expressivity.md
+    - file: content/Translations.md
+    - file: content/CoLog.md
   - caption: Order Enriched Coalgebraic Logic
     chapters:
-    - file: contents/OECL-introduction.md
-    - file: contents/OECL-posetification.md
+    - file: content/OECL-introduction.md
+    - file: content/OECL-posetification.md
   - caption: Cospan (Bi)Similarity
     chapters:
-    - file: contents/Cospan-Bisimulation-Introduction.md
-    - file: contents/Cospan-Bisimulation.md
-    - file: contents/Neighbourhood-Coalgebras.md
-    - file: contents/Bisimulation-for-Order-Enriched-Coalgebras.md
-    - file: contents/Cospan-Bisimulation-2.md
+    - file: content/Cospan-Bisimulation-Introduction.md
+    - file: content/Cospan-Bisimulation.md
+    - file: content/Neighbourhood-Coalgebras.md
+    - file: content/Bisimulation-for-Order-Enriched-Coalgebras.md
+    - file: content/Cospan-Bisimulation-2.md
   - caption: Outline of Quantale Enriched CL
     chapters:
-    - file: contents/QECL-Introduction.md    
-    - file: contents/QECL-Examples.md    
-    - file: contents/QECL-Quantalification.md    
-    - file: contents/QECL-Change-of-Base.md
+    - file: content/QECL-Introduction.md    
+    - file: content/QECL-Examples.md    
+    - file: content/QECL-Quantalification.md    
+    - file: content/QECL-Change-of-Base.md

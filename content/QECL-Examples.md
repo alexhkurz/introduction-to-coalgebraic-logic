@@ -18,7 +18,7 @@ See the section [The Logic of Chosen Predicate Liftings](QECL-Introduction.md#th
 
 [Logics preserving degrees of truth from varieties of residuated lattices](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Logics+preserving+degrees+of+truth+from+varieties+of+residuated+lattices&btnG=), [pdf](https://arxiv.org/pdf/0803.1648)
 
-# Poiger etal 2023, 2024
+## Poiger etal 2023, 2024
 
 - [Many-Valued Coalgebraic Logic: From Boolean Algebras to Primal Varieties](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Many-Valued+Coalgebraic+Logic%3A+From+Boolean+Algebras+to+Primal+Varieties&btnG=), [pdf](https://orbilu.uni.lu/bitstream/10993/57051/1/LIPIcs-CALCO-2023-17.pdf)
 - [New perspectives on semi-primal varieties](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=New+perspectives+on+semi-primal+varieties&btnG=), [pdf](https://arxiv.org/pdf/2301.13406)
