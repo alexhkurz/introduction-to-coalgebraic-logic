@@ -15,7 +15,7 @@ project:
     - title: Modal Logic
       children:
         - file: content/Introduction-to-Modal-Logic.md
-    - title: Overview of Coalgebraic Logic
+    - title: Overview of CL
       children:
         - file: content/Introduction-to-Coalgebraic-Logic.md
         - file: content/The-Origins-of-Coalgebra-in-Domain-Theory.md
@@ -26,7 +26,7 @@ project:
         - file: content/Powerdomains.md
         - file: content/Neighbourhood-Frames.md
         - file: content/Probability-Distributions.md
-    - title: Introduction to Coalgebraic Logic
+    - title: Introduction to CL
       children:
         - file: content/Coalgebraic-BiSimilarity.md
         - file: content/Basic-Coalgebraic-Logic.md
@@ -45,7 +45,7 @@ project:
         - file: content/Expressivity.md
         - file: content/Translations.md
         - file: content/CoLog.md
-    - title: Order Enriched Coalgebraic Logic
+    - title: Order Enriched CL
       children:
         - file: content/OECL-introduction.md
         - file: content/OECL-posetification.md
@@ -56,7 +56,7 @@ project:
         - file: content/Neighbourhood-Coalgebras.md
         - file: content/Bisimulation-for-Order-Enriched-Coalgebras.md
         - file: content/Cospan-Bisimulation-2.md
-    - title: Outline of Quantale Enriched CL
+    - title: Quantale Enriched CL
       children:
         - file: content/QECL-Introduction.md
         - file: content/QECL-Examples.md
