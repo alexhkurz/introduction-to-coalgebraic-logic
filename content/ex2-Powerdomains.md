@@ -261,7 +261,9 @@ We now assembled all the pieces needed for the table below.
 
 ## Summary
 
-To read the table recall that, for a poset $X$,  the elements of $\mathcal DX$ are downsets ordered according to $\ a\le b \ \Leftrightarrow\  a\subseteq b$ and the elements of $\mathcal UX$ are upsets ordered as  $\ a\le b \ \Leftrightarrow\  a\supseteq b$ .
+To read the table recall that, for a poset $X$,  the elements of $\mathcal DX$ are downsets ordered according to $\ a\le b \ \Leftrightarrow\  a\subseteq b$ and the elements of $\mathcal UX$ are upsets ordered as  $\ a\le b \ \Leftrightarrow\  a\supseteq b$. 
+
+Also remember that the semantics of formulas is given by upsets. $\Box \phi$ will be true if the upset of successors is contained in $\phi$. $\Diamond\phi$ will be true if the downset of successors intersects $\phi$. 
 
 |$T$|$\mathcal D$|$\mathcal U$|
 |:---:|:---:|:---:|
