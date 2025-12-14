@@ -13,10 +13,6 @@ The book will be available at [http://localhost:3000](http://localhost:3000) (or
 
 ## Deploy to Github Pages
 
-```bash
-./deploy-gh-pages.sh
-```
-
 The site is available at: https://alexhkurz.github.io/introduction-to-coalgebraic-logic/
 
 ## Build Only
