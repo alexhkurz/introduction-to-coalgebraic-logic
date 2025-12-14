@@ -18,38 +18,38 @@ project:
         - file: content/Introduction-to-Modal-Logic.md
     - title: Overview of CL
       children:
-        - file: content/Introduction-to-Coalgebraic-Logic.md
-        - file: content/The-Origins-of-Coalgebra-in-Domain-Theory.md
-        - file: content/The-Landscape-of-Coalgebraic-Logic.md
+        - file: content/ov0-Introduction-to-Coalgebraic-Logic.md
+        - file: content/ov1-The-Origins-of-Coalgebra-in-Domain-Theory.md
+        - file: content/ov2-The-Landscape-of-Coalgebraic-Logic.md
     - title: Examples
       children:
-        - file: content/polynomial-functors.md
-        - file: content/Powerdomains.md
-        - file: content/Neighbourhood-Frames.md
-        - file: content/Probability-Distributions.md
+        - file: content/ex1-polynomial-functors.md
+        - file: content/ex2-Powerdomains.md
+        - file: content/ex3-Neighbourhood-Frames.md
+        - file: content/ex4-Probability-Distributions.md
     - title: Introduction to CL
       children:
-        - file: content/Coalgebraic-BiSimilarity.md
-        - file: content/Basic-Coalgebraic-Logic.md
-        - file: content/Predicate-Liftings.md
-        - file: content/Monotone-Predicate-Liftings.md
-        - file: content/Expressive-Predicate-Liftings.md
-        - file: content/Relation-Lifting.md
-        - file: content/Moss-Coalgebraic-Logic.md
+        - file: content/cl1-Coalgebraic-BiSimilarity.md
+        - file: content/cl2-Basic-Coalgebraic-Logic.md
+        - file: content/cl3-Predicate-Liftings.md
+        - file: content/cl4-Monotone-Predicate-Liftings.md
+        - file: content/cl5-Expressive-Predicate-Liftings.md
+        - file: content/cl6-Relation-Lifting.md
+        - file: content/cl7-Moss-Coalgebraic-Logic.md
     - title: Functorial Modal Logic
       children:
-        - file: content/Introduction-to-Functorial-Modal-Logic.md
-        - file: content/Presenting-Functors-by-Operations-and-Equations.md
-        - file: content/Boolean-Logic-for-Set-Coalgebras.md
-        - file: content/Semantics.md
-        - file: content/Completeness.md
-        - file: content/Expressivity.md
-        - file: content/Translations.md
-        - file: content/CoLog.md
+        - file: content/fml0-Introduction-to-Functorial-Modal-Logic.md
+        - file: content/fml1-Presenting-Functors-by-Operations-and-Equations.md
+        - file: content/fml2-Boolean-Logic-for-Set-Coalgebras.md
+        - file: content/fml3-Semantics.md
+        - file: content/fml4-Completeness.md
+        - file: content/fml5-Expressivity.md
+        - file: content/fml6-Translations.md
+        - file: content/fml7- CoLog.md
     - title: Order Enriched CL
       children:
-        - file: content/OECL-introduction.md
-        - file: content/OECL-posetification.md
+        - file: content/oecl0-introduction.md
+        - file: content/oecl1-posetification.md
     - title: Cospan (Bi)Similarity
       children:
         - file: content/csp0-Cospan-Bisimulation-Introduction.md

@@ -2,6 +2,8 @@
 
 (draft) 
 
+These notes have been collected from various sources and do overlap quite a bit. Some streamlining should be done when time permits.
+
 ---
 
 - [Cospan Bisimulation](./csp1-Cospan-Bisimulation.md) ([formerly](https://hackmd.io/@alexhkurz/HyQxhrh_v)) **suggests that cospan bisimulation is a better behaved alternative than tradiditional span bisimulation**. It relies on the notion of posetification of a functor in order to apply Worrell's cospan bisimulation for quantale-enriched coalgebras also to set coalgebras. 
