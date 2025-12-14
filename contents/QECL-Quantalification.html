@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Quantalification &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/QECL-Quantalification';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -448,15 +442,15 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="quantalification">
-<h1>Quantalification<a class="headerlink" href="#quantalification" title="Link to this heading">#</a></h1>
+<h1>Quantalification<a class="headerlink" href="#quantalification" title="Permalink to this heading">#</a></h1>
 <section id="extending-functors-to-quantale-categories">
-<h2>Extending Functors to Quantale Categories<a class="headerlink" href="#extending-functors-to-quantale-categories" title="Link to this heading">#</a></h2>
+<h2>Extending Functors to Quantale Categories<a class="headerlink" href="#extending-functors-to-quantale-categories" title="Permalink to this heading">#</a></h2>
 <p>For now, assuming the quantale to be commutative, we refer to <a class="reference external" href="https://lmcs.episciences.org/5132">Adriana Balan ; Alexander Kurz ; Jiří Velebil - Extending set functors to generalised metric spaces</a> for details. We only extract some information for reference.</p>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
 <section id="constant-functor">
-<h3>Constant Functor<a class="headerlink" href="#constant-functor" title="Link to this heading">#</a></h3>
+<h3>Constant Functor<a class="headerlink" href="#constant-functor" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(T:\Set\to\Set\)</span>, be a constant functor at a set <span class="math notranslate nohighlight">\(S\)</span>. Then <span class="math notranslate nohighlight">\(\overline T\)</span> acts as follows: For any <span class="math notranslate nohighlight">\(\Qu\)</span>-category <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(\overline TX\)</span> is the constant <span class="math notranslate nohighlight">\(\QuCat\)</span>-functor to the <span class="math notranslate nohighlight">\(\Qu\)</span>-category with <span class="math notranslate nohighlight">\(S\)</span> as set of objects, with <span class="math notranslate nohighlight">\(\Qu\)</span>-distances</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -470,7 +464,7 @@ document.write(`
 <p>That is, <span class="math notranslate nohighlight">\(\overline TX = S \cdot \One_\top\)</span> is the coproduct in <span class="math notranslate nohighlight">\(\QuCat\)</span> of <span class="math notranslate nohighlight">\(S\)</span> copies of the terminal <span class="math notranslate nohighlight">\(\Qu\)</span>-category <span class="math notranslate nohighlight">\(\One_\top\)</span>. In case <span class="math notranslate nohighlight">\(\Qu\)</span> is integral, we have <span class="math notranslate nohighlight">\(\overline T X=D S\)</span>.</p>
 </section>
 <section id="power">
-<h3>Power<a class="headerlink" href="#power" title="Link to this heading">#</a></h3>
+<h3>Power<a class="headerlink" href="#power" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(T:\Set\to\Set\)</span> be the functor <span class="math notranslate nohighlight">\(TX= X^n\)</span>, for <span class="math notranslate nohighlight">\(n\)</span> a natural number.
 Then <span class="math notranslate nohighlight">\(\overline T\)</span> maps a quantale category <span class="math notranslate nohighlight">\(X\)</span> to its <span class="math notranslate nohighlight">\(n\)</span>-th power <span class="math notranslate nohighlight">\(X^n\)</span>, where</p>
 <div class="math notranslate nohighlight">
@@ -485,7 +479,7 @@ X(x'_0,x_0)\wedge\dots\wedge X(x'_{n-1},x_{n-1}).
 <span class="math notranslate nohighlight">\(T:\Set\to \Set\)</span>, <span class="math notranslate nohighlight">\(TX=X^n\)</span> also exists and <span class="math notranslate nohighlight">\(\overline TX((x'_i),(x_i))=\bigsqcap_i X (x'_i,x_i)\)</span>. That is, <span class="math notranslate nohighlight">\(\overline TX=X^n\)</span>.</p>
 </section>
 <section id="polynomial-functor">
-<h3>Polynomial Functor<a class="headerlink" href="#polynomial-functor" title="Link to this heading">#</a></h3>
+<h3>Polynomial Functor<a class="headerlink" href="#polynomial-functor" title="Permalink to this heading">#</a></h3>
 <p>The quantalification of a finitary polynomial functor
 <span class="math notranslate nohighlight">\(
 X\mapsto \coprod_n X^n\coprod \Sigma n
@@ -497,16 +491,16 @@ X\mapsto \coprod_n X^n \otimes D\Sigma n
 <p>In particular, the quantalification of the list functor <span class="math notranslate nohighlight">\(LX = X^* = \coprod_n X^n\)</span> maps a <span class="math notranslate nohighlight">\(\Qu\)</span>-category <span class="math notranslate nohighlight">\(X\)</span> to the <span class="math notranslate nohighlight">\(\Qu\)</span>-category having as objects tuples of objects of <span class="math notranslate nohighlight">\(X\)</span>, with non-trivial <span class="math notranslate nohighlight">\(\Qu\)</span>-distances only between tuples of same order</p>
 </section>
 <section id="powerset-functor">
-<h3>Powerset Functor<a class="headerlink" href="#powerset-functor" title="Link to this heading">#</a></h3>
+<h3>Powerset Functor<a class="headerlink" href="#powerset-functor" title="Permalink to this heading">#</a></h3>
 <p>…</p>
 </section>
 <section id="distribution-functor">
-<h3>Distribution Functor<a class="headerlink" href="#distribution-functor" title="Link to this heading">#</a></h3>
+<h3>Distribution Functor<a class="headerlink" href="#distribution-functor" title="Permalink to this heading">#</a></h3>
 <p>…</p>
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>…</p>
 </section>
 </section>
@@ -609,7 +603,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

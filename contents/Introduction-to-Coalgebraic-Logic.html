@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Introduction-to-Coalgebraic-Logic';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -444,7 +438,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>(draft … references to be added)</p>
 <p>We assume here that the reader has seen some propositional and modal logic and is interested in how Kripke structures  can be generalised to coalgebras. Coalgebraic logic can be seen as generalising modal logic along the following parameters:</p>
 <ul class="simple">
@@ -461,7 +455,7 @@ document.write(`
 <p>In the following we summarise the basic ingredients necessary to carry out this approach.</p>
 <p>The paradigmatic example of the powerset functor <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> is reviewed in some detail in this note on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1SJ8lizO">powerdomains</a>.</p>
 <section id="idea">
-<h2>Idea<a class="headerlink" href="#idea" title="Link to this heading">#</a></h2>
+<h2>Idea<a class="headerlink" href="#idea" title="Permalink to this heading">#</a></h2>
 <p>We extend a basic dual adjunction between a category <span class="math notranslate nohighlight">\(\mathcal S\)</span> of “spaces” and a category <span class="math notranslate nohighlight">\(\mathcal A\)</span> of “algebras”, to a dual adjunction between coalgebras for a functor <span class="math notranslate nohighlight">\(T\)</span> on <span class="math notranslate nohighlight">\(\mathcal S\)</span> and algebras for a functor <span class="math notranslate nohighlight">\(L\)</span> on <span class="math notranslate nohighlight">\(\mathcal A\)</span>.</p>
 <p>In more detail, we have</p>
 <ul class="simple">
@@ -483,7 +477,7 @@ document.write(`
 <p>If <span class="math notranslate nohighlight">\(S\dashv P\)</span> is only a dual adjunction, it lifts to coalgebras/algebras only under special circumstances.</p>
 </section>
 <section id="the-modal-logic-view">
-<h2>The modal logic view<a class="headerlink" href="#the-modal-logic-view" title="Link to this heading">#</a></h2>
+<h2>The modal logic view<a class="headerlink" href="#the-modal-logic-view" title="Permalink to this heading">#</a></h2>
 <p>The above framework is very abstract. When is it legitimate to think of coalgebras as transition systems and of algebras as logics?</p>
 <p>The paradigmatic example is the one where</p>
 <ul class="simple">
@@ -504,12 +498,12 @@ document.write(`
 <p>But the main interest in coalgebras stems from the discovery made by Jan Rutten and others, that there is a great variety of functors <span class="math notranslate nohighlight">\(T\)</span>.</p>
 </section>
 <section id="the-coalgebraic-approach-to-modal-logic">
-<h2>The coalgebraic approach to modal logic<a class="headerlink" href="#the-coalgebraic-approach-to-modal-logic" title="Link to this heading">#</a></h2>
+<h2>The coalgebraic approach to modal logic<a class="headerlink" href="#the-coalgebraic-approach-to-modal-logic" title="Permalink to this heading">#</a></h2>
 <p>The coalgebraic approach to modal logic is to expand the landscape of modal logics by systematically extending modal logic to a large variety of functors <span class="math notranslate nohighlight">\(T\)</span>.</p>
 <p>List some examples …</p>
 </section>
 <section id="the-category-theoretic-view">
-<h2>The category theoretic view<a class="headerlink" href="#the-category-theoretic-view" title="Link to this heading">#</a></h2>
+<h2>The category theoretic view<a class="headerlink" href="#the-category-theoretic-view" title="Permalink to this heading">#</a></h2>
 <p>The category theoretic approach to coalgebras takes an axiomatic point of view. Clearly, we cannot expect all results of modal logic to survive modifcations of the parameters
 <span class="math notranslate nohighlight">\(\mathcal X,\mathcal A,S,P,L,T\)</span>.</p>
 <p>On the other hand, the coalgebraic approach has shown that there is indeed a wide variety of instantiations of these parameters that allows us to extend many results of modal logic.</p>
@@ -523,7 +517,7 @@ document.write(`
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>Jonsson-Tarski</p>
 <p>Goldblatt</p>
 <p>Abramsky</p>
@@ -536,7 +530,7 @@ document.write(`
 <p>…</p>
 </section>
 <section id="further-reading">
-<h2>Further Reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <p>…</p>
 </section>
 </section>
@@ -635,7 +629,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

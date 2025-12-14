@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Examples &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/QECL-Examples';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -229,6 +223,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="QECL-Introduction.html">Introduction</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Examples</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="QECL-Quantalification.html">Quantalification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QECL-Change-of-Base.html">Change of Base</a></li>
 </ul>
@@ -260,9 +255,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +398,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -426,10 +421,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Examples</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bou-etal-2009">Bou etal 2009</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Bou etal 2009</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#poiger-etal-2023-2024">Poiger etal 2023, 2024</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-papers">More papers</a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -441,26 +443,57 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h1>
+<p>See the section <span class="xref myst">The Logic of Chosen Predicate Liftings</span> for the general setup of many-valued modal logics with truth values in a quantale. The examples below illustrate different choices for the data introduced there.</p>
 <section id="bou-etal-2009">
-<h2>Bou etal 2009<a class="headerlink" href="#bou-etal-2009" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;amp;as_sdt=0%2C5&amp;amp;q=Logics+preserving+degrees+of+truth+from+varieties+of+residuated+lattices&amp;amp;btnG=">On the Minimum Many-Valued Modal Logic over a Finite Residuated Lattice</a>, <a class="reference external" href="https://arxiv.org/pdf/0811.2107">pdf</a></p>
+<h2>Bou etal 2009<a class="headerlink" href="#bou-etal-2009" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Logics+preserving+degrees+of+truth+from+varieties+of+residuated+lattices&amp;btnG=">On the Minimum Many-Valued Modal Logic over a Finite Residuated Lattice</a>, <a class="reference external" href="https://arxiv.org/pdf/0811.2107">pdf</a></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\Qu\)</span>, a finite commutative quantale</p></li>
-<li><p><span class="math notranslate nohighlight">\(\QuCat\)</span>, category of <span class="math notranslate nohighlight">\(\Qu\)</span>-enriched categories</p></li>
-<li><p><span class="math notranslate nohighlight">\(T:\QuCat\to\QuCat\)</span>, … powerset or upset …</p></li>
-<li><p><span class="math notranslate nohighlight">\(\Box:({\Qu^n})^X\to Q^{TX}\)</span>, predicate liftings</p></li>
+<li><p><span class="math notranslate nohighlight">\(T:\QuCat\to\QuCat\)</span>, the upset functor <span class="math notranslate nohighlight">\(TX=\mathcal UX\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\xi:X\to\mathcal UX\)</span>, coalgebras</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Box:{\Qu}^X\to Q^{\mathcal UX}\)</span>, <span class="math notranslate nohighlight">\(\Box(\phi)(x)=\bigsqcap_y(\xi(x)(y)\rhd\phi(y))\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\mathcal A\)</span>, … <span class="math notranslate nohighlight">\(ISP(\Qu)\)</span> … ? …</p></li>
 </ul>
 <p>… some details …</p>
 </section>
 <section id="id1">
-<h2>Bou etal 2009<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;amp;as_sdt=0%2C5&amp;amp;q=Logics+preserving+degrees+of+truth+from+varieties+of+residuated+lattices&amp;amp;btnG=">Logics preserving degrees of truth from varieties of residuated lattices</a>, <a class="reference external" href="https://arxiv.org/pdf/0803.1648">pdf</a></p>
+<h2>Bou etal 2009<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Logics+preserving+degrees+of+truth+from+varieties+of+residuated+lattices&amp;btnG=">Logics preserving degrees of truth from varieties of residuated lattices</a>, <a class="reference external" href="https://arxiv.org/pdf/0803.1648">pdf</a></p>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="poiger-etal-2023-2024">
+<h1>Poiger etal 2023, 2024<a class="headerlink" href="#poiger-etal-2023-2024" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Many-Valued+Coalgebraic+Logic%3A+From+Boolean+Algebras+to+Primal+Varieties&amp;btnG=">Many-Valued Coalgebraic Logic: From Boolean Algebras to Primal Varieties</a>, <a class="reference external" href="https://orbilu.uni.lu/bitstream/10993/57051/1/LIPIcs-CALCO-2023-17.pdf">pdf</a></p></li>
+<li><p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=New+perspectives+on+semi-primal+varieties&amp;btnG=">New perspectives on semi-primal varieties</a>, <a class="reference external" href="https://arxiv.org/pdf/2301.13406">pdf</a></p></li>
+<li><p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Many-valued+coalgebraic+logic+over+semi-primal+varieties&amp;btnG=">Many-valued coalgebraic logic over semi-primal varieties</a>, <a class="reference external" href="https://lmcs.episciences.org/13948/pdf">pdf</a></p></li>
+<li><p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Natural+dualities+for+varieties+generated+by+finite+positive+MV-chains&amp;btnG=">Natural dualities for varieties generated by finite positive MV-chains</a>, <a class="reference external" href="https://arxiv.org/pdf/2309.16998">pdf</a></p></li>
+<li><p><a class="reference external" href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Poiger+Positive+modal+logic+over+finite+MV-chains&amp;btnG=">Positive modal logic over finite MV-chains</a>, pdf</p></li>
+</ul>
+<p>Overview:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Qu\)</span>, a finite commutative MV chain</p></li>
+<li><p><span class="math notranslate nohighlight">\(T:\QuCat\to\QuCat\)</span>, …</p></li>
+<li><p><span class="math notranslate nohighlight">\(\xi:X\to\mathcal TX\)</span>, coalgebras</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal A\)</span> is the variety generated by <span class="math notranslate nohighlight">\(\Qu\)</span> (as MV chain)</p></li>
+</ul>
+<p>… some details …</p>
 <section id="more-papers">
-<h2>More papers<a class="headerlink" href="#more-papers" title="Link to this heading">#</a></h2>
-<p>…</p>
+<h2>More papers<a class="headerlink" href="#more-papers" title="Permalink to this heading">#</a></h2>
+<p>The history goes back to the work of Melvin Fitting:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://journals.sagepub.com/doi/pdf/10.3233/FI-1991-153-404?casa_token=yID_XSw0StwAAAAA:1MyhQLjU9YqdmWZu5u3gdR08LmI5YLd8wdicx3EOgpg_JQaVsEvQ7eaCoskky9ode8ID5Eaxohy-">Many-valued modal logics</a></p></li>
+<li><p><a class="reference external" href="https://journals.sagepub.com/doi/pdf/10.3233/FI-1992-171-205?casa_token=KgMabfgCv3YAAAAA:rP9kvZer3LEKPBbT3ivkTTfrOdeSERG-eV_AqXKahQ8Dnd7UTpBbElg7WhigvBZ1UlBHoZ1sRRDg">Many-vawed modal lLogics II</a></p></li>
+</ul>
+<p>Those literatures are relavent</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.tandfonline.com/doi/abs/10.3166/jancl.20.279-301">Modal logics with Belnapian truth values</a></p></li>
+<li><p><a class="reference external" href="https://ieeexplore.ieee.org/document/7095540">Fuzzy bisimulation for Gödel modal logic</a></p></li>
+<li><p><a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S0888613X23000142?casa_token=_xUTiAd334IAAAAA:pxEyJJ70BPFSWSMNdyokAeiLFYOnPqURbEijwKayu9fUFg5G8spu6dXhNCLCsVvhzK9LZ0zlog">Fuzzy simulations and bisimulations between fuzzy automata</a></p></li>
+<li><p><a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S016501142100289X?casa_token=ctK59tZoZvMAAAAA:wlp6O7mOMB-62-4G-yYCwO5ZJvfJQcYSOk8qi0DkfSuYq36Mr7mFCrVKSP8J0Er2M-DIcB-XeQ">Logical characterizations of fuzzy bisimulations in fuzzy modal logics over residuated lattices</a></p></li>
+<li><p><a class="reference external" href="https://sweet.ua.pt/madeira/main_files/PTSCJournal24.pdf">Paraconsistent transition structures: compositional principles and a modal logic</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -528,10 +561,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Examples</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bou-etal-2009">Bou etal 2009</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Bou etal 2009</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#poiger-etal-2023-2024">Poiger etal 2023, 2024</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-papers">More papers</a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
@@ -555,7 +595,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

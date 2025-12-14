@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Boolean Logic for Set-Coalgebras &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Boolean-Logic-for-Set-Coalgebras';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -447,7 +441,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="boolean-logic-for-set-coalgebras">
-<h1>Boolean Logic for Set-Coalgebras<a class="headerlink" href="#boolean-logic-for-set-coalgebras" title="Link to this heading">#</a></h1>
+<h1>Boolean Logic for Set-Coalgebras<a class="headerlink" href="#boolean-logic-for-set-coalgebras" title="Permalink to this heading">#</a></h1>
 <p>We build on concepts and examples explained previously, but try to keep this section self-contained from a technical point of view.</p>
 <p>We specialise the setting from <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1t-Y6f8L">Coalgebraic Logic: Introduction</a> as follows:</p>
 <ul class="simple">
@@ -464,7 +458,7 @@ document.write(`
 <p><strong>Lemma:</strong> Let <span class="math notranslate nohighlight">\(H\)</span> be a functor on <span class="math notranslate nohighlight">\({\sf BA}\)</span> and <span class="math notranslate nohighlight">\(L\)</span> a sifted colimit preserving functor on <span class="math notranslate nohighlight">\({\sf BA}\)</span> and <span class="math notranslate nohighlight">\(LFn=HFn\)</span> for all finitely generated free Boolean algebras <span class="math notranslate nohighlight">\(Fn\)</span>. Then <span class="math notranslate nohighlight">\(LA=HA\)</span> for all finite non-trivial algebras <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <p><em>Proof:</em> Every finite non-trivial Boolean algebra is a retract of a finitely generated free one.</p>
 <section id="the-logic-of-l">
-<h2>The logic of <span class="math notranslate nohighlight">\(L\)</span><a class="headerlink" href="#the-logic-of-l" title="Link to this heading">#</a></h2>
+<h2>The logic of <span class="math notranslate nohighlight">\(L\)</span><a class="headerlink" href="#the-logic-of-l" title="Permalink to this heading">#</a></h2>
 <p>As promised, we are going to show that  every sifted colimit preserving functor on a variety has a presentation and hence gives rise to a modal logic.</p>
 <p>Every sifted colimit preserving functor <span class="math notranslate nohighlight">\(L\)</span> on a variety is a quotient</p>
 <div class="math notranslate nohighlight">
@@ -486,37 +480,37 @@ document.write(`
 <p><strong>Example:</strong> The variety of Boolean algebras with operator (BAO) is presented by the operations and equations of Boolean algebra plus a unary operation <span class="math notranslate nohighlight">\(\Box\)</span> and two equations specifying that <span class="math notranslate nohighlight">\(\Box\)</span> preserves finite meets.</p>
 </section>
 <section id="moss-s-coalgebraic-logic">
-<h2>Moss’s coalgebraic logic<a class="headerlink" href="#moss-s-coalgebraic-logic" title="Link to this heading">#</a></h2>
+<h2>Moss’s coalgebraic logic<a class="headerlink" href="#moss-s-coalgebraic-logic" title="Permalink to this heading">#</a></h2>
 <p>The first proposal for a logic of coalgebras parametric in the coalgebra functor <span class="math notranslate nohighlight">\(T\)</span> was Moss’s coalgebraic logic. It can be obtained by defining <span class="math notranslate nohighlight">\(L\)</span> via a presentation</p>
 <div class="math notranslate nohighlight">
 \[FGUA\stackrel {q_A} \longrightarrow LA\]</div>
 <p>where <span class="math notranslate nohighlight">\(G=T\)</span>. Originally, Moss’s logic did not have equations, which corresponds to taking the <span class="math notranslate nohighlight">\(q_{Fn}\)</span> to be identities. This use of the functor <span class="math notranslate nohighlight">\(T\)</span> itself as a syntax constructor for a logic yields a very interesting presentation. This presentation is equivalent in expressiveness (in case <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks) to the ones we know from classical modal logic, but is quite different in terms of the opportunities it offers as a logical tool. For more see the section on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/rJksR4sso">Moss’s Coalgebraic Logic</a>.</p>
 </section>
 <section id="the-logic-of-all-predicate-liftings">
-<h2>The logic of all predicate liftings<a class="headerlink" href="#the-logic-of-all-predicate-liftings" title="Link to this heading">#</a></h2>
+<h2>The logic of all predicate liftings<a class="headerlink" href="#the-logic-of-all-predicate-liftings" title="Permalink to this heading">#</a></h2>
 <p>Pattinson introduced <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJcARPMVO">predicate liftings</a> to give a parametric treatment of coalgebraic logic that includes classical modal logic as an example. The logic of all predicate liftings can be defined in our setting in a natural way.</p>
 <p><strong>Remark:</strong> Note that Moss’s logic is defined by applying <span class="math notranslate nohighlight">\(T\)</span> directly to syntax, whereas here we want to use the duality given by <span class="math notranslate nohighlight">\(S:{\sf BA} \to Set\)</span> and <span class="math notranslate nohighlight">\(P:Set\to{\sf BA}\)</span> to keep <span class="math notranslate nohighlight">\(T\)</span> on the semantic side of the duality. In fact, we might have been tempted to simply define <span class="math notranslate nohighlight">\(L = PTS\)</span> and while this is still the guiding idea, this direct approach is only suitable if we start from a dual equivalence of base categories such as the one given by complete atomic Boolean algebras and Set or the one given by Boolean algebras and Stone spaces. Moreover, defining <span class="math notranslate nohighlight">\(L=PTS\)</span> will not, in general, result in a sifted colimit preserving functor and, thus, not, in general, allow us to find a finitary presentation of <span class="math notranslate nohighlight">\(Alg(L)\)</span> by operations and equations.</p>
 <section id="syntax">
-<h3>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
 <p>We define <span class="math notranslate nohighlight">\(L=PTS\)</span> on finitely generated free algebras:</p>
 <div class="math notranslate nohighlight">
 \[LFn = PTSFn\]</div>
 <p>We extend <span class="math notranslate nohighlight">\(L\)</span> to all algebras via sifted colimits (hence <span class="math notranslate nohighlight">\(L\)</span> preserves sifted colimits by definition).</p>
 <p>Moreover, <span class="math notranslate nohighlight">\(ULFn=UPTSFn\)</span> is the set of all <span class="math notranslate nohighlight">\(n\)</span>-ary <strong>predicate liftings</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d16d924-3ba9-4f66-bef6-373879e1b9bf">
-<span class="eqno">(23)<a class="headerlink" href="#equation-7d16d924-3ba9-4f66-bef6-373879e1b9bf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9c12f54d-04a0-4f7d-88c3-e05974c24332">
+<span class="eqno">(23)<a class="headerlink" href="#equation-9c12f54d-04a0-4f7d-88c3-e05974c24332" title="Permalink to this equation">#</a></span>\[\begin{align}
 UPTSFn &amp;\cong UPT(2^n) \\
 &amp;= 2^{T(2^n)} \\
 &amp;\cong Nat({(2^n)}^X,2^{TX}) \\
 &amp;\cong Nat({(2^X)}^n,2^{TX}) \\
 \end{align}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(L\)</span> preserves sifted colimits it has a <a class="reference internal" href="#"><span class="xref myst">presentation by operations and equations</span></a> and this presentation presents <span class="math notranslate nohighlight">\(L\)</span> by all predicates liftings as</p>
+<p>Since <span class="math notranslate nohighlight">\(L\)</span> preserves sifted colimits it has a <span class="xref myst">presentation by operations and equations</span> and this presentation presents <span class="math notranslate nohighlight">\(L\)</span> by all predicates liftings as</p>
 <div class="math notranslate nohighlight">
 \[FGUA\stackrel {q_A} \longrightarrow LA\]</div>
 <p>where <span class="math notranslate nohighlight">\(GX=\coprod_{n\in\mathbb N}ULFn\times X^n\)</span>.</p>
 </section>
 <section id="semantics">
-<h3>Semantics<a class="headerlink" href="#semantics" title="Link to this heading">#</a></h3>
+<h3>Semantics<a class="headerlink" href="#semantics" title="Permalink to this heading">#</a></h3>
 <p>The semantics <span class="math notranslate nohighlight">\(\delta_X:LPX\to PTX\)</span> is given as follows.
 ![](https://hackmd.io/_uploads/HJHa0kb2o.png =500x)</p>
 <p>Every <span class="math notranslate nohighlight">\(PX\)</span> is a sifted colimit <span class="math notranslate nohighlight">\(c_i:Fn\to PX\)</span>. Let <span class="math notranslate nohighlight">\(c_i^\ast\)</span> be the adjoint transpose. Since <span class="math notranslate nohighlight">\(L\)</span> preserves sifted colimits and since <span class="math notranslate nohighlight">\(PTc_i^\ast\)</span> is a cocone, <span class="math notranslate nohighlight">\(\delta_X\)</span> is well-defined.</p>
@@ -528,8 +522,8 @@ UPTSFn &amp;\cong UPT(2^n) \\
 <div class="math notranslate nohighlight">
 \[LPX=PTSPX\cong PTX\]</div>
 <p>which, in terms of the presentation of <span class="math notranslate nohighlight">\(L\)</span> by modal operators, corresponds to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-053d68ab-a3fa-4185-80da-37dc52de3f25">
-<span class="eqno">(24)<a class="headerlink" href="#equation-053d68ab-a3fa-4185-80da-37dc52de3f25" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f9c9626a-db6c-4dc1-a2fe-a58e0fb9f2a7">
+<span class="eqno">(24)<a class="headerlink" href="#equation-f9c9626a-db6c-4dc1-a2fe-a58e0fb9f2a7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta_X: LPX &amp; \to PTX\\
 \Delta(a_1,\ldots a_n) &amp;\mapsto \Delta(a_1,\ldots a_n)
 \end{align}\]</div>
@@ -541,13 +535,13 @@ UPTSFn &amp;\cong UPT(2^n) \\
 </section>
 </section>
 <section id="from-funtors-to-predicate-liftings-and-back">
-<h2>From Funtors to Predicate Liftings and Back<a class="headerlink" href="#from-funtors-to-predicate-liftings-and-back" title="Link to this heading">#</a></h2>
+<h2>From Funtors to Predicate Liftings and Back<a class="headerlink" href="#from-funtors-to-predicate-liftings-and-back" title="Permalink to this heading">#</a></h2>
 <p>Every sifted colimit preserving functor <span class="math notranslate nohighlight">\(L\)</span> with a semantics <span class="math notranslate nohighlight">\(\delta:LP\to PT\)</span> can be represented by predicate liftings. Conversely, each set of predicate liftings presents a functor together with a semantics. We summarize this corrspondence.</p>
 <p><img alt="" src="https://hackmd.io/_uploads/Sktt1gIhj.png" /></p>
 <p>Starting with a functor <span class="math notranslate nohighlight">\(L\)</span>, its presentation <span class="math notranslate nohighlight">\(FGU\to L\)</span> and its semantics <span class="math notranslate nohighlight">\(LP\to PT\)</span>, we obtain its presentation by predicate liftings in the last line, where <span class="math notranslate nohighlight">\(\Delta\)</span> ranges over all elements of <span class="math notranslate nohighlight">\(G_n\)</span>. Conversely, any collection of predicate liftings <span class="math notranslate nohighlight">\(\Delta\)</span> defines a functor <span class="math notranslate nohighlight">\(L\)</span> obtained from “climbing the ladder up” and quotienting the corresponding <span class="math notranslate nohighlight">\(FGUPX\to PTX\)</span>.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Kurz-Rosicky: <a class="reference external" href="https://arxiv.org/pdf/1207.2732.pdf">Strongly Complete Logics for Coalgebras</a>, 2012.</p></li>
 </ul>
@@ -656,7 +650,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

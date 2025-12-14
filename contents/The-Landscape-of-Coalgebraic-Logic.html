@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>The Landscape &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/The-Landscape-of-Coalgebraic-Logic';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -442,10 +436,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-landscape">
-<h1>The Landscape<a class="headerlink" href="#the-landscape" title="Link to this heading">#</a></h1>
+<h1>The Landscape<a class="headerlink" href="#the-landscape" title="Permalink to this heading">#</a></h1>
 <p>These notes were prepared for the workshop <a class="reference external" href="https://soroushrrad.wixsite.com/my-site-1/workshop-1">Exploring Baltag’s Universe</a> celebrating <a class="reference external" href="https://sites.google.com/site/thealexandrubaltagsite/research/publications">Alexandru Baltag’s</a> 55th birthday.</p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>I met Alexandru first in 1997 in the pages of the book “Vicious Circles” by Barwise and Moss, from which I quote the introduction of the section that contains some of the earliest results in the area of coalgebra and modal logic:</p>
 <p><img alt="" src="https://hackmd.io/_uploads/BJpkRix6F.png" /></p>
 <p>For some time this Alexandru Baltag remained a mythical person.  There was no trace to find of him on the internet, which, even at that time, seemed curious given that he had important theorems to his name. Was he a practical joke of Barwise and Moss? But it wasn’t long before Alexandru and I met at <a class="reference external" href="http://www.aiml.net/conferences/aiml-1998/">AiML 1998</a> and we have been friends ever since.</p>
@@ -455,7 +449,7 @@ document.write(`
 <p>One question raised by Aczel’s discovery was whether the many important results in modal logic and in concurrency have generalisations to arbitrary functors <span class="math notranslate nohighlight">\(T\)</span>. This was the first dimension of coalgebraic logic and is the starting point for what follows.</p>
 </section>
 <section id="dimensions-of-coalgebraic-logic">
-<h2>Dimensions of Coalgebraic Logic<a class="headerlink" href="#dimensions-of-coalgebraic-logic" title="Link to this heading">#</a></h2>
+<h2>Dimensions of Coalgebraic Logic<a class="headerlink" href="#dimensions-of-coalgebraic-logic" title="Permalink to this heading">#</a></h2>
 <p>In the talk I sketched a three dimensional picture. One axis had the functor <span class="math notranslate nohighlight">\(T\)</span> (the type of transitions, eg non-determinstic, probabilistic, etc), a second axis had the modal theory,  a third one had the base category. This axes, or dimensions, appear in red below (and there are more than three).</p>
 <p>We start from modal logic, thinking of a class of Kripke frames axiomatized by a modal theory. Generalising from Kripke frames to <span class="math notranslate nohighlight">\(T\)</span>-coalgebras, we also need to generalise the standard modal operators <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>. There are two ways to do this known as Moss’s <span class="math notranslate nohighlight">\(\nabla\)</span> and as Pattinson’s predicate liftings.</p>
 <p>Next one can ask what can be done in case of a general base cateagory <span class="math notranslate nohighlight">\(\mathcal C\)</span>. Dualising the Lawvere-Linton account of algebra over a general base category one is lead to a theory of “modal predicate transformer”, that is, predicate transformers preserving coalgebraic bisimilarity.</p>
@@ -510,11 +504,11 @@ Parameter:  <font color=red>Lattice <span class="math notranslate nohighlight">\
 <p>See also the survey paper <a class="reference external" href="https://users.cecs.anu.edu.au/~dpattinson/Publications/cj2011.pdf">Modal logics are coalgebraic</a>. Comput. J., 2011.</p>
 </section>
 <section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
 <p>I thank Alexandru Baltag, Nick Bezhanishvili and Nima Motamed for their questions and comments.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>Coalgebraic logic draws on many influences. To mention just a few: Aczel in set theory; Goldblatt, van Benthem, Ghilardi in modal logic; Scott, Plotkin, Abramsky in domain theory; Johnstone on Stone duality. Coalgebras started to move into the mainstream of computer science with work by Jacobs and Rutten and the CMCS workshops the first of which took place in 1998.</p>
 <p>In the following, I only list the work which I had time to mention in the presentation (but see also the references linked in the text above).</p>
 <ul class="simple">
@@ -531,48 +525,47 @@ Parameter:  <font color=red>Lattice <span class="math notranslate nohighlight">\
 <li><p>Adriana Balan, Alexander Kurz: An equational approach to enriched distributivity. CoRR abs/2112.13290 (2021)</p></li>
 </ul>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="mosspattinson" role="doc-footnote">
+<aside class="footnote brackets" id="mosspattinson" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>Moss and Pattinson show in different ways that one can retain some control over the syntax and stay parametric in <span class="math notranslate nohighlight">\(T\)</span>. A chosen set of predicate liftings can be considered another parameter. This is similar to choose a basic set of operations when defining categories of algebras.</p>
 </aside>
-<aside class="footnote brackets" id="rankone" role="doc-footnote">
+<aside class="footnote brackets" id="rankone" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>Some axioms, so called axioms of rank 1, can be incorporated in <span class="math notranslate nohighlight">\(T\)</span>, but general axioms (such as transitivity)  live on in their own dimension (the parameter of modal theories).</p>
 </aside>
-<aside class="footnote brackets" id="composingfunctors" role="doc-footnote">
+<aside class="footnote brackets" id="composingfunctors" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>Composing functors is compositional, as is composing their logics. (It is well-known in the semantics of programming languages that there are problems composing the monads for non-determinism and probability, but here we only compose functors. See <a class="reference external" href="https://hal.archives-ouvertes.fr/hal-02564365/document">(Goy and Petrisan, 2020)</a> for a recent work on composing the monads.)</p>
 </aside>
-<aside class="footnote brackets" id="predicatetransformers" role="doc-footnote">
+<aside class="footnote brackets" id="predicatetransformers" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
 <p>Naturality of the predicate transformers guarantess that they are invariant under coalgebraic bisimilarity.</p>
 </aside>
-<aside class="footnote brackets" id="category" role="doc-footnote">
+<aside class="footnote brackets" id="category" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
 <p>One might say that the functor <span class="math notranslate nohighlight">\(T:\mathcal C\to\mathcal C\)</span> is just one parameter comprising both <span class="math notranslate nohighlight">\(\mathcal C\)</span> and <span class="math notranslate nohighlight">\(T\)</span>, but one can extend functors along varying <span class="math notranslate nohighlight">\(\mathcal C\)</span>. For example, the powerset functor on sets extends to the convex powerset functor on posets, to the Vietoris functor on Stone spaces, to the Plotkin powerdomain on domains, to the Hausdorff metric for metric spaces, etc.</p>
 </aside>
-<aside class="footnote brackets" id="category2" role="doc-footnote">
+<aside class="footnote brackets" id="category2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
 <p>Changing the base category can be used to model a variety of different phenomena. Partially ordered sets can be used to weaken bisimulation to simulation. Categories of algebras can be used to equip coalgebras (seen as automata) with internal memory. Categories such as nominal sets (and various presheaf categories) can be used to treat binding and local store. Measurable spaces are useful for probabilistic transition systems. Starting from a given logic, categories of topological spaces (such as Stone spaces) can be used to obtain coalgebraic semantics that is dually equivalent to the corresponding algebraic semantic. Categories of domains can be used to obtain solutions for mixed variance domain equations and build models for the untyped lambda calculus.</p>
 </aside>
-<aside class="footnote brackets" id="adjunction" role="doc-footnote">
+<aside class="footnote brackets" id="adjunction" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
 <p>The adjunction can be varied to put different logics into the same picture. For example, starting from Sets, one my use boolean algebras or complete atomic boolean algebras as the semantics. One may also want to drop negation or only retain conjunction. On the other hand, starting from, say Boolean algebras, one may want to topologise the semantic side and consider Stone spaces.</p>
 </aside>
-<aside class="footnote brackets" id="enrichment" role="doc-footnote">
+<aside class="footnote brackets" id="enrichment" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
 <p>Enrichment is useful to enrich the notion of bismilarity. For example, order enriched category theory deals with simulations and metric-space enriched category deals with metric bisimulations.</p>
 </aside>
-<aside class="footnote brackets" id="quantale" role="doc-footnote">
+<aside class="footnote brackets" id="quantale" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
 <p>A quantale <span class="math notranslate nohighlight">\(\Omega\)</span> determines a “multi-ordered set” (<span class="math notranslate nohighlight">\(\Omega\)</span>-enriched category) with an order for each element of the quantale and composition of orderes governed by the multiplication of the quantale. Metric spaces are a special case of multi-ordered sets. The category of multi-ordered sets (<span class="math notranslate nohighlight">\(\Omega\)</span>-enriched categories) then serves as the base category <span class="math notranslate nohighlight">\(\mathcal C\)</span> over which one takes <span class="math notranslate nohighlight">\(T\)</span>-coalgebras.</p>
 </aside>
-<aside class="footnote brackets" id="monad" role="doc-footnote">
+<aside class="footnote brackets" id="monad" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
 <p>While monads provide a means to account for general theories functors account onky for rank 1.</p>
 </aside>
-<aside class="footnote brackets" id="designspace" role="doc-footnote">
+<aside class="footnote brackets" id="designspace" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">11</a><span class="fn-bracket">]</span></span>
 <p>Some comments on the design space of coalgebraic logic.</p>
 <ul class="simple">
@@ -583,7 +576,6 @@ Parameter:  <font color=red>Lattice <span class="math notranslate nohighlight">\
 <li><p>The logic <span class="math notranslate nohighlight">\(L\)</span> can either be obtained as the Stone dual of <span class="math notranslate nohighlight">\(T\)</span> or created in an adhoc fashion to suit particular modelling requirements.</p></li>
 <li><p>Various “bells and whistles” can be added.</p></li>
 </ul>
-</aside>
 </aside>
 </section>
 </section>
@@ -680,7 +672,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Coalgebraic (Bi)Similarity &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Coalgebraic-BiSimilarity';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -442,14 +436,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="coalgebraic-bi-similarity">
-<h1>Coalgebraic (Bi)Similarity<a class="headerlink" href="#coalgebraic-bi-similarity" title="Link to this heading">#</a></h1>
+<h1>Coalgebraic (Bi)Similarity<a class="headerlink" href="#coalgebraic-bi-similarity" title="Permalink to this heading">#</a></h1>
 <p>(draft … references to be added)</p>
 <p>One of the main contributions of coalgebra to computer science is to provide the minimal abstract setting allowing us to account for various different notions of simulation and bisimulation in a uniform way with the help of a single simple parameter, that of a functor <span class="math notranslate nohighlight">\(T\)</span> on a category <span class="math notranslate nohighlight">\(\mathcal C\)</span>.</p>
 <p>The objects of the category <span class="math notranslate nohighlight">\(\mathcal C\)</span> represent the possible state spaces and the functor <span class="math notranslate nohighlight">\(T\)</span> represents the possible one-step transitions states can take.</p>
 <p>Since (bi)simulation is a relationship betweeen states, the category <span class="math notranslate nohighlight">\(\mathcal C\)</span> should be the category of sets, or of sets with additional structure. The theory of (bi)similarity is not part of the theory of coalgebras that can be developed over arbitrary categories <span class="math notranslate nohighlight">\(\mathcal C\)</span>. <a class="footnote-reference brackets" href="#duality" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>In the following we will define bisimilarity for set-coalgebras and then look at (bi)similarity for coalgebras over other base categories.</p>
 <section id="bisimilarity-for-set-coalgebras">
-<h2>Bisimilarity for Set-Coalgebras<a class="headerlink" href="#bisimilarity-for-set-coalgebras" title="Link to this heading">#</a></h2>
+<h2>Bisimilarity for Set-Coalgebras<a class="headerlink" href="#bisimilarity-for-set-coalgebras" title="Permalink to this heading">#</a></h2>
 <p>Every functor <span class="math notranslate nohighlight">\(T:\sf Set\to Set\)</span> induces a notion of <span class="math notranslate nohighlight">\(T\)</span>-bisimilarity on elements of <span class="math notranslate nohighlight">\(T\)</span>-coalgebras <span class="math notranslate nohighlight">\(X\to TX\)</span>.</p>
 <p><strong>Definition:</strong> Bisimilarity (behavioural equivalence) <span class="math notranslate nohighlight">\(\simeq\)</span> is the smallest equivalence relation between elements <span class="math notranslate nohighlight">\((x,X\to TX)\)</span> of coalgebras induced by pairs</p>
 <div class="math notranslate nohighlight">
@@ -469,7 +463,7 @@ document.write(`
 <p><strong>Remark:</strong> This proof is a variation of Lemma 1 in Chapter X of Mac Lane, which shows that the limit of the identity functor is the initial object (and the colimit of the identity functor is the terminal object).</p>
 </section>
 <section id="bi-similarity-for-ordered-coalgebras">
-<h2>(Bi)similarity for Ordered Coalgebras<a class="headerlink" href="#bi-similarity-for-ordered-coalgebras" title="Link to this heading">#</a></h2>
+<h2>(Bi)similarity for Ordered Coalgebras<a class="headerlink" href="#bi-similarity-for-ordered-coalgebras" title="Permalink to this heading">#</a></h2>
 <p>We briefly indicate that essentially the same approach to bisimilarity works for coalgebras over ordered sets (preorders or posets). <a class="footnote-reference brackets" href="#preorders" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
 <p>Let <span class="math notranslate nohighlight">\(T:\sf Ord\to Ord\)</span> be a functor.</p>
 <p><strong>Definition:</strong> Two elements of two coalgebras are (bi)similar</p>
@@ -482,42 +476,40 @@ document.write(`
 <p><strong>Prop:</strong> The final coalgebra (if it exists) is the colimit of the forgetful functor  <span class="math notranslate nohighlight">\({\sf Coalg}( T)\to \sf Ord\)</span>.</p>
 </section>
 <section id="other-base-categories">
-<h2>Other Base Categories<a class="headerlink" href="#other-base-categories" title="Link to this heading">#</a></h2>
+<h2>Other Base Categories<a class="headerlink" href="#other-base-categories" title="Permalink to this heading">#</a></h2>
 <p>One could continue here with looking at other base categories such as metric spaces, topological spaces, nominal sets, various categories of algebras, …</p>
 <p>I don’t do this (for now) because the literature is big and growing and the new interesting phenomena that arise are particular to the base category one chooses.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>Modal Logic: van Benthem, Segerberg, Goldblatt, …</p>
 <p>Concurrency: Park, Milner, van Glabbeek, Panangaden, …</p>
 <p>Coalgebra: Aczel, Aczel-Mendler, Barr, Rutten, Worrell, Kurz, Staton, Hughes-Jacobs, Balan-Kurz-Velebil, …</p>
 <p>Mac Lane: Categories for the Working Mathematician. 1971.</p>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="duality" role="doc-footnote">
+<aside class="footnote brackets" id="duality" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>This can be seen from the fact that the theory of coalgebras over <span class="math notranslate nohighlight">\(\mathcal C\)</span> is  the theory of algebras over <span class="math notranslate nohighlight">\(\mathcal C^{\rm op}\)</span>. But the theory that can be developed simultaneously for algebra and coalgebra is quite small in the sense that it excludes most features that are of particular interest to the algebraist or the coalgebraist. Intuitively, the intersection of algebra and coalgebra only consists of those “systems” that can be defined by <em>unary</em> operations such as deterministic automata or, more generally, presheaves.</p>
 </aside>
-<aside class="footnote brackets" id="fhom" role="doc-footnote">
+<aside class="footnote brackets" id="fhom" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>This notion makes sense in any category which has a forgetful functor to <span class="math notranslate nohighlight">\(\sf Set\)</span>. Why is it trivial for categories of algebras?</p>
 </aside>
-<aside class="footnote brackets" id="quot" role="doc-footnote">
+<aside class="footnote brackets" id="quot" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p><em>Exercise:</em> Let <span class="math notranslate nohighlight">\(D:\mathcal I\to \sf Set\)</span> be a functor. Form the disjoint sum <span class="math notranslate nohighlight">\(S\)</span> of all <span class="math notranslate nohighlight">\(D(i)\)</span>, <span class="math notranslate nohighlight">\(i\in\mathcal I\)</span>. Connect <span class="math notranslate nohighlight">\((x,Di)\)</span> with <span class="math notranslate nohighlight">\((y,Dj)\)</span> if there is <span class="math notranslate nohighlight">\(f:i\to j\)</span> in <span class="math notranslate nohighlight">\(\mathcal I\)</span> such that <span class="math notranslate nohighlight">\(f(x)=y\)</span>. Then the connected components of <span class="math notranslate nohighlight">\(S\)</span> are the colimit of <span class="math notranslate nohighlight">\(D\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="gaft" role="doc-footnote">
+<aside class="footnote brackets" id="gaft" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
 <p>For a deeper understanding of final coalgebras, it is instructive to study the proof of the General Adjoint Functor Theroy as it appears in Mac Lane and then the proof of the final coalgebra theorem of Aczel-Mendler. Further contributions to this topic are in papers by Barr, by Adamek-Milius-Velebil and others. Much of this work resolves around the question of what are the most elegant side conditions that allow us to cope with situations where the final coalgebra does not exist in the category of coalgebras. (Footnote: Aczel-Mendler showed that for all set-functors there is a final coalgebra that classifies bisimilarity for all set-coalgebras and the carrier of which is a proper class. I find this still the most elegant formulation of the size problem in coalgebra as it shows exactly where the distinction between <em>set</em> and <em>proper class</em> comes in.)</p>
 </aside>
-<aside class="footnote brackets" id="am" role="doc-footnote">
+<aside class="footnote brackets" id="am" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
 <p>As shown by Aczel-Mendler, the final coalgebra always exists if one allows coalgebras on proper classes (as opposed to only sets).</p>
 </aside>
-<aside class="footnote brackets" id="preorders" role="doc-footnote">
+<aside class="footnote brackets" id="preorders" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
 <p>It is well known, in the classic case of the Kripke frames (coalgebras for the powerset functor), that to ask that <span class="math notranslate nohighlight">\(x,y\)</span> are bisimilar is a stronger requirement than to ask that <span class="math notranslate nohighlight">\(x,y\)</span> are forward and backward bisimilar. Accordingly, it does make a difference whether we take, for example, the final upset-coalgebra over preorders or posets. Over preorders equality in the final coalgebra is bisimilarity and the preorder captures forward-simulation. Over posets, equality means the existence of a forward-simulation in both directions.</p>
-</aside>
 </aside>
 </section>
 </section>
@@ -614,7 +606,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

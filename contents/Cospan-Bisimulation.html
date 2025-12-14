@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Cospan Bisimulation &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Cospan-Bisimulation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -446,7 +440,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cospan-bisimulation">
-<h1>Cospan Bisimulation<a class="headerlink" href="#cospan-bisimulation" title="Link to this heading">#</a></h1>
+<h1>Cospan Bisimulation<a class="headerlink" href="#cospan-bisimulation" title="Permalink to this heading">#</a></h1>
 <p>(draft)</p>
 <p>One of the starting points of coalgebra was Aczel’s discovery, see also (Rutten, 2000), that span-bisimulation, also known as Aczel-Mendler bisimulation, can capture category theoretically the combinatorial notion of bisimulation.</p>
 <p>From an axiomatic point of view, one drawback of span-bisimulations is that, in order to for span-bisimulations to capture the coalgebraic notion of equivalence (aka behavioural equivalence), the coalgebra-functor needs to weakly preserve pullbacks (=preserve weak pullbacks).</p>
@@ -468,7 +462,7 @@ TX  &amp; \rightarrow &amp; \overline T\mathbf R &amp; \leftarrow &amp; TY
 \end{split}\]</div>
 <p>commute is order preserving. As we will see now, this notion does also work well in case of set-functors that do not preserve weak pullbacks. But let us first start with the familiar case of Kripke frames.</p>
 <section id="kripke-models">
-<h2>Kripke models<a class="headerlink" href="#kripke-models" title="Link to this heading">#</a></h2>
+<h2>Kripke models<a class="headerlink" href="#kripke-models" title="Permalink to this heading">#</a></h2>
 <p>For a starter we can illustrate what happens in the case of Kripke frames, that is, <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> is the powerset functor.</p>
 <p><strong>Proposition</strong> (Balan et al, 2015): The posetification of <span class="math notranslate nohighlight">\(\mathcal P\)</span> is the convex powerset functor <span class="math notranslate nohighlight">\(\mathcal{\overline P}\)</span>.</p>
 <p>By definition, then, <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation iff</p>
@@ -476,15 +470,15 @@ TX  &amp; \rightarrow &amp; \overline T\mathbf R &amp; \leftarrow &amp; TY
 \[xRy \ \ \Rightarrow \ \ \xi x \le_{\mathcal{\overline P}R} \nu y,\]</div>
 <p>which, by definition<a class="footnote-reference brackets" href="#eglimilner" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> of the order on <span class="math notranslate nohighlight">\(\mathcal{\overline P}\mathbf R\)</span>, gives us the usual definition of a bisimulation on Kripke frames (to emphasise the coalgebraic nature of Kripke frames we write <span class="math notranslate nohighlight">\(x'\in\xi(x)\)</span> instead of <span class="math notranslate nohighlight">\(x\to x'\)</span> and <span class="math notranslate nohighlight">\(y'\in\nu(y)\)</span> instead of <span class="math notranslate nohighlight">\(y\to y'\)</span>).</p>
 <p><strong>Corollary:</strong> <span class="math notranslate nohighlight">\(R\)</span> is a cospan-bisimulation between Kripke frames <span class="math notranslate nohighlight">\(\xi:X\to TX\)</span> and <span class="math notranslate nohighlight">\(\nu:Y\to TY\)</span> iff <span class="math notranslate nohighlight">\(xRy\)</span> implies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-756e236f-8418-459f-ad49-b8ddc54e0970">
-<span class="eqno">(28)<a class="headerlink" href="#equation-756e236f-8418-459f-ad49-b8ddc54e0970" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-e49c87f3-ba82-4a2c-b0c7-7241d91f66ee">
+<span class="eqno">(28)<a class="headerlink" href="#equation-e49c87f3-ba82-4a2c-b0c7-7241d91f66ee" title="Permalink to this equation">#</a></span>\[\begin{gather}
 \forall x'\in\xi(x).\exists y'\in\nu(y).  x'Ry' \\[1ex]
 \textrm { and }\\[1ex]
 \forall y'\in\nu(y).\exists x'\in\xi(x).  x'Ry' \\  
 \end{gather}\]</div>
 </section>
 <section id="monotone-neighbourhood-coalgebras">
-<h2>Monotone Neighbourhood Coalgebras<a class="headerlink" href="#monotone-neighbourhood-coalgebras" title="Link to this heading">#</a></h2>
+<h2>Monotone Neighbourhood Coalgebras<a class="headerlink" href="#monotone-neighbourhood-coalgebras" title="Permalink to this heading">#</a></h2>
 <p>In this subsection we look at coalgebras for the functor <span class="math notranslate nohighlight">\(Up\mathcal P:Set\to Set\)</span> and the associated notion of cospan-bisimulation induced by its posetification <span class="math notranslate nohighlight">\(\overline{Up\mathcal P}\)</span>. For cospan-(bi)simulations for related functors <span class="math notranslate nohighlight">\(Pos\to Pos\)</span> see the section on <a class="reference external" href="https://hackmd.io/Kaf6xVVMRP2w7a9hTLjT2w">Montone Neighbourhood Coalgebras</a>.</p>
 <p><strong>Proposition</strong> (Corollary 5 in Dahlqvist and Kurz, 2017): The preordification of the monotone neighbourhood functor <span class="math notranslate nohighlight">\(T=Up\mathcal P\)</span> is <span class="math notranslate nohighlight">\(\mathcal D \mathcal U\)</span> ordered by</p>
 <div class="math notranslate nohighlight">
@@ -516,7 +510,7 @@ TX  &amp; \rightarrow &amp; \overline T\mathbf R &amp; \leftarrow &amp; TY
 \end{gather*}\]</div>
 </section>
 <section id="neighbourhood-coalgebras">
-<h2>Neighbourhood Coalgebras<a class="headerlink" href="#neighbourhood-coalgebras" title="Link to this heading">#</a></h2>
+<h2>Neighbourhood Coalgebras<a class="headerlink" href="#neighbourhood-coalgebras" title="Permalink to this heading">#</a></h2>
 <p>In this subsection we take <span class="math notranslate nohighlight">\(TX=2^{2^{X}}\)</span>.</p>
 <p><strong>Proposition</strong> (Theorem 8 in Dahlqvist and Kurz, 2017): The posetification of the neighbourhood functor <span class="math notranslate nohighlight">\(2^{2^-}\)</span> maps a poset <span class="math notranslate nohighlight">\(X\)</span> to the <span class="math notranslate nohighlight">\(2^{2^{CX}}\)</span> where <span class="math notranslate nohighlight">\(C\)</span> takes connected components. (CHECK whether this is also true for the preordification.)</p>
 <p>Recall that, given <span class="math notranslate nohighlight">\(R\subseteq X\times Y\)</span>, we have <a class="footnote-reference brackets" href="#pr" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
@@ -553,15 +547,15 @@ DTX\cong\overline TDX  &amp; \stackrel{\overline Ti}\longrightarrow &amp; \overl
 <p>and similarly for “<span class="math notranslate nohighlight">\(\supseteq\)</span>”.</p>
 </section>
 <section id="probabilistic-bisimulation">
-<h2>Probabilistic bisimulation<a class="headerlink" href="#probabilistic-bisimulation" title="Link to this heading">#</a></h2>
+<h2>Probabilistic bisimulation<a class="headerlink" href="#probabilistic-bisimulation" title="Permalink to this heading">#</a></h2>
 <p>Probabilistic bisimulation also provides an example of cospan bisimulations. If <span class="math notranslate nohighlight">\(\mathcal D\)</span> is the functor of  finitely supported probability distributions, then the posetification <span class="math notranslate nohighlight">\(\overline{\mathcal D}\)</span> is given as follows. Let <span class="math notranslate nohighlight">\(p,q\)</span> be two probability distributions in <span class="math notranslate nohighlight">\(\mathcal DX\)</span>. Then define <span class="math notranslate nohighlight">\(p\sqsubseteq q\)</span> if <span class="math notranslate nohighlight">\(p[U]\le q[U]\)</span> for all upsets <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(X\)</span>.</p>
 </section>
 <section id="more-examples">
-<h2>More Examples?<a class="headerlink" href="#more-examples" title="Link to this heading">#</a></h2>
+<h2>More Examples?<a class="headerlink" href="#more-examples" title="Permalink to this heading">#</a></h2>
 <p>… other, less well-known, examples?</p>
 </section>
 <section id="results">
-<h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>
 <p>We will get the expected results. For <span class="math notranslate nohighlight">\(T:Set\to Set\)</span>, cospan bisimulation</p>
 <ul class="simple">
 <li><p>agrees with span bisimulation if <span class="math notranslate nohighlight">\(T\)</span> preserves weak pullbacks</p></li>
@@ -576,7 +570,7 @@ DTX\cong\overline TDX  &amp; \stackrel{\overline Ti}\longrightarrow &amp; \overl
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>Balan, Kurz and Velebil: <a class="reference external" href="https://arxiv.org/pdf/1402.5922.pdf">Positive Fragments of Coalgebraic Logics</a>. LMCS 2015.</p>
 <p>Dahlqvist and Kurz: <a class="reference external" href="http://drops.dagstuhl.de/opus/volltexte/2017/8042/pdf/LIPIcs-CALCO-2017-9.pdf">The Positivication of Coalgebraic Logics</a>. CALCO 2017. (Section 3.3 and 3.4)</p>
 <p>Hansen: <a class="reference external" href="https://eprints.illc.uva.nl/id/document/264">Monotonic modal logics</a>. 2003. (Def 4.10, Def 8.20, Prop 8.25)</p>
@@ -586,26 +580,24 @@ DTX\cong\overline TDX  &amp; \stackrel{\overline Ti}\longrightarrow &amp; \overl
 <p>Worrell: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1571066105803561">Coinduction for recursive data types: partial orders, metric spaces and <span class="math notranslate nohighlight">\(\Omega\)</span>-categories</a>, CMCS 2000. (Def 5.2)</p>
 </section>
 <section id="further-reading">
-<h2>Further Reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <p>Aczel:</p>
 <p>Aczel, Mendler:</p>
-<p>Hansen, Kupke and Pacuit: <a class="reference internal" href="#%5Chref%7Bhttps://arxiv.org/pdf/0901.4430"><span class="xref myst">Neighbourhood Structures: Bisimilarity and Basic Model Theory</span></a>. LMCS 2009.</p>
+<p>Hansen, Kupke and Pacuit: <span class="xref myst">Neighbourhood Structures: Bisimilarity and Basic Model Theory</span>. LMCS 2009.</p>
 <p>Lawvere:</p>
 <p>Rutten:</p>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="preordification" role="doc-footnote">
+<aside class="footnote brackets" id="preordification" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>Much of the following would also work for the posetification <span class="math notranslate nohighlight">\(\overline T:Pos\to Pos\)</span>. The one property that we only have for the preordification is <span class="math notranslate nohighlight">\(V\overline T \cong TV\)</span> where <span class="math notranslate nohighlight">\(V\)</span> the forgetful functor to <span class="math notranslate nohighlight">\(Set\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="eglimilner" role="doc-footnote">
+<aside class="footnote brackets" id="eglimilner" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>Given a preorder/poset <span class="math notranslate nohighlight">\(X\)</span>, the order on the convex powerset of <span class="math notranslate nohighlight">\(X\)</span> is defined by <span class="math notranslate nohighlight">\((a,b)\in \mathcal{\overline P}X\)</span> if <span class="math notranslate nohighlight">\(\forall x\in a.\exists y\in b. x\le y\)</span> and <span class="math notranslate nohighlight">\(\forall y\in b.\exists x\in a. x\le y\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="pr" role="doc-footnote">
+<aside class="footnote brackets" id="pr" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p><span class="math notranslate nohighlight">\(a\subseteq R^{-1}[b]\)</span> and <span class="math notranslate nohighlight">\(b\subseteq R[a]\)</span>.</p>
-</aside>
 </aside>
 </section>
 </section>
@@ -706,7 +698,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

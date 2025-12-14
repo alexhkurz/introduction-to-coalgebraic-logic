@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Basic Coalgebraic Logic &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Basic-Coalgebraic-Logic';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -447,10 +441,10 @@ document.write(`
                   
   <p><span class="math notranslate nohighlight">\(\newcommand{\sem}[1]{\mathopen{[\![} #1 \mathclose{]\!]}}\)</span></p>
 <section class="tex2jax_ignore mathjax_ignore" id="basic-coalgebraic-logic">
-<h1>Basic Coalgebraic Logic<a class="headerlink" href="#basic-coalgebraic-logic" title="Link to this heading">#</a></h1>
+<h1>Basic Coalgebraic Logic<a class="headerlink" href="#basic-coalgebraic-logic" title="Permalink to this heading">#</a></h1>
 <p>(draft … references to be added)</p>
 <section id="idea">
-<h2>Idea<a class="headerlink" href="#idea" title="Link to this heading">#</a></h2>
+<h2>Idea<a class="headerlink" href="#idea" title="Permalink to this heading">#</a></h2>
 <p>We continue from the <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/r1t-Y6f8L">introduction</a>.</p>
 <p>Let</p>
 <ul class="simple">
@@ -471,14 +465,14 @@ document.write(`
 <ul class="simple">
 <li><p>LA is the free Boolean algebra over <span class="math notranslate nohighlight">\(\Box a\)</span>, <span class="math notranslate nohighlight">\(a\in A\)</span> module the equations</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-cf1a2da4-c365-42b6-b839-8d6e594791a2">
-<span class="eqno">(13)<a class="headerlink" href="#equation-cf1a2da4-c365-42b6-b839-8d6e594791a2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cbc07226-7a38-4e48-a341-9240ec6fe778">
+<span class="eqno">(13)<a class="headerlink" href="#equation-cbc07226-7a38-4e48-a341-9240ec6fe778" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Box\top &amp;= \top \\
 \Box(a\wedge b) &amp; = \Box a\wedge \Box b
 \end{align}\]</div>
 </section>
 <section id="the-category-theoretic-approach">
-<h2>The category theoretic approach<a class="headerlink" href="#the-category-theoretic-approach" title="Link to this heading">#</a></h2>
+<h2>The category theoretic approach<a class="headerlink" href="#the-category-theoretic-approach" title="Permalink to this heading">#</a></h2>
 <p>(should this section go into the intro?)</p>
 <p>Here are some simplifications that the category theoretic approach offers:</p>
 <ul class="simple">
@@ -500,7 +494,7 @@ document.write(`
 <p>(<em>We need to elaborate on the last point above somewhere!</em>)</p>
 </section>
 <section id="finding-the-logic-of-a-functor">
-<h2>Finding the logic of a functor<a class="headerlink" href="#finding-the-logic-of-a-functor" title="Link to this heading">#</a></h2>
+<h2>Finding the logic of a functor<a class="headerlink" href="#finding-the-logic-of-a-functor" title="Permalink to this heading">#</a></h2>
 <p>Starting from a functor <span class="math notranslate nohighlight">\(T:Set\to Set\)</span>, what is the modal logic of <span class="math notranslate nohighlight">\(T\)</span>-coalgebras?</p>
 <p>According to the discussion above, the task is to find a functor <span class="math notranslate nohighlight">\(L:BA\to BA\)</span> such that, restricted to finite sets and finite Boolean algebras, <span class="math notranslate nohighlight">\(L\)</span> is the dual of <span class="math notranslate nohighlight">\(T\)</span>. More precisely, we have to find <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -529,21 +523,21 @@ PT\to L'P\to LP
 <p>In order to find a nice presentation of <span class="math notranslate nohighlight">\(L\)</span> by generators (modal operators) and relations (modal axioms) one, of course, needs to understand the particular functor <span class="math notranslate nohighlight">\(T\)</span> and this can require a lot of work. But there are general theorems that for all functors <span class="math notranslate nohighlight">\(T\)</span> there exists a functor <span class="math notranslate nohighlight">\(L\)</span>. And, conversely, all functors preserving so-called sifted colimits describe a modal logic given by operations and equations.</p>
 </section>
 <section id="finding-the-logic-of-the-powerset-functor">
-<h2>Finding the logic of the powerset functor<a class="headerlink" href="#finding-the-logic-of-the-powerset-functor" title="Link to this heading">#</a></h2>
+<h2>Finding the logic of the powerset functor<a class="headerlink" href="#finding-the-logic-of-the-powerset-functor" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> be the powerset functor. <span class="math notranslate nohighlight">\(T\)</span>-coalgebras are precisely Kripke frames.</p>
 <section id="step-1-the-language-and-modal-operations">
-<h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Link to this heading">#</a></h3>
+<h3>Step 1: The Language and Modal Operations<a class="headerlink" href="#step-1-the-language-and-modal-operations" title="Permalink to this heading">#</a></h3>
 <p>For now we side-step the question of how to find the language. We start from the language we know and love, namely the one given by one modal operation <span class="math notranslate nohighlight">\(\Box\)</span>. We also know the standard Kripke semantics of the <span class="math notranslate nohighlight">\(\Box\)</span> via sets of successors. The aim is to show a methodology of how to find the axioms.</p>
 <p>The functor <span class="math notranslate nohighlight">\(L'\)</span> is represented by the language without the axioms. It is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c50a231b-a717-4704-943f-d00178a6b74e">
-<span class="eqno">(14)<a class="headerlink" href="#equation-c50a231b-a717-4704-943f-d00178a6b74e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f3287a46-396f-435c-89da-b79f1aae6cab">
+<span class="eqno">(14)<a class="headerlink" href="#equation-f3287a46-396f-435c-89da-b79f1aae6cab" title="Permalink to this equation">#</a></span>\[\begin{align}
 L':BA&amp; \to BA\\
  A &amp; \mapsto F\{\Box a \mid a\in A\}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(FX\)</span> denotes the free Boolean algebra over <span class="math notranslate nohighlight">\(X\)</span>. Categorically <span class="math notranslate nohighlight">\(F\)</span> is the left adjoint of the forgetful functor <span class="math notranslate nohighlight">\(U:BA\to Set\)</span>.</p>
 <p>The semantics of the language is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76deb731-3864-4ecb-a095-8938d73c5da0">
-<span class="eqno">(15)<a class="headerlink" href="#equation-76deb731-3864-4ecb-a095-8938d73c5da0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9d53a361-947b-4a82-ba23-f7e2c378f90d">
+<span class="eqno">(15)<a class="headerlink" href="#equation-9d53a361-947b-4a82-ba23-f7e2c378f90d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta'_X:L'PX &amp; \to PTX\\
            \Box a &amp; \mapsto \{S\in PTX \mid S\subseteq a\}
 \end{align}\]</div>
@@ -560,8 +554,8 @@ L':BA&amp; \to BA\\
 \]</div>
 <p>interpreting formulas as subsets of <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>Spelling this out in detail, gives us back the usual definition of the semantics of modal logic:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-873d820b-d2ea-439b-a31c-5b3f168b0346">
-<span class="eqno">(16)<a class="headerlink" href="#equation-873d820b-d2ea-439b-a31c-5b3f168b0346" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-98cd1042-9853-4180-917a-e5c0de515fbc">
+<span class="eqno">(16)<a class="headerlink" href="#equation-98cd1042-9853-4180-917a-e5c0de515fbc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sem{\top} &amp; = X\\
 \sem{\phi\wedge \psi} &amp; = \sem{\phi}\wedge\sem{\psi}\\
 \sem{\neg\phi} &amp; = X\setminus \sem{\phi}\\
@@ -570,7 +564,7 @@ L':BA&amp; \to BA\\
 <p>The first three lines come from <span class="math notranslate nohighlight">\(\sem{-}\)</span> being a Boolean algebra morphism and the fourth one from being an <span class="math notranslate nohighlight">\(L\)</span>-algebra morphism.</p>
 </section>
 <section id="step-2-finding-the-normal-form-of-operations">
-<h3>Step 2: Finding the Normal Form of Operations<a class="headerlink" href="#step-2-finding-the-normal-form-of-operations" title="Link to this heading">#</a></h3>
+<h3>Step 2: Finding the Normal Form of Operations<a class="headerlink" href="#step-2-finding-the-normal-form-of-operations" title="Permalink to this heading">#</a></h3>
 <p>We now turn to the task of finding the axioms via normal forms. This involves finding a map</p>
 <div class="math notranslate nohighlight">
 \[
@@ -584,19 +578,17 @@ nf: PTX\to L'PX
 \sem{...}
 \]</div>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="freelalgebra" role="doc-footnote">
+<aside class="footnote brackets" id="freelalgebra" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>More precisely, the initial <span class="math notranslate nohighlight">\(L\)</span>-algebra will be the Lindenbaum-Tarski algebra of classical modal logic with no atomic propositions. To account for a set of atomic proposisions, one takes the free <span class="math notranslate nohighlight">\(L\)</span>-algebra over the Boolean algebra freely generated by the set of atomic propositions.</p>
 </aside>
-<aside class="footnote brackets" id="rank-one" role="doc-footnote">
+<aside class="footnote brackets" id="rank-one" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>More precisely, <span class="math notranslate nohighlight">\(LPX\)</span> has formulas in which every generator <span class="math notranslate nohighlight">\(a\in PX\)</span> is under the scope of exactly one modal operation. For example <span class="math notranslate nohighlight">\(\Box(a\wedge b)\)</span> is of rank 1 but neither are <span class="math notranslate nohighlight">\(a\to \Box a\)</span> nor <span class="math notranslate nohighlight">\(\Box\Box a\to \Box a\)</span>. Intuitively, <span class="math notranslate nohighlight">\(a\to \Box a\)</span> expresses a relationship between states in <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(TX\)</span> and <span class="math notranslate nohighlight">\(\Box\Box a\to \Box a\)</span> between states in <span class="math notranslate nohighlight">\(TTX\)</span> and <span class="math notranslate nohighlight">\(TX\)</span>, whereas formulas in <span class="math notranslate nohighlight">\(LPX\)</span> express only relationships between states in <span class="math notranslate nohighlight">\(TX\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="natural-isomorphism" role="doc-footnote">
+<aside class="footnote brackets" id="natural-isomorphism" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p><span class="math notranslate nohighlight">\(PT\)</span> and <span class="math notranslate nohighlight">\(LP\)</span> are functors <span class="math notranslate nohighlight">\(Set\to BA\)</span>. Hence <span class="math notranslate nohighlight">\(\delta\)</span> should be an arrow in the category of functors <span class="math notranslate nohighlight">\(Set\to BA\)</span>, that is, we require <span class="math notranslate nohighlight">\(\delta\)</span> to be a natural transformation such that all components <span class="math notranslate nohighlight">\(\delta_X:PTX\to LPX\)</span> are isomorphisms.</p>
-</aside>
 </aside>
 </section>
 </section>
@@ -698,7 +690,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

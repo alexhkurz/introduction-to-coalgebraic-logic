@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Presenting Functors &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Presenting-Functors-by-Operations-and-Equations';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -448,13 +442,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="presenting-functors">
-<h1>Presenting Functors<a class="headerlink" href="#presenting-functors" title="Link to this heading">#</a></h1>
+<h1>Presenting Functors<a class="headerlink" href="#presenting-functors" title="Permalink to this heading">#</a></h1>
 <p>(draft)</p>
 <p>The main theorem is that a functor on a variety (in the sense of universal algebra) has a <strong>presentation by operations and equations</strong> if and only if the functor preserves sifted colimits.</p>
 <p>The theory of sifted colimits is well explained in Adamek-Rosicky-Vitale. We only cover some highlights.</p>
 <p>In all of the following <span class="math notranslate nohighlight">\(\mathcal A\)</span> is a variety in the sense of univeral algebra, that is, a category of algebras specified (finitary) operations equations. (We will assume all operations to be finitary in the following, even if we drop the qualifier.)</p>
 <section id="sifted-colimits">
-<h2>Sifted Colimits<a class="headerlink" href="#sifted-colimits" title="Link to this heading">#</a></h2>
+<h2>Sifted Colimits<a class="headerlink" href="#sifted-colimits" title="Permalink to this heading">#</a></h2>
 <p><strong>Filtered categories</strong> are precisely categories <span class="math notranslate nohighlight">\(\mathcal D\)</span> such that colimits over <span class="math notranslate nohighlight">\(\mathcal D\)</span> commute with finite limits in Set. There is also a characterization of filtered categories independent of sets – a category <span class="math notranslate nohighlight">\(\mathcal D\)</span> is filtered if and only if the diagonal functor <span class="math notranslate nohighlight">\(\mathcal D \to \mathcal D^\mathcal I\)</span> is final for each finite category <span class="math notranslate nohighlight">\(\mathcal I\)</span>.</p>
 <p><strong>Sifted categories</strong> are the categories <span class="math notranslate nohighlight">\(\mathcal D\)</span> such that colimits over <span class="math notranslate nohighlight">\(\mathcal D\)</span> commute with finite products. These categories are characterized by the property that the diagonal functor <span class="math notranslate nohighlight">\(\mathcal D \to \mathcal D \times \mathcal D\)</span> is final.</p>
 <p><strong>Facts:</strong></p>
@@ -483,9 +477,9 @@ document.write(`
 </ul>
 </section>
 <section id="presenting-functors-on-varieties">
-<h2>Presenting Functors on Varieties<a class="headerlink" href="#presenting-functors-on-varieties" title="Link to this heading">#</a></h2>
+<h2>Presenting Functors on Varieties<a class="headerlink" href="#presenting-functors-on-varieties" title="Permalink to this heading">#</a></h2>
 <section id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h3>
 <p>Given an adjunction <span class="math notranslate nohighlight">\(L\dashv R:\mathcal C\to \mathcal X\)</span> such that the right-adjoint <span class="math notranslate nohighlight">\(R\)</span> is monadic (or of descent type) all objects <span class="math notranslate nohighlight">\(A\in\mathcal C\)</span> have a presentation “by generators and relations”</p>
 <div class="math notranslate nohighlight">
 \[LRLRA\rightrightarrows LRA \to A.\]</div>
@@ -495,14 +489,14 @@ document.write(`
 <p><em>Step 2:</em> We represent a sifted colimit on Set as the quotient of polynomial functor.</p>
 </section>
 <section id="preliminaries">
-<h3>Preliminaries<a class="headerlink" href="#preliminaries" title="Link to this heading">#</a></h3>
+<h3>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(S(\mathcal C)\)</span> be the category of sifted colimit preserving functors <span class="math notranslate nohighlight">\(\mathcal C\to\mathcal C\)</span>.</p>
 <p><strong>Fact:</strong> The category <span class="math notranslate nohighlight">\(S(\mathcal C)\)</span> is slfp if <span class="math notranslate nohighlight">\(\mathcal C\)</span> is.</p>
 <p>A functor <span class="math notranslate nohighlight">\(H : \mathcal A \to \mathcal B\)</span> between slfp categories is called <strong>algebraically exact</strong> provided that it preserves limits and sifted colimits.</p>
 <p><strong>Fact:</strong> If <span class="math notranslate nohighlight">\(H\)</span> is algebraically exact it has a left adjoint.</p>
 </section>
 <section id="step-1">
-<h3>Step 1<a class="headerlink" href="#step-1" title="Link to this heading">#</a></h3>
+<h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(U:\mathcal A\to Set\)</span> be a variety and <span class="math notranslate nohighlight">\(F\dashv U\)</span>. Define</p>
 <div class="math notranslate nohighlight">
 \[\Psi:S(\mathcal A)\to S(Set)\]</div>
@@ -514,11 +508,11 @@ document.write(`
 <p>After the first step, we obtain a quotient <span class="math notranslate nohighlight">\(FULFU\to L\)</span>. Here, <span class="math notranslate nohighlight">\(FULFU\)</span> results from applying the free construction <span class="math notranslate nohighlight">\(\Phi=F-U\)</span> to the Set-functor <span class="math notranslate nohighlight">\(ULF\)</span>. What we need next is a presentation by operations and equations of <span class="math notranslate nohighlight">\(ULF\)</span>.</p>
 </section>
 <section id="step-2">
-<h3>Step 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h3>
+<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this heading">#</a></h3>
 <p>Every sifted colimit preserving on <span class="math notranslate nohighlight">\(Set\)</span> (=filtered colimit preserving functor=finitary functor) can be presented as the quotient of a polynomial functor.</p>
 <p>Indeed, if <span class="math notranslate nohighlight">\(T:Set\to Set\)</span> is finitary then we have a natural transformation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f42ac90-9f59-41b3-825e-e8717c7d4ee3">
-<span class="eqno">(22)<a class="headerlink" href="#equation-6f42ac90-9f59-41b3-825e-e8717c7d4ee3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-63464863-d036-4f74-addf-52bed300a2fb">
+<span class="eqno">(22)<a class="headerlink" href="#equation-63464863-d036-4f74-addf-52bed300a2fb" title="Permalink to this equation">#</a></span>\[\begin{align}
 \coprod_{n\in\mathbb N} Tn\times X^n &amp; 
 \stackrel {q_X} \longrightarrow TX \\
 (\sigma,v) &amp; \ \mapsto \ T(v)(\sigma)
@@ -528,7 +522,7 @@ document.write(`
 <p>This gives us a representation of <span class="math notranslate nohighlight">\(T\)</span> as a functor by operations and equations where the set of <span class="math notranslate nohighlight">\(n\)</span>-ary operations is <span class="math notranslate nohighlight">\(Tn\)</span> and the set of equations in <span class="math notranslate nohighlight">\(n\)</span> variables is the kernel of <span class="math notranslate nohighlight">\(q_n\)</span>.</p>
 </section>
 <section id="the-presentation">
-<h3>The Presentation<a class="headerlink" href="#the-presentation" title="Link to this heading">#</a></h3>
+<h3>The Presentation<a class="headerlink" href="#the-presentation" title="Permalink to this heading">#</a></h3>
 <p><strong>Theorem:</strong> A functor on a variety has a presentation by operations and equations iff the functor preserves sifted colimits.</p>
 <p>To prove “if”, one shows that every sifted colimit preserving functor <span class="math notranslate nohighlight">\(L\)</span> on a variety is a quotient</p>
 <div class="math notranslate nohighlight">
@@ -549,14 +543,12 @@ document.write(`
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>Kurz-Rosicky: <a class="reference external" href="https://arxiv.org/pdf/1207.2732.pdf">Strongly Complete Logics for Coalgebras</a>, 2012.</p>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="sigma" role="doc-footnote">
+<aside class="footnote brackets" id="sigma" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>Note that <span class="math notranslate nohighlight">\((\sigma,v:n\to UA)\)</span> is a modal formula <span class="math notranslate nohighlight">\(\Delta(a_1,\ldots a_n)\)</span> where <span class="math notranslate nohighlight">\(\Delta=\sigma\)</span> and <span class="math notranslate nohighlight">\(a_i=v(i)\)</span>.</p>
-</aside>
 </aside>
 </section>
 </section>
@@ -659,7 +651,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

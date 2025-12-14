@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Predicate Liftings &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Predicate-Liftings';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -442,10 +436,10 @@ document.write(`
                   
   <p><span class="math notranslate nohighlight">\(\newcommand{\sem}[1]{\mathopen{[\![}#1\mathclose{]\!]}}\)</span></p>
 <section class="tex2jax_ignore mathjax_ignore" id="predicate-liftings">
-<h1>Predicate Liftings<a class="headerlink" href="#predicate-liftings" title="Link to this heading">#</a></h1>
+<h1>Predicate Liftings<a class="headerlink" href="#predicate-liftings" title="Permalink to this heading">#</a></h1>
 <p>(draft)</p>
 <section id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h2>
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
 <p>A <span class="math notranslate nohighlight">\(n\)</span>-ary predicate lifting for a functor <span class="math notranslate nohighlight">\(T:\sf Set\to Set\)</span> is a natural transformation</p>
 <div class="math notranslate nohighlight">
 \[{2^n}^X\to 2^{TX}\]</div>
@@ -479,7 +473,7 @@ document.write(`
 <p><strong>Anyway:</strong> Since there is a bijection between predicate liftings and modal operators, we may blur the distinction on occasion.</p>
 </section>
 <section id="example-powerset">
-<h2>Example: Powerset<a class="headerlink" href="#example-powerset" title="Link to this heading">#</a></h2>
+<h2>Example: Powerset<a class="headerlink" href="#example-powerset" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(T=\mathcal P\)</span> be the powerset functor.</p>
 <p>We see right away that there are 16 modal operators</p>
 <div class="math notranslate nohighlight">
@@ -538,7 +532,7 @@ document.write(`
 <p>This puzzle will be resolved in a follow-up note on <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/Sk4WH_fNd">monotone predicate liftings</a>.</p>
 </section>
 <section id="example-probability-distributions">
-<h2>Example: Probability Distributions<a class="headerlink" href="#example-probability-distributions" title="Link to this heading">#</a></h2>
+<h2>Example: Probability Distributions<a class="headerlink" href="#example-probability-distributions" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(\mathcal D\)</span> be the functor that maps a set <span class="math notranslate nohighlight">\(X\)</span> to the set <span class="math notranslate nohighlight">\(\mathcal DX\)</span> of finitely supported probability distributions.</p>
 <p>The unary modalities are given by sets of distributions on 2
 $<span class="math notranslate nohighlight">\(\mathcal D2\to 2.\)</span>$</p>
@@ -551,32 +545,30 @@ D\phi}\longrightarrow \mathcal D2\stackrel\triangle\longrightarrow 2\]</div>
 \[p\in \sem{\triangle\phi}\ \Leftrightarrow \ Pr(x\in\phi)
 =r\]</div>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="aristotle" role="doc-footnote">
+<aside class="footnote brackets" id="aristotle" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>This reminds me of the <a class="reference external" href="https://plato.stanford.edu/entries/square/">square of opposition</a> in Aristotelian logic. <span class="math notranslate nohighlight">\(\{1\}\)</span> corresponds to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to all successors”, <span class="math notranslate nohighlight">\(\{0\}\)</span> to <span class="math notranslate nohighlight">\(\phi\)</span> “belongs to no successors”, <span class="math notranslate nohighlight">\(\top\)</span> to “belongs to some but not all”. As far as I understand (not my area of expertise) Aristotle’s logic does not admit <span class="math notranslate nohighlight">\(\varnothing\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="zero" role="doc-footnote">
+<aside class="footnote brackets" id="zero" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>Here and in the following all elements not explicitly mentioned are sent to <span class="math notranslate nohighlight">\(0\)</span>. For example, writing <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> implies  <span class="math notranslate nohighlight">\(\overline 0,\overline{01}\mapsto 0\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="boxdiamond" role="doc-footnote">
+<aside class="footnote brackets" id="boxdiamond" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>For example, in the case of <span class="math notranslate nohighlight">\(\Box\)</span>, one has to verify that with <span class="math notranslate nohighlight">\(\triangle\)</span> defined as <span class="math notranslate nohighlight">\(\varnothing,\overline 1\mapsto 1\)</span> the function <span class="math notranslate nohighlight">\(\mathcal PX\stackrel {\mathcal P\phi}\longrightarrow \mathcal P2\stackrel\triangle\longrightarrow 2\)</span> maps <span class="math notranslate nohighlight">\(S\subseteq X\)</span> to <span class="math notranslate nohighlight">\(1\)</span> iff <span class="math notranslate nohighlight">\(S\subseteq\phi\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="generators" role="doc-footnote">
+<aside class="footnote brackets" id="generators" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
 <p>Intuitively, <span class="math notranslate nohighlight">\(\sf o\)</span> means “some successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\sf i\)</span> means “some successor inside <span class="math notranslate nohighlight">\(\phi\)</span>”. It is a lucky coincidence that the symbol <span class="math notranslate nohighlight">\(\sf o\)</span> reminds us of both <strong>o</strong>ut and <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(\sf i\)</span> of both <strong>i</strong>n and <span class="math notranslate nohighlight">\(1\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="atoms" role="doc-footnote">
+<aside class="footnote brackets" id="atoms" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
 <p>Recall that <span class="math notranslate nohighlight">\(\varnothing\)</span> means “no successor”, <span class="math notranslate nohighlight">\(\overline 0\)</span> means “some and all successor outside of <span class="math notranslate nohighlight">\(\phi\)</span>”, <span class="math notranslate nohighlight">\(\overline 1\)</span> means “some and all successors in <span class="math notranslate nohighlight">\(\phi\)</span>” and <span class="math notranslate nohighlight">\(\overline{01}\)</span> means “some out and some in”.
 Accordingly, we map the elements <span class="math notranslate nohighlight">\(\varnothing,\overline 0,\overline{01},\overline 1\in\mathcal P2\)</span> to conjunctions of generators as follows. <span class="math notranslate nohighlight">\(\varnothing \mapsto \sf \neg o\wedge\neg i\)</span>, <span class="math notranslate nohighlight">\(\overline 0\mapsto \sf o\wedge\neg i\)</span>, <span class="math notranslate nohighlight">\(\overline{01}\mapsto \sf o\wedge i\)</span>, <span class="math notranslate nohighlight">\(\overline 1\mapsto \sf\neg o\wedge i\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="monotonebox" role="doc-footnote">
+<aside class="footnote brackets" id="monotonebox" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
 <p>It also makes sense to replace <span class="math notranslate nohighlight">\(\to\)</span> by <span class="math notranslate nohighlight">\(\le\)</span> if we think of predicates as propositional functions to <span class="math notranslate nohighlight">\(2=\{0&lt;1\}\)</span>.</p>
-</aside>
 </aside>
 </section>
 </section>
@@ -672,7 +664,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

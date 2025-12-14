@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Monotone Predicate Liftings &#8212; Coalgebraic Logic</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\\sqcap", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Set": ["{\\sf Set}", 0], "Coalg": ["{\\sf Coalg}", 0], "Alg": ["{\\sf Alg}", 0], "Q": ["Q", 0], "Qu": ["{Q}", 0], "QuCat": ["{\\Q\\text{-Cat}}", 0], "One": ["{\\mathbb{1}}", 0], "yon": ["\u3088", 0], "bigsqcap": ["\u2a05", 0], "val": ["[\\![{#1}]\\!]", 1], "descr": ["(\\![{#1}]\\!)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/Monotone-Predicate-Liftings';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -154,18 +159,7 @@
     <p class="title logo__title">Coalgebraic Logic</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -260,9 +254,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -403,9 +397,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -448,13 +442,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="monotone-predicate-liftings">
-<h1>Monotone Predicate Liftings<a class="headerlink" href="#monotone-predicate-liftings" title="Link to this heading">#</a></h1>
+<h1>Monotone Predicate Liftings<a class="headerlink" href="#monotone-predicate-liftings" title="Permalink to this heading">#</a></h1>
 <p>(draft)</p>
 <p>In a previous note, we defined <a class="reference external" href="https://hackmd.io/&#64;alexhkurz/SJcARPMVO">predicate liftings</a> and showed that the unary predicate liftings of the powerset functor are isomorphic to the free Boolean algebra generated by <span class="math notranslate nohighlight">\(\Box\)</span> and <span class="math notranslate nohighlight">\(\Diamond\)</span>.</p>
 <p>Here, we first single out all of those 16 modal operators that are monotone.</p>
 <p>Then we are going to test our insights by studying the predicate liftings of two posets functors, namely the upset functor <span class="math notranslate nohighlight">\(\mathcal U\)</span> and the downset functor <span class="math notranslate nohighlight">\(\mathcal D\)</span>.</p>
 <section id="set-functors">
-<h2>Set Functors<a class="headerlink" href="#set-functors" title="Link to this heading">#</a></h2>
+<h2>Set Functors<a class="headerlink" href="#set-functors" title="Permalink to this heading">#</a></h2>
 <p>We have studied modal operators as predicate liftings</p>
 <div class="math notranslate nohighlight">
 \[\mathcal P 2\to 2\]</div>
@@ -466,8 +460,8 @@ document.write(`
 \[\overline{\mathcal P}:\sf Pos\to Pos\]</div>
 <p>of the functor <span class="math notranslate nohighlight">\(\mathcal P:\sf Set\to Set\)</span>.</p>
 <p><strong>Fact:</strong> <span class="math notranslate nohighlight">\(\overline{\mathcal P}\)</span> is the convex powerset functor, that is, for two convex subsets <span class="math notranslate nohighlight">\(a,b\subseteq X\)</span> we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dfec86b9-1cab-40eb-a9fd-653fcb1ab46f">
-<span class="eqno">(17)<a class="headerlink" href="#equation-dfec86b9-1cab-40eb-a9fd-653fcb1ab46f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-06269047-465f-448e-9010-0c8f665c3ae1">
+<span class="eqno">(17)<a class="headerlink" href="#equation-06269047-465f-448e-9010-0c8f665c3ae1" title="Permalink to this equation">#</a></span>\[\begin{align}
 a\le b\  \quad \textrm{ iff } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\le y \quad \textrm{ and }\\
 &amp;\forall y\in b\,.\,\exists x\in a. x\le y\\
 \end{align}\]</div>
@@ -522,7 +516,7 @@ a\le b\  \quad \textrm{ iff } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\l
 </div>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>We have seen that in the example of the powerset functor that the monotone modal operators correspond precisely to the monotone functions  <span class="math notranslate nohighlight">\(\overline{\mathcal P}2\to 2\)</span> where <span class="math notranslate nohighlight">\(\overline{\mathcal P}\)</span> is the convex powerset functor.</p>
 <p>More generally, for any set-functor <span class="math notranslate nohighlight">\(T\)</span>, the <span class="math notranslate nohighlight">\(n\)</span>-ary monotone modal operators (=predicate liftings) are in bijection to the monotone functions</p>
 <div class="math notranslate nohighlight">
@@ -530,9 +524,9 @@ a\le b\  \quad \textrm{ iff } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\l
 <p>where <span class="math notranslate nohighlight">\(\overline T\)</span> is the posetification of <span class="math notranslate nohighlight">\(T\)</span>.</p>
 </section>
 <section id="poset-functors">
-<h2>Poset Functors<a class="headerlink" href="#poset-functors" title="Link to this heading">#</a></h2>
+<h2>Poset Functors<a class="headerlink" href="#poset-functors" title="Permalink to this heading">#</a></h2>
 <section id="the-upset-functor">
-<h3>The Upset Functor<a class="headerlink" href="#the-upset-functor" title="Link to this heading">#</a></h3>
+<h3>The Upset Functor<a class="headerlink" href="#the-upset-functor" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(\mathcal U\)</span> be the upset functor. Consider</p>
 <div class="math notranslate nohighlight">
 \[\mathcal UX\stackrel{\mathcal U\phi}\longrightarrow\mathcal U2\longrightarrow 2\]</div>
@@ -568,7 +562,7 @@ a\le b\  \quad \textrm{ iff } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\l
 <p>is not an upset of <span class="math notranslate nohighlight">\(\mathcal U 2\)</span>.</p>
 </section>
 <section id="the-downset-functor">
-<h3>The Downset Functor<a class="headerlink" href="#the-downset-functor" title="Link to this heading">#</a></h3>
+<h3>The Downset Functor<a class="headerlink" href="#the-downset-functor" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(\mathcal D\)</span> be the downset functor. Consider</p>
 <div class="math notranslate nohighlight">
 \[\mathcal DX\stackrel{\mathcal D\phi}\longrightarrow\mathcal D2\longrightarrow 2\]</div>
@@ -604,7 +598,7 @@ a\le b\  \quad \textrm{ iff } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\l
 <p>is not available since <span class="math notranslate nohighlight">\(\overline 1\)</span> is not an element of <span class="math notranslate nohighlight">\(\mathcal D2\)</span>.</p>
 </section>
 <section id="breakdown-of-duality">
-<h3>Breakdown of Duality<a class="headerlink" href="#breakdown-of-duality" title="Link to this heading">#</a></h3>
+<h3>Breakdown of Duality<a class="headerlink" href="#breakdown-of-duality" title="Permalink to this heading">#</a></h3>
 <p>It is interesting to think about why the arguments for <span class="math notranslate nohighlight">\(\mathcal U2\)</span> and <span class="math notranslate nohighlight">\(\mathcal D2\)</span> are not entirely dual.</p>
 <p>On the “object level” there is duality: Swapping <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> and turning the order around is an isomorphism.</p>
 <p>This means that it must be the “meta level” which is breaking the duality.</p>
@@ -620,13 +614,13 @@ a\le b\  \quad \textrm{ iff } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\l
 <p><img alt="" src="https://i.imgur.com/yy0CrMa.png" /></p>
 </section>
 <section id="distribution-functor">
-<h3>Distribution Functor<a class="headerlink" href="#distribution-functor" title="Link to this heading">#</a></h3>
+<h3>Distribution Functor<a class="headerlink" href="#distribution-functor" title="Permalink to this heading">#</a></h3>
 <p><strong>Proposition</strong>: The posetification of the distribution functor is given by <span class="math notranslate nohighlight">\(p\sqsubseteq q\)</span> if <span class="math notranslate nohighlight">\(p[S]\le q[S]\)</span> for all upsets <span class="math notranslate nohighlight">\(S\)</span>.</p>
 <p>This order on distributions goes back to (Jones and Plotkin, 1989) for so-called IPOs and was extended to all posets in Worrell 2000. The observation that it is the posetification will appear in (Kurz and Motamed, 2022).</p>
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>The definition of the posetification (extension from <span class="math notranslate nohighlight">\(\sf Set\)</span> to <span class="math notranslate nohighlight">\(\sf Pos\)</span>) of an arbitrary set-functor as well as the result on monotone predicate liftings is in</p>
 <ul class="simple">
 <li><p>Balan, Kurz, Velebil: <a class="reference external" href="https://lmcs.episciences.org/1594">Positive Fragments of Coalgebraic Logics</a>. 2015.</p></li>
@@ -637,19 +631,17 @@ a\le b\  \quad \textrm{ iff } \quad &amp; \forall x\in a\,.\,\exists y\in b. x\l
 <p>Moreover, one can reconstruct the poset <span class="math notranslate nohighlight">\((X,R)\)</span> as a certain order-enriched colimit of the diagram <span class="math notranslate nohighlight">\(p_1,p_2:R\to X\)</span>. Then the posetification <span class="math notranslate nohighlight">\(\overline TX\)</span> is defined as the said colimit of <span class="math notranslate nohighlight">\(Tp_1,Tp_2:TR\to TX\)</span>.</p>
 <p>The posetification enjoys the universal property of an order-enriched left Kan extension.</p>
 <hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="predlift" role="doc-footnote">
+<aside class="footnote brackets" id="predlift" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>Recall that for a predicate lifting <span class="math notranslate nohighlight">\(\triangle\)</span> and a formula <span class="math notranslate nohighlight">\(\varphi:X\to 2\)</span>, the meaning of <span class="math notranslate nohighlight">\(\triangle\phi\)</span> is given by how the composition <span class="math notranslate nohighlight">\(\mathcal PX\stackrel{\mathcal P\phi}\longrightarrow{\mathcal P2}\stackrel \triangle\longrightarrow 2\)</span> acts on a subset ‘of successors’ <span class="math notranslate nohighlight">\(S\in\mathcal PX\)</span>.</p>
 </aside>
-<aside class="footnote brackets" id="posetification" role="doc-footnote">
+<aside class="footnote brackets" id="posetification" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>The posetification of a functor <span class="math notranslate nohighlight">\(T\)</span> is defined as follows. Any poset <span class="math notranslate nohighlight">\((X,R)\)</span> can be represented by its “graph”</p>
 </aside>
-<aside class="footnote brackets" id="doesnot" role="doc-footnote">
+<aside class="footnote brackets" id="doesnot" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>“<span class="math notranslate nohighlight">\(\phi[S]=\overline 1\)</span> only if <span class="math notranslate nohighlight">\(\phi[S]\subseteq \overline{01}\)</span>” is needed to establish that <span class="math notranslate nohighlight">\(\{\overline{01}\}\subseteq\mathcal D2\)</span> corresponds to <span class="math notranslate nohighlight">\(\Diamond\phi\)</span>.</p>
-</aside>
 </aside>
 </section>
 </section>
@@ -752,7 +744,7 @@ By Alexander Kurz
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
