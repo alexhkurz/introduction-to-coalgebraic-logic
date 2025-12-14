@@ -1,5 +1,3 @@
----
-
 #  Cospan Bisimulation 
 
 (draft) 

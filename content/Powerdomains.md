@@ -1,5 +1,3 @@
----
-
 # Powerdomains
 
 Powerdomains can be seen as modelling non-determinstic choice. They appear in various areas of mathematics and computer science. 

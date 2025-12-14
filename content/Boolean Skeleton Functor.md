@@ -1,5 +1,3 @@
----
-
 # Boolean Skeleton Functor
 
 (under construction)

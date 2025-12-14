@@ -1,5 +1,3 @@
----
-
 # Introduction to Coalgebraic Logic
 
 (under construction ... [up](https://hackmd.io/@alexhkurz/Hy1oUrS4u))

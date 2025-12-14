@@ -1,5 +1,3 @@
----
-
 # Boolean Logic for Set-Coalgebras
 
 We build on concepts and examples explained previously, but try to keep this section self-contained from a technical point of view.

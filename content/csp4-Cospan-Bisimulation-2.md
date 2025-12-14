@@ -1,9 +1,6 @@
----
 # Cospan Bisimulation 2
 
-(draft ... references to be added) 
-
----
+(draft ... references to be added)
 
 ## Introduction
 

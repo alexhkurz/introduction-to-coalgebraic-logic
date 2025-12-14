@@ -1,5 +1,3 @@
----
-
 # Presenting Functors
 
 (draft)

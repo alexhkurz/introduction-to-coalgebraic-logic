@@ -1,5 +1,3 @@
----
-
 # Coalgebraic Logic: A Survey
 
 (draft ... far from complete)

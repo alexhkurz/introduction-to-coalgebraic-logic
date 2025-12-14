@@ -32,7 +32,7 @@ These notes consist of the following parts.
 
 ## Acknowledgements
 
-These notes have been written in discussions with Adriana Balan, Daniel Briseno, Luke Burns, Justin Dressel, Jim de Groot, Helle Hansen, Peter Jipsen, Nima Motamed, Drew Moshier, Wolfgang Poiger, Bruno Teheux, Yde Venema, Jeremy Wayland and others.
+I am grateful to Adriana Balan, Daniel Briseno, Luke Burns, Yiwen Ding, Justin Dressel, Jim de Groot, Helle Hansen, Peter Jipsen, Nima Motamed, Drew Moshier, Wolfgang Poiger, Bruno Teheux, Yde Venema, Jeremy Wayland and others for giving me the opportunity to discuss the content of these notes.
 
 ## Bibliography
 

@@ -1,4 +1,3 @@
----
 # The Landscape
 
 These notes were prepared for the workshop [Exploring Baltag's Universe](https://soroushrrad.wixsite.com/my-site-1/workshop-1) celebrating [Alexandru Baltag's](https://sites.google.com/site/thealexandrubaltagsite/research/publications) 55th birthday. 

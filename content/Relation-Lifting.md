@@ -102,6 +102,6 @@ The cospan-based relation lifting generalises from ordered sets to Lawvere metri
 ## References 
 
 References can be found in the survey article
-- Kurz, Velebil: [Relation Lifting]().
+- Kurz, Velebil: Relation Lifting (URL to be added).
 
 [^Ord]: (or a functor on preorders or posets)

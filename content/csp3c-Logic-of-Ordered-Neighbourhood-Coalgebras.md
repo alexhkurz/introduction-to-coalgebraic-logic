@@ -1,4 +1,3 @@
----
 # Logic of Ordered Neighbourhood Coalgebras
 
 (draft ... references to be added) ... ([up](https://hackmd.io/@alexhkurz/ryrkkYZZc))

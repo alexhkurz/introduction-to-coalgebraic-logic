@@ -1,7 +1,3 @@
----
-
-$\newcommand{\sem}[1]{[\![#1]\!]}$ 
-
 # Primal and Semi-Primal Algebras
 
 ## Primal algebras

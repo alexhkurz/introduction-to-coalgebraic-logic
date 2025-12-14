@@ -1,5 +1,3 @@
----
-
 # Moss's Coalgebraic Logic
 
 (under construction)

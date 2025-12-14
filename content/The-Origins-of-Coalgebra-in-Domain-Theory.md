@@ -1,5 +1,3 @@
----
-
 # Origins in Domain Theory
 
 (sketchy draft ... references to be added) 

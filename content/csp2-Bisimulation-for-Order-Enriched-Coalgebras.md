@@ -1,5 +1,3 @@
----
-
 #  Bisimulation for Ordered Coalgebras
 
 (draft ... reference to be added) ... ([up](https://hackmd.io/@alexhkurz/ryrkkYZZc))
