@@ -1,6 +1,3 @@
----
-tags: coalgebraic logic
----
 # Neighbourhood Coalgebras
 
 (draft) 

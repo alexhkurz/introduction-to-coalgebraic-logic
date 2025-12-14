@@ -1,6 +1,3 @@
----
-tags: coalgebraic logic
----
 # Montone Neighbourhood Coalgebras
 
 (draft)

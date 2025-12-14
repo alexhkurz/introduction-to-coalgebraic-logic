@@ -1,8 +1,9 @@
 version: 1
 project:
   title: Coalgebraic Logic
-  authors:
-    - name: Alexander Kurz
+  # Authors kept for reference but not displayed on every page
+  # authors:
+  #   - name: Alexander Kurz
   github: alexhkurz/coalgebraic-logic-jupyter/
   bibliography:
     - ahk.bib
@@ -53,8 +54,10 @@ project:
       children:
         - file: content/csp0-Cospan-Bisimulation-Introduction.md
         - file: content/csp1-Cospan-Bisimulation.md
-        - file: content/csp2-Neighbourhood-Coalgebras.md
-        - file: content/csp3-Bisimulation-for-Order-Enriched-Coalgebras.md
+        - file: content/csp2-Bisimulation-for-Order-Enriched-Coalgebras.md
+        - file: content/csp3-Neighbourhood-Coalgebras.md
+        - file: content/csp3b-Monotone-Neighbourhood-Coalgebras.md
+        - file: content/csp3c-Logic-of-Ordered-Neighbourhood-Coalgebras.md
         - file: content/csp4-Cospan-Bisimulation-2.md
     - title: Quantale Enriched CL
       children:
