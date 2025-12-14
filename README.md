@@ -1,17 +1,26 @@
-# coalgebraic-logic-jupyter
+# Introduction to Coalgebraic Logic
 
-(under construction)
+A book on coalgebraic logic built with Jupyter Book 2.0 (MyST).
 
-I currently maintain the version made with jupyter book version 2.
+## Setup amd Local Development
 
-```
-git checkout jupyter-book-2
+```bash
 source setup.sh
 jupyter book start
 ```
 
-This should make a local copy of the book available at [localhost](http://localhost:3000).
+The book will be available at [http://localhost:3000](http://localhost:3000) (or port 3001 if 3000 is in use).
 
-Current work is in the chapter "Outline of Quantale Enriched CL".
+## Deploy to Github Pages
 
-I will merge the branch jupyter-book-2 into main only after I had time to review all chapters.
+```bash
+./deploy-gh-pages.sh
+```
+
+The site is available at: https://alexhkurz.github.io/introduction-to-coalgebraic-logic/
+
+## Build Only
+
+```bash
+jupyter book build
+```

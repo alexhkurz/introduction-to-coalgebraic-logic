@@ -78,4 +78,5 @@ project:
 site:
   options:
     folders: true
+    baseurl: /introduction-to-coalgebraic-logic
   template: book-theme
