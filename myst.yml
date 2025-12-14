@@ -12,7 +12,7 @@ project:
       template: plain_latex_book
       output: exports/book.pdf
   toc:
-    - file: intro.md
+    - file: content/intro.md
     - title: Modal Logic
       children:
         - file: content/Introduction-to-Modal-Logic.md
