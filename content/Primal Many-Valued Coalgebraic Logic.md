@@ -1,6 +1,4 @@
 ---
-tags: wolfgang poiger, mathematics, boolean power
----
 
 $\newcommand{\sem}[1]{[\![#1]\!]}$ 
 

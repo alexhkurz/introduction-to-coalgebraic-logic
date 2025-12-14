@@ -1,6 +1,4 @@
 ---
-tags: wolfgang poiger, bruno teheux, mathematics, boolean power, universal algebra
----
 
 # Boolean Skeleton Functor
 

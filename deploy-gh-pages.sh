@@ -1,43 +1,26 @@
 #!/bin/bash
 
-# Script to build and deploy Jupyter Book to GitHub Pages
+# Script to build and deploy Jupyter Book to GitHub Pages using ghp-import
 
 set -e
 
-# Activate virtual environment
-source venv/bin/activate
+# Activate virtual environment if it exists
+if [ -f "venv/bin/activate" ]; then
+    source venv/bin/activate
+elif [ -f ".venv/bin/activate" ]; then
+    source .venv/bin/activate
+fi
 
 # Build the site
 echo "Building site..."
 jupyter-book build --site
 
-# Check if gh-pages branch exists
-if git show-ref --verify --quiet refs/heads/gh-pages; then
-    echo "gh-pages branch exists"
-    # Switch to gh-pages branch
-    git checkout gh-pages
-    # Remove all files except .git
-    find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +
-else
-    echo "Creating gh-pages branch..."
-    git checkout --orphan gh-pages
-    git rm -rf .
-fi
-
-# Copy site contents to root
-echo "Copying site files..."
-cp -r _build/site/* .
-
-# Add and commit
-git add -A
-git commit -m "Deploy site to GitHub Pages" || echo "No changes to commit"
-
-# Push to origin
-echo "Pushing to GitHub..."
-git push origin gh-pages
-
-# Switch back to main branch
-git checkout main
+# Deploy using ghp-import
+# -n: don't include .nojekyll file (not needed for MyST sites)
+# -p: push to origin/gh-pages
+# -f: force push (overwrites existing gh-pages branch)
+echo "Deploying to GitHub Pages..."
+ghp-import -n -p -f _build/site
 
 echo "Deployment complete! Your site should be available at:"
-echo "https://alexhkurz.github.io/coalgebraic-logic-jupyter/"
+echo "https://alexhkurz.github.io/introduction-to-coalgebraic-logic/"

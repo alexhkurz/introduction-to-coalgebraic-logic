@@ -1,6 +1,4 @@
 ---
-tags: mathematics, coalgebraic logic, 
----
 
 # Moss's Coalgebraic Logic
 

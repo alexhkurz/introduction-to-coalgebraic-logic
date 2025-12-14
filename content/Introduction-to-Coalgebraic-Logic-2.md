@@ -1,6 +1,4 @@
 ---
-tags: coalgebraic modal logic, maths, functorial modal logic
----
 
 # Introduction to Coalgebraic Logic
 

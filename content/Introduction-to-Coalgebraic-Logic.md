@@ -1,6 +1,4 @@
 ---
-tags: coalgebraic logic
----
 # Introduction
 
 (draft ... references to be added)

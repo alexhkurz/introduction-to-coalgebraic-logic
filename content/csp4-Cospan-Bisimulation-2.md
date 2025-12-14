@@ -1,6 +1,4 @@
 ---
-tags: coalgebraic logic
----
 # Cospan Bisimulation 2
 
 (draft ... references to be added) 

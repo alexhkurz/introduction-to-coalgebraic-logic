@@ -1,6 +1,4 @@
 ---
-tags: coalgebraic logic, coalgebraic modal logic, maths, functorial modal logic
----
 
 # Coalgebraic Logic: A Survey
 

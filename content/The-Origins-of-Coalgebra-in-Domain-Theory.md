@@ -1,6 +1,4 @@
 ---
-tags: coalgebra, 
----
 
 # Origins in Domain Theory
 
