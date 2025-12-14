@@ -54,7 +54,6 @@ In other words, $f$ makes the following square commute.
 <!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzAsMiwiWCciXSxbMiwwLCJcXG1hdGhjYWwgUFgiXSxbMiwyLCJcXG1hdGhjYWwgUFgnIl0sWzAsMSwiZiIsMl0sWzIsMywiXFxtYXRoY2FsIFBmIl0sWzAsMiwiXFx4aSJdLFsxLDMsIlxceGknIl1d -->
 <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzAsMiwiWCciXSxbMiwwLCJcXG1hdGhjYWwgUFgiXSxbMiwyLCJcXG1hdGhjYWwgUFgnIl0sWzAsMSwiZiIsMl0sWzIsMywiXFxtYXRoY2FsIFBmIl0sWzAsMiwiXFx4aSJdLFsxLDMsIlxceGknIl1d&embed" width="432" height="432" style="border-radius: 8px; border: none;"></iframe>
 
-
 Of course, a coalgebra on $X$ is nothing but a set with a relation $R\subseteq X\times X$. But coalgebra morphisms do not only preserve the relation but also reflect it in a particular way. Key to this is the following.
 
 **Exercise on (bi)simulation:** We write $xRy$ for $y\in\xi(x)$. The following are equivalent conditions for $f$ being a **forward simulation**.
