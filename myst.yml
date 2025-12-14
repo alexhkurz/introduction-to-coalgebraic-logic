@@ -51,11 +51,11 @@ project:
         - file: content/OECL-posetification.md
     - title: Cospan (Bi)Similarity
       children:
-        - file: content/csp-Cospan-Bisimulation-Introduction.md
-        - file: content/csp-Cospan-Bisimulation.md
-        - file: content/csp-Neighbourhood-Coalgebras.md
-        - file: content/csp-Bisimulation-for-Order-Enriched-Coalgebras.md
-        - file: content/csp-Cospan-Bisimulation-2.md
+        - file: content/csp0-Cospan-Bisimulation-Introduction.md
+        - file: content/csp1-Cospan-Bisimulation.md
+        - file: content/csp2-Neighbourhood-Coalgebras.md
+        - file: content/csp3-Bisimulation-for-Order-Enriched-Coalgebras.md
+        - file: content/csp4-Cospan-Bisimulation-2.md
     - title: Quantale Enriched CL
       children:
         - file: content/QECL-Introduction.md
