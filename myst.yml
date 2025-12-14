@@ -4,7 +4,7 @@ project:
   # Authors kept for reference but not displayed on every page
   # authors:
   #   - name: Alexander Kurz
-  github: alexhkurz/coalgebraic-logic-jupyter/
+  github: https://github.com/alexhkurz/coalgebraic-logic-jupyter/
   bibliography:
     - ahk.bib
   exports:
