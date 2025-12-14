@@ -59,9 +59,6 @@ project:
     - title: Quantale Enriched CL
       children:
         - file: content/QECL-Introduction.md
-        - file: content/QECL-Examples.md
-        - file: content/QECL-Quantalification.md
-        - file: content/QECL-Change-of-Base.md
   math:
     '\Qu': 'Q'
     '\QuCat': '\Qu\text{-Cat}'

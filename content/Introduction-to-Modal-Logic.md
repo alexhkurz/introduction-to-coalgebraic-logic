@@ -1,4 +1,3 @@
-$\newcommand{\sem}[1]{[\![#1]\!]}$
 # Introduction to Modal Logic
 
 (draft) 

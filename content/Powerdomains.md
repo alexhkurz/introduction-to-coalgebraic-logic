@@ -51,7 +51,8 @@ $$\mathcal Pf\circ \xi = \xi\circ f.$$
 
 In other words, $f$ makes the following square commute.
 
-![](https://i.imgur.com/wpaU0or.png)
+<!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzAsMiwiWCciXSxbMiwwLCJcXG1hdGhjYWwgUFgiXSxbMiwyLCJcXG1hdGhjYWwgUFgnIl0sWzAsMSwiZiIsMl0sWzIsMywiXFxtYXRoY2FsIFBmIl0sWzAsMiwiXFx4aSJdLFsxLDMsIlxceGknIl1d -->
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzAsMiwiWCciXSxbMiwwLCJcXG1hdGhjYWwgUFgiXSxbMiwyLCJcXG1hdGhjYWwgUFgnIl0sWzAsMSwiZiIsMl0sWzIsMywiXFxtYXRoY2FsIFBmIl0sWzAsMiwiXFx4aSJdLFsxLDMsIlxceGknIl1d&embed" width="432" height="432" style="border-radius: 8px; border: none;"></iframe>
 
 
 Of course, a coalgebra on $X$ is nothing but a set with a relation $R\subseteq X\times X$. But coalgebra morphisms do not only preserve the relation but also reflect it in a particular way. Key to this is the following.
@@ -95,7 +96,7 @@ x\ge x\odot y
 
 The functor 
 
-$$\mathcal P^\rm c:\sf Pos \to Pos$$ 
+$$\mathcal P^{\rm{c}}:\sf Pos \to Pos$$ 
 
 maps a poset $(X,\le)$ to the set of convex subsets $\mathcal PX$. The order on convex subsets is defined as follows. [^back-forth] [^Pjust]
 
@@ -104,7 +105,7 @@ a\le b\  \quad \textrm{ if } \quad & \forall x\in a\,.\,\exists y\in b. x\le y \
 &\forall y\in b\,.\,\exists x\in a. x\le y\\
 \end{align}
 
-If $X$ is discrete then $\mathcal P^\rm c X$ is just  $\mathcal PX$ and $\le$ is equality.
+If $X$ is discrete then $\mathcal P^{\rm{c}} X$ is just  $\mathcal PX$ and $\le$ is equality.
 
 #### Lower Powerdomain 
 
@@ -147,7 +148,7 @@ $$\frac{x'\ge x R y \ge y'}{x'R y'}$$
 
 ### (Bi)simulations
 
-As for set-functors, any functor on ordered sets gives rise to a canonical notion of **(bi)simulation**,  [cospan bisimulation](https://hackmd.io/@alexhkurz/HyQxhrh_v). In case of $\mathcal P^\rm c$-coalgebras (bi)simulation is bisimulation, in case of $\mathcal U$-coalgebras (bi)simulation is backward simulation and in case of  $\mathcal D$-coalgebras (bi)simulation is forward simulation.
+As for set-functors, any functor on ordered sets gives rise to a canonical notion of **(bi)simulation**,  [cospan bisimulation](https://hackmd.io/@alexhkurz/HyQxhrh_v). In case of $\mathcal P^{\rm{c}}$-coalgebras (bi)simulation is bisimulation, in case of $\mathcal U$-coalgebras (bi)simulation is backward simulation and in case of  $\mathcal D$-coalgebras (bi)simulation is forward simulation.
 
 **Fact:** The largest preorder on a $\mathcal U$-coalgebra ($\mathcal D$-coalgebra) compatible with the coalgebra structure is the largest backward-simulation (forward simulation) on that coalgebra. [^compatible]
 
@@ -176,7 +177,7 @@ We first note that each functor $T:\sf Ord\to Ord$ induces a notion of $T$-(bi)s
 
 A general way to introduce notions of simulation for $\sf Set$ functors is as follows. Let $T:\sf Set\to Set$ be a functor. Extend $T$ to a functor $T':\sf Ord\to Ord$.[^extend] Then restrict $T'$-(bi)simulation to $T$-coalgebras.
 
-**Example:** Let $T=\mathcal P$. We can let $T'$ be one of $\mathcal P^\rm c$ or $\mathcal U$ or $\mathcal D$ to capture bisimulation or forward simulation or backward simulation.
+**Example:** Let $T=\mathcal P$. We can let $T'$ be one of $\mathcal P^{\rm{c}}$ or $\mathcal U$ or $\mathcal D$ to capture bisimulation or forward simulation or backward simulation.
 
 **Remark:** The ordered setting is the right one if we want to exploit that the structures at hand support an order-duality. In the example, $\mathcal U$ and $\mathcal D$ capture $\Box$ and $\Diamond$ separately and both extend $\mathcal P$.
 
@@ -186,7 +187,7 @@ A general way to introduce notions of simulation for $\sf Set$ functors is as fo
 
 The finitary versions of the three powerdomains can be generated as follows. The way we describe algebras by generators and relation is the same as over sets, with the only difference that we now require $\odot$ to be order-preserving (monotone).
 
-If $X$ is a finite poset, then the finitely generated convex subsets $\mathcal P_\omega^\rm c X$ are ismorphic to the free semi-lattice over $X$. Convexity is captured by the requirement that $\odot$ is montone. [^fingenconv]
+If $X$ is a finite poset, then the finitely generated convex subsets $\mathcal P_\omega^{\rm{c}} X$ are ismorphic to the free semi-lattice over $X$. Convexity is captured by the requirement that $\odot$ is montone. [^fingenconv]
 
 [^fingenconv]: Add more detail ...
 
@@ -196,7 +197,7 @@ If $X$ is a finite poset, then the finitely generated upsets $\mathcal U_\omega 
 
 To remember how taking upsets and downsets interacts with the order, it is helpful to know the following.
 
-**Facts:** Let $X$ be a preorder. $\mathcal DX$ is the free complete join semi lattice over $X$. $\mathcal D$ is a monad on preorders (and also on posets). The unit $X\to\mathcal DX=[X^\rm o,2]$ is the order enriched Yoneda embedding.[^yoneda] The Yoneda embedding is a free completion by colimits (joins). The $x\le x\odot y$ play the role of the arrows into the colimit (coproduct, join). (The Yoneda embedding preserves all limits (meets) that may already exist in $X$.) The multiplication of the monad is the free extension of the identity $\mathcal DX\to\mathcal DX$. 
+**Facts:** Let $X$ be a preorder. $\mathcal DX$ is the free complete join semi lattice over $X$. $\mathcal D$ is a monad on preorders (and also on posets). The unit $X\to\mathcal DX=[X^{\rm{o}},2]$ is the order enriched Yoneda embedding.[^yoneda] The Yoneda embedding is a free completion by colimits (joins). The $x\le x\odot y$ play the role of the arrows into the colimit (coproduct, join). (The Yoneda embedding preserves all limits (meets) that may already exist in $X$.) The multiplication of the monad is the free extension of the identity $\mathcal DX\to\mathcal DX$. 
 
 [^yoneda]: This deserves more explanation ...
 

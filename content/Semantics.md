@@ -1,8 +1,3 @@
----
-tags: coalgebraic logic
----
-$\newcommand{\sem}[1]{[\![#1]\!]}$
-
 # Semantics of Coalgebraic Logic
 
 (draft) 

@@ -1,9 +1,3 @@
----
-tags: coalgebraic logic, predicate lifting, powerset functor, distribution functor, coalgebraic modal logic, maths, functorial modal logic
----
-
-$\newcommand{\sem}[1]{\mathopen{[\![}#1\mathclose{]\!]}}$
-
 # Predicate Liftings
 
 (draft)

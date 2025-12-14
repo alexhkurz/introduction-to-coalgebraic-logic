@@ -1,5 +1,3 @@
-$\newcommand{\BA}{{\sf BA}}$
-
 # Polyonomial Functors
 
 (under construction)
