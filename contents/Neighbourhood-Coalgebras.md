@@ -3,8 +3,7 @@ tags: coalgebraic logic
 ---
 # Neighbourhood Coalgebras
 
-(draft) ... ([up](https://hackmd.io/@alexhkurz/ryrkkYZZc))
-<!--![](https://i.imgur.com/1FLZ0fs.png =80x80)-->
+(draft) 
 
 The idea of the following is to run through (Hansen, Kupke, Pacuit, 2009) and analyse it from the point of view of cospan bisimulation.
 

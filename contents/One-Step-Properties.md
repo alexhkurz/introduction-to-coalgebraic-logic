@@ -1,9 +1,11 @@
 # Coalgebraic Logic: One-Step Properties
 
 Given functors $T:\sf Set\to Set$ and $L:\sf BA\to BA$ and the contravariant adjunction "homming into $2$"
+
 $$ P:\sf Set \leftrightarrow BA : S$$
 
 the meaning of the logic $L$ is determined by 
+
 $$LP\to PT$$
 
 Moreover, $LP\to PT$ determines, and is determined by, its so-called mate

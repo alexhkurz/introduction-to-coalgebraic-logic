@@ -1,6 +1,6 @@
 # Cospan Bisimulation: Overview
 
-(draft) ... ([up](https://hackmd.io/@alexhkurz/ryrkkYZZc))
+(draft) 
 
 ---
 
