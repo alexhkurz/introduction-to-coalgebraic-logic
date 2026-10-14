@@ -1,0 +1,82 @@
+version: 1
+project:
+  title: Coalgebraic Logic
+  # Authors kept for reference but not displayed on every page
+  # authors:
+  #   - name: Alexander Kurz
+  github: https://github.com/alexhkurz/introduction-to-coalgebraic-logic/
+  bibliography:
+    - ahk.bib
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: content/intro.md
+    - title: Modal Logic
+      children:
+        - file: content/Introduction-to-Modal-Logic.md
+    - title: Overview of CL
+      children:
+        - file: content/ov0-Introduction-to-Coalgebraic-Logic.md
+        - file: content/ov1-The-Origins-of-Coalgebra-in-Domain-Theory.md
+        - file: content/ov2-The-Landscape-of-Coalgebraic-Logic.md
+    - title: Examples
+      children:
+        - file: content/ex1-polynomial-functors.md
+        - file: content/ex2-Powerdomains.md
+        - file: content/ex3-Neighbourhood-Frames.md
+        - file: content/ex4-Probability-Distributions.md
+    - title: Introduction to CL
+      children:
+        - file: content/cl1-Coalgebraic-BiSimilarity.md
+        - file: content/cl2-Basic-Coalgebraic-Logic.md
+        - file: content/cl3-Predicate-Liftings.md
+        - file: content/cl4-Monotone-Predicate-Liftings.md
+        - file: content/cl5-Expressive-Predicate-Liftings.md
+        - file: content/cl6-Relation-Lifting.md
+        - file: content/cl7-Moss-Coalgebraic-Logic.md
+    - title: Functorial Modal Logic
+      children:
+        - file: content/fml0-Introduction-to-Functorial-Modal-Logic.md
+        - file: content/fml1-Presenting-Functors-by-Operations-and-Equations.md
+        - file: content/fml2-Boolean-Logic-for-Set-Coalgebras.md
+        - file: content/fml3-Semantics.md
+        - file: content/fml4-Completeness.md
+        - file: content/fml5-Expressivity.md
+        - file: content/fml6-Translations.md
+        - file: content/fml7- CoLog.md
+    - title: Order Enriched CL
+      children:
+        - file: content/oecl0-introduction.md
+        - file: content/oecl1-posetification.md
+    - title: Cospan (Bi)Similarity
+      children:
+        - file: content/csp0-Cospan-Bisimulation-Introduction.md
+        - file: content/csp1-Cospan-Bisimulation.md
+        - file: content/csp2-Bisimulation-for-Order-Enriched-Coalgebras.md
+        - file: content/csp3-Neighbourhood-Coalgebras.md
+        - file: content/csp3b-Monotone-Neighbourhood-Coalgebras.md
+        - file: content/csp3c-Logic-of-Ordered-Neighbourhood-Coalgebras.md
+        - file: content/csp4-Cospan-Bisimulation-2.md
+    - title: Quantale Enriched CL
+      children:
+        - file: content/QECL-Introduction.md
+  math:
+    '\Qu': 'Q'
+    '\QuCat': '\Qu\text{-Cat}'
+    '\One': '\mathbb{1}'
+    '\yon': 'よ'
+    '\bigsqcap': '⨅'
+    '\val': '[\![{#1}]\!]'
+    '\descr': '(\![{#1}]\!)'
+    '\sem': '[\![{#1}]\!]'
+    '\Set': '{\\sf Set}'
+    '\Coalg': '{\sf Coalg}'
+    '\Alg': '{\sf Alg}'
+    '\BA': '{\sf BA}'
+site:
+  options:
+    folders: true
+    baseurl: /introduction-to-coalgebraic-logic
+  template: book-theme

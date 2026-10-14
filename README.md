@@ -1,79 +1,22 @@
-# coalgebraic-logic-jupyter
+# Introduction to Coalgebraic Logic
 
-(under construction)
+A book on coalgebraic logic built with Jupyter Book 2.0 (MyST).
 
-## coalgebraic logic
+## Setup amd Local Development
 
-This is the repo in which I keep [my notes on coalgebraic logic](https://alexhkurz.github.io/coalgebraic-logic-jupyter).
-
-I wanted to turn them into something that looks more like a book and I tried various frameworks (gitbook, mdbook, bookdown, honkit) but they all had various problems, in particular when it came to latex. 
-
-So far, jupyter-book seems to work well [^slow] and the next section contains a summary of how I set it up (but the available documentation works almost out of the box anyway).
-
-[^slow]: Maybe building is a bit slow. On the other hand, once the files are cached, compiling the book in the terminal with `jb build . ; open _build/html/index.html` does not take longer than doing it directly in TeX.
-
-## how to create a jupyter book
-
-Starting from [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book.html) the following steps were taken.
-
-### basics
-
-After creating this repo, cloning it (assuming it is called `root` locally), I run the following from the commandline in the folder containing `root`.
-
-```
-pip install -U jupyter-book
-jupyter-book create book
-mv book/* root
-cd root
-jupyter-book build .
+```bash
+source setup.sh
+jupyter book start
 ```
 
-The book can now be opened in a browser by opening the file `_build/html/index.html`. On a mac, simply run `open _build/html/index.html`
+The book will be available at [http://localhost:3000](http://localhost:3000) (or port 3001 if 3000 is in use).
 
-Following [Math and equations](https://jupyterbook.org/en/stable/content/math.html#math-and-equations) add to `_config.yml`
+## Deploy to Github Pages
 
-```
-parse:
-  myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
-    - amsmath
-    - dollarmath
-```
+The site is available at: https://alexhkurz.github.io/introduction-to-coalgebraic-logic/
 
-Adapt `_config.yml` and `_toc.yml`. Add your own files. Go through several iterations of 
+## Build Only
 
-```
-jupyter-book build .
-open _build/html/index.html
-```
-
-Before committing and pushing to git, I downloaded a `.gitignore`:
-
-```
-curl https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.gitignore > .gitignore
-```
-
-### publishing
-
-Following [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html) install `ghp-import`
-
-```
-pip install ghp-import
-```
-
-and then publish the book by running
-
-```
-ghp-import -n -p -f _build/html
-```
-
-This makes the [book available online](https://alexhkurz.github.io/coalgebraic-logic-jupyter). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch.
-
-### important commands
-
-If, for example, the table of contents in the left-ahnd pane behaves in a strange way, clean out `_build`:
-
-```
-jupyter-book clean .
+```bash
+jupyter book build
 ```
